@@ -58,3 +58,16 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/projectSettingsUpdater.xml
+/.idea.arena-game.iml
+/modules.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
