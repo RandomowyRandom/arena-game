@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -2996,7 +2996,6 @@ TextureImporter:
       env_tileset32_1: 1040483616
       env_tileset32_138: -807898406
       env_tileset32_4: 1904895388
-      env_tileset32_111: -807211674
       env_tileset32_38: -2009018110
       env_tileset32_95: -1293986769
       env_tileset32_33: 1137814984
@@ -3122,6 +3121,7 @@ TextureImporter:
       env_tileset32_23: -1600746637
       env_tileset32_142: 1590227872
       env_tileset32_67: -458549670
+      env_tileset32_111: -807211674
       env_tileset32_79: 490802466
       env_tileset32_88: -1440371528
       env_tileset32_46: 1869619171
