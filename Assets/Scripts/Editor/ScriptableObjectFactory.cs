@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Common.Attributes;
+using Common.Enums;
 using Sirenix.OdinInspector;
 using Sirenix.OdinInspector.Editor;
 using Sirenix.Utilities;
@@ -33,6 +34,10 @@ namespace Editor
         [ShowInInspector]
         private string _objectName;
         
+        [VerticalGroup]
+        [ShowInInspector]
+        private ScriptableType _scriptableType;
+        
         [HorizontalGroup]
         [Button(ButtonSizes.Large)]
         public void Instantiate()
@@ -45,12 +50,22 @@ namespace Editor
                 return;
             }
             
-            var path = $"Assets/Scriptables/{_objectName}.asset";
+            var path = GetPath(_scriptableType, _objectName);  
             
+            var directory = path[..path.LastIndexOf('/')];
+            
+            if (!AssetDatabase.IsValidFolder(directory))
+                AssetDatabase.CreateFolder("Assets/Scriptables", _scriptableType.ToString());
+
             AssetDatabase.CreateAsset(instance, path);
             AssetDatabase.SaveAssets();
         }
 
+        private static string GetPath(ScriptableType type, string objectName)
+        {
+            return $"Assets/Scriptables/{type.ToString()}/{objectName}.asset";
+        }
+        
         private static List<Type> GetDerivedTypes(Type baseType)
         {
             var assemblies = AppDomain.CurrentDomain.GetAssemblies();
