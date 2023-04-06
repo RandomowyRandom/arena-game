@@ -24,7 +24,9 @@ namespace Player
                 _defaultStats.Damage, 
                 _defaultStats.Speed, 
                 _defaultStats.FireRate, 
-                _defaultStats.MaxHealth);
+                _defaultStats.MaxHealth,
+                _defaultStats.Defense
+                );
         }
 
         private void OnDestroy()

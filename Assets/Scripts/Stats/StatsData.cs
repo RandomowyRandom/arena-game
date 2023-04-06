@@ -16,13 +16,17 @@ namespace Stats
         
         [SerializeField]
         private float _maxHealth;
+        
+        [SerializeField]
+        private float _defense;
 
-        public StatsData(float damage, float speed, float fireRate, float maxHealth)
+        public StatsData(float damage, float speed, float fireRate, float maxHealth, float defense)
         {
             _damage = damage;
             _speed = speed;
             _fireRate = fireRate;
             _maxHealth = maxHealth;
+            _defense = defense;
         }
 
         public float Damage => _damage;
@@ -31,5 +35,7 @@ namespace Stats
         public float FireRate => _fireRate;
 
         public float MaxHealth => _maxHealth;
+        
+        public float Defense => _defense;
     }
 }
