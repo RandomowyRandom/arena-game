@@ -4445,6 +4445,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Systems
       objectReference: {fileID: 0}
+    - target: {fileID: 8080923281210923930, guid: d70e097a41bc7124486ce601567a54de, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8080923281210923930, guid: d70e097a41bc7124486ce601567a54de, type: 3}
     - target: {fileID: 8718608631532790232, guid: d70e097a41bc7124486ce601567a54de, type: 3}
       propertyPath: m_RootOrder
       value: 8
