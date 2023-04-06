@@ -14,5 +14,9 @@ namespace Items
             _itemData = itemData;
             _amount = amount;
         }
+
+        public ItemData ItemData => _itemData;
+
+        public int Amount => _amount;
     }
 }
