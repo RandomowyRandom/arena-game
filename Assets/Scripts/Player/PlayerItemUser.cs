@@ -1,8 +1,10 @@
 ﻿using Items;
 using Items.Abstraction;
+using JetBrains.Annotations;
 using QFSW.QC;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
+using UnityEngine;
 
 namespace Player
 {
@@ -18,9 +20,15 @@ namespace Player
 
         #region QC
 
-        [Command("use-item")]
+        [Command("use-item")] [UsedImplicitly]
         private void UseItemCommand()
         {
+            if (_selectedItem == null)
+            {
+                Debug.Log("No item selected");
+                return;
+            }
+            
             if (_selectedItem is not UsableItem usableItem) 
                 return;
             
