@@ -1,4 +1,4 @@
-﻿namespace Items
+﻿namespace Items.ItemDataSystem
 {
     public enum EquipmentType
     {

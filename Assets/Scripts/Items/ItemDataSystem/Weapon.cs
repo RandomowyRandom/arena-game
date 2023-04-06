@@ -3,16 +3,13 @@ using Stats;
 using Stats.Interfaces;
 using UnityEngine;
 
-namespace Items
+namespace Items.ItemDataSystem
 {
     [ScriptableFactoryElement]
-    public class Equipment: ItemData, IStatsDataProvider
+    public class Weapon: UsableItem, IStatsDataProvider
     {
         [SerializeField]
         private StatsData _statsData;
-        
-        [SerializeField]
-        private EquipmentType _equipmentType;
         
         public StatsData GetStatsData()
         {

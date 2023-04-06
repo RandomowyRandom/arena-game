@@ -1,4 +1,6 @@
-﻿namespace Items.Abstraction
+﻿using Items.ItemDataSystem;
+
+namespace Items.Abstraction
 {
     public interface IItemUser
     {

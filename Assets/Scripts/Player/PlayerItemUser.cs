@@ -1,5 +1,6 @@
 ﻿using Items;
 using Items.Abstraction;
+using Items.ItemDataSystem;
 using JetBrains.Annotations;
 using QFSW.QC;
 using Sirenix.OdinInspector;

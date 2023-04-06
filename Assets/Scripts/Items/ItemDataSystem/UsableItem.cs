@@ -4,7 +4,7 @@ using Items.Abstraction;
 using Sirenix.Serialization;
 using UnityEngine;
 
-namespace Items
+namespace Items.ItemDataSystem
 {
     [ScriptableFactoryElement]
     public class UsableItem: ItemData
