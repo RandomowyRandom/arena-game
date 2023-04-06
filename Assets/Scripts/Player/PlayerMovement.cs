@@ -1,24 +1,29 @@
-﻿using UnityEngine;
+﻿using Stats.Interfaces;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Player
 {
     [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(IStatsDataProvider))]
     public class PlayerMovement: MonoBehaviour
     {
-        [SerializeField]
-        private float _speed = 5f;
-        
         private Vector2 _move;
         private Rigidbody2D _rigidbody2D;
 
+        private IStatsDataProvider _playerStats;
+        
         private void Awake()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
+            _playerStats = GetComponent<IStatsDataProvider>();
         }
+        
         private void FixedUpdate()
         {
-            _rigidbody2D.AddForce(_move * (20 * _speed), ForceMode2D.Force);
+            const int dragCompensation = 20;
+
+            _rigidbody2D.AddForce(_move * (dragCompensation * _playerStats.GetStatsData().Speed), ForceMode2D.Force);
         }
         public void OnMove(InputAction.CallbackContext context)
         {
