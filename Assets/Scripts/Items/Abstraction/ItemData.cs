@@ -1,9 +1,9 @@
 ﻿using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Items
+namespace Items.Abstraction
 {
-    public class ItemData: SerializedScriptableObject
+    public abstract class ItemData: SerializedScriptableObject
     {
         [SerializeField]
         private string _displayName;
