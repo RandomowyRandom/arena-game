@@ -19,6 +19,8 @@ namespace Items.ItemDataSystem
         [SerializeField]
         private int _maxStack;
 
+        public string Key => name;
+        
         public string DisplayName => _displayName;
 
         public Sprite Icon => _icon;

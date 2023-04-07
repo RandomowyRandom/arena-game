@@ -21,7 +21,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  _displayName: 
+  _displayName: Wooden plank
   _icon: {fileID: 0}
-  _description: 
-  _maxStack: 0
+  _description: Good old wood
+  _maxStack: 128

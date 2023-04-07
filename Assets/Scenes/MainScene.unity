@@ -326,14 +326,6 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 2884918401978545162, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
-    - target: {fileID: 2884918401978545162, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884918401978545162, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
-      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4857834470512048521, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4758,6 +4750,14 @@ PrefabInstance:
     - target: {fileID: 627456442542836662, guid: d70e097a41bc7124486ce601567a54de, type: 3}
       propertyPath: m_Name
       value: Systems
+      objectReference: {fileID: 0}
+    - target: {fileID: 6677589889404420261, guid: d70e097a41bc7124486ce601567a54de, type: 3}
+      propertyPath: _activateOnStartup
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6677589889404420261, guid: d70e097a41bc7124486ce601567a54de, type: 3}
+      propertyPath: _initialiseOnStartup
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8080923281210923930, guid: d70e097a41bc7124486ce601567a54de, type: 3}
       propertyPath: serializationData.Prefab
