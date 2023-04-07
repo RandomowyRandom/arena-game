@@ -5,6 +5,7 @@
         Weapon,
         Material,
         Armor,
-        Consumable
+        Consumable,
+        Database
     }
 }

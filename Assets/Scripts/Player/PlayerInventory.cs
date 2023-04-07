@@ -13,7 +13,7 @@ namespace Player
     public class PlayerInventory: MonoBehaviour, IInventory
     {
         [SerializeField]
-        private List<ItemData> _itemDatabase;
+        private ItemDatabase _itemDatabase;
         
         public event Action OnInventoryChanged;
         
@@ -57,36 +57,23 @@ namespace Player
 
         public bool TryRemoveItem(Item item)
         {
-            // TODO: fix this
-            
             if(!HasItem(item))
                 return false;
             
-            var itemData = item.ItemData;
-            var itemAmount = item.Amount;
+            var leftToRemove = item.Amount;
             
-            for (var i = 0; i < _items.Length; i++)
+            do
             {
-                var inventoryItem = _items[i];
+                var slotWithLestAmount = GetSlotWithLeastAmount(item.ItemData);
                 
-                if (inventoryItem.ItemData != itemData)
-                    continue;
+                var amountInSlot = _items[slotWithLestAmount].Amount;
                 
-                var inventoryItemAmount = inventoryItem.Amount;
-                if (inventoryItemAmount <= itemAmount)
-                {
-                    _items[i] = null;
-                    itemAmount -= inventoryItemAmount;
-                }
-                else
-                {
-                    _items[i] = new Item(itemData, inventoryItemAmount - itemAmount);
-                    itemAmount = 0;
-                }
-
-                if (itemAmount == 0)
-                    break;
-            }
+                var amountToRemoveFromSlot = Mathf.Min(leftToRemove, amountInSlot);
+                
+                RemoveItemAmountFromSlot(slotWithLestAmount, amountToRemoveFromSlot);
+                
+                leftToRemove -= amountToRemoveFromSlot;
+            } while (leftToRemove > 0);
             
             OnInventoryChanged?.Invoke();
             return true;
@@ -95,10 +82,12 @@ namespace Player
         public bool HasItem(Item item)
         {
             var itemData = item.ItemData;
-            var itemAmount = _items
-                .Where(inventoryItem => inventoryItem.ItemData == itemData)
-                .Sum(inventoryItem => inventoryItem.Amount);
-            
+            var itemAmount = (
+                from inventoryItem in _items 
+                where inventoryItem != null 
+                where inventoryItem.ItemData == itemData 
+                select inventoryItem.Amount).Sum();
+
             return itemAmount >= item.Amount;
         }
 
@@ -128,6 +117,12 @@ namespace Player
 
         public void SetItem(int index, Item item)
         {
+            if (item.Amount <= 0)
+            {
+                _items[index] = null;
+                return;
+            }
+            
             _items[index] = item;
             OnInventoryChanged?.Invoke();
         }
@@ -190,6 +185,34 @@ namespace Player
             return itemData.MaxStack - inventoryItem.Amount;
         }
 
+        private void RemoveItemAmountFromSlot(int slot, int amountToRemove)
+        {
+            var amountInSlot = _items[slot].Amount;
+            SetItem(slot, new Item(_items[slot].ItemData, amountInSlot - amountToRemove));
+        }
+
+        private int GetSlotWithLeastAmount(ItemData itemData)
+        {
+            var slotsWithItem = new List<int>();
+            
+            for (var i = 0; i < _items.Length; i++)
+            {
+                var slotItem = _items[i];
+                
+                if (slotItem == null)
+                    continue;
+                
+                if (slotItem.ItemData.Key != itemData.Key)
+                    continue;
+                
+                slotsWithItem.Add(i);
+            }
+
+            return slotsWithItem
+                .OrderBy(slot => _items[slot].Amount)
+                .FirstOrDefault();
+        }
+        
         #region QC
 
         [Command("log-inventory")] [UsedImplicitly]
@@ -208,7 +231,7 @@ namespace Player
         [Command("add-item")] [UsedImplicitly]
         private void CommandAddItem(string key, int amount)
         {
-            var itemData = _itemDatabase.FirstOrDefault(item => item.Key == key);
+            var itemData = _itemDatabase.GetItemData(key);
             if (itemData == null)
             {
                 Debug.Log($"No item with key {key} found");
@@ -223,7 +246,7 @@ namespace Player
         [Command("remove-item")] [UsedImplicitly]
         private void CommandRemoveItem(string key, int amount)
         {
-            var itemData = _itemDatabase.FirstOrDefault(item => item.Key == key);
+            var itemData = _itemDatabase.GetItemData(key);
             if (itemData == null)
             {
                 Debug.Log($"No item with key {key} found");
