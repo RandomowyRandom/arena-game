@@ -1,5 +1,6 @@
 ﻿using System;
 using Items;
+using Items.ItemDataSystem;
 
 namespace Inventory.Interfaces
 {
@@ -9,6 +10,7 @@ namespace Inventory.Interfaces
         
         public int Capacity { get; }
         public bool IsFull { get; }
+        public Item[] Items { get; }
         
         public bool TryAddItem(Item item);
         public bool TryRemoveItem(Item item);
