@@ -18,12 +18,17 @@ namespace UI
             if (item == null)
             {
                 _itemImage.sprite = null;
+                _itemImage.color = Color.clear;
                 _itemAmountText.text = string.Empty;
                 return;
             }
             
             _itemImage.sprite = item.ItemData.Icon;
+            _itemImage.color = Color.white;
             _itemAmountText.text = item.Amount.ToString();
+            
+            if (item.Amount == 1)
+                _itemAmountText.text = string.Empty;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Inventory.Interfaces;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
@@ -17,16 +18,15 @@ namespace UI
         [OdinSerialize]
         private IInventory _inventoryToRegister;
         
-        private List<ItemSlotUI> _slots = new();
+        private readonly List<ItemSlotUI> _slots = new();
 
         private IInventory _inventory;
 
         private void Start()
         {
             RegisterInventory(_inventoryToRegister);
-            UpdateUI();
         }
-        
+
         private void OnDestroy()
         {
             DeregisterInventory();
@@ -52,6 +52,8 @@ namespace UI
                 var newSlot = Instantiate(_slotPrefab, _slotsPanel);
                 _slots.Add(newSlot);
             }
+            
+            UpdateUI();
         }
         
         private void DeregisterInventory()
@@ -60,7 +62,6 @@ namespace UI
                 return;
             
             _inventory.OnInventoryChanged -= UpdateUI;
-            _inventory = null;
         }
 
         private void UpdateUI()

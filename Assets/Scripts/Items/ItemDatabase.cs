@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Common.Attributes;
 using Items.ItemDataSystem;
 using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using UnityEngine;
 
 namespace Items
@@ -11,38 +12,35 @@ namespace Items
     public class ItemDatabase: SerializedScriptableObject
     {
         [SerializeField]
-        private List<ItemData> _items;
+        private List<ItemData> _itemDataList;
         
-        private Dictionary<string, ItemData> _itemDictionary;
+        [Space(10)]
         
-        private bool _isInitialized;
+        [OdinSerialize] [ReadOnly]
+        private Dictionary<string, ItemData> _items;
+
+        [Button]
+        private void RefreshDatabase()
+        {
+            _items = new Dictionary<string, ItemData>();
+            
+            foreach (var itemData in _itemDataList)
+            {
+                _items.Add(itemData.Key, itemData);
+            }
+        }
         
         public ItemData GetItemData(string key)
         {
-            Initialize();
+            RefreshDatabase();
             
-            var item = _itemDictionary[key];
+            var item = _items[key];
 
             if (item != null) 
                 return item;
             
             Debug.LogError($"Item with key {key} not found in database {name}.");
             throw new NotImplementedException();
-        }
-        
-        private void Initialize()
-        {
-            if (_isInitialized)
-                return;
-            
-            _itemDictionary = new Dictionary<string, ItemData>();
-            
-            foreach (var item in _items)
-            {
-                _itemDictionary.Add(item.Key, item);
-            }
-            
-            _isInitialized = true;
         }
     }
 }
