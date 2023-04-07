@@ -17,6 +17,8 @@ namespace Player
         
         public event Action OnInventoryChanged;
         
+        public Item[] Items => _items;
+        
         private Item[] _items;
 
         private void Awake()
