@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 547665086816242306}
   - component: {fileID: 233742928}
   - component: {fileID: 2884918401978545162}
+  - component: {fileID: 1791306574103134018}
   - component: {fileID: 233742930}
   - component: {fileID: 233742927}
   m_Layer: 0
@@ -131,6 +132,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7740344273d042a9967770d1766ac138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _selectedItem
+      Entry: 6
+      Data: 
+--- !u!114 &1791306574103134018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4857834470512048523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 219e07778c934f17b94a20eec9eef628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemDatabase:
+  - {fileID: 11400000, guid: 1092548eece441b468e2c2ccbdd301b2, type: 2}
+  - {fileID: 11400000, guid: 5cd9f6b3404097d45bab0a1560aee0ba, type: 2}
 --- !u!50 &233742930
 Rigidbody2D:
   serializedVersion: 4
