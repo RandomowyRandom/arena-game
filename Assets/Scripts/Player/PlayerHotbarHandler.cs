@@ -1,5 +1,4 @@
-﻿using System;
-using Inventory.Interfaces;
+﻿using Inventory.Interfaces;
 using Items.ItemDataSystem;
 using Player.Interfaces;
 using Sirenix.OdinInspector;
