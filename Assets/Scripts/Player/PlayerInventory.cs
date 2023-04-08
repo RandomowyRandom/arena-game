@@ -6,6 +6,7 @@ using Items;
 using Items.ItemDataSystem;
 using JetBrains.Annotations;
 using QFSW.QC;
+using QFSW.QC.Actions;
 using UnityEngine;
 
 namespace Player
@@ -14,6 +15,9 @@ namespace Player
     {
         [SerializeField]
         private ItemDatabase _itemDatabase;
+        
+        [SerializeField]
+        private int _capacity = 25;
         
         public event Action OnInventoryChanged;
         
@@ -26,7 +30,7 @@ namespace Player
             _items = new Item[Capacity];
         }
 
-        public int Capacity => 25;
+        public int Capacity => _capacity;
         public bool IsFull => _items.Length >= Capacity;
         
         public bool TryAddItem(Item item)
@@ -231,16 +235,22 @@ namespace Player
         }
         
         [Command("add-item")] [UsedImplicitly]
-        private void CommandAddItem(string key, int amount)
+        private IEnumerator<ICommandAction> CommandAddItem(string key, int amount)
         {
+            PlayerInventory target = default;
+            var targets = InvocationTargetFactory.FindTargets<PlayerInventory>(MonoTargetType.All);
+
+            yield return new Value("Select inventory:");
+            yield return new Choice<PlayerInventory>(targets, t => target = t);
+            
             var itemData = _itemDatabase.GetItemData(key);
             if (itemData == null)
             {
                 Debug.Log($"No item with key {key} found");
-                return;
+                yield break;
             }
             
-            var result = TryAddItem(new Item(itemData, amount));
+            var result = target.TryAddItem(new Item(itemData, amount));
             
             Debug.Log($"{nameof(PlayerInventory)}: {(result ? "Added" : "Failed to add")} {amount} {key}");
         }
