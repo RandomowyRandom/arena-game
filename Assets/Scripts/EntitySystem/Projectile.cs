@@ -6,6 +6,8 @@ namespace EntitySystem
     {
         [SerializeField] 
         private float _damage;
+
+        public GameObject Source { get; set; }
         public float Damage => _damage;
     }
 }

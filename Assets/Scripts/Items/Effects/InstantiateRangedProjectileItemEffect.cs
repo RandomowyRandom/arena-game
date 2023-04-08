@@ -1,4 +1,5 @@
 ﻿using System;
+using EntitySystem;
 using Items.Abstraction;
 using Items.ItemDataSystem;
 using UnityEngine;
@@ -26,6 +27,9 @@ namespace Items.Effects
             var mousePosition = GetMousePosition();
             var direction = (mousePosition - (Vector2) user.GameObject.transform.position).normalized;
             projectile.GetComponent<Rigidbody2D>().AddForce(direction * _force, _forceMode);
+            
+            var projectileDamageSource = projectile.GetComponent<IDamageSource>();
+            projectileDamageSource.Source = user.GameObject;
         }
         
         private Vector2 GetMousePosition()

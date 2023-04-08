@@ -37,6 +37,8 @@ namespace EntitySystem
             var damageSource = gameObjectCollision.GetComponent<IDamageSource>();
             
             // TODO: check if damage source game object is == damageable game object; if so, ignore
+            if(gameObject == damageSource.Source)
+                return;
 
             TakeDamage(damageSource.Damage);
         }
