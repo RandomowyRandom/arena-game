@@ -6,6 +6,7 @@
         Material,
         Armor,
         Consumable,
-        Database
+        Database,
+        Entity
     }
 }
