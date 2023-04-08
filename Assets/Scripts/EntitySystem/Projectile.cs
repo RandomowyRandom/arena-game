@@ -6,7 +6,6 @@ namespace EntitySystem
     {
         [SerializeField] 
         private float _damage;
-
         public float Damage => _damage;
     }
 }
