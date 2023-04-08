@@ -21,7 +21,7 @@ namespace Items.ItemDataSystem
         {
             foreach (var effect in _effects)
             {
-                effect.OnUse(user);
+                effect.OnUse(user, this);
             }
         }
     }

@@ -17,6 +17,8 @@ namespace Player
         [OdinSerialize]
         private IUsableItemProvider _usableItemProvider;
         
+        public GameObject GameObject => gameObject;
+        
         public void UseItem(UsableItem item)
         {
             item.OnUse(this);
