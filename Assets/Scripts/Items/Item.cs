@@ -6,17 +6,19 @@ namespace Items
     [Serializable]
     public class Item
     {
-        private ItemData _itemData;
-        private int _amount;
-        
         public Item(ItemData itemData, int amount)
         {
-            _itemData = itemData;
-            _amount = amount;
+            ItemData = itemData;
+            Amount = amount;
         }
 
-        public ItemData ItemData => _itemData;
+        public ItemData ItemData { get; protected set; }
 
-        public int Amount => _amount;
+        public int Amount { get; protected set; }
+
+        public override string ToString()
+        {
+            return $"{ItemData.DisplayName} x({Amount})";
+        }
     }
 }

@@ -1,7 +1,9 @@
-﻿namespace Stats.Interfaces
+﻿using Items.RaritySystem;
+
+namespace Stats.Interfaces
 {
     public interface IStatsDataProvider
     {
-        public StatsData GetStatsData();
+        public StatsData GetStatsData(GearRarity gearRarity);
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Player
 {
-    public class PlayerStats: MonoBehaviour, IPlayerStats, IStatsDataProvider
+    public class PlayerStats: MonoBehaviour, IPlayerStats
     {
         [SerializeField]
         private StatsData _defaultStats;

@@ -1,22 +1,29 @@
-﻿using Common.Attributes;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Common.Attributes;
+using Items.RaritySystem;
+using Sirenix.Serialization;
 using Stats;
 using Stats.Interfaces;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Items.ItemDataSystem
 {
     [ScriptableFactoryElement]
     public class Equipment: ItemData, IStatsDataProvider
     {
-        [SerializeField]
-        private StatsData _statsData;
+        [OdinSerialize]
+        private List<GearRarityData> _rarityData;
         
         [SerializeField]
         private EquipmentType _equipmentType;
-        
-        public StatsData GetStatsData()
+
+        public StatsData GetStatsData(GearRarity rarity)
         {
-            return _statsData;
+            return  _rarityData
+                .Where(r => r.GearRarity == rarity)
+                .Select(r => r.StatsData).FirstOrDefault();
         }
     }
 }

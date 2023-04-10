@@ -1,4 +1,6 @@
-﻿using Stats.Interfaces;
+﻿using System;
+using Player.Interfaces;
+using Stats.Interfaces;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,14 +13,18 @@ namespace Player
         private Vector2 _move;
         private Rigidbody2D _rigidbody2D;
 
-        private IStatsDataProvider _playerStats;
+        private IPlayerStats _playerStats;
         
         private void Awake()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
-            _playerStats = GetComponent<IStatsDataProvider>();
         }
-        
+
+        private void Start()
+        {
+            _playerStats = ServiceLocator.ServiceLocator.Instance.Get<IPlayerStats>();
+        }
+
         private void FixedUpdate()
         {
             const int dragCompensation = 20;

@@ -7,6 +7,7 @@
         Armor,
         Consumable,
         Database,
-        Entity
+        Entity,
+        GearRarity,
     }
 }

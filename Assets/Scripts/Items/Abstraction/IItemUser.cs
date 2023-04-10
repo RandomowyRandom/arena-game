@@ -1,6 +1,5 @@
 ﻿using Items.ItemDataSystem;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Items.Abstraction
 {

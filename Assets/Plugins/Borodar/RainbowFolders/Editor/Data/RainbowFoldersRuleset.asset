@@ -137,7 +137,7 @@ MonoBehaviour:
     Key: Prefabs
     Ordinal: 10
     Priority: 0
-    IconType: 2110
+    IconType: 2610
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -341,7 +341,7 @@ MonoBehaviour:
     Key: Assets/Scriptables
     Ordinal: 27
     Priority: 0
-    IconType: 2120
+    IconType: 2620
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -416,6 +416,18 @@ MonoBehaviour:
     IconType: 1
     SmallIcon: {fileID: 2800000, guid: c301528c5616e124992dffa70d69f5fc, type: 3}
     LargeIcon: {fileID: 2800000, guid: 61132b6ef4fa0c647a5b4abcfb69dbd3, type: 3}
+    IsIconRecursive: 0
+    BackgroundType: 0
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 0
+    IsHidden: 0
+  - Type: 1
+    Key: Assets/Scriptables/GearRarity
+    Ordinal: 34
+    Priority: 0
+    IconType: 1
+    SmallIcon: {fileID: 2800000, guid: 7fe4b323473374f4eb30ca54032e70fc, type: 3}
+    LargeIcon: {fileID: 2800000, guid: db7bee81d138e4d4ab3404fe597299d4, type: 3}
     IsIconRecursive: 0
     BackgroundType: 0
     BackgroundTexture: {fileID: 0}
