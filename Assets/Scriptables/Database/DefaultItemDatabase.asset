@@ -16,9 +16,12 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
+    - {fileID: 11400000, guid: fecb9f0fa428f604299c5d28ff36d38a, type: 2}
+    - {fileID: 11400000, guid: 8e5b2c0912d91704faa6eb87cd562097, type: 2}
+    - {fileID: 11400000, guid: d0eb9b4b1a113ae4abf01a6ec9adb801, type: 2}
+    - {fileID: 11400000, guid: c760c982095238742b24d7adc78b2079, type: 2}
     - {fileID: 11400000, guid: 1092548eece441b468e2c2ccbdd301b2, type: 2}
     - {fileID: 11400000, guid: 5cd9f6b3404097d45bab0a1560aee0ba, type: 2}
-    - {fileID: 11400000, guid: c760c982095238742b24d7adc78b2079, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -37,13 +40,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 6
     - Name: 
       Entry: 7
       Data: 
     - Name: $k
       Entry: 1
-      Data: WOODEN_PLANK
+      Data: GRASS
     - Name: $v
       Entry: 10
       Data: 0
@@ -55,7 +58,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: WOODEN_SWORD
+      Data: STICK
     - Name: $v
       Entry: 10
       Data: 1
@@ -67,10 +70,46 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: WOODEN_BOW
+      Data: STONE
     - Name: $v
       Entry: 10
       Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: WOODEN_BOW
+    - Name: $v
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: WOODEN_PLANK
+    - Name: $v
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: WOODEN_SWORD
+    - Name: $v
+      Entry: 10
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -81,6 +120,9 @@ MonoBehaviour:
       Entry: 8
       Data: 
   _itemDataList:
+  - {fileID: 11400000, guid: fecb9f0fa428f604299c5d28ff36d38a, type: 2}
+  - {fileID: 11400000, guid: 8e5b2c0912d91704faa6eb87cd562097, type: 2}
+  - {fileID: 11400000, guid: d0eb9b4b1a113ae4abf01a6ec9adb801, type: 2}
+  - {fileID: 11400000, guid: c760c982095238742b24d7adc78b2079, type: 2}
   - {fileID: 11400000, guid: 1092548eece441b468e2c2ccbdd301b2, type: 2}
   - {fileID: 11400000, guid: 5cd9f6b3404097d45bab0a1560aee0ba, type: 2}
-  - {fileID: 11400000, guid: c760c982095238742b24d7adc78b2079, type: 2}

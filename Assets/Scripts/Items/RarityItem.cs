@@ -13,7 +13,7 @@ namespace Items
             Amount = amount;
             _gearRarity = rarity;
         }
-        
+
         public GearRarity GearRarity => _gearRarity;
         
         public override string ToString()

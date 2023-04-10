@@ -9,5 +9,6 @@
         Database,
         Entity,
         GearRarity,
+        CraftingRecipe,
     }
 }

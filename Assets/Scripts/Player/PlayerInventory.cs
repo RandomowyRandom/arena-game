@@ -6,6 +6,7 @@ using Items;
 using Items.ItemDataSystem;
 using Items.RaritySystem;
 using JetBrains.Annotations;
+using Player.Interfaces;
 using QFSW.QC;
 using QFSW.QC.Actions;
 using UnityEditor;
@@ -13,23 +14,31 @@ using UnityEngine;
 
 namespace Player
 {
-    public class PlayerInventory: MonoBehaviour, IInventory
+    public class PlayerInventory: MonoBehaviour, IInventory, IPlayerInventory
     {
         [SerializeField]
         private ItemDatabase _itemDatabase;
         
         [SerializeField]
         private int _capacity = 25;
+     
+        [SerializeField]
+        private bool _registerAsService = true;
         
         public event Action OnInventoryChanged;
         
         public Item[] Items => _items;
         
+        public IInventory Inventory => this;
+
         private Item[] _items;
 
         private void Awake()
         {
             _items = new Item[Capacity];
+            
+            if(_registerAsService)
+                ServiceLocator.ServiceLocator.Instance.Register<IPlayerInventory>(this);
         }
 
         public int Capacity => _capacity;
