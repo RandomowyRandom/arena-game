@@ -137,7 +137,7 @@ MonoBehaviour:
     Key: Prefabs
     Ordinal: 10
     Priority: 0
-    IconType: 2110
+    IconType: 2610
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -341,7 +341,7 @@ MonoBehaviour:
     Key: Assets/Scriptables
     Ordinal: 27
     Priority: 0
-    IconType: 2120
+    IconType: 2620
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
