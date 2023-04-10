@@ -4,9 +4,11 @@ using System.Linq;
 using Inventory.Interfaces;
 using Items;
 using Items.ItemDataSystem;
+using Items.RaritySystem;
 using JetBrains.Annotations;
 using QFSW.QC;
 using QFSW.QC.Actions;
+using UnityEditor;
 using UnityEngine;
 
 namespace Player
@@ -234,6 +236,29 @@ namespace Player
             }
         }
         
+        [Command("add-rarity-item")] [UsedImplicitly]
+        private IEnumerator<ICommandAction> CommandAddRarityItem(string key, string rarity ,int amount)
+        {
+            PlayerInventory target = default;
+            var targets = InvocationTargetFactory.FindTargets<PlayerInventory>(MonoTargetType.All);
+
+            // load gear rarity from asset
+            var gearRarity = AssetDatabase.LoadAssetAtPath<GearRarity>($"Assets/Scriptables/GearRarity/{rarity}.asset");
+
+            yield return new Value("Select inventory:");
+            yield return new Choice<PlayerInventory>(targets, t => target = t);
+            
+            var itemData = _itemDatabase.GetItemData(key);
+            if (itemData == null)
+            {
+                Debug.Log($"No item with key {key} found");
+                yield break;
+            }
+            
+            var result = target.TryAddItem(new RarityItem(itemData, amount, gearRarity));
+            
+            Debug.Log($"{nameof(PlayerInventory)}: {(result ? "Added" : "Failed to add")} {amount} {gearRarity.name} {key}");
+        }
         [Command("add-item")] [UsedImplicitly]
         private IEnumerator<ICommandAction> CommandAddItem(string key, int amount)
         {
