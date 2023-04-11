@@ -60,9 +60,14 @@ namespace Player
             return rest;
         }
 
-        public bool TryRemoveItem(Item item)
+        public Item TryRemoveItem(Item item)
         {
-            throw new NotImplementedException();
+            var rest = _inventory.TryRemoveItem(item);
+            
+            if (rest != null)
+                rest = _hotbar.TryRemoveItem(rest);
+            
+            return rest;
         }
 
         public bool HasItem(Item item)
@@ -116,47 +121,33 @@ namespace Player
         }
         
         [Command("add-rarity-item")] [UsedImplicitly]
-        private IEnumerator<ICommandAction> CommandAddRarityItem(string key, string rarity ,int amount)
+        private void CommandAddRarityItem(string key, string rarity ,int amount)
         {
-            BasicInventory target = default;
-            var targets = InvocationTargetFactory.FindTargets<BasicInventory>(MonoTargetType.All);
-
             // load gear rarity from asset
             var gearRarity = AssetDatabase.LoadAssetAtPath<GearRarity>($"Assets/Scriptables/GearRarity/{rarity}.asset");
 
-            yield return new Value("Select inventory:");
-            yield return new Choice<BasicInventory>(targets, t => target = t);
-            
             var itemData = _itemDatabase.GetItemData(key);
             if (itemData == null)
             {
                 Debug.Log($"No item with key {key} found");
-                yield break;
             }
             
-            var result = target.TryAddItem(new RarityItem(itemData, amount, gearRarity));
+            var result = TryAddItem(new RarityItem(itemData, amount, gearRarity));
             
-            Debug.Log($"{nameof(BasicInventory)}: {(result != null ? "Added" : "Failed to add")} {amount} {gearRarity.name} {key}");
+            Debug.Log($"{nameof(BasicInventory)}: {(result == null ? "Added" : "Failed to add")} {amount} {gearRarity.name} {key}");
         }
         [Command("add-item")] [UsedImplicitly]
-        private IEnumerator<ICommandAction> CommandAddItem(string key, int amount)
+        private void CommandAddItem(string key, int amount)
         {
-            BasicInventory target = default;
-            var targets = InvocationTargetFactory.FindTargets<BasicInventory>(MonoTargetType.All);
-
-            yield return new Value("Select inventory:");
-            yield return new Choice<BasicInventory>(targets, t => target = t);
-            
             var itemData = _itemDatabase.GetItemData(key);
             if (itemData == null)
             {
                 Debug.Log($"No item with key {key} found");
-                yield break;
             }
             
-            var result = target.TryAddItem(new Item(itemData, amount));
+            var result = TryAddItem(new Item(itemData, amount));
             
-            Debug.Log($"{nameof(BasicInventory)}: {(result != null ? "Added" : "Failed to add")} {amount} {key}");
+            Debug.Log($"{nameof(BasicInventory)}: {(result == null ? "Added" : "Failed to add")} {amount} {key}");
         }
         
         [Command("remove-item")] [UsedImplicitly]
@@ -171,7 +162,7 @@ namespace Player
             
             var result = TryRemoveItem(new Item(itemData, amount));
             
-            Debug.Log($"{nameof(BasicInventory)}: {(result ? "Removed" : "Failed to remove")} x{amount} {key}");
+            Debug.Log($"{nameof(BasicInventory)}: {(result == null ? "Removed" : "Failed to remove")} x{amount} {key}");
         }
 
         #endregion

@@ -4,21 +4,12 @@ using System.Linq;
 using Inventory.Interfaces;
 using Items;
 using Items.ItemDataSystem;
-using Items.RaritySystem;
-using JetBrains.Annotations;
-using Player.Interfaces;
-using QFSW.QC;
-using QFSW.QC.Actions;
-using UnityEditor;
 using UnityEngine;
 
 namespace Inventory
 {
     public class BasicInventory: MonoBehaviour, IInventory
     {
-        [SerializeField]
-        private ItemDatabase _itemDatabase;
-        
         [SerializeField]
         private int _capacity = 25;
      
@@ -41,12 +32,6 @@ namespace Inventory
         public Item TryAddItem(Item item)
         {
             var remainingAmount = item.Amount;
-
-            if (!HasSpaceForItem(item))
-            {
-                OnInventoryChanged?.Invoke();
-                return item;
-            }
 
             var bestSlotIndex = GetBestSlotForItem(item);
             if (bestSlotIndex != -1)
@@ -83,30 +68,48 @@ namespace Inventory
             return new Item(item.ItemData, remainingAmount);
         }
 
-        public bool TryRemoveItem(Item item)
+        public Item TryRemoveItem(Item item)
         {
-            if(!HasItem(item))
-                return false;
+            var remainingAmount = item.Amount;
             
-            var leftToRemove = item.Amount;
-            
-            do
+            var bestSlotIndex = GetBestSlotToRemoveFrom(item.ItemData);
+
+            while (remainingAmount > 0 && bestSlotIndex != -1)
             {
-                var slotWithLestAmount = GetSlotWithLeastAmount(item.ItemData);
-                
-                var amountInSlot = _items[slotWithLestAmount].Amount;
-                
-                var amountToRemoveFromSlot = Mathf.Min(leftToRemove, amountInSlot);
-                
-                RemoveItemAmountFromSlot(slotWithLestAmount, amountToRemoveFromSlot);
-                
-                leftToRemove -= amountToRemoveFromSlot;
-            } while (leftToRemove > 0);
+                var amountToRemove = Mathf.Min(remainingAmount, Items[bestSlotIndex].Amount);
+                RemoveItemAmountFromSlot(bestSlotIndex, amountToRemove);
+                remainingAmount -= amountToRemove;
+
+                if (remainingAmount == 0)
+                {
+                    OnInventoryChanged?.Invoke();
+                    return null;
+                }
+
+                bestSlotIndex = GetBestSlotToRemoveFrom(item.ItemData);
+            }
             
             OnInventoryChanged?.Invoke();
-            return true;
+            return new Item(item.ItemData, remainingAmount);
         }
 
+        private int GetBestSlotToRemoveFrom(ItemData itemData)
+        {
+            var bestSlotIndex = -1;
+            
+            for (var i = 0; i < Capacity; i++)
+            {
+                var inventoryItem = Items[i];
+                if (inventoryItem == null || inventoryItem.ItemData == null || inventoryItem.ItemData != itemData) 
+                    continue;
+                
+                if (bestSlotIndex == -1 || inventoryItem.Amount < Items[bestSlotIndex].Amount)
+                    bestSlotIndex = i;
+            }
+            
+            return bestSlotIndex;
+        }
+        
         public bool HasItem(Item item)
         {
             var itemData = item.ItemData;
