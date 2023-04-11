@@ -31,5 +31,10 @@ namespace Items.ItemDataSystem
         public int MaxStack => _maxStack;
         
         public bool IsStackable => _maxStack > 1;
+
+        public override string ToString()
+        {
+            return Key;
+        }
     }
 }
