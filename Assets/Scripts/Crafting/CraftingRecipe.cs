@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 using Common.Attributes;
 using Items;
+using Player.Interfaces;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
+using UnityEngine;
 
 namespace Crafting
 {
@@ -17,5 +19,22 @@ namespace Crafting
         
         public List<Item> Ingredients => _ingredients;
         public Item Result => _result;
+        
+        public string Key => name;
+        
+        [InfoBox("Runtime only")]
+        [Button]
+        private void AddNeededItems()
+        {
+            var playerInventory = ServiceLocator.ServiceLocator.Instance.Get<IPlayerInventory>();
+
+            foreach (var ingredient in _ingredients)
+            {
+                var res = playerInventory.Inventory.TryAddItem(ingredient);
+
+                if (res != null)
+                    Debug.LogError($"Could not add {ingredient} to inventory");
+            }
+        }
     }
 }
