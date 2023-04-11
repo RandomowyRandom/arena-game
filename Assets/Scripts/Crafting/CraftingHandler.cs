@@ -2,7 +2,9 @@
 using System.Linq;
 using Crafting.Abstraction;
 using Inventory.Interfaces;
+using JetBrains.Annotations;
 using Player.Interfaces;
+using QFSW.QC;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
@@ -73,5 +75,19 @@ namespace Crafting
             
             Debug.Log($"Crafting result: {result} for item: {_testRecipe.Result.ItemData}");
         }
+
+        #region QC
+
+        [Command("craft")] [UsedImplicitly]
+        private void CommandCraft(string recipeKey)
+        {
+            var recipe = CraftingRecipeDatabase.GetRecipe(recipeKey);
+            
+            var result = TryCraft(recipe);
+            
+            Debug.Log($"Crafting result: {result} for item: {recipe.Result.ItemData}");
+        }
+
+        #endregion
     }
 }

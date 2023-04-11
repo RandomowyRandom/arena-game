@@ -14,6 +14,11 @@ namespace Crafting
         [SerializeField]
         private List<CraftingRecipe> _recipes;
 
+        public CraftingRecipe GetRecipe(string key)
+        {
+            return _recipes.FirstOrDefault(recipe => recipe.Key == key);
+        }
+        
         public List<CraftingRecipe> GetAvailableRecipes(IInventory inventory)
         {
             var itemsInInventory = inventory.Items
