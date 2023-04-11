@@ -503,6 +503,36 @@ MonoBehaviour:
     - Name: _hotbarInventory
       Entry: 10
       Data: 0
+--- !u!114 &233742935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170430564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3de7fa8ec18b4e40a1cf1a0e894fc547, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 233742926}
+    - {fileID: 233742927}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _inventory
+      Entry: 10
+      Data: 0
+    - Name: _hotbar
+      Entry: 10
+      Data: 1
+  _itemDatabase: {fileID: 11400000, guid: 4a30b8bde1f7ccb4d95eec975755eff7, type: 2}
 --- !u!1 &350800592
 GameObject:
   m_ObjectHideFlags: 0

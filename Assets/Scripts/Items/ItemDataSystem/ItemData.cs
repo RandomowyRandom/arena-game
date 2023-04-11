@@ -1,4 +1,5 @@
-﻿using Common.Attributes;
+﻿using System;
+using Common.Attributes;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

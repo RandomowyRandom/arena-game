@@ -34,9 +34,11 @@ namespace Items
             protected set => _amount = value;
         }
 
+        public bool IsRarityItem => this is RarityItem;
+
         public override string ToString()
         {
-            return $"{ItemData.DisplayName} x({Amount})";
+            return $"{ItemData.DisplayName} x{Amount}";
         }
     }
 }

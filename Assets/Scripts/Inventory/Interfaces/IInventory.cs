@@ -12,8 +12,8 @@ namespace Inventory.Interfaces
         public bool IsFull { get; }
         public Item[] Items { get; }
         
-        public bool TryAddItem(Item item);
-        public bool TryRemoveItem(Item item);
+        public Item TryAddItem(Item item);
+        public Item TryRemoveItem(Item item);
         public bool HasItem(Item item);
         public bool HasSpaceForItem(Item item);
         public void SetItem(int index, Item item);
