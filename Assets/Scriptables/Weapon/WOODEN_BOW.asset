@@ -219,7 +219,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   _displayName: Wooden bow
-  _icon: {fileID: 21300000, guid: 3c5ff31e6ead84d4990ddf4a34f2328d, type: 3}
+  _icon: {fileID: 21300000, guid: 81022db8f20821044a541c548aff9b9e, type: 3}
   _description: Wooden range
   _maxStack: 1
   _consumeOnUse: 0
