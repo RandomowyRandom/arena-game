@@ -22,6 +22,6 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _displayName: Stone
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 971dfc01bb688a74892fd93d036730ab, type: 3}
   _description: rock
   _maxStack: 128

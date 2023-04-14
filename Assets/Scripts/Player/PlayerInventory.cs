@@ -108,22 +108,6 @@ namespace Player
             OnInventoryChanged?.Invoke();
         }
 
-        public void OnItemWorldEnter(GameObject collisionObject)
-        {
-            var itemWorld = collisionObject.GetComponent<ItemWorld>();
-            
-            if (itemWorld == null)
-                return;
-
-            var item = itemWorld.PickUpItem();
-            
-            var rest = TryAddItem(item);
-            
-            if(rest != null)
-                Instantiate(_itemWorldPrefab, transform.position, Quaternion.identity).SetItem(rest);
-        }
-        
-
         #region QC
 
         [Command("log-inventory")] [UsedImplicitly]

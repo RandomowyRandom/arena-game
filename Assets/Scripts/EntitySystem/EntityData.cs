@@ -1,5 +1,6 @@
 ﻿using Common.Attributes;
 using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using UnityEngine;
 
 namespace EntitySystem
@@ -12,6 +13,12 @@ namespace EntitySystem
         
         [SerializeField]
         private string _key;
+        
+        [Space(10)]
+        [OdinSerialize]
+        private DropTable _dropTable;
+        
+        public DropTable DropTable => _dropTable;
 
         public float MaxHealth => _maxHealth;
         

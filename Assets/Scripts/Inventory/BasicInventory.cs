@@ -191,9 +191,11 @@ namespace Inventory
                     slotsWithSpaceForItem.Add(i);
             }
 
-            return slotsWithSpaceForItem
-                .OrderBy(slot => GetSpaceForItemInSlot(slot, item))
-                .FirstOrDefault();
+            return slotsWithSpaceForItem.Count > 0
+                ? slotsWithSpaceForItem
+                    .OrderBy(slot => GetSpaceForItemInSlot(slot, item))
+                    .FirstOrDefault()
+                : -1;
         }
 
         private void AddItemAmountToSlot(int slot, int amount, ItemData data)

@@ -1,5 +1,6 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
+using Player;
 using TMPro;
 using UnityEngine;
 
@@ -45,22 +46,37 @@ namespace Items
             _item = item;
             
             _spriteRenderer.sprite = item.ItemData.Icon;
-            var amount = item.Amount > 1 ? item.Amount.ToString() : "";
+            var amount = item.Amount > 1 ? $"x{item.Amount.ToString()}" : string.Empty;
             
-            _amountText.SetText($"x{amount}");
+            _amountText.SetText(amount);
         }
         
-        public Item PickUpItem()
+        public Item GetItem()
         {
             var item = _item;
-            Destroy(gameObject);
             return item;
         }
         
-        private async UniTask  EnableColliderAfterSeconds(float seconds)
+        private async UniTask EnableColliderAfterSeconds(float seconds)
         {
             await UniTask.Delay(TimeSpan.FromSeconds(seconds));
             GetComponent<Collider2D>().enabled = true;
+        }
+        
+        public void OnPlayerInventoryEnter(GameObject collisionObject)
+        {
+            var playerInventory = collisionObject.GetComponent<PlayerInventory>();
+            
+            if (playerInventory == null)
+                return;
+            
+            var item = GetItem();
+            var rest = playerInventory.TryAddItem(item);
+            
+            if(rest == null)
+                Destroy(gameObject);
+            else
+                SetItem(rest);
         }
     }
 }
