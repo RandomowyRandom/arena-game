@@ -18,16 +18,27 @@ namespace Player
         
         [OdinSerialize]
         private InventoryUI _hotbarUI;
-
-        public event Action<ItemData> OnHotbarItemChanged;
         
+        public event Action OnUsableItemChanged;
+
         private int _currentHotbarSlot = 0;
         
         private int LastHotbarSlot => _hotbarInventory.Capacity - 1;
         
         private bool _initialized;
         private readonly List<HotbarSlotUI> _hotbarSlots = new();
+
+
+        private void Start()
+        {
+            _hotbarInventory.OnInventoryChanged += OnUsableItemChanged;
+        }
         
+        private void OnDestroy()
+        {
+            _hotbarInventory.OnInventoryChanged -= OnUsableItemChanged;
+        }
+
         public UsableItem GetUsableItem()
         {
             if(_hotbarInventory.Items[_currentHotbarSlot] == null)
@@ -55,7 +66,7 @@ namespace Player
                 _hotbarSlots[i].SetSelected(false);
             }
             
-            OnHotbarItemChanged?.Invoke(_hotbarInventory.Items[_currentHotbarSlot]?.ItemData);
+            OnUsableItemChanged?.Invoke();
         }
 
         private void Initialize()
