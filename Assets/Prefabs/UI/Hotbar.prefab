@@ -142,4 +142,4 @@ MonoBehaviour:
       Entry: 6
       Data: 
   _slotsPanel: {fileID: 4325902104303804736}
-  _slotPrefab: {fileID: -4050196497257775967, guid: 778eea64ba7112744b588ee40711e811, type: 3}
+  _slotPrefab: {fileID: -4050196497257775967, guid: e2c67c5506d7ab441a297bb93fab74d0, type: 3}
