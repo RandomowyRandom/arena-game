@@ -21,6 +21,8 @@ namespace UI
         private readonly List<ItemSlotUI> _slots = new();
 
         private IInventory _inventory;
+        
+        public List<ItemSlotUI> Slots => _slots;
 
         private void Start()
         {
