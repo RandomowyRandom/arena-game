@@ -27,8 +27,11 @@ namespace Player
 
         public void SetItem(ItemData item)
         {
-            if(item == null)
-                return;
+            if (item == null)
+            {
+                _handRenderer.sprite = null;
+                return;                
+            }
             
             _handRenderer.sprite = item.Icon;
         }
