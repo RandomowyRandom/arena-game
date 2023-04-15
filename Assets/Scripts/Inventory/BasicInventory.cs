@@ -148,9 +148,10 @@ namespace Inventory
 
         public void SetItem(int index, Item item)
         {
-            if (item.Amount <= 0)
+            if (item is not { Amount: > 0 })
             {
                 _items[index] = null;
+                OnInventoryChanged?.Invoke();
                 return;
             }
             

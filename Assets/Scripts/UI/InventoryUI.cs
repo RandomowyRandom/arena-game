@@ -23,6 +23,7 @@ namespace UI
         private IInventory _inventory;
         
         public List<ItemSlotUI> Slots => _slots;
+        public IInventory Inventory => _inventory;
 
         private void Start()
         {
@@ -52,6 +53,8 @@ namespace UI
             for (var i = 0; i < _inventory.Capacity; i++)
             {
                 var newSlot = Instantiate(_slotPrefab, _slotsPanel);
+                newSlot.UIHandler = this;
+                newSlot.SlotIndex = i;
                 _slots.Add(newSlot);
             }
             
