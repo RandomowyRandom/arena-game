@@ -5,13 +5,15 @@ using TMPro;
 using UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 namespace Inventory
 {
     public class CursorItem: MonoBehaviour
-    {
+    { 
         [SerializeField]
-        private SpriteRenderer _itemRenderer;
+        private Image _itemImage;
         
         [SerializeField]
         private TMP_Text _itemAmountText;
@@ -21,6 +23,11 @@ namespace Inventory
         private void Awake()
         {
             ItemSlotUI.OnItemSlotClicked += HandleSlotClick;
+        }
+
+        private void Start()
+        {
+            SetItem(null);
         }
 
         private void OnDestroy()
@@ -129,13 +136,15 @@ namespace Inventory
         {
             if (item == null)
             {
-                _itemRenderer.sprite = null;
+                _itemImage.sprite = null;
+                _itemImage.color = Color.clear;
                 _itemAmountText.text = string.Empty;
                 _heldItem = null;
                 return;
             }
             
-            _itemRenderer.sprite = item.ItemData.Icon;
+            _itemImage.sprite = item.ItemData.Icon;
+            _itemImage.color = Color.white;
             _itemAmountText.text = item.Amount > 1 ? item.Amount.ToString() : string.Empty;
             
             _heldItem = item;
