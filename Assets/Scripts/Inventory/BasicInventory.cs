@@ -110,16 +110,17 @@ namespace Inventory
             return bestSlotIndex;
         }
         
-        public bool HasItem(Item item)
+        public bool HasItem(Item item, out Item howMuchHas)
         {
             var itemData = item.ItemData;
-            var itemAmount = (
-                from inventoryItem in _items 
-                where inventoryItem != null 
-                where inventoryItem.ItemData == itemData 
-                select inventoryItem.Amount).Sum();
+            
+            var amount = _items
+                .Where(inventoryItem => inventoryItem != null && inventoryItem.ItemData == itemData)
+                .Sum(inventoryItem => inventoryItem.Amount);
 
-            return itemAmount >= item.Amount;
+            howMuchHas = new Item(itemData, amount);
+            
+            return amount >= item.Amount;
         }
 
         public bool HasSpaceForItem(Item item)

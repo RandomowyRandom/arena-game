@@ -26,10 +26,6 @@ namespace Player
         
         [SerializeField]
         private ItemDatabase _itemDatabase;
-        
-        [SerializeField]
-        private ItemWorld _itemWorldPrefab;
-        
         public IInventory Inventory => this;
 
         public event Action OnInventoryChanged;
@@ -40,17 +36,11 @@ namespace Player
         private void Awake()
         {
             ServiceLocator.ServiceLocator.Instance.Register<IPlayerInventory>(this);
-            
-            _inventory.OnInventoryChanged += OnInventoryChanged;
-            _hotbar.OnInventoryChanged += OnInventoryChanged;
         }
-
+        
         private void OnDestroy()
         {
             ServiceLocator.ServiceLocator.Instance.Deregister<IPlayerInventory>();
-            
-            _inventory.OnInventoryChanged -= OnInventoryChanged;
-            _hotbar.OnInventoryChanged -= OnInventoryChanged;
         }
 
         public Item TryAddItem(Item item)
@@ -60,6 +50,7 @@ namespace Player
             if (rest != null)
                 rest = _hotbar.TryAddItem(rest);
             
+            OnInventoryChanged?.Invoke();
             return rest;
         }
 
@@ -70,12 +61,21 @@ namespace Player
             if (rest != null)
                 rest = _hotbar.TryRemoveItem(rest);
             
+            OnInventoryChanged?.Invoke();
+
             return rest;
         }
 
-        public bool HasItem(Item item)
+        public bool HasItem(Item item, out Item howMuchHas)
         {
-            return _inventory.HasItem(item) || _hotbar.HasItem(item); 
+            _inventory.HasItem(item, out var howMuchHasInInventory);
+            _hotbar.HasItem(item, out var howMuchHasInHotbar);
+            
+            var totalAmount = howMuchHasInInventory.Amount + howMuchHasInHotbar.Amount;
+            
+            howMuchHas = new Item(item.ItemData, totalAmount);
+            
+            return totalAmount >= item.Amount;
         }
 
         public bool HasSpaceForItem(Item item)

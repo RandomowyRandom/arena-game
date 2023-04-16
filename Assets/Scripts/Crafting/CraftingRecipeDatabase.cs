@@ -19,7 +19,7 @@ namespace Crafting
             return _recipes.FirstOrDefault(recipe => recipe.Key == key);
         }
         
-        public List<CraftingRecipe> GetAvailableRecipes(IInventory inventory)
+        public List<CraftingRecipe> GetAvailableRecipes(IInventory inventory, bool excludeCraftable = false)
         {
             var itemsInInventory = inventory.Items
                 .Where(item => item != null)
@@ -27,19 +27,29 @@ namespace Crafting
             
             var recipes = new List<CraftingRecipe>();
             
+            var craftableRecipes = GetCraftableRecipes(inventory);
+            
             foreach (var recipe in _recipes)
             {
                 var ingredients = recipe.Ingredients;
                 
                 var isRecipeAvailable = ingredients.Any(ingredient => itemsInInventory.Contains(ingredient.ItemData));
 
-                if (isRecipeAvailable) 
-                    recipes.Add(recipe);
+                if (!isRecipeAvailable)
+                    continue;
+                
+                if(excludeCraftable && craftableRecipes.Contains(recipe))
+                    continue;
+                    
+                recipes.Add(recipe);
             }
             
-            return recipes;
+            return recipes.OrderByDescending(
+                    recipe => recipe.Ingredients
+                        .Sum(ingredient => ingredient.Amount))
+                        .ToList();
         }
-        
+
         public List<CraftingRecipe> GetCraftableRecipes(IInventory inventory)
         {
             var items = inventory.Items
@@ -58,8 +68,11 @@ namespace Crafting
                 if (isRecipeAvailable)
                     recipes.Add(recipe);
             }
-            
-            return recipes;
+
+            return recipes.OrderByDescending(
+                recipe => recipe.Ingredients
+                    .Sum(ingredient => ingredient.Amount))
+                    .ToList();
         }
 
         [InfoBox("Runtime tests", InfoMessageType.Warning)]
