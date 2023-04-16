@@ -22,6 +22,6 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _displayName: Stick
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: c6aeb125cef4f324f9303aaad08c9f0d, type: 3}
   _description: Piece of wood
   _maxStack: 64

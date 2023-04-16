@@ -1,11 +1,8 @@
-﻿using System;
-using Inventory.Interfaces;
-using Items;
+﻿using Items;
 using TMPro;
 using UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Inventory
