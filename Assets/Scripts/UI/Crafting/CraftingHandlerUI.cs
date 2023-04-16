@@ -55,6 +55,7 @@ namespace UI.Crafting
             var recipe = _recipeProvider.GetRecipe();
 
             _resultImage.sprite = recipe != null ? recipe.Result.ItemData.Icon : null;
+            _resultImage.color = recipe == null ? Color.clear : Color.white;
             
             foreach (Transform child in _ingredientsPanel)
             {
