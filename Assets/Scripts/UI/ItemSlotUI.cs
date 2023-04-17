@@ -15,7 +15,7 @@ namespace UI
         [SerializeField]
         private TMP_Text _itemAmountText;
         
-        public InventoryUI UIHandler { get; set; }
+        public InstantiateSlotsInventoryUI UIHandler { get; set; }
         public int SlotIndex { get; set; }
         public Item Item => UIHandler.Inventory.GetItem(SlotIndex);
         

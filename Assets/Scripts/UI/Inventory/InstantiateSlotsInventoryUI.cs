@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace UI
 {
-    public class InventoryUI: SerializedMonoBehaviour
+    public class InstantiateSlotsInventoryUI: SerializedMonoBehaviour, IInventoryUI
     {
         [SerializeField]
         private RectTransform _slotsPanel;
@@ -35,7 +35,7 @@ namespace UI
             DeregisterInventory();
         }
 
-        private void RegisterInventory(IInventory inventory)
+        public void RegisterInventory(IInventory inventory)
         {
             _inventory = inventory;
             _inventory.OnInventoryChanged += UpdateUI;
@@ -61,7 +61,7 @@ namespace UI
             UpdateUI();
         }
         
-        private void DeregisterInventory()
+        public void DeregisterInventory()
         {
             if (_inventory == null)
                 return;
@@ -69,7 +69,7 @@ namespace UI
             _inventory.OnInventoryChanged -= UpdateUI;
         }
 
-        private void UpdateUI()
+        public void UpdateUI()
         {
             for (var i = 0; i < _inventory.Items.Length; i++)
             {

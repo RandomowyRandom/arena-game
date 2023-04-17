@@ -17,7 +17,7 @@ namespace Player
         private IInventory _hotbarInventory;
         
         [OdinSerialize]
-        private InventoryUI _hotbarUI;
+        private InstantiateSlotsInventoryUI _hotbarUI;
         
         public event Action OnUsableItemChanged;
 
