@@ -85,12 +85,18 @@ namespace Inventory
 
         public void SetItem(int index, Item item)
         {
-            if(item.ItemData is not Equipment equipmentItem)
+            if (item == null || item.ItemData == null)
+            {
+                _items[index] = null;
+                OnInventoryChanged?.Invoke();
+                
+                return;
+            }
+            
+            if(item.ItemData is not Equipment)
                 return;
             
-            var slotIndex = GetSlotIndexForEquipment(equipmentItem);
-            
-            _items[slotIndex] = item;
+            _items[index] = item;
             
             OnInventoryChanged?.Invoke();
         }
