@@ -10,5 +10,6 @@
         Entity,
         GearRarity,
         CraftingRecipe,
+        Accessory,
     }
 }

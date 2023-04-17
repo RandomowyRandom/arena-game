@@ -8,17 +8,25 @@ namespace Inventory
 {
     public class EquipmentInventory: MonoBehaviour, IInventory
     {
-        private Item[] _items = new Item[3];
+        [SerializeField]
+        private int _capacity;
+
+        private Item[] _items;
         
         public event Action OnInventoryChanged;
-        public int Capacity => _items.Length;
+        public int Capacity => _capacity;
         public bool IsFull => _items.Length >= Capacity;
         public Item[] Items => _items;
         
         private Item HelmetSlot => _items[0];
         private Item ChestplateSlot => _items[1];
         private Item LeggingsSlot => _items[2];
-        
+
+        private void Awake()
+        {
+            _items = new Item[_capacity];
+        }
+
         public Item TryAddItem(Item item)
         {
             if(item.ItemData is not Equipment equipmentItem)
