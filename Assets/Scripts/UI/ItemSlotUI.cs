@@ -1,5 +1,8 @@
 ﻿using System;
+using Inventory.Interfaces;
 using Items;
+using Items.ItemDataSystem;
+using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -7,7 +10,7 @@ using UnityEngine.UI;
 
 namespace UI
 {
-    public class ItemSlotUI: MonoBehaviour, IPointerDownHandler
+    public class ItemSlotUI: SerializedMonoBehaviour, IPointerDownHandler
     {
         [SerializeField]
         private Image _itemImage;
@@ -15,8 +18,17 @@ namespace UI
         [SerializeField]
         private TMP_Text _itemAmountText;
         
-        public InventoryUI UIHandler { get; set; }
+        [Space(10)]
+        [SerializeField]
+        private bool _equipmentLock;
+        
+        [SerializeField] [ShowIf(nameof(_equipmentLock))]
+        private EquipmentType _equipmentType;
+        public IInventoryUI UIHandler { get; set; }
         public int SlotIndex { get; set; }
+        public bool EquipmentLock => _equipmentLock;
+        public EquipmentType EquipmentType => _equipmentType;
+        
         public Item Item => UIHandler.Inventory.GetItem(SlotIndex);
         
         public static event Action<ItemSlotUI, PointerEventData> OnItemSlotClicked; 

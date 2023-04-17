@@ -18,6 +18,8 @@ namespace Items.ItemDataSystem
         
         [SerializeField]
         private EquipmentType _equipmentType;
+        
+        public EquipmentType EquipmentType => _equipmentType;
 
         public StatsData GetStatsData(GearRarity rarity)
         {

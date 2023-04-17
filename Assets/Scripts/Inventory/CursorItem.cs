@@ -1,4 +1,5 @@
 ﻿using Items;
+using Items.ItemDataSystem;
 using TMPro;
 using UI;
 using UnityEngine;
@@ -43,6 +44,18 @@ namespace Inventory
             if(!slotHasItem && !cursorHasItem)
                 return;
 
+            if (_heldItem != null)
+            {
+                if(slot.EquipmentLock && _heldItem.ItemData is not Equipment)
+                    return;
+                
+                if (slot.EquipmentLock && _heldItem.ItemData is Equipment equipment &&
+                    equipment.EquipmentType != slot.EquipmentType)
+                      
+                    return;
+            }
+            
+            
             switch (eventData.button)
             {
                 case PointerEventData.InputButton.Left:
