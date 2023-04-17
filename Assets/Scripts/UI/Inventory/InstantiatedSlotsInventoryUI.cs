@@ -14,7 +14,8 @@ namespace UI
         
         [SerializeField]
         private List<ItemSlotUI> _slots = new();
-        
+        public IInventory Inventory => _inventory;
+
         private IInventory _inventory;
 
         private void Start()
@@ -26,7 +27,7 @@ namespace UI
         {
             DeregisterInventory();
         }
-
+        
         public void RegisterInventory(IInventory inventory)
         {
             if (inventory.Items.Length != _slots.Count)
@@ -36,8 +37,17 @@ namespace UI
             }
             
             _inventory = inventory;
-            
+
+            for (var i = 0; i < _slots.Count; i++)
+            {
+                var itemSlotUI = _slots[i];
+                
+                itemSlotUI.UIHandler = this;
+                itemSlotUI.SlotIndex = i;
+            }
+
             _inventory.OnInventoryChanged += UpdateUI;
+            UpdateUI();
         }
 
         public void DeregisterInventory()
