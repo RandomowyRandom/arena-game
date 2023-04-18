@@ -111,14 +111,12 @@ namespace Player
                 return new StatsData();
 
             var itemInSlot = _hotbarInventory.GetItem(_currentHotbarSlot);
-            
-            var rarityItem = itemInSlot as RarityItem;
 
-            if (rarityItem == null)
+            if (!itemInSlot.IsRarityItem)
                 return new StatsData();
             
             if (usableItem is IStatsDataProvider statsDataProvider)
-                return statsDataProvider.GetStatsData(rarityItem.GearRarity);
+                return statsDataProvider.GetStatsData(itemInSlot.GearRarity);
 
             return new StatsData();
         }

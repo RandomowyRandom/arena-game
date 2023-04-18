@@ -135,7 +135,12 @@ namespace Player
                 Debug.Log($"No item with key {key} found");
             }
             
-            var result = TryAddItem(new RarityItem(itemData, amount, gearRarity));
+            var itemToAdd = new Item(itemData, amount)
+            {
+                GearRarity = gearRarity
+            };
+            
+            var result = TryAddItem(itemToAdd);
             
             Debug.Log($"{nameof(BasicInventory)}: {(result == null ? "Added" : "Failed to add")} {amount} {gearRarity.name} {key}");
         }
