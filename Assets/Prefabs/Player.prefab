@@ -193,10 +193,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 675abbd8999445c9a5b2d1986e93ca85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _statsDataProviders
+      Entry: 6
+      Data: 
   _defaultStats:
     _damage: 3
     _speed: 5
-    _fireRate: 0.5
+    _fireRate: 1
     _maxHealth: 100
     _defense: 0
 --- !u!114 &233742928
@@ -503,7 +515,6 @@ MonoBehaviour:
       Entry: 10
       Data: 1
   _itemDatabase: {fileID: 11400000, guid: 4a30b8bde1f7ccb4d95eec975755eff7, type: 2}
-  _itemWorldPrefab: {fileID: 4956166285135844185, guid: 4909a5cc932cf8b4a8f682ba5aecb08a, type: 3}
 --- !u!1 &8618184906701007138
 GameObject:
   m_ObjectHideFlags: 0

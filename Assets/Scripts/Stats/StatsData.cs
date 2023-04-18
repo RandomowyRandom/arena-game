@@ -29,6 +29,15 @@ namespace Stats
             _defense = defense;
         }
 
+        public StatsData()
+        {
+            _damage = 0;
+            _speed = 0;
+            _fireRate = 0;
+            _maxHealth = 0;
+            _defense = 0;
+        }
+
         public float Damage => _damage;
         public float Speed => _speed;
 
@@ -37,5 +46,27 @@ namespace Stats
         public float MaxHealth => _maxHealth;
         
         public float Defense => _defense;
+
+        public static StatsData operator +(StatsData a, StatsData b)
+        {
+            return new StatsData(
+                a.Damage + b.Damage,
+                a.Speed + b.Speed,
+                a.FireRate + b.FireRate,
+                a.MaxHealth + b.MaxHealth,
+                a.Defense + b.Defense
+            );
+        }
+        
+        public static StatsData operator -(StatsData a, StatsData b)
+        {
+            return new StatsData(
+                a.Damage - b.Damage,
+                a.Speed - b.Speed,
+                a.FireRate - b.FireRate,
+                a.MaxHealth - b.MaxHealth,
+                a.Defense - b.Defense
+            );
+        }
     }
 }

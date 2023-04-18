@@ -1,5 +1,6 @@
 ﻿using System;
 using Items.ItemDataSystem;
+using Items.RaritySystem;
 using UnityEngine;
 
 namespace Items
@@ -19,6 +20,13 @@ namespace Items
             Amount = amount;
         }
         
+        public Item(ItemData itemData, int amount, GearRarity gearRarity)
+        {
+            ItemData = itemData;
+            Amount = amount;
+            GearRarity = gearRarity;
+        }
+        
         // for odin serialization
         public Item(){}
 
@@ -33,8 +41,10 @@ namespace Items
             get => _amount;
             protected set => _amount = value;
         }
+        
+        public GearRarity GearRarity { get; set; }
 
-        public bool IsRarityItem => this is RarityItem;
+        public bool IsRarityItem => GearRarity != null;
 
         public override string ToString()
         {
