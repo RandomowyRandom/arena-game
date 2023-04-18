@@ -1,4 +1,5 @@
 ﻿using System;
+using Cysharp.Threading.Tasks;
 using EntitySystem;
 using Items.Abstraction;
 using Items.ItemDataSystem;
@@ -19,10 +20,12 @@ namespace Items.Effects
         
         [SerializeField]
         private ForceMode2D _forceMode = ForceMode2D.Impulse;
-        public void OnUse(IItemUser user, UsableItem item)
+        public UniTask OnUse(IItemUser user, UsableItem item)
         {
             var projectile = Object
                 .Instantiate(_projectilePrefab, user.GameObject.transform.position, Quaternion.identity);
+
+            Debug.Log($"Instantiated projectile at {user.GameObject.transform.position}");
             
             var mousePosition = GetMousePosition();
             var direction = (mousePosition - (Vector2) user.GameObject.transform.position).normalized;
@@ -30,6 +33,8 @@ namespace Items.Effects
             
             var projectileDamageSource = projectile.GetComponent<IDamageSource>();
             projectileDamageSource.Source = user.GameObject;
+            
+            return UniTask.CompletedTask;
         }
         
         private Vector2 GetMousePosition()

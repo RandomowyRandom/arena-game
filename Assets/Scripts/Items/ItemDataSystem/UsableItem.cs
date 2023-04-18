@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Common.Attributes;
+using Cysharp.Threading.Tasks;
 using Items.Abstraction;
 using Sirenix.Serialization;
 using UnityEngine;
@@ -17,11 +18,11 @@ namespace Items.ItemDataSystem
         
         public bool ConsumeOnUse => _consumeOnUse;
         
-        public void OnUse(IItemUser user)
+        public async UniTask OnUse(IItemUser user)
         {
             foreach (var effect in _effects)
             {
-                effect.OnUse(user, this);
+                await effect.OnUse(user, this);
             }
         }
     }
