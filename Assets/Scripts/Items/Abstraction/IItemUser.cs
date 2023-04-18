@@ -6,6 +6,6 @@ namespace Items.Abstraction
     public interface IItemUser
     {
         public GameObject GameObject { get; }
-        public void UseItem(UsableItem item);
+        public bool TryUseItem(UsableItem item);
     }
 }

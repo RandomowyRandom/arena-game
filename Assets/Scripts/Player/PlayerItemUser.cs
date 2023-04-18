@@ -19,19 +19,29 @@ namespace Player
         
         public GameObject GameObject => gameObject;
         
-        public void UseItem(UsableItem item)
+        private float _useDelay;
+        
+        public bool TryUseItem(UsableItem item)
         {
+            if(_useDelay > 0)
+                return false;
+            
             item.OnUse(this);
+
+            _useDelay = ServiceLocator.ServiceLocator.Instance.Get<IPlayerStats>().GetStatsData().FireRate;
+            return true;
         }
 
         private void Update()
         {
-            if (!Mouse.current.leftButton.wasPressedThisFrame)
+            _useDelay -= Time.deltaTime;
+            
+            if (!Mouse.current.leftButton.isPressed)
                 return;
             
             var usableItem = _usableItemProvider.GetUsableItem();
             if(usableItem != null)
-                UseItem(usableItem);
+                TryUseItem(usableItem);
         }
 
         #region QC
@@ -45,7 +55,7 @@ namespace Player
                 return;
             }
 
-            UseItem(_usableItemProvider.GetUsableItem());
+            TryUseItem(_usableItemProvider.GetUsableItem());
         }
 
         #endregion

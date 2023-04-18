@@ -1,17 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using Inventory.Interfaces;
+using Items;
 using Items.ItemDataSystem;
+using Items.RaritySystem;
 using Player.Interfaces;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
+using Stats;
+using Stats.Interfaces;
 using UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Player
 {
-    public class PlayerHotbarHandler: SerializedMonoBehaviour, IUsableItemProvider
+    public class PlayerHotbarHandler: SerializedMonoBehaviour, IUsableItemProvider, IStatsDataProvider
     {
         [OdinSerialize]
         private IInventory _hotbarInventory;
@@ -97,6 +101,26 @@ namespace Player
                     SetCurrentHotbarSlot(_currentHotbarSlot == 0 ? LastHotbarSlot : _currentHotbarSlot - 1);
                     break;
             }
+        }
+
+        public StatsData GetStatsData(GearRarity gearRarity)
+        {
+            var usableItem = GetUsableItem();
+
+            if (usableItem == null)
+                return new StatsData();
+
+            var itemInSlot = _hotbarInventory.GetItem(_currentHotbarSlot);
+            
+            var rarityItem = itemInSlot as RarityItem;
+
+            if (rarityItem == null)
+                return new StatsData();
+            
+            if (usableItem is IStatsDataProvider statsDataProvider)
+                return statsDataProvider.GetStatsData(rarityItem.GearRarity);
+
+            return new StatsData();
         }
     }
 }

@@ -5,7 +5,6 @@ namespace Player.Interfaces
 {
     public interface IPlayerStats: IService
     {
-        public void SetStats(StatsData statsData);
         public StatsData GetStatsData();
     }
 }

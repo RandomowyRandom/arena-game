@@ -2,11 +2,14 @@
 using Inventory.Interfaces;
 using Items;
 using Items.ItemDataSystem;
+using Items.RaritySystem;
+using Stats;
+using Stats.Interfaces;
 using UnityEngine;
 
 namespace Inventory
 {
-    public class EquipmentInventory: MonoBehaviour, IInventory
+    public class EquipmentInventory: MonoBehaviour, IInventory, IStatsDataProvider
     {
         [SerializeField]
         private int _capacity;
@@ -130,6 +133,25 @@ namespace Inventory
                 EquipmentType.Boots => 2,
                 _ => throw new ArgumentOutOfRangeException()
             };
+        }
+
+        public StatsData GetStatsData(GearRarity gearRarity)
+        {
+            var statsData = new StatsData();
+            
+            foreach (var item in _items)
+            {
+                if (item?.ItemData is not IStatsDataProvider statsDataProvider) 
+                    continue;
+                
+                if(item is not RarityItem rarityItem)
+                    continue;
+                
+                var itemStatsData = statsDataProvider.GetStatsData(rarityItem.GearRarity);
+                statsData += itemStatsData;
+            }
+
+            return statsData;
         }
     }
 }
