@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Inventory.Interfaces;
 using Items;
+using Items.Abstraction;
 using Items.ItemDataSystem;
 using Items.RaritySystem;
 using Player.Interfaces;
@@ -19,6 +20,9 @@ namespace Player
     {
         [OdinSerialize]
         private IInventory _hotbarInventory;
+        
+        [OdinSerialize]
+        private IItemUseLock _itemUseLock;
         
         [OdinSerialize]
         private InstantiateSlotsInventoryUI _hotbarUI;
@@ -90,6 +94,9 @@ namespace Player
 
         private void Update()
         {
+            if(_itemUseLock.IsLocked)
+                return;
+            
             var input = Mouse.current.scroll.y.ReadValue();
 
             switch (input)

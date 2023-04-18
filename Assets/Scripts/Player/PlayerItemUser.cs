@@ -1,4 +1,5 @@
 ﻿using System;
+using Cysharp.Threading.Tasks;
 using Items;
 using Items.Abstraction;
 using Items.ItemDataSystem;
@@ -12,22 +13,28 @@ using UnityEngine.InputSystem;
 
 namespace Player
 {
-    public class PlayerItemUser: SerializedMonoBehaviour, IItemUser
+    public class PlayerItemUser: SerializedMonoBehaviour, IItemUser, IItemUseLock
     {
         [OdinSerialize]
         private IUsableItemProvider _usableItemProvider;
         
+        public bool IsLocked => _useLock || _useDelay > 0;
+
         public GameObject GameObject => gameObject;
         
         private float _useDelay;
         
-        public bool TryUseItem(UsableItem item)
+        private bool _useLock;
+        
+        public async UniTask<bool> TryUseItem(UsableItem item)
         {
-            if(_useDelay > 0)
+            if (IsLocked)
                 return false;
-            
-            item.OnUse(this);
 
+            _useLock = true;
+            await item.OnUse(this);
+            _useLock = false;
+            
             _useDelay = ServiceLocator.ServiceLocator.Instance.Get<IPlayerStats>().GetStatsData().FireRate;
             return true;
         }
@@ -41,23 +48,7 @@ namespace Player
             
             var usableItem = _usableItemProvider.GetUsableItem();
             if(usableItem != null)
-                TryUseItem(usableItem);
+                TryUseItem(usableItem).Forget();
         }
-
-        #region QC
-
-        [Command("use-item")] [UsedImplicitly]
-        private void UseItemCommand()
-        {
-            if (_usableItemProvider.GetUsableItem() == null)
-            {
-                Debug.Log("No item selected");
-                return;
-            }
-
-            TryUseItem(_usableItemProvider.GetUsableItem());
-        }
-
-        #endregion
     }
 }
