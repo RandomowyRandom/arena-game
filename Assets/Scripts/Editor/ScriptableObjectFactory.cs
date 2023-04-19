@@ -38,6 +38,10 @@ namespace Editor
         [ShowInInspector]
         private ScriptableType _scriptableType;
         
+        [Space(20)]
+        [ShowInInspector]
+        private bool _focusOnInstantiate = true;
+        
         [HorizontalGroup]
         [Button(ButtonSizes.Large)]
         public void Instantiate()
@@ -59,6 +63,12 @@ namespace Editor
 
             AssetDatabase.CreateAsset(instance, path);
             AssetDatabase.SaveAssets();
+
+            if (!_focusOnInstantiate) 
+                return;
+            
+            Selection.activeObject = instance;
+            EditorGUIUtility.PingObject(instance);
         }
 
         private static string GetPath(ScriptableType type, string objectName)

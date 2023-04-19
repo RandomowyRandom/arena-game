@@ -16,12 +16,6 @@ namespace Crafting
         [SerializeField]
         private CraftingRecipeDatabase _craftingRecipeDatabase;
 
-        [Space(50)]
-        [Header("====================TESTING====================")]
-        [InfoBox("This is just for testing purposes")]
-        [OdinSerialize]
-        private CraftingRecipe _testRecipe;
-        
         private IInventory _sourceInventory;
         
         public CraftingRecipeDatabase CraftingRecipeDatabase => _craftingRecipeDatabase;
@@ -50,7 +44,9 @@ namespace Crafting
             if (!CanCraft(recipe))
                 return false;
 
-            if (!_sourceInventory.HasSpaceForItem(recipe.Result))
+            var result = recipe.Result;
+
+            if (!_sourceInventory.HasSpaceForItem(result))
                 return false;
 
             var ingredients = recipe.Ingredients;
@@ -63,17 +59,9 @@ namespace Crafting
                     return false;
             }
             
-            _sourceInventory.TryAddItem(recipe.Result);
+            _sourceInventory.TryAddItem(result);
             
             return true;
-        }
-
-        [Button]
-        private void Craft()
-        {
-            var result = TryCraft(_testRecipe);
-            
-            Debug.Log($"Crafting result: {result} for item: {_testRecipe.Result.ItemData}");
         }
 
         #region QC

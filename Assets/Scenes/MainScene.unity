@@ -6188,16 +6188,12 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 11400000, guid: 22cc3d4644f5dbd4d9d492265d4fe637, type: 2}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: _testRecipe
-      Entry: 10
-      Data: 0
+    SerializationNodes: []
   _craftingRecipeDatabase: {fileID: 11400000, guid: 87d30faa21d28d440900a85926c2ba7e, type: 2}
 --- !u!212 &1774269325
 SpriteRenderer:

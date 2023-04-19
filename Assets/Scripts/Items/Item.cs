@@ -14,6 +14,10 @@ namespace Items
         [SerializeField]
         private int _amount;
 
+        [Space(5)]
+        [SerializeField]
+        private GearRarity _gearRarity;
+
         public Item(ItemData itemData, int amount)
         {
             ItemData = itemData;
@@ -42,13 +46,17 @@ namespace Items
             protected set => _amount = value;
         }
         
-        public GearRarity GearRarity { get; set; }
+        public GearRarity GearRarity
+        {
+            get => _gearRarity;
+            protected set => _gearRarity = value;
+        }
 
         public bool IsRarityItem => GearRarity != null;
 
         public override string ToString()
         {
-            return $"{ItemData.DisplayName} x{Amount}";
+            return IsRarityItem ? $"{GearRarity} {ItemData.DisplayName} x{Amount}" : $"{ItemData.DisplayName} x{Amount}";
         }
     }
 }
