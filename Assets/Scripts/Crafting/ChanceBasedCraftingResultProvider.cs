@@ -19,13 +19,13 @@ namespace Crafting
         {
             _possibleResults.Clear();
             var chances = new[] { 0.04f, 0.08f, 0.25f, 0.5f, 1f };
-            
-            for (var i = 0; i < chances.Length; i++)
+
+            foreach (var chance in chances)
             {
                 _possibleResults.Add(new ChanceBasedCraftingResult
                 {
-                    Chance = chances[i],
-                    Result = _possibleResults[i].Result
+                    Chance = chance,
+                    Result = null
                 });
             }
         }
