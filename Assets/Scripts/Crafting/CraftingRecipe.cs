@@ -15,17 +15,20 @@ namespace Crafting
         private List<Item> _ingredients;
         
         [OdinSerialize]
-        private Item _result;
+        private ICraftingResultProvider _resultProvider;
         
         public List<Item> Ingredients => _ingredients;
-        public Item Result => _result;
+        public Item Result => _resultProvider.GetResult();
         
         public string Key => name;
-        
+
         [InfoBox("Runtime only")]
         [Button]
         private void AddNeededItems()
         {
+            if(Application.isPlaying == false)
+                throw new System.Exception("This method is only for runtime use");
+            
             var playerInventory = ServiceLocator.ServiceLocator.Instance.Get<IPlayerInventory>();
 
             foreach (var ingredient in _ingredients)

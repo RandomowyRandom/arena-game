@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Inventory.Interfaces;
-using Items;
 using Items.Abstraction;
 using Items.ItemDataSystem;
 using Items.RaritySystem;
@@ -11,7 +10,6 @@ using Sirenix.Serialization;
 using Stats;
 using Stats.Interfaces;
 using UI;
-using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Player

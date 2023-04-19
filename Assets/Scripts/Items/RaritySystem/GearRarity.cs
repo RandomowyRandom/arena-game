@@ -13,5 +13,10 @@ namespace Items.RaritySystem
         private Color _color = Color.white;
         
         public Color Color => _color;
+
+        public override string ToString()
+        {
+            return name;
+        }
     }
 }

@@ -116,10 +116,11 @@ namespace Player
             for (var i = 0; i < Capacity; i++)
             {
                 var item = Items[i];
-                
-                Debug.Log(item == null
-                    ? $"{nameof(BasicInventory)}[{i}]: Empty"
-                    : $"{nameof(BasicInventory)}[{i}]: {item.ItemData.Key} x{item.Amount}");
+                var itemString = item == null
+                    ? $"{nameof(PlayerInventory)}[{i}]: Empty"
+                    : $"{nameof(PlayerInventory)}[{i}]: {item}";
+
+                Debug.Log(itemString);
             }
         }
         
@@ -134,11 +135,8 @@ namespace Player
             {
                 Debug.Log($"No item with key {key} found");
             }
-            
-            var itemToAdd = new Item(itemData, amount)
-            {
-                GearRarity = gearRarity
-            };
+
+            var itemToAdd = new Item(itemData, amount, gearRarity);
             
             var result = TryAddItem(itemToAdd);
             
