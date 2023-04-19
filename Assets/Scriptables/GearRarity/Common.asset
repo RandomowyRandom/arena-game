@@ -22,3 +22,4 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _color: {r: 0.3529412, g: 0.54901963, b: 0.6901961, a: 1}
+  _material: {fileID: 2100000, guid: 2a6411239859db54f9776c0cf85c161c, type: 2}
