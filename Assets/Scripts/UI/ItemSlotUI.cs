@@ -54,6 +54,8 @@ namespace UI
             
             if (item.Amount == 1)
                 _itemAmountText.text = string.Empty;
+            
+            _itemImage.material = item.IsRarityItem ? item.GearRarity.Material : null;
         }
     }
 }

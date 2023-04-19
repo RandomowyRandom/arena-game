@@ -250,7 +250,6 @@ GameObject:
   - component: {fileID: 7990950870048876401}
   - component: {fileID: 4485910763821257334}
   - component: {fileID: 4752989922213675846}
-  - component: {fileID: 7578980604161947114}
   m_Layer: 0
   m_Name: ItemSprite
   m_TagString: Untagged
@@ -306,7 +305,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fc5282db51b039f4da1e1ff46ae17b36, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -316,19 +315,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7578980604161947114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8275032131412591511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee158225ee1e59f4791627785501d950, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shaderTypes: 2
-  normalStrength: 5
-  normalSmoothing: 1
-  computingNormal: 0

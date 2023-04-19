@@ -157,6 +157,8 @@ namespace Inventory
             _itemImage.color = Color.white;
             _itemAmountText.text = item.Amount > 1 ? item.Amount.ToString() : string.Empty;
             
+            _itemImage.material = item.IsRarityItem ? item.GearRarity.Material : null;
+            
             _heldItem = item;
         }
     }

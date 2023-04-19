@@ -12,7 +12,12 @@ namespace Items.RaritySystem
         [SerializeField]
         private Color _color = Color.white;
         
+        [SerializeField]
+        private Material _material;
+        
         public Color Color => _color;
+        
+        public Material Material => _material;
 
         public override string ToString()
         {
