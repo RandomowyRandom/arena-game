@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Items;
+using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
 
@@ -12,6 +13,22 @@ namespace Crafting
     {
         [OdinSerialize]
         private List<ChanceBasedCraftingResult> _possibleResults;
+        
+        [Button]
+        private void SetDefaultChances()
+        {
+            _possibleResults.Clear();
+            var chances = new[] { 0.04f, 0.08f, 0.25f, 0.5f, 1f };
+            
+            for (var i = 0; i < chances.Length; i++)
+            {
+                _possibleResults.Add(new ChanceBasedCraftingResult
+                {
+                    Chance = chances[i],
+                    Result = _possibleResults[i].Result
+                });
+            }
+        }
         
         public Item GetResult()
         {
@@ -32,9 +49,17 @@ namespace Crafting
             [OdinSerialize] [Range(0f, 1f)]
             private float _chance;
             
-            public Item Result => _result;
-            
-            public float Chance => _chance;
+            public Item Result
+            {
+                get => _result;
+                set => _result = value;
+            }
+
+            public float Chance
+            {
+                get => _chance;
+                set => _chance = value;
+            }
         }
     }
 }
