@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Inventory.Interfaces;
+using Items;
 using Items.Abstraction;
 using Items.ItemDataSystem;
 using Items.RaritySystem;
@@ -33,7 +34,9 @@ namespace Player
         
         private bool _initialized;
         private readonly List<HotbarSlotUI> _hotbarSlots = new();
-
+        
+        public Item CurrentItem => _hotbarInventory.Items[_currentHotbarSlot];
+        
 
         private void Start()
         {
