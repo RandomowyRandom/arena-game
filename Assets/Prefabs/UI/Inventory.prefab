@@ -218,8 +218,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -7.2, y: -41.5}
-  m_SizeDelta: {x: 492.1799, y: 50}
+  m_AnchoredPosition: {x: 2.6005, y: -41.5}
+  m_SizeDelta: {x: 511.78, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &857415104
 CanvasRenderer:
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Item name here
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e269e050e3aea564c8c1ca95ac15de84, type: 2}
   m_sharedMaterial: {fileID: -2864140341360343227, guid: e269e050e3aea564c8c1ca95ac15de84, type: 2}
@@ -279,9 +279,9 @@ MonoBehaviour:
   m_fontSize: 42.15
   m_fontSizeBase: 42.15
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 42.15
   m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 8192
@@ -384,7 +384,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Item description here
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e269e050e3aea564c8c1ca95ac15de84, type: 2}
   m_sharedMaterial: {fileID: -2864140341360343227, guid: e269e050e3aea564c8c1ca95ac15de84, type: 2}
@@ -414,9 +414,9 @@ MonoBehaviour:
   m_fontSize: 29.1
   m_fontSizeBase: 29.1
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 29.1
   m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -541,6 +541,7 @@ GameObject:
   - component: {fileID: 1232689568956318967}
   - component: {fileID: 1232689568956318961}
   - component: {fileID: 1232689568956318962}
+  - component: {fileID: 6158518245513138362}
   - component: {fileID: 560638903290919005}
   m_Layer: 0
   m_Name: Inventory
@@ -608,6 +609,20 @@ MonoBehaviour:
       Data: 
   _slotsPanel: {fileID: 1232689569606193920}
   _slotPrefab: {fileID: -4050196497257775967, guid: 778eea64ba7112744b588ee40711e811, type: 3}
+--- !u!114 &6158518245513138362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232689568956318966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf96df581d924a91806a04ca68e0b7d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemNameText: {fileID: 857415103}
+  _itemDescriptionText: {fileID: 1684646980}
 --- !u!114 &560638903290919005
 MonoBehaviour:
   m_ObjectHideFlags: 0
