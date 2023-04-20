@@ -56,7 +56,8 @@ namespace Items
 
         public override string ToString()
         {
-            return IsRarityItem ? $"{GearRarity} {ItemData.DisplayName} x{Amount}" : $"{ItemData.DisplayName} x{Amount}";
+            var amount = Amount > 1 ? $"x{Amount.ToString()}" : string.Empty;
+            return IsRarityItem ? $"{GearRarity} {ItemData.DisplayName} {amount}" : $"{ItemData.DisplayName} {amount}";
         }
     }
 }

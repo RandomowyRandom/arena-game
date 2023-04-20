@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 namespace UI
 {
-    public class ItemSlotUI: SerializedMonoBehaviour, IPointerDownHandler
+    public class ItemSlotUI: SerializedMonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField]
         private Image _itemImage;
@@ -32,10 +32,24 @@ namespace UI
         public Item Item => UIHandler.Inventory.GetItem(SlotIndex);
         
         public static event Action<ItemSlotUI, PointerEventData> OnItemSlotClicked; 
+        public static event Action<ItemSlotUI, PointerEventData> OnMouseEnterItemSlot;
+        public static event Action<ItemSlotUI, PointerEventData> OnMouseExitItemSlot; 
 
+        
         public void OnPointerDown(PointerEventData eventData)
         {
             OnItemSlotClicked?.Invoke(this, eventData);
+        }
+        
+        
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            OnMouseEnterItemSlot?.Invoke(this, eventData);
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            OnMouseExitItemSlot?.Invoke(this, eventData);
         }
         
         public void SetItem(Item item)
