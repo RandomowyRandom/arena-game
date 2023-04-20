@@ -105,6 +105,9 @@ GameObject:
   - component: {fileID: 233742944}
   - component: {fileID: 233742934}
   - component: {fileID: 233742935}
+  - component: {fileID: 2005232551}
+  - component: {fileID: 2005232561}
+  - component: {fileID: 2005232562}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -196,14 +199,36 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 233742934}
+    - {fileID: 2005232551}
+    - {fileID: 2005232561}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
     - Name: _statsDataProviders
-      Entry: 6
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Stats.Interfaces.IStatsDataProvider,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
   _defaultStats:
     _damage: 3
@@ -392,13 +417,7 @@ MonoBehaviour:
       Entry: 12
       Data: 1
     - Name: 
-      Entry: 7
-      Data: 1|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: EntitySystem.IDamageable, Assembly-CSharp
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 13
@@ -427,7 +446,7 @@ MonoBehaviour:
   _onCollisionStay:
     m_PersistentCalls:
       m_Calls: []
-  _includeTriggers: 1
+  _includeTriggers: 0
 --- !u!114 &3334973587308119609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,6 +493,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 2282224341156010215}
+    - {fileID: 1679763617177288053}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -482,6 +502,9 @@ MonoBehaviour:
     - Name: _hotbarInventory
       Entry: 10
       Data: 0
+    - Name: _itemUseLock
+      Entry: 10
+      Data: 1
     - Name: _hotbarUI
       Entry: 6
       Data: 
@@ -515,6 +538,47 @@ MonoBehaviour:
       Entry: 10
       Data: 1
   _itemDatabase: {fileID: 11400000, guid: 4a30b8bde1f7ccb4d95eec975755eff7, type: 2}
+--- !u!114 &2005232551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4857834470512048523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e391722f6324cb49f946a18a7fa8d84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _capacity: 3
+--- !u!114 &2005232561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4857834470512048523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e391722f6324cb49f946a18a7fa8d84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _capacity: 5
+--- !u!114 &2005232562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4857834470512048523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade6983ea9a94ad9a146d10db5c819b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _regenAfterSeconds: 0.5
+  _maxStamina: 100
+  _staminaRegenerationSpeed: 3
 --- !u!1 &8618184906701007138
 GameObject:
   m_ObjectHideFlags: 0
