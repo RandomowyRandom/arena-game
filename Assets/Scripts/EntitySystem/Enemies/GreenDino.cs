@@ -27,8 +27,6 @@ namespace EntitySystem.Enemies
             if (target == null)
                 return;
             
-            // move towards target
-            
             const float speed = 40f;
             
             var direction = (target.transform.position - transform.position).normalized;
