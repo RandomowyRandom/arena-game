@@ -16,6 +16,11 @@ namespace WaveSystem
         [SerializeField]
         private Transform _playerTransform;
         
+        public event Action<Wave> OnWaveStart;
+        public event Action<Wave> OnWaveEnd;
+        public event Action<SubWave> OnSubWaveStart;
+        public event Action<SubWave> OnSubWaveEnd;
+        
         private Wave _wave;
         
         private void Awake()
@@ -52,15 +57,23 @@ namespace WaveSystem
 
         private async UniTask SpawnEnemies()
         {
+            OnWaveStart?.Invoke(_wave);
+            
             foreach (var subWave in _wave.SubWaves)
             {
+                OnSubWaveStart?.Invoke(subWave);
                 foreach (var entity in subWave.Entities)
                 {
                     Instantiate(entity, GetRandomPositionOutOfScreen(), Quaternion.identity);
                     
                     await UniTask.Delay(TimeSpan.FromSeconds(subWave.SpawnDelay));
                 }
+                
+                OnSubWaveEnd?.Invoke(subWave);
+                await UniTask.Delay(TimeSpan.FromSeconds(_wave.SubWaveDelay));
             }
+            
+            OnWaveEnd?.Invoke(_wave);
         }
 
         private Vector2 GetRandomPositionOutOfScreen()
