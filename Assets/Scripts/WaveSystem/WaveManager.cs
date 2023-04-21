@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using EntitySystem;
+using JetBrains.Annotations;
+using QFSW.QC;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -40,8 +42,6 @@ namespace WaveSystem
 
             Debug.Log(wave.ToString());
         }
-
-        [Button]
         public async void StartWave()
         {
             await SpawnEnemies();
@@ -80,5 +80,15 @@ namespace WaveSystem
             
             return _playerTransform.position + new Vector3(randomPosition.x, randomPosition.y, 0);
         }
+
+        #region QC
+
+        [Command("start-wave")] [UsedImplicitly]
+        private void CommandStartWave()
+        {
+            StartWave();
+        }
+
+        #endregion
     }
 }
