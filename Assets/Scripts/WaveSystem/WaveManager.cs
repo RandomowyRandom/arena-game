@@ -9,9 +9,8 @@ namespace WaveSystem
 {
     public class WaveManager: SerializedMonoBehaviour, IWaveManager
     {
-        [InfoBox("Test only")]
         [SerializeField]
-        private Entity _testEntity;
+        private WaveFactory _waveFactory;
         
         [SerializeField]
         private Transform _playerTransform;
@@ -27,16 +26,7 @@ namespace WaveSystem
         {
             ServiceLocator.ServiceLocator.Instance.Register<IWaveManager>(this);
             
-            var subWaves = new List<SubWave>
-            {
-                new (new List<Entity> {_testEntity, _testEntity, _testEntity}, 1f),
-                new (new List<Entity> {_testEntity, _testEntity, _testEntity}, 1f),
-                new (new List<Entity> {_testEntity, _testEntity, _testEntity}, 1f),
-                new (new List<Entity> {_testEntity, _testEntity, _testEntity}, 1f),
-                new (new List<Entity> {_testEntity, _testEntity, _testEntity}, 1f),
-                new (new List<Entity> {_testEntity, _testEntity, _testEntity}, 1f),
-            };
-            _wave = new Wave(subWaves, 2f);
+            SetWave(_waveFactory.GetWave());
         }
 
         private void OnDestroy()
@@ -47,12 +37,16 @@ namespace WaveSystem
         public void SetWave(Wave wave)
         {
             _wave = wave;
+
+            Debug.Log(wave.ToString());
         }
 
         [Button]
         public async void StartWave()
         {
             await SpawnEnemies();
+            
+            SetWave(_waveFactory.GetWave());
         }
 
         private async UniTask SpawnEnemies()

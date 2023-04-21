@@ -8,7 +8,7 @@ namespace EntitySystem.Enemies
 {
     [RequireComponent(typeof(Rigidbody2D))]
     [RequireComponent(typeof(Entity))]
-    public class GreenDino: SerializedMonoBehaviour
+    public class TargetFollowEntity: SerializedMonoBehaviour
     {
         [OdinSerialize]
         private IEntityTargetProvider _targetProvider;

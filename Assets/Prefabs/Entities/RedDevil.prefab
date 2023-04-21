@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1085831635514190003}
   - component: {fileID: 1085831635514190001}
   m_Layer: 0
-  m_Name: GreenDino
+  m_Name: RedDevil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1892211745, guid: b1b0415fd699ac749910ab815e767d9e, type: 3}
+  m_Sprite: {fileID: 1803247662, guid: b1b0415fd699ac749910ab815e767d9e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dccf123b5ba144aeba0a29fd3b0b9a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _data: {fileID: 11400000, guid: e27d9bafd3572e146babc1ddc701ef39, type: 2}
+  _data: {fileID: 11400000, guid: dd7e444f83bcf1746b5ccccad9182b62, type: 2}
 --- !u!61 &1085831635514189996
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -181,18 +181,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.015463233, y: 0.061047893}
+  m_Offset: {x: 0.016354918, y: 0.013557538}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.13636364}
-    oldSize: {x: 0.5, y: 0.6875}
+    pivot: {x: 0.5, y: 0.125}
+    oldSize: {x: 0.5, y: 0.5}
     newSize: {x: 2.56, y: 2.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.34492755, y: 0.1844508}
+  m_Size: {x: 0.22506356, y: 0.10200633}
   m_EdgeRadius: 0
 --- !u!50 &1085831635514190002
 Rigidbody2D:
@@ -258,7 +258,7 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 11400000, guid: fecb9f0fa428f604299c5d28ff36d38a, type: 2}
+    - {fileID: 11400000, guid: 8e5b2c0912d91704faa6eb87cd562097, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -357,7 +357,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6599137950370571373}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.001, y: 0.095, z: 0}
+  m_LocalPosition: {x: 0.018, y: 0.125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -405,7 +405,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d94cc70706583cc4da20cdf0e09aca95, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3aa6168c78dbb8841a2686e663599f12, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
