@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace EntitySystem
+namespace EntitySystem.Abstraction
 {
     public interface IDamageSource
     {

@@ -14,12 +14,6 @@ namespace EntitySystem
         [SerializeField]
         private string _key;
         
-        [Space(10)]
-        [OdinSerialize]
-        private DropTable _dropTable;
-        
-        public DropTable DropTable => _dropTable;
-
         public float MaxHealth => _maxHealth;
         
         public string Key => _key;

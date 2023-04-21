@@ -1,6 +1,7 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
 using EntitySystem;
+using EntitySystem.Abstraction;
 using Items.Abstraction;
 using Items.ItemDataSystem;
 using UnityEngine;

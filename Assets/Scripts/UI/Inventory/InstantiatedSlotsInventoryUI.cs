@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Inventory.Interfaces;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
 
-namespace UI
+namespace UI.Inventory
 {
     public class InstantiatedSlotsInventoryUI: SerializedMonoBehaviour, IInventoryUI
     {
