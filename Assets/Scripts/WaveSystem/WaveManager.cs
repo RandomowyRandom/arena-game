@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using EntitySystem;
+using JetBrains.Annotations;
+using QFSW.QC;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -9,9 +11,8 @@ namespace WaveSystem
 {
     public class WaveManager: SerializedMonoBehaviour, IWaveManager
     {
-        [InfoBox("Test only")]
         [SerializeField]
-        private Entity _testEntity;
+        private WaveFactory _waveFactory;
         
         [SerializeField]
         private Transform _playerTransform;
@@ -27,16 +28,7 @@ namespace WaveSystem
         {
             ServiceLocator.ServiceLocator.Instance.Register<IWaveManager>(this);
             
-            var subWaves = new List<SubWave>
-            {
-                new (new List<Entity> {_testEntity, _testEntity, _testEntity}, 1f),
-                new (new List<Entity> {_testEntity, _testEntity, _testEntity}, 1f),
-                new (new List<Entity> {_testEntity, _testEntity, _testEntity}, 1f),
-                new (new List<Entity> {_testEntity, _testEntity, _testEntity}, 1f),
-                new (new List<Entity> {_testEntity, _testEntity, _testEntity}, 1f),
-                new (new List<Entity> {_testEntity, _testEntity, _testEntity}, 1f),
-            };
-            _wave = new Wave(subWaves, 2f);
+            SetWave(_waveFactory.GetWave());
         }
 
         private void OnDestroy()
@@ -47,12 +39,14 @@ namespace WaveSystem
         public void SetWave(Wave wave)
         {
             _wave = wave;
-        }
 
-        [Button]
+            Debug.Log(wave.ToString());
+        }
         public async void StartWave()
         {
             await SpawnEnemies();
+            
+            SetWave(_waveFactory.GetWave());
         }
 
         private async UniTask SpawnEnemies()
@@ -86,5 +80,15 @@ namespace WaveSystem
             
             return _playerTransform.position + new Vector3(randomPosition.x, randomPosition.y, 0);
         }
+
+        #region QC
+
+        [Command("start-wave")] [UsedImplicitly]
+        private void CommandStartWave()
+        {
+            StartWave();
+        }
+
+        #endregion
     }
 }

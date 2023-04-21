@@ -15555,7 +15555,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  _testEntity: {fileID: 1085831635514189995, guid: 3497570ac769a074890dd1de261120c8, type: 3}
+  _waveFactory: {fileID: 11400000, guid: be8e0b8e7c517eb4aa4a955aa7cf0a9e, type: 2}
   _playerTransform: {fileID: 233742925}
 --- !u!1 &1724111568
 GameObject:

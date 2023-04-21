@@ -5,16 +5,19 @@ namespace WaveSystem
 {
     public class SubWave
     {
-        private readonly List<Entity> _entities;
-        private readonly float _spawnDelay;
-        
         public SubWave(List<Entity> entities, float spawnDelay)
         {
-            _entities = entities;
-            _spawnDelay = spawnDelay;
+            Entities = entities;
+            SpawnDelay = spawnDelay;
+        }
+
+        public SubWave()
+        {
+            Entities = new ();
         }
         
-        public List<Entity> Entities => _entities;
-        public float SpawnDelay => _spawnDelay;
+        public List<Entity> Entities { get; set; }
+
+        public float SpawnDelay { get; set; }
     }
 }

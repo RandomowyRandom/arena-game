@@ -11,5 +11,6 @@
         GearRarity,
         CraftingRecipe,
         Accessory,
+        WaveFactory,
     }
 }
