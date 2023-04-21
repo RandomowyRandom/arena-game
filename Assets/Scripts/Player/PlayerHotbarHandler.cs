@@ -11,6 +11,7 @@ using Sirenix.Serialization;
 using Stats;
 using Stats.Interfaces;
 using UI;
+using UI.Inventory;
 using UnityEngine.InputSystem;
 
 namespace Player

@@ -1,14 +1,10 @@
-﻿using System;
-using Cysharp.Threading.Tasks;
-using DG.Tweening;
-using Player;
-using Player.Interfaces;
+﻿using Player;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using TMPro;
 using UnityEngine;
 
-namespace UI
+namespace UI.Inventory
 {
     public class HotbarItemPreview: SerializedMonoBehaviour
     {
