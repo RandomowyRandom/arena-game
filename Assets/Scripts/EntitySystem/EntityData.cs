@@ -18,8 +18,6 @@ namespace EntitySystem
         [OdinSerialize]
         private DropTable _dropTable;
         
-        public DropTable DropTable => _dropTable;
-
         public float MaxHealth => _maxHealth;
         
         public string Key => _key;
