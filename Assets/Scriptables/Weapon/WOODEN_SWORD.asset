@@ -212,7 +212,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   _displayName: Wooden sword
-  _icon: {fileID: 21300000, guid: fc5282db51b039f4da1e1ff46ae17b36, type: 3}
+  _icon: {fileID: 21300000, guid: aa586a4dca7bb7a4682db44c84ed4bcd, type: 3}
   _description: Pure wood power
   _maxStack: 1
   _consumeOnUse: 0
