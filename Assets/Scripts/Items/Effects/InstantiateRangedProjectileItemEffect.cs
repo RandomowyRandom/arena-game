@@ -25,8 +25,6 @@ namespace Items.Effects
         {
             var projectile = Object
                 .Instantiate(_projectilePrefab, user.GameObject.transform.position, Quaternion.identity);
-
-            Debug.Log($"Instantiated projectile at {user.GameObject.transform.position}");
             
             var mousePosition = GetMousePosition();
             var direction = (mousePosition - (Vector2) user.GameObject.transform.position).normalized;

@@ -20,6 +20,9 @@ namespace Items.ItemDataSystem
         
         public async UniTask OnUse(IItemUser user)
         {
+            if(_effects == null)
+                return;
+            
             foreach (var effect in _effects)
             {
                 await effect.OnUse(user, this);

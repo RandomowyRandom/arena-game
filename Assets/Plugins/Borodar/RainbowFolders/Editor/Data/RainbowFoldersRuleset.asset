@@ -110,20 +110,8 @@ MonoBehaviour:
     IsBackgroundRecursive: 0
     IsHidden: 0
   - Type: 0
-    Key: Materials
-    Ordinal: 8
-    Priority: 0
-    IconType: 2070
-    SmallIcon: {fileID: 0}
-    LargeIcon: {fileID: 0}
-    IsIconRecursive: 0
-    BackgroundType: 0
-    BackgroundTexture: {fileID: 0}
-    IsBackgroundRecursive: 0
-    IsHidden: 0
-  - Type: 0
     Key: Meshes
-    Ordinal: 9
+    Ordinal: 8
     Priority: 0
     IconType: 2080
     SmallIcon: {fileID: 0}
@@ -135,7 +123,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 0
     Key: Prefabs
-    Ordinal: 10
+    Ordinal: 9
     Priority: 0
     IconType: 2610
     SmallIcon: {fileID: 0}
@@ -147,7 +135,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 0
     Key: Project
-    Ordinal: 11
+    Ordinal: 10
     Priority: 0
     IconType: 2120
     SmallIcon: {fileID: 0}
@@ -159,7 +147,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 0
     Key: RainbowFolders
-    Ordinal: 12
+    Ordinal: 11
     Priority: 0
     IconType: 2130
     SmallIcon: {fileID: 0}
@@ -171,7 +159,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 0
     Key: Scenes
-    Ordinal: 13
+    Ordinal: 12
     Priority: 0
     IconType: 2650
     SmallIcon: {fileID: 0}
@@ -183,7 +171,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 0
     Key: Scripts
-    Ordinal: 14
+    Ordinal: 13
     Priority: 0
     IconType: 2660
     SmallIcon: {fileID: 0}
@@ -195,7 +183,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 0
     Key: Shaders
-    Ordinal: 15
+    Ordinal: 14
     Priority: 0
     IconType: 2170
     SmallIcon: {fileID: 0}
@@ -207,7 +195,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 0
     Key: Terrains
-    Ordinal: 16
+    Ordinal: 15
     Priority: 0
     IconType: 2180
     SmallIcon: {fileID: 0}
@@ -219,7 +207,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 0
     Key: Textures
-    Ordinal: 17
+    Ordinal: 16
     Priority: 0
     IconType: 2190
     SmallIcon: {fileID: 0}
@@ -231,7 +219,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 0
     Key: Physics
-    Ordinal: 18
+    Ordinal: 17
     Priority: 0
     IconType: 2090
     SmallIcon: {fileID: 0}
@@ -243,7 +231,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 0
     Key: Flares
-    Ordinal: 19
+    Ordinal: 18
     Priority: 0
     IconType: 2050
     SmallIcon: {fileID: 0}
@@ -255,7 +243,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 0
     Key: Android
-    Ordinal: 20
+    Ordinal: 19
     Priority: 0
     IconType: 3000
     SmallIcon: {fileID: 0}
@@ -267,7 +255,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 0
     Key: iOS
-    Ordinal: 21
+    Ordinal: 20
     Priority: 0
     IconType: 3010
     SmallIcon: {fileID: 0}
@@ -279,7 +267,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 0
     Key: Windows
-    Ordinal: 22
+    Ordinal: 21
     Priority: 0
     IconType: 3040
     SmallIcon: {fileID: 0}
@@ -291,7 +279,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 0
     Key: Mac
-    Ordinal: 23
+    Ordinal: 22
     Priority: 0
     IconType: 3020
     SmallIcon: {fileID: 0}
@@ -303,7 +291,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 0
     Key: WebGL
-    Ordinal: 24
+    Ordinal: 23
     Priority: 0
     IconType: 3030
     SmallIcon: {fileID: 0}
@@ -315,7 +303,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 1
     Key: Assets/Sprites
-    Ordinal: 25
+    Ordinal: 24
     Priority: 0
     IconType: 2670
     SmallIcon: {fileID: 0}
@@ -327,7 +315,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 1
     Key: Assets/Scriptables
-    Ordinal: 26
+    Ordinal: 25
     Priority: 0
     IconType: 2620
     SmallIcon: {fileID: 0}
@@ -339,7 +327,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 1
     Key: Assets/Scriptables/Weapon
-    Ordinal: 27
+    Ordinal: 26
     Priority: 0
     IconType: 1
     SmallIcon: {fileID: 2800000, guid: f3a76ddba2e802441911063267bf14fc, type: 3}
@@ -351,7 +339,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 1
     Key: Assets/Scriptables/Material
-    Ordinal: 28
+    Ordinal: 27
     Priority: 0
     IconType: 1
     SmallIcon: {fileID: 2800000, guid: addb7c3223cd33f40a99f38f50e37a85, type: 3}
@@ -363,7 +351,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 1
     Key: Assets/Scriptables/Database
-    Ordinal: 29
+    Ordinal: 28
     Priority: 0
     IconType: 1
     SmallIcon: {fileID: 2800000, guid: 0ec032f0471d79b41b6cb58ae7815e84, type: 3}
@@ -375,7 +363,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 1
     Key: Assets/Sprites/Tilemaps
-    Ordinal: 30
+    Ordinal: 29
     Priority: 0
     IconType: 1070
     SmallIcon: {fileID: 0}
@@ -387,7 +375,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 1
     Key: Assets/Sprites/UI
-    Ordinal: 31
+    Ordinal: 30
     Priority: 0
     IconType: 3040
     SmallIcon: {fileID: 0}
@@ -399,7 +387,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 1
     Key: Assets/Scriptables/Entity
-    Ordinal: 32
+    Ordinal: 31
     Priority: 0
     IconType: 1
     SmallIcon: {fileID: 2800000, guid: c301528c5616e124992dffa70d69f5fc, type: 3}
@@ -411,7 +399,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 1
     Key: Assets/Scriptables/GearRarity
-    Ordinal: 33
+    Ordinal: 32
     Priority: 0
     IconType: 1
     SmallIcon: {fileID: 2800000, guid: 7fe4b323473374f4eb30ca54032e70fc, type: 3}
@@ -423,7 +411,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 1
     Key: Assets/Scriptables/CraftingRecipe
-    Ordinal: 34
+    Ordinal: 33
     Priority: 0
     IconType: 1
     SmallIcon: {fileID: 2800000, guid: 1691c169877d0384e94ccb906be5033f, type: 3}
@@ -435,7 +423,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 1
     Key: Assets/Scriptables/Armor
-    Ordinal: 35
+    Ordinal: 34
     Priority: 0
     IconType: 1
     SmallIcon: {fileID: 2800000, guid: b3dbed94c780eec479424e231884614f, type: 3}
@@ -447,7 +435,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 1
     Key: Assets/Scriptables/Accessory
-    Ordinal: 36
+    Ordinal: 35
     Priority: 0
     IconType: 1
     SmallIcon: {fileID: 2800000, guid: 308cc6ebf6fcebd418b33b0e09d02aae, type: 3}
