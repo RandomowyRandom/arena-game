@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using JetBrains.Annotations;
 using Player.Interfaces;
+using QFSW.QC;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using Stats;
@@ -44,5 +46,21 @@ namespace Player
                     (current, statsDataProvider) => current + statsDataProvider
                         .GetStatsData(null));
         }
+
+        #region QC
+
+        [Command("log-stats", "Logs the player's stats to the console.")] [UsedImplicitly]
+        private void CommandLogStats()
+        {
+            var statsData = GetStatsData();
+            Debug.Log($"Damage: {statsData.Damage}");
+            Debug.Log($"Speed: {statsData.Speed}");
+            Debug.Log($"FireRate: {statsData.FireRate}");
+            Debug.Log($"MaxHealth: {statsData.MaxHealth}");
+            Debug.Log($"Defense: {statsData.Defense}");
+        }
+        
+
+        #endregion
     }
 }

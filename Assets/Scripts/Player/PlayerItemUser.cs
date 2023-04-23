@@ -18,10 +18,14 @@ namespace Player
         [OdinSerialize]
         private IUsableItemProvider _usableItemProvider;
         
+        [SerializeField]
+        private GameObject _parentGameObject;
+        
         public bool IsLocked => _useLock || _useDelay > 0;
 
         public GameObject GameObject => gameObject;
-        
+        public GameObject ParentGameObject => _parentGameObject;
+
         private float _useDelay;
         
         private bool _useLock;

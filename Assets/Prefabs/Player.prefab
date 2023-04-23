@@ -682,6 +682,7 @@ MonoBehaviour:
     - Name: _usableItemProvider
       Entry: 10
       Data: 0
+  _parentGameObject: {fileID: 4857834470512048523}
 --- !u!1 &8879232156482763354
 GameObject:
   m_ObjectHideFlags: 0
