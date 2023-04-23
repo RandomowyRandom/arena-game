@@ -8,7 +8,7 @@ using Items.RaritySystem;
 using JetBrains.Annotations;
 using Player.Interfaces;
 using QFSW.QC;
-using QFSW.QC.Actions;
+using QFSW.QC.Suggestors.Tags;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEditor;
