@@ -4,6 +4,7 @@ using EntitySystem;
 using EntitySystem.Abstraction;
 using Items.Abstraction;
 using Items.ItemDataSystem;
+using Player.Interfaces;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Object = UnityEngine.Object;
@@ -24,14 +25,17 @@ namespace Items.Effects
         
         [SerializeField]
         private Color _projectileColor = Color.white;
-
+        
+        private IPlayerStats _playerStats;
+        private IPlayerStats PlayerStats => _playerStats ??= ServiceLocator.ServiceLocator.Instance.Get<IPlayerStats>();
+        
         public UniTask OnUse(IItemUser user, UsableItem item)
         {
             var projectile = Object
                 .Instantiate(_projectilePrefab, user.GameObject.transform.position, Quaternion.identity);
             
             projectile.GetComponent<SpriteRenderer>().color = _projectileColor;
-            projectile.Damage = 5; // TODO: later change to actual damage
+            projectile.Damage = PlayerStats.GetStatsData().Damage;
             
             var mousePosition = GetMousePosition();
             var direction = (mousePosition - (Vector2) user.GameObject.transform.position).normalized;
@@ -44,7 +48,7 @@ namespace Items.Effects
             projectile.GetComponent<Rigidbody2D>().AddForce(direction * _force, _forceMode);
             
             var projectileDamageSource = projectile.GetComponent<IDamageSource>();
-            projectileDamageSource.Source = user.GameObject;
+            projectileDamageSource.Source = user.ParentGameObject;
             
             return UniTask.CompletedTask;
         }
