@@ -46,7 +46,7 @@ MonoBehaviour:
       Data: 5
     - Name: _fireRate
       Entry: 4
-      Data: 0.1
+      Data: -0.1
     - Name: _maxHealth
       Entry: 4
       Data: 0
