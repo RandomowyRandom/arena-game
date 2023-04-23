@@ -16,6 +16,7 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
+    - {fileID: 6220283805649785671, guid: 904da2b18d667814abd782c12e1a1581, type: 3}
     - {fileID: 11400000, guid: 7ff96bf0ebbc025429ee488993903671, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -23,24 +24,79 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes:
     - Name: _effects
-      Entry: 6
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Items.Abstraction.IItemEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 1|Items.Effects.MeleeScaleVisualItemEffect, Assembly-CSharp
+    - Name: _scaleDuration
+      Entry: 4
+      Data: 0.2
+    - Name: _rotationDuration
+      Entry: 4
+      Data: 0.15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|Items.Effects.InstantiateMeleeProjectileItemEffect, Assembly-CSharp
+    - Name: _projectilePrefab
+      Entry: 10
+      Data: 0
+    - Name: _force
+      Entry: 4
+      Data: 35
+    - Name: _forceMode
+      Entry: 3
+      Data: 1
+    - Name: _projectileColor
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 0.987176239
+    - Name: 
+      Entry: 4
+      Data: 0.3176471
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: _rarityData
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Items.RaritySystem.GearRarityData,
+      Data: 3|System.Collections.Generic.List`1[[Items.RaritySystem.GearRarityData,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 1|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 4|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
-      Data: 0
+      Data: 1
     - Name: _statsData
       Entry: 7
-      Data: 2|Stats.StatsData, Assembly-CSharp
+      Data: 5|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 12
@@ -69,7 +125,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   _displayName: Ancient golden sword
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: cce63eb15aa57c84f9da1519fd663eb9, type: 3}
   _description: Holds power of the prince
   _maxStack: 1
   _consumeOnUse: 0
