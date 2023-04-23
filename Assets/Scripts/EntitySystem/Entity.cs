@@ -14,6 +14,10 @@ namespace EntitySystem
         public event Action<float> OnDamageTaken;
         public event Action OnDeath;
         
+        public float Health => _health;
+        
+        public float MaxHealth => _data.MaxHealth;
+        
         private float _health;
 
         private void Awake()

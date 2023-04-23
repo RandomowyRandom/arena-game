@@ -15,10 +15,13 @@ namespace Player
         [SerializeField]
         private float _staminaRegenerationSpeed = 10f;
 
+        public event Action<float> OnStaminaChanged;
+        
         private float _currentStamina;
         private float _staminaRegenerationTimer;
         
         public float CurrentStamina => _currentStamina;
+        public float MaxStamina => _maxStamina;
         private bool ShouldRegenStamina => _staminaRegenerationTimer < 0f;
 
         private void Awake()
@@ -40,12 +43,16 @@ namespace Player
         {
             _currentStamina -= amount;
             _staminaRegenerationTimer = _regenAfterSeconds;
+            
+            OnStaminaChanged?.Invoke(_currentStamina);
         }
         
         public void RegenStamina(float amount)
         {
             _currentStamina += amount;
             _currentStamina = Mathf.Clamp(_currentStamina, 0f, _maxStamina);
+            
+            OnStaminaChanged?.Invoke(_currentStamina);
         }
 
         public bool HasEnoughStamina(float amount)
