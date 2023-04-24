@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Linq;
+using Items.Abstraction;
 using Items.ItemDataSystem;
 using Items.RaritySystem;
+using Stats.Interfaces;
 using UnityEngine;
 
 namespace Items
@@ -22,6 +25,9 @@ namespace Items
         {
             ItemData = itemData;
             Amount = amount;
+
+            if (itemData is IGearRaritiesProvider statsDataProvider)
+                GearRarity = statsDataProvider.GetGearRarities().FirstOrDefault()!.GearRarity;
         }
         
         public Item(ItemData itemData, int amount, GearRarity gearRarity)
