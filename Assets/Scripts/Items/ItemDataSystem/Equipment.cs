@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Common.Attributes;
+using Items.Abstraction;
 using Items.RaritySystem;
 using Sirenix.Serialization;
 using Stats;
@@ -11,7 +12,7 @@ using UnityEngine.Serialization;
 namespace Items.ItemDataSystem
 {
     [ScriptableFactoryElement]
-    public class Equipment: ItemData, IStatsDataProvider
+    public class Equipment: ItemData, IStatsDataProvider, IGearRaritiesProvider
     {
         [OdinSerialize]
         private List<GearRarityData> _rarityData;
@@ -26,6 +27,11 @@ namespace Items.ItemDataSystem
             return  _rarityData
                 .Where(r => r.GearRarity == rarity)
                 .Select(r => r.StatsData).FirstOrDefault();
+        }
+
+        public List<GearRarityData> GetGearRarities()
+        {
+            return _rarityData;
         }
     }
 }

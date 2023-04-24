@@ -124,24 +124,7 @@ namespace Player
             }
         }
         
-        [Command("add-rarity-item")] [UsedImplicitly]
-        private void CommandAddRarityItem(string key, string rarity ,int amount)
-        {
-            // load gear rarity from asset
-            var gearRarity = AssetDatabase.LoadAssetAtPath<GearRarity>($"Assets/Scriptables/GearRarity/{rarity}.asset");
-
-            var itemData = _itemDatabase.GetItemData(key);
-            if (itemData == null)
-            {
-                Debug.Log($"No item with key {key} found");
-            }
-
-            var itemToAdd = new Item(itemData, amount, gearRarity);
-            
-            var result = TryAddItem(itemToAdd);
-            
-            Debug.Log($"{nameof(BasicInventory)}: {(result == null ? "Added" : "Failed to add")} {amount} {gearRarity.name} {key}");
-        }
+        
         [Command("add-item")] [UsedImplicitly]
         private void CommandAddItem(string key, int amount)
         {
@@ -151,9 +134,10 @@ namespace Player
                 Debug.Log($"No item with key {key} found");
             }
             
-            var result = TryAddItem(new Item(itemData, amount));
+            var itemToAdd = new Item(itemData, amount);
+            var result = TryAddItem(itemToAdd);
             
-            Debug.Log($"{nameof(BasicInventory)}: {(result == null ? "Added" : "Failed to add")} {amount} {key}");
+            Debug.Log($"{nameof(BasicInventory)}: {(result == null ? "Added" : "Failed to add")} {amount} {itemToAdd}");
         }
         
         [Command("remove-item")] [UsedImplicitly]
