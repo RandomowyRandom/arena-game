@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3591dfe6887e46dc889849552fe27e7d, type: 3}
+  m_Name: EasyWaveFactory
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _entities:
+  - {fileID: 1085831635514189995, guid: 2732fa87657842748a8f676032057715, type: 3}
+  - {fileID: 1085831635514189995, guid: 3497570ac769a074890dd1de261120c8, type: 3}
+  - {fileID: 1085831635514189995, guid: 3497570ac769a074890dd1de261120c8, type: 3}
+  - {fileID: 1085831635514189995, guid: 3497570ac769a074890dd1de261120c8, type: 3}
+  - {fileID: 1085831635514189995, guid: 3497570ac769a074890dd1de261120c8, type: 3}
+  - {fileID: 1085831635514189995, guid: 3497570ac769a074890dd1de261120c8, type: 3}
+  - {fileID: 1085831635514189995, guid: 3497570ac769a074890dd1de261120c8, type: 3}
+  _subWaveCountFactor: 4
+  _subwaveEnemyCountFactor: 10
+  _enemyDifficultyFactor: 2
+  _difficultyRaise: 0.1

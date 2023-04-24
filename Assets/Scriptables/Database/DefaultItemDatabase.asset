@@ -1,0 +1,786 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4aaaaa419f457e800e2a92517d5f0e, type: 3}
+  m_Name: DefaultItemDatabase
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 1384386db39eef74d96f62752ff0f234, type: 2}
+    - {fileID: 11400000, guid: 9a7341f9a37634f4fbb81ac2ac364e19, type: 2}
+    - {fileID: 11400000, guid: 474748b8d37d7a844838b6d3221ea1a9, type: 2}
+    - {fileID: 11400000, guid: f02d6b62283b77e4288cb3e242e52e26, type: 2}
+    - {fileID: 11400000, guid: f25148785e1498e42b69d6677619c5bf, type: 2}
+    - {fileID: 11400000, guid: ae898ccdc5c497e44a5bd23936d5fe8d, type: 2}
+    - {fileID: 11400000, guid: 98feeb17ecabf31498df3ff15b58af5a, type: 2}
+    - {fileID: 11400000, guid: ea2b61484c5e6b04d9a1987d9c95ef6d, type: 2}
+    - {fileID: 11400000, guid: 38d1862d6b4ddcd46aa32af8917ad424, type: 2}
+    - {fileID: 11400000, guid: f4b427b4007adb746a2a58dea57cf71b, type: 2}
+    - {fileID: 11400000, guid: 1afd86fe56747d64db7800d6e109f591, type: 2}
+    - {fileID: 11400000, guid: 7b9743157188ffd45a2ee11c7c26288c, type: 2}
+    - {fileID: 11400000, guid: 32e444a2a86fa5f4a85f4d2b02ebe969, type: 2}
+    - {fileID: 11400000, guid: f13734d84b51e414eaa334e7b66d44b0, type: 2}
+    - {fileID: 11400000, guid: 87d3aa677b1d65b46b9c9170b0fc143e, type: 2}
+    - {fileID: 11400000, guid: 1fcfc79e2e470484e8fa6db4a2a09e37, type: 2}
+    - {fileID: 11400000, guid: be2abb5f77bea6842b5e9581b0c80877, type: 2}
+    - {fileID: 11400000, guid: 1c5ec546bab06ee4b93958c46b0db236, type: 2}
+    - {fileID: 11400000, guid: 962a6829cdafb8144abcedcc05e9fe3c, type: 2}
+    - {fileID: 11400000, guid: 8cfdc5209dfad004d8c6c931b29e1f7e, type: 2}
+    - {fileID: 11400000, guid: 97253760ac5e87145bb085845ce78f23, type: 2}
+    - {fileID: 11400000, guid: 5c195031c99381746be310fcb34488b7, type: 2}
+    - {fileID: 11400000, guid: 78a5ff1308597d94dae02ed4a4fd5f28, type: 2}
+    - {fileID: 11400000, guid: 357a375b70cb03a43a582228160fb66f, type: 2}
+    - {fileID: 11400000, guid: 8e5d241fa5991be458acd167f095ffd4, type: 2}
+    - {fileID: 11400000, guid: b7f12b1ef0f27754d94d942a0222d6ee, type: 2}
+    - {fileID: 11400000, guid: c2f0bf6036eb07242976aa9d34bb2fc5, type: 2}
+    - {fileID: 11400000, guid: 15ef4b42ab9fcae46bf9a1c3aabfe699, type: 2}
+    - {fileID: 11400000, guid: 7c2fce353265b73449e040c3678cc176, type: 2}
+    - {fileID: 11400000, guid: 705818e0d254e2240bdfd08b20d2ca88, type: 2}
+    - {fileID: 11400000, guid: fecb9f0fa428f604299c5d28ff36d38a, type: 2}
+    - {fileID: 11400000, guid: 581c6410b37e70f4799d4ab3349b7b49, type: 2}
+    - {fileID: 11400000, guid: 171aeed0d50b3dc4dac88741ad651189, type: 2}
+    - {fileID: 11400000, guid: a86f937ca05c7fa48b7ae0609e21d741, type: 2}
+    - {fileID: 11400000, guid: 31284351e7846d94db4a0661bd8ab03e, type: 2}
+    - {fileID: 11400000, guid: 8e5b2c0912d91704faa6eb87cd562097, type: 2}
+    - {fileID: 11400000, guid: d0eb9b4b1a113ae4abf01a6ec9adb801, type: 2}
+    - {fileID: 11400000, guid: 1092548eece441b468e2c2ccbdd301b2, type: 2}
+    - {fileID: 11400000, guid: 29db3cb41ec41944d93f03fef1328ed9, type: 2}
+    - {fileID: 11400000, guid: a051a68d78723a4479221cd1923762a9, type: 2}
+    - {fileID: 11400000, guid: b7e1e927137f0104691ecc55a2d3aa54, type: 2}
+    - {fileID: 11400000, guid: aebbc128da9873f40b87f3d42b2fdc26, type: 2}
+    - {fileID: 11400000, guid: 4e1452f97fe4c4d43bd7e7cbd4c5d6ca, type: 2}
+    - {fileID: 11400000, guid: 0974c5b09519a1840a581549d9c2b86c, type: 2}
+    - {fileID: 11400000, guid: b7ccf37902d9b6345ac0f9a27c652cb1, type: 2}
+    - {fileID: 11400000, guid: 8b04078c2a1577444a26c1f57c0d57c1, type: 2}
+    - {fileID: 11400000, guid: 1135907777c22b1418ad7b21107005cf, type: 2}
+    - {fileID: 11400000, guid: ecae45177ab6ddb45b0c3f02a5e26c5c, type: 2}
+    - {fileID: 11400000, guid: a7f4edc93d413b14cac33b8bf096cd9a, type: 2}
+    - {fileID: 11400000, guid: 1d997c2a213e16d458fb13e946c79c34, type: 2}
+    - {fileID: 11400000, guid: 4e0b077d45b88db43b304ffa57d79bca, type: 2}
+    - {fileID: 11400000, guid: c760c982095238742b24d7adc78b2079, type: 2}
+    - {fileID: 11400000, guid: 5cd9f6b3404097d45bab0a1560aee0ba, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _items
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[Items.ItemDataSystem.ItemData,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 53
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: AIDENS_RING
+    - Name: $v
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: AMETHYST_RING
+    - Name: $v
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: AMMOLITE_RING
+    - Name: $v
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: AZURITE_RING
+    - Name: $v
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: CORDIERITE_RING
+    - Name: $v
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: CUPRITE_RING
+    - Name: $v
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: DIAMOND_RING
+    - Name: $v
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: EMERALD_RING
+    - Name: $v
+      Entry: 10
+      Data: 7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: OPAL_RING
+    - Name: $v
+      Entry: 10
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: RUBY_RING
+    - Name: $v
+      Entry: 10
+      Data: 9
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: SAPPHIRE_RING
+    - Name: $v
+      Entry: 10
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: COPPER_CHESTPLATE
+    - Name: $v
+      Entry: 10
+      Data: 11
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: COPPER_HELMET
+    - Name: $v
+      Entry: 10
+      Data: 12
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: COPPER_LEGGINGS
+    - Name: $v
+      Entry: 10
+      Data: 13
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: GOLDEN_CHESTPLATE
+    - Name: $v
+      Entry: 10
+      Data: 14
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: GOLDEN_HELMET
+    - Name: $v
+      Entry: 10
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: GOLDEN_LEGGINGS
+    - Name: $v
+      Entry: 10
+      Data: 16
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: IRON_CHESTPLATE
+    - Name: $v
+      Entry: 10
+      Data: 17
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: IRON_HELMET
+    - Name: $v
+      Entry: 10
+      Data: 18
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: IRON_LEGGINGS
+    - Name: $v
+      Entry: 10
+      Data: 19
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: MITHRIL_CHESTPLATE
+    - Name: $v
+      Entry: 10
+      Data: 20
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: MITHRIL_HELMET
+    - Name: $v
+      Entry: 10
+      Data: 21
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: MITHRIL_LEGGINGS
+    - Name: $v
+      Entry: 10
+      Data: 22
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: WOODEN_CHESTPLATE
+    - Name: $v
+      Entry: 10
+      Data: 23
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: WOODEN_HELMET
+    - Name: $v
+      Entry: 10
+      Data: 24
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: WOODEN_LEGGINGS
+    - Name: $v
+      Entry: 10
+      Data: 25
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: COPPER_INGOT
+    - Name: $v
+      Entry: 10
+      Data: 26
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: COPPER_ORE
+    - Name: $v
+      Entry: 10
+      Data: 27
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: GOLD_INGOT
+    - Name: $v
+      Entry: 10
+      Data: 28
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: GOLD_ORE
+    - Name: $v
+      Entry: 10
+      Data: 29
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: GRASS
+    - Name: $v
+      Entry: 10
+      Data: 30
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: IRON_INGOT
+    - Name: $v
+      Entry: 10
+      Data: 31
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: IRON_ORE
+    - Name: $v
+      Entry: 10
+      Data: 32
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: MITHRIL_INGOT
+    - Name: $v
+      Entry: 10
+      Data: 33
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: MITHRIL_ORE
+    - Name: $v
+      Entry: 10
+      Data: 34
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: STICK
+    - Name: $v
+      Entry: 10
+      Data: 35
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: STONE
+    - Name: $v
+      Entry: 10
+      Data: 36
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: WOODEN_PLANK
+    - Name: $v
+      Entry: 10
+      Data: 37
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: ANCIENT_GOLDEN_SWORD
+    - Name: $v
+      Entry: 10
+      Data: 38
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: COPPER_SPEAR
+    - Name: $v
+      Entry: 10
+      Data: 39
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: COPPER_SWORD
+    - Name: $v
+      Entry: 10
+      Data: 40
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: FIERY_CROSSBOW
+    - Name: $v
+      Entry: 10
+      Data: 41
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: FROZEN_SHORTSWORD
+    - Name: $v
+      Entry: 10
+      Data: 42
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: FUSION_TWOSHOT
+    - Name: $v
+      Entry: 10
+      Data: 43
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: GOLDEN_CROSSBOW
+    - Name: $v
+      Entry: 10
+      Data: 44
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: GOLDEN_SWORD
+    - Name: $v
+      Entry: 10
+      Data: 45
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: IRON_BOW
+    - Name: $v
+      Entry: 10
+      Data: 46
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: IRON_GREATSWORD
+    - Name: $v
+      Entry: 10
+      Data: 47
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: MITHRIL_KNIVES
+    - Name: $v
+      Entry: 10
+      Data: 48
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: PRINCE_AIDENS_SWORD
+    - Name: $v
+      Entry: 10
+      Data: 49
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: STONE_SPEAR
+    - Name: $v
+      Entry: 10
+      Data: 50
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: WOODEN_BOW
+    - Name: $v
+      Entry: 10
+      Data: 51
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: WOODEN_SWORD
+    - Name: $v
+      Entry: 10
+      Data: 52
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  _itemDataList:
+  - {fileID: 11400000, guid: 1384386db39eef74d96f62752ff0f234, type: 2}
+  - {fileID: 11400000, guid: 9a7341f9a37634f4fbb81ac2ac364e19, type: 2}
+  - {fileID: 11400000, guid: 474748b8d37d7a844838b6d3221ea1a9, type: 2}
+  - {fileID: 11400000, guid: f02d6b62283b77e4288cb3e242e52e26, type: 2}
+  - {fileID: 11400000, guid: f25148785e1498e42b69d6677619c5bf, type: 2}
+  - {fileID: 11400000, guid: ae898ccdc5c497e44a5bd23936d5fe8d, type: 2}
+  - {fileID: 11400000, guid: 98feeb17ecabf31498df3ff15b58af5a, type: 2}
+  - {fileID: 11400000, guid: ea2b61484c5e6b04d9a1987d9c95ef6d, type: 2}
+  - {fileID: 11400000, guid: 38d1862d6b4ddcd46aa32af8917ad424, type: 2}
+  - {fileID: 11400000, guid: f4b427b4007adb746a2a58dea57cf71b, type: 2}
+  - {fileID: 11400000, guid: 1afd86fe56747d64db7800d6e109f591, type: 2}
+  - {fileID: 11400000, guid: 7b9743157188ffd45a2ee11c7c26288c, type: 2}
+  - {fileID: 11400000, guid: 32e444a2a86fa5f4a85f4d2b02ebe969, type: 2}
+  - {fileID: 11400000, guid: f13734d84b51e414eaa334e7b66d44b0, type: 2}
+  - {fileID: 11400000, guid: 87d3aa677b1d65b46b9c9170b0fc143e, type: 2}
+  - {fileID: 11400000, guid: 1fcfc79e2e470484e8fa6db4a2a09e37, type: 2}
+  - {fileID: 11400000, guid: be2abb5f77bea6842b5e9581b0c80877, type: 2}
+  - {fileID: 11400000, guid: 1c5ec546bab06ee4b93958c46b0db236, type: 2}
+  - {fileID: 11400000, guid: 962a6829cdafb8144abcedcc05e9fe3c, type: 2}
+  - {fileID: 11400000, guid: 8cfdc5209dfad004d8c6c931b29e1f7e, type: 2}
+  - {fileID: 11400000, guid: 97253760ac5e87145bb085845ce78f23, type: 2}
+  - {fileID: 11400000, guid: 5c195031c99381746be310fcb34488b7, type: 2}
+  - {fileID: 11400000, guid: 78a5ff1308597d94dae02ed4a4fd5f28, type: 2}
+  - {fileID: 11400000, guid: 357a375b70cb03a43a582228160fb66f, type: 2}
+  - {fileID: 11400000, guid: 8e5d241fa5991be458acd167f095ffd4, type: 2}
+  - {fileID: 11400000, guid: b7f12b1ef0f27754d94d942a0222d6ee, type: 2}
+  - {fileID: 11400000, guid: c2f0bf6036eb07242976aa9d34bb2fc5, type: 2}
+  - {fileID: 11400000, guid: 15ef4b42ab9fcae46bf9a1c3aabfe699, type: 2}
+  - {fileID: 11400000, guid: 7c2fce353265b73449e040c3678cc176, type: 2}
+  - {fileID: 11400000, guid: 705818e0d254e2240bdfd08b20d2ca88, type: 2}
+  - {fileID: 11400000, guid: fecb9f0fa428f604299c5d28ff36d38a, type: 2}
+  - {fileID: 11400000, guid: 581c6410b37e70f4799d4ab3349b7b49, type: 2}
+  - {fileID: 11400000, guid: 171aeed0d50b3dc4dac88741ad651189, type: 2}
+  - {fileID: 11400000, guid: a86f937ca05c7fa48b7ae0609e21d741, type: 2}
+  - {fileID: 11400000, guid: 31284351e7846d94db4a0661bd8ab03e, type: 2}
+  - {fileID: 11400000, guid: 8e5b2c0912d91704faa6eb87cd562097, type: 2}
+  - {fileID: 11400000, guid: d0eb9b4b1a113ae4abf01a6ec9adb801, type: 2}
+  - {fileID: 11400000, guid: 1092548eece441b468e2c2ccbdd301b2, type: 2}
+  - {fileID: 11400000, guid: 29db3cb41ec41944d93f03fef1328ed9, type: 2}
+  - {fileID: 11400000, guid: a051a68d78723a4479221cd1923762a9, type: 2}
+  - {fileID: 11400000, guid: b7e1e927137f0104691ecc55a2d3aa54, type: 2}
+  - {fileID: 11400000, guid: aebbc128da9873f40b87f3d42b2fdc26, type: 2}
+  - {fileID: 11400000, guid: 4e1452f97fe4c4d43bd7e7cbd4c5d6ca, type: 2}
+  - {fileID: 11400000, guid: 0974c5b09519a1840a581549d9c2b86c, type: 2}
+  - {fileID: 11400000, guid: b7ccf37902d9b6345ac0f9a27c652cb1, type: 2}
+  - {fileID: 11400000, guid: 8b04078c2a1577444a26c1f57c0d57c1, type: 2}
+  - {fileID: 11400000, guid: 1135907777c22b1418ad7b21107005cf, type: 2}
+  - {fileID: 11400000, guid: ecae45177ab6ddb45b0c3f02a5e26c5c, type: 2}
+  - {fileID: 11400000, guid: a7f4edc93d413b14cac33b8bf096cd9a, type: 2}
+  - {fileID: 11400000, guid: 1d997c2a213e16d458fb13e946c79c34, type: 2}
+  - {fileID: 11400000, guid: 4e0b077d45b88db43b304ffa57d79bca, type: 2}
+  - {fileID: 11400000, guid: c760c982095238742b24d7adc78b2079, type: 2}
+  - {fileID: 11400000, guid: 5cd9f6b3404097d45bab0a1560aee0ba, type: 2}

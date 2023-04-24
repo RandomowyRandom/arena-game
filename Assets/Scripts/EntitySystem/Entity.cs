@@ -1,0 +1,54 @@
+﻿using System;
+using EntitySystem.Abstraction;
+using TriangularAssets;
+using UnityEngine;
+
+namespace EntitySystem
+{
+    [RequireComponent(typeof(CollisionHandler))]
+    public class Entity : MonoBehaviour, IDamageable
+    {
+        [SerializeField]
+        private EntityData _data;
+
+        public event Action<float> OnDamageTaken;
+        public event Action OnDeath;
+        
+        public float Health => _health;
+        
+        public float MaxHealth => _data.MaxHealth;
+        
+        private float _health;
+
+        private void Awake()
+        {
+            _health = _data.MaxHealth;
+        }
+        
+        public void TakeDamage(float damage)
+        {
+            _health -= damage;
+            OnDamageTaken?.Invoke(_health);
+
+            if (!(_health <= 0)) 
+                return;
+            
+            OnDeath?.Invoke();
+            Destroy(gameObject);
+        }
+
+        public void OnDamageSourceEnter(GameObject gameObjectCollision)
+        {
+            var damageSource = gameObjectCollision.GetComponent<IDamageSource>();
+            
+            if(damageSource == null)
+                return;
+            
+            // TODO: check if damage source game object is == damageable game object; if so, ignore
+            if(gameObject == damageSource.Source)
+                return;
+
+            TakeDamage(damageSource.Damage);
+        }
+    }
+}
