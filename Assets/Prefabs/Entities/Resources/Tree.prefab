@@ -88,7 +88,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!61 &2268759984707524890
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -188,7 +188,6 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: 1092548eece441b468e2c2ccbdd301b2, type: 2}
-    - {fileID: 11400000, guid: d0eb9b4b1a113ae4abf01a6ec9adb801, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -260,7 +259,7 @@ MonoBehaviour:
       Data: 7|Items.Item, Assembly-CSharp
     - Name: _itemData
       Entry: 10
-      Data: 1
+      Data: 0
     - Name: _amount
       Entry: 3
       Data: 1
