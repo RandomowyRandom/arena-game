@@ -51,7 +51,7 @@ MonoBehaviour:
       Data: 0
     - Name: _force
       Entry: 4
-      Data: 45
+      Data: 55
     - Name: _forceMode
       Entry: 3
       Data: 1
@@ -84,7 +84,7 @@ MonoBehaviour:
       Data: 1
     - Name: _force
       Entry: 4
-      Data: 30
+      Data: 40
     - Name: _forceMode
       Entry: 3
       Data: 1
@@ -117,7 +117,7 @@ MonoBehaviour:
       Data: 1
     - Name: _force
       Entry: 4
-      Data: 20
+      Data: 25
     - Name: _forceMode
       Entry: 3
       Data: 1

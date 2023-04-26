@@ -29,7 +29,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 4
     - Name: 
       Entry: 7
       Data: 1|Items.Effects.MeleeReappearVisualItemEffect, Assembly-CSharp
@@ -44,7 +44,7 @@ MonoBehaviour:
       Data: 0
     - Name: _force
       Entry: 4
-      Data: 25
+      Data: 65
     - Name: _forceMode
       Entry: 3
       Data: 1
@@ -71,7 +71,40 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 3|Items.Effects.PushItemUserItemEffect, Assembly-CSharp
+      Data: 3|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
+    - Name: _projectilePrefab
+      Entry: 10
+      Data: 0
+    - Name: _force
+      Entry: 4
+      Data: 45
+    - Name: _forceMode
+      Entry: 3
+      Data: 1
+    - Name: _projectileColor
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 0.7165238
+    - Name: 
+      Entry: 4
+      Data: 0.4292453
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|Items.Effects.PushItemUserItemEffect, Assembly-CSharp
     - Name: _force
       Entry: 4
       Data: 4
@@ -86,20 +119,20 @@ MonoBehaviour:
       Data: 
     - Name: _rarityData
       Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Items.RaritySystem.GearRarityData,
+      Data: 5|System.Collections.Generic.List`1[[Items.RaritySystem.GearRarityData,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 5|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 6|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 1
     - Name: _statsData
       Entry: 7
-      Data: 6|Stats.StatsData, Assembly-CSharp
+      Data: 7|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 7

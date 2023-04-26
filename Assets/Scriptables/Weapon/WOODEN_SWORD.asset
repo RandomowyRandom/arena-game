@@ -54,7 +54,7 @@ MonoBehaviour:
       Data: 0
     - Name: _force
       Entry: 4
-      Data: 25
+      Data: 20
     - Name: _forceMode
       Entry: 3
       Data: 1
@@ -63,13 +63,13 @@ MonoBehaviour:
       Data: UnityEngine.Color, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 0.8156863
+      Data: 0.831372559
     - Name: 
       Entry: 4
-      Data: 0.433305085
+      Data: 0.432795674
     - Name: 
       Entry: 4
-      Data: 0.183962286
+      Data: 0
     - Name: 
       Entry: 4
       Data: 1
