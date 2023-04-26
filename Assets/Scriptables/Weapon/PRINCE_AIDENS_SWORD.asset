@@ -16,8 +16,8 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 6220283805649785671, guid: 904da2b18d667814abd782c12e1a1581, type: 3}
     - {fileID: 6220283805649785671, guid: 480da600776938b48bf66d269ead1ff8, type: 3}
+    - {fileID: 6220283805649785671, guid: 904da2b18d667814abd782c12e1a1581, type: 3}
     - {fileID: 11400000, guid: 7ff96bf0ebbc025429ee488993903671, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -45,76 +45,10 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 2|Items.Effects.InstantiateMeleeProjectileItemEffect, Assembly-CSharp
+      Data: 2|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
     - Name: _projectilePrefab
       Entry: 10
       Data: 0
-    - Name: _force
-      Entry: 4
-      Data: 45
-    - Name: _forceMode
-      Entry: 3
-      Data: 1
-    - Name: _projectileColor
-      Entry: 7
-      Data: UnityEngine.Color, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
-      Data: 0.5502522
-    - Name: 
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 4
-      Data: 0.3176471
-    - Name: 
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|Items.Effects.InstantiateMeleeProjectileItemEffect, Assembly-CSharp
-    - Name: _projectilePrefab
-      Entry: 10
-      Data: 0
-    - Name: _force
-      Entry: 4
-      Data: 15
-    - Name: _forceMode
-      Entry: 3
-      Data: 1
-    - Name: _projectileColor
-      Entry: 7
-      Data: UnityEngine.Color, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
-      Data: 0.5502522
-    - Name: 
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 4
-      Data: 0.3176471
-    - Name: 
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 4|Items.Effects.InstantiateMeleeProjectileItemEffect, Assembly-CSharp
-    - Name: _projectilePrefab
-      Entry: 10
-      Data: 1
     - Name: _force
       Entry: 4
       Data: 55
@@ -126,13 +60,79 @@ MonoBehaviour:
       Data: UnityEngine.Color, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 0.5502522
+      Data: 0.6745283
     - Name: 
       Entry: 4
       Data: 1
     - Name: 
       Entry: 4
-      Data: 0.3176471
+      Data: 0.9968458
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
+    - Name: _projectilePrefab
+      Entry: 10
+      Data: 1
+    - Name: _force
+      Entry: 4
+      Data: 40
+    - Name: _forceMode
+      Entry: 3
+      Data: 1
+    - Name: _projectileColor
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.6745283
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 0.9968458
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
+    - Name: _projectilePrefab
+      Entry: 10
+      Data: 1
+    - Name: _force
+      Entry: 4
+      Data: 25
+    - Name: _forceMode
+      Entry: 3
+      Data: 1
+    - Name: _projectileColor
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.6
+    - Name: 
+      Entry: 4
+      Data: 0.90196085
+    - Name: 
+      Entry: 4
+      Data: 0.372549027
     - Name: 
       Entry: 4
       Data: 1

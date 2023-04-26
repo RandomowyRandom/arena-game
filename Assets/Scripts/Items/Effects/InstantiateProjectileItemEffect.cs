@@ -12,10 +12,10 @@ using Object = UnityEngine.Object;
 namespace Items.Effects
 {
     [Serializable]
-    public class InstantiateMeleeProjectileItemEffect: IItemEffect
+    public class InstantiateProjectileItemEffect: IItemEffect
     {
         [SerializeField]
-        private MeleeProjectile _projectilePrefab;
+        private Projectile _projectilePrefab;
         
         [SerializeField]
         private float _force = 25;

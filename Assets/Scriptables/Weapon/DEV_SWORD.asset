@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77ff0a4e48464d89a81eaf5274ec21a7, type: 3}
-  m_Name: COPPER_SPEAR
+  m_Name: DEV_SWORD
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 6220283805649785671, guid: 856dd4792e2626b4eb608a67bfed5507, type: 3}
+    - {fileID: 6220283805649785671, guid: a44c6633f2ad74a4d885251194a197ad, type: 3}
     - {fileID: 11400000, guid: 7ff96bf0ebbc025429ee488993903671, type: 2}
+    - {fileID: 11400000, guid: 5c3c3f83f3bff214caedaf5ea0b51356, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -32,7 +33,13 @@ MonoBehaviour:
       Data: 4
     - Name: 
       Entry: 7
-      Data: 1|Items.Effects.MeleeReappearVisualItemEffect, Assembly-CSharp
+      Data: 1|Items.Effects.MeleeScaleVisualItemEffect, Assembly-CSharp
+    - Name: _scaleDuration
+      Entry: 4
+      Data: 0.2
+    - Name: _rotationDuration
+      Entry: 4
+      Data: 0.15
     - Name: 
       Entry: 8
       Data: 
@@ -44,7 +51,7 @@ MonoBehaviour:
       Data: 0
     - Name: _force
       Entry: 4
-      Data: 65
+      Data: 100
     - Name: _forceMode
       Entry: 3
       Data: 1
@@ -56,10 +63,10 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 4
-      Data: 0.7165238
+      Data: 0.4481132
     - Name: 
       Entry: 4
-      Data: 0.4292453
+      Data: 0.9389245
     - Name: 
       Entry: 4
       Data: 1
@@ -77,7 +84,7 @@ MonoBehaviour:
       Data: 0
     - Name: _force
       Entry: 4
-      Data: 45
+      Data: 80
     - Name: _forceMode
       Entry: 3
       Data: 1
@@ -89,10 +96,10 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 4
-      Data: 0.7165238
+      Data: 0.4481132
     - Name: 
       Entry: 4
-      Data: 0.4292453
+      Data: 0.9389245
     - Name: 
       Entry: 4
       Data: 1
@@ -104,10 +111,34 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 4|Items.Effects.PushItemUserItemEffect, Assembly-CSharp
+      Data: 4|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
+    - Name: _projectilePrefab
+      Entry: 10
+      Data: 0
     - Name: _force
       Entry: 4
-      Data: 4
+      Data: 20
+    - Name: _forceMode
+      Entry: 3
+      Data: 1
+    - Name: _projectileColor
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 0.4481132
+    - Name: 
+      Entry: 4
+      Data: 0.9389245
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -123,7 +154,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 6|Items.RaritySystem.GearRarityData, Assembly-CSharp
@@ -135,13 +166,43 @@ MonoBehaviour:
       Data: 7|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 7
+      Data: 9999
     - Name: _speed
       Entry: 4
       Data: 0
     - Name: _fireRate
       Entry: 4
-      Data: 0.5
+      Data: -0.3
+    - Name: _maxHealth
+      Entry: 4
+      Data: 0
+    - Name: _defense
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 8|Items.RaritySystem.GearRarityData, Assembly-CSharp
+    - Name: _gearRarity
+      Entry: 10
+      Data: 2
+    - Name: _statsData
+      Entry: 7
+      Data: 9|Stats.StatsData, Assembly-CSharp
+    - Name: _damage
+      Entry: 4
+      Data: 9999
+    - Name: _speed
+      Entry: 4
+      Data: 0
+    - Name: _fireRate
+      Entry: 4
+      Data: -0.3
     - Name: _maxHealth
       Entry: 4
       Data: 0
@@ -160,8 +221,8 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  _displayName: Copper spear
-  _icon: {fileID: 21300000, guid: cbf9c44c024324842b9b98d91998423b, type: 3}
-  _description: 
+  _displayName: Rozpierdalacz
+  _icon: {fileID: 21300000, guid: e9abc629f6f83604f9b894a3d3e2a178, type: 3}
+  _description: dev
   _maxStack: 1
   _consumeOnUse: 0

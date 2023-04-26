@@ -7,7 +7,7 @@ namespace EntitySystem
 {
     [RequireComponent(typeof(Rigidbody2D))]
     [RequireComponent(typeof(SpriteRenderer))]
-    public class MeleeProjectile: MonoBehaviour, IDamageSource
+    public class Projectile: MonoBehaviour, IDamageSource
     {
         private Rigidbody2D _rigidbody2D;
         private SpriteRenderer _spriteRenderer;
