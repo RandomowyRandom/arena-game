@@ -677,6 +677,22 @@ PrefabInstance:
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[0]
       value: 
       objectReference: {fileID: 233742934}
+    - target: {fileID: 1791306574103134018, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
+      propertyPath: _startingItems.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791306574103134018, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
+      propertyPath: _startingItems.Array.data[0]._amount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791306574103134018, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
+      propertyPath: _startingItems.Array.data[0]._itemData
+      value: 
+      objectReference: {fileID: 11400000, guid: 25cc81a80f572e043b274cc55ca1b706, type: 2}
+    - target: {fileID: 1791306574103134018, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
+      propertyPath: _startingItems.Array.data[0]._gearRarity
+      value: 
+      objectReference: {fileID: 11400000, guid: 5c3c3f83f3bff214caedaf5ea0b51356, type: 2}
     - target: {fileID: 4710309355608420230, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
       propertyPath: serializationData.Prefab
       value: 
