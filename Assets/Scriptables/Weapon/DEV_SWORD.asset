@@ -45,7 +45,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 2|Items.Effects.InstantiateMeleeProjectileItemEffect, Assembly-CSharp
+      Data: 2|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
     - Name: _projectilePrefab
       Entry: 10
       Data: 0
@@ -63,10 +63,10 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 4
-      Data: 0.2028302
+      Data: 0.4481132
     - Name: 
       Entry: 4
-      Data: 0.8866664
+      Data: 0.9389245
     - Name: 
       Entry: 4
       Data: 1
@@ -78,7 +78,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 3|Items.Effects.InstantiateMeleeProjectileItemEffect, Assembly-CSharp
+      Data: 3|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
     - Name: _projectilePrefab
       Entry: 10
       Data: 0
@@ -96,10 +96,10 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 4
-      Data: 0.2028302
+      Data: 0.4481132
     - Name: 
       Entry: 4
-      Data: 0.8866664
+      Data: 0.9389245
     - Name: 
       Entry: 4
       Data: 1
@@ -111,7 +111,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 4|Items.Effects.InstantiateMeleeProjectileItemEffect, Assembly-CSharp
+      Data: 4|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
     - Name: _projectilePrefab
       Entry: 10
       Data: 0
@@ -129,10 +129,10 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 4
-      Data: 0.2028302
+      Data: 0.4481132
     - Name: 
       Entry: 4
-      Data: 0.8866664
+      Data: 0.9389245
     - Name: 
       Entry: 4
       Data: 1

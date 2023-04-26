@@ -38,13 +38,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 2|Items.Effects.InstantiateMeleeProjectileItemEffect, Assembly-CSharp
+      Data: 2|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
     - Name: _projectilePrefab
       Entry: 10
       Data: 0
     - Name: _force
       Entry: 4
-      Data: 50
+      Data: 25
     - Name: _forceMode
       Entry: 3
       Data: 1
@@ -56,10 +56,10 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 4
-      Data: 0.6668724
+      Data: 0.7165238
     - Name: 
       Entry: 4
-      Data: 0.3176471
+      Data: 0.4292453
     - Name: 
       Entry: 4
       Data: 1
