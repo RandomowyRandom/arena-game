@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 2931861312426724260}
   - component: {fileID: 2931861312426724261}
   - component: {fileID: 2931861312426724267}
+  - component: {fileID: -601255169618957485}
+  - component: {fileID: -7566442241650396870}
   m_Layer: 0
   m_Name: BigGoldOre
   m_TagString: Untagged
@@ -57,7 +59,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 26af6926e1c01634c8a08db07a5695f3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -285,6 +287,30 @@ MonoBehaviour:
       Entry: 8
       Data: 
   _itemWorldPrefab: {fileID: 4956166285135844185, guid: 4909a5cc932cf8b4a8f682ba5aecb08a, type: 3}
+--- !u!114 &-601255169618957485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931861312426724257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa12e131011f41c89ee8b76a0f039b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-7566442241650396870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931861312426724257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad927df318354e97b96d8f350a2b6c31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6300845516717947327
 GameObject:
   m_ObjectHideFlags: 0

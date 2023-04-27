@@ -14,8 +14,13 @@ namespace EntitySystem
         [SerializeField]
         private string _key;
         
+        [SerializeField]
+        private bool _isStatic;
+        
         public float MaxHealth => _maxHealth;
         
         public string Key => _key;
+        
+        public bool IsStatic => _isStatic;
     }
 }

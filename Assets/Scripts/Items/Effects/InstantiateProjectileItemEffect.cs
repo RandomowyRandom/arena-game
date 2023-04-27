@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using EntitySystem;
 using EntitySystem.Abstraction;
 using Items.Abstraction;
 using Items.ItemDataSystem;
 using Player.Interfaces;
+using ProjectileSystem;
+using ProjectileSystem.Abstraction;
+using Sirenix.Serialization;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Object = UnityEngine.Object;
@@ -25,6 +29,10 @@ namespace Items.Effects
         
         [SerializeField]
         private Color _projectileColor = Color.white;
+
+        [Space(5)] 
+        [OdinSerialize] 
+        private List<IProjectileEffect> _projectileEffects;
         
         private IPlayerStats _playerStats;
         private IPlayerStats PlayerStats => _playerStats ??= ServiceLocator.ServiceLocator.Instance.Get<IPlayerStats>();
@@ -33,6 +41,10 @@ namespace Items.Effects
         {
             var projectile = Object
                 .Instantiate(_projectilePrefab, user.GameObject.transform.position, Quaternion.identity);
+
+            if (_projectileEffects != null)
+                foreach (var effect in _projectileEffects)
+                    projectile.AddEffect(effect);
             
             projectile.GetComponent<SpriteRenderer>().color = _projectileColor;
             projectile.Damage = PlayerStats.GetStatsData().Damage;

@@ -14,11 +14,7 @@ namespace Items.Effects
         private float _seconds;
         public async UniTask OnUse(IItemUser user, UsableItem item)
         {
-            Debug.Log($"Waiting for {_seconds} seconds");
             await UniTask.Delay(TimeSpan.FromSeconds(_seconds));
-            Debug.Log($"Waited for {_seconds} seconds");
-            
-            await UniTask.CompletedTask;
         }
     }
 }

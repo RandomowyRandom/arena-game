@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 1085831635514190002}
   - component: {fileID: 1085831635514190003}
   - component: {fileID: 1085831635514190001}
+  - component: {fileID: 1619545926}
+  - component: {fileID: 1619545927}
   m_Layer: 0
   m_Name: GreenDino
   m_TagString: Untagged
@@ -59,7 +61,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 26af6926e1c01634c8a08db07a5695f3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -111,34 +113,25 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: _acceptedTypes
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[System.Type, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: EntitySystem.Abstraction.IDamageSource, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+    SerializationNodes: []
   _onCollisionEnter:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1085831635514189995}
         m_TargetAssemblyTypeName: EntitySystem.Entity, Assembly-CSharp
         m_MethodName: OnDamageSourceEnter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1619545927}
+        m_TargetAssemblyTypeName: EntitySystem.EntityProjectileEffectHandler, Assembly-CSharp
+        m_MethodName: ApplyProjectileEffects
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -332,6 +325,30 @@ MonoBehaviour:
       Entry: 8
       Data: 
   _itemWorldPrefab: {fileID: 4956166285135844185, guid: 4909a5cc932cf8b4a8f682ba5aecb08a, type: 3}
+--- !u!114 &1619545926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085831635514189993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad927df318354e97b96d8f350a2b6c31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1619545927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085831635514189993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa12e131011f41c89ee8b76a0f039b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6599137950370571373
 GameObject:
   m_ObjectHideFlags: 0
