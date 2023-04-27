@@ -18,11 +18,17 @@ namespace EntitySystem
         
         public float MaxHealth => _data.MaxHealth;
         
+        public bool IsStatic => _data.IsStatic;
+
+        private EntityProjectileEffectHandler _effectHandler;
+        
         private float _health;
 
         private void Awake()
         {
             _health = _data.MaxHealth;
+            
+            _effectHandler = GetComponent<EntityProjectileEffectHandler>();
         }
         
         public void TakeDamage(float damage)
@@ -44,11 +50,18 @@ namespace EntitySystem
             if(damageSource == null)
                 return;
             
-            // TODO: check if damage source game object is == damageable game object; if so, ignore
             if(gameObject == damageSource.Source)
                 return;
 
+            if(damageSource.DamagedEntities.Contains(this))
+                return;
+            
             TakeDamage(damageSource.Damage);
+            
+            if(_effectHandler != null)
+                _effectHandler.ApplyProjectileEffects(gameObjectCollision);
+            
+            damageSource.DamagedEntities.Add(this);
         }
     }
 }

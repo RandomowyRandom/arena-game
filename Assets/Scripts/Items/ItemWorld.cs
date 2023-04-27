@@ -1,5 +1,6 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using Player;
 using TMPro;
 using UnityEngine;
@@ -20,14 +21,12 @@ namespace Items
         private Item _item;
         
         private Collider2D _collider2D;
-        private Rigidbody2D _rigidbody2D;
         
         public Item Item => _item;
 
         private void Awake()
         {
             _collider2D = GetComponent<Collider2D>();
-            _rigidbody2D = GetComponent<Rigidbody2D>();
             
             _collider2D.enabled = false;
             EnableColliderAfterSeconds(0.5f).Forget();
@@ -35,10 +34,36 @@ namespace Items
             SetItem(_startingItem);
         }
 
+        private void OnDestroy()
+        {
+            transform.DOKill();
+        }
+
         private void Start()
         {
             var randomDirection = new Vector2(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f));
-            _rigidbody2D.AddForce(randomDirection * 2f, ForceMode2D.Impulse);
+            var moveDuration = UnityEngine.Random.Range(0.2f, 0.4f);
+            
+            transform.DOMove(transform.position + (Vector3)randomDirection * .8f, moveDuration).SetEase(Ease.OutQuart);
+            transform.DOScale(new Vector2(1, 1.3f), moveDuration * .5f).OnComplete(() =>
+                transform.DOScale(Vector3.one, moveDuration * .5f));
+
+            PerformJumps();
+        }
+
+        private async void PerformJumps()
+        {
+            var spriteRendererTransform = _spriteRenderer.transform;
+
+            while (true)
+            {
+                await UniTask.Delay(TimeSpan.FromSeconds(UnityEngine.Random.Range(2.5f, 3.5f)));
+                
+                if(spriteRendererTransform == null)
+                    return;
+                
+                spriteRendererTransform.DOJump(spriteRendererTransform.position, 0.2f, 1, .8f); 
+            }
         }
 
         public void SetItem(Item item)

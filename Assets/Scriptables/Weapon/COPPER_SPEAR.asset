@@ -66,12 +66,34 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: _projectileEffects
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[ProjectileSystem.Abstraction.IProjectileEffect,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 4|ProjectileSystem.Effects.ApplyKnockBackProjectileEffect, Assembly-CSharp
+    - Name: _force
+      Entry: 4
+      Data: 20
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 3|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
+      Data: 5|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
     - Name: _projectilePrefab
       Entry: 10
       Data: 0
@@ -99,12 +121,15 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: _projectileEffects
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 4|Items.Effects.PushItemUserItemEffect, Assembly-CSharp
+      Data: 6|Items.Effects.PushItemUserItemEffect, Assembly-CSharp
     - Name: _force
       Entry: 4
       Data: 4
@@ -119,20 +144,20 @@ MonoBehaviour:
       Data: 
     - Name: _rarityData
       Entry: 7
-      Data: 5|System.Collections.Generic.List`1[[Items.RaritySystem.GearRarityData,
+      Data: 7|System.Collections.Generic.List`1[[Items.RaritySystem.GearRarityData,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 6|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 8|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 1
     - Name: _statsData
       Entry: 7
-      Data: 7|Stats.StatsData, Assembly-CSharp
+      Data: 9|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 7

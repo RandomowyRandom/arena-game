@@ -76,6 +76,28 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: _projectileEffects
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[ProjectileSystem.Abstraction.IProjectileEffect,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 4|ProjectileSystem.Effects.ApplyKnockBackProjectileEffect, Assembly-CSharp
+    - Name: _force
+      Entry: 4
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -87,20 +109,20 @@ MonoBehaviour:
       Data: 
     - Name: _rarityData
       Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[Items.RaritySystem.GearRarityData,
+      Data: 5|System.Collections.Generic.List`1[[Items.RaritySystem.GearRarityData,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 5
     - Name: 
       Entry: 7
-      Data: 4|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 6|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 1
     - Name: _statsData
       Entry: 7
-      Data: 5|Stats.StatsData, Assembly-CSharp
+      Data: 7|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 2
@@ -124,13 +146,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 6|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 8|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 2
     - Name: _statsData
       Entry: 7
-      Data: 7|Stats.StatsData, Assembly-CSharp
+      Data: 9|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 3
@@ -154,13 +176,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 8|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 10|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 3
     - Name: _statsData
       Entry: 7
-      Data: 9|Stats.StatsData, Assembly-CSharp
+      Data: 11|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 4
@@ -184,13 +206,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 10|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 12|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 4
     - Name: _statsData
       Entry: 7
-      Data: 11|Stats.StatsData, Assembly-CSharp
+      Data: 13|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 4.5
@@ -214,13 +236,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 12|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 14|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 5
     - Name: _statsData
       Entry: 7
-      Data: 13|Stats.StatsData, Assembly-CSharp
+      Data: 15|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 5

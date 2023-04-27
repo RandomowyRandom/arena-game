@@ -23,3 +23,4 @@ MonoBehaviour:
     SerializationNodes: []
   _maxHealth: 100
   _key: IRON_ORE
+  _isStatic: 1
