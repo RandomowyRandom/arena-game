@@ -6,7 +6,7 @@ namespace Player
 {
     [RequireComponent(typeof(Animator))]
     [RequireComponent(typeof(SpriteRenderer))]
-    public class PlayerRigidbodyAnimatorController: MonoBehaviour
+    public class PlayerInputAnimatorController: MonoBehaviour
     {
         private Animator _animator;
         private SpriteRenderer _spriteRenderer;
