@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Common.Attributes;
 using Items.Abstraction;
 using Items.RaritySystem;
+using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using Stats;
 using Stats.Interfaces;
@@ -27,5 +29,31 @@ namespace Items.ItemDataSystem
         {
             return _rarityData;
         }
+
+        [InfoBox("Requires definition of Common stats!")]
+        [Button]
+        private void GenerateStats()
+        {
+            var hasCommonStats = _rarityData
+                .Any(r => r.GearRarity.name == "Common");
+
+            var commonStat = _rarityData[0].StatsData;
+                
+            if (!hasCommonStats)
+                throw new NotImplementedException("Common stats are not defined!");
+
+            for (var i = 1; i < 5; i++)
+            {
+                var newStat = new StatsData
+                    (commonStat.Damage + i * _damageIncreasePerLevel, 
+                        commonStat.Speed,commonStat.FireRate, 
+                        commonStat.MaxHealth, 
+                        commonStat.Defense);
+                _rarityData.Add(new GearRarityData(newStat));
+            }
+        }
+        
+        [SerializeField]
+        private float _damageIncreasePerLevel = 1f;
     }
 }

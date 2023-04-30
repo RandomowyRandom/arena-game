@@ -131,7 +131,7 @@ MonoBehaviour:
       Data: 0
     - Name: _fireRate
       Entry: 4
-      Data: 1
+      Data: 0.7
     - Name: _maxHealth
       Entry: 4
       Data: 0
@@ -161,7 +161,7 @@ MonoBehaviour:
       Data: 0
     - Name: _fireRate
       Entry: 4
-      Data: 0.8
+      Data: 0.7
     - Name: _maxHealth
       Entry: 4
       Data: 0
@@ -215,13 +215,13 @@ MonoBehaviour:
       Data: 13|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 4.5
+      Data: 5
     - Name: _speed
       Entry: 4
       Data: 0
     - Name: _fireRate
       Entry: 4
-      Data: 0.6
+      Data: 0.7
     - Name: _maxHealth
       Entry: 4
       Data: 0
@@ -245,13 +245,13 @@ MonoBehaviour:
       Data: 15|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 5
+      Data: 6
     - Name: _speed
       Entry: 4
       Data: 0
     - Name: _fireRate
       Entry: 4
-      Data: -0.5
+      Data: 0.7
     - Name: _maxHealth
       Entry: 4
       Data: 0
@@ -275,3 +275,4 @@ MonoBehaviour:
   _description: Pure wood power
   _maxStack: 1
   _consumeOnUse: 0
+  _damageIncreasePerLevel: 1
