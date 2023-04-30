@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 4256584674152707086}
   - component: {fileID: 4256584674152707087}
   - component: {fileID: 6549163521216006640}
+  - component: {fileID: -8345884688567939605}
   m_Layer: 0
   m_Name: BlueSlime
   m_TagString: Untagged
@@ -349,6 +350,20 @@ MonoBehaviour:
       Entry: 8
       Data: 
   _itemWorldPrefab: {fileID: 4956166285135844185, guid: 4909a5cc932cf8b4a8f682ba5aecb08a, type: 3}
+--- !u!114 &-8345884688567939605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3748062702778602465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ee0da8836744a40b8d3e572b2e93bef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _experienceOrbPrefab: {fileID: 4797993179183230533, guid: 9c48afd48a52b2543b2a6ac789bca1a6, type: 3}
+  _experienceOrbAmount: 6
 --- !u!1 &6955444816798097189
 GameObject:
   m_ObjectHideFlags: 0

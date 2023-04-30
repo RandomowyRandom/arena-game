@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 4637590501584507407}
   - component: {fileID: 5714401500757210618}
   - component: {fileID: 5714401500757210619}
+  - component: {fileID: -1194861503629681118}
   m_Layer: 0
   m_Name: Bat
   m_TagString: Untagged
@@ -342,3 +343,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa12e131011f41c89ee8b76a0f039b1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1194861503629681118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4637590501584507413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ee0da8836744a40b8d3e572b2e93bef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _experienceOrbPrefab: {fileID: 4797993179183230533, guid: 9c48afd48a52b2543b2a6ac789bca1a6, type: 3}
+  _experienceOrbAmount: 2

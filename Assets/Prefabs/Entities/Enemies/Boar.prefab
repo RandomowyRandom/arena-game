@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 5695288043864771795}
   - component: {fileID: 5695288043864771794}
   - component: {fileID: 4590608920536994468}
+  - component: {fileID: -8637499691256948194}
   m_Layer: 0
   m_Name: Boar
   m_TagString: Untagged
@@ -349,3 +350,17 @@ PolygonCollider2D:
       - {x: 0.24899483, y: -0.033715725}
       - {x: 0.402452, y: -0.034793377}
       - {x: 0.38116264, y: 0.16250062}
+--- !u!114 &-8637499691256948194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4618472564772760380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ee0da8836744a40b8d3e572b2e93bef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _experienceOrbPrefab: {fileID: 4797993179183230533, guid: 9c48afd48a52b2543b2a6ac789bca1a6, type: 3}
+  _experienceOrbAmount: 9
