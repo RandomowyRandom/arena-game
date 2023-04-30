@@ -66,7 +66,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   _displayName: Copper helmet
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: cda17a4353790734a9162fe3068d4fc9, type: 3}
   _description: 
   _maxStack: 1
   _equipmentType: 0
