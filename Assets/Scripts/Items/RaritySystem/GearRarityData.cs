@@ -14,6 +14,13 @@ namespace Items.RaritySystem
         [SerializeField]
         private StatsData _statsData;
         
+        public GearRarityData(){}
+        
+        public GearRarityData(StatsData statsData)
+        {
+            _statsData = statsData;
+        }
+        
         public GearRarity GearRarity => _gearRarity;
         
         public StatsData StatsData => _statsData;

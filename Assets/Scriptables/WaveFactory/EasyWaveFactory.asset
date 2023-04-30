@@ -29,4 +29,4 @@ MonoBehaviour:
   _subWaveCountFactor: 4
   _subwaveEnemyCountFactor: 10
   _enemyDifficultyFactor: 2
-  _difficultyRaise: 5.08
+  _difficultyRaise: 0.15

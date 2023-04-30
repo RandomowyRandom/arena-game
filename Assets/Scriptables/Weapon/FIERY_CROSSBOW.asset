@@ -18,6 +18,10 @@ MonoBehaviour:
     ReferencedUnityObjects:
     - {fileID: 6220283805649785671, guid: c09c62d55865de64586693b1db0627da, type: 3}
     - {fileID: 11400000, guid: 7ff96bf0ebbc025429ee488993903671, type: 2}
+    - {fileID: 11400000, guid: a24912256fd91a845bd6f489827a3d3b, type: 2}
+    - {fileID: 11400000, guid: d8917f73eb0309040ad9ef636dc22eae, type: 2}
+    - {fileID: 11400000, guid: cea9beb5a9fdacc448777c52afac584b, type: 2}
+    - {fileID: 11400000, guid: 5c3c3f83f3bff214caedaf5ea0b51356, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -243,7 +247,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 5
     - Name: 
       Entry: 7
       Data: 16|Items.RaritySystem.GearRarityData, Assembly-CSharp
@@ -262,6 +266,126 @@ MonoBehaviour:
     - Name: _fireRate
       Entry: 4
       Data: 0.2
+    - Name: _maxHealth
+      Entry: 4
+      Data: 0
+    - Name: _defense
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 18|Items.RaritySystem.GearRarityData, Assembly-CSharp
+    - Name: _gearRarity
+      Entry: 10
+      Data: 2
+    - Name: _statsData
+      Entry: 7
+      Data: 19|Stats.StatsData, Assembly-CSharp
+    - Name: _damage
+      Entry: 4
+      Data: 17.5
+    - Name: _speed
+      Entry: 4
+      Data: 0
+    - Name: _fireRate
+      Entry: 4
+      Data: 0.2
+    - Name: _maxHealth
+      Entry: 4
+      Data: 0
+    - Name: _defense
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 20|Items.RaritySystem.GearRarityData, Assembly-CSharp
+    - Name: _gearRarity
+      Entry: 10
+      Data: 3
+    - Name: _statsData
+      Entry: 7
+      Data: 21|Stats.StatsData, Assembly-CSharp
+    - Name: _damage
+      Entry: 4
+      Data: 19
+    - Name: _speed
+      Entry: 4
+      Data: 0
+    - Name: _fireRate
+      Entry: 4
+      Data: 0.2
+    - Name: _maxHealth
+      Entry: 4
+      Data: 0
+    - Name: _defense
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 22|Items.RaritySystem.GearRarityData, Assembly-CSharp
+    - Name: _gearRarity
+      Entry: 10
+      Data: 4
+    - Name: _statsData
+      Entry: 7
+      Data: 23|Stats.StatsData, Assembly-CSharp
+    - Name: _damage
+      Entry: 4
+      Data: 20.5
+    - Name: _speed
+      Entry: 4
+      Data: 0
+    - Name: _fireRate
+      Entry: 4
+      Data: 0.18
+    - Name: _maxHealth
+      Entry: 4
+      Data: 0
+    - Name: _defense
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 24|Items.RaritySystem.GearRarityData, Assembly-CSharp
+    - Name: _gearRarity
+      Entry: 10
+      Data: 5
+    - Name: _statsData
+      Entry: 7
+      Data: 25|Stats.StatsData, Assembly-CSharp
+    - Name: _damage
+      Entry: 4
+      Data: 21.5
+    - Name: _speed
+      Entry: 4
+      Data: 0
+    - Name: _fireRate
+      Entry: 4
+      Data: 0.15
     - Name: _maxHealth
       Entry: 4
       Data: 0

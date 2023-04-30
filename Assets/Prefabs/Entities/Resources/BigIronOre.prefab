@@ -216,7 +216,7 @@ MonoBehaviour:
       Data: 0
     - Name: _amount
       Entry: 3
-      Data: 1
+      Data: 2
     - Name: _gearRarity
       Entry: 6
       Data: 
@@ -240,7 +240,7 @@ MonoBehaviour:
       Data: 0
     - Name: _amount
       Entry: 3
-      Data: 1
+      Data: 2
     - Name: _gearRarity
       Entry: 6
       Data: 
@@ -264,7 +264,7 @@ MonoBehaviour:
       Data: 0
     - Name: _amount
       Entry: 3
-      Data: 1
+      Data: 2
     - Name: _gearRarity
       Entry: 6
       Data: 
