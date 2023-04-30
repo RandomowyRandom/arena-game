@@ -21,6 +21,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a24912256fd91a845bd6f489827a3d3b, type: 2}
     - {fileID: 11400000, guid: d8917f73eb0309040ad9ef636dc22eae, type: 2}
     - {fileID: 11400000, guid: cea9beb5a9fdacc448777c52afac584b, type: 2}
+    - {fileID: 11400000, guid: 5c3c3f83f3bff214caedaf5ea0b51356, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -238,7 +239,7 @@ MonoBehaviour:
       Data: 14|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
-      Data: 4
+      Data: 5
     - Name: _statsData
       Entry: 7
       Data: 15|Stats.StatsData, Assembly-CSharp
@@ -274,3 +275,4 @@ MonoBehaviour:
   _description: 
   _maxStack: 1
   _consumeOnUse: 0
+  _damageIncreasePerLevel: 1
