@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Inventory
 {
@@ -12,7 +13,7 @@ namespace Inventory
 
         private void Update()
         {
-            if (!Input.GetKeyDown(KeyCode.E)) 
+            if (!Keyboard.current.tabKey.wasPressedThisFrame) 
                 return;
             
             SwitchInventory();

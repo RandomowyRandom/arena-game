@@ -5,6 +5,7 @@ using EntitySystem;
 using JetBrains.Annotations;
 using QFSW.QC;
 using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using UnityEngine;
 
 namespace WaveSystem
@@ -21,8 +22,13 @@ namespace WaveSystem
         public event Action<Wave> OnWaveEnd;
         public event Action<SubWave> OnSubWaveStart;
         public event Action<SubWave> OnSubWaveEnd;
-        
+
+        public bool IsWaveInProgress { get; private set; }
+
         private Wave _wave;
+        
+        [OdinSerialize] [ReadOnly]
+        private readonly List<Entity> _spawnedEnemies = new();
         
         private void Awake()
         {
@@ -35,7 +41,7 @@ namespace WaveSystem
         {
             ServiceLocator.ServiceLocator.Instance.Deregister<IWaveManager>();
         }
-
+        
         public void SetWave(Wave wave)
         {
             _wave = wave;
@@ -44,7 +50,9 @@ namespace WaveSystem
         }
         public async void StartWave()
         {
+            IsWaveInProgress = true;
             await SpawnEnemies();
+            IsWaveInProgress = false;
             
             SetWave(_waveFactory.GetWave());
         }
@@ -58,7 +66,10 @@ namespace WaveSystem
                 OnSubWaveStart?.Invoke(subWave);
                 foreach (var entity in subWave.Entities)
                 {
-                    Instantiate(entity, GetRandomPositionOutOfScreen(), Quaternion.identity);
+                    var spawnedEntity = Instantiate(entity, GetRandomPositionOutOfScreen(), Quaternion.identity);
+                    
+                    _spawnedEnemies.Add(spawnedEntity);
+                    spawnedEntity.OnDeath += () => _spawnedEnemies.Remove(spawnedEntity);
                     
                     await UniTask.Delay(TimeSpan.FromSeconds(subWave.SpawnDelay));
                 }
@@ -67,6 +78,7 @@ namespace WaveSystem
                 await UniTask.Delay(TimeSpan.FromSeconds(_wave.SubWaveDelay));
             }
             
+            await UniTask.WaitUntil(() => _spawnedEnemies.Count == 0);
             OnWaveEnd?.Invoke(_wave);
         }
 

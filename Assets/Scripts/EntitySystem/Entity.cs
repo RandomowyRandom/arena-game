@@ -30,7 +30,13 @@ namespace EntitySystem
             
             _effectHandler = GetComponent<EntityProjectileEffectHandler>();
         }
-        
+
+        private void OnDestroy()
+        {
+            OnDamageTaken = null;
+            OnDeath = null;
+        }
+
         public void TakeDamage(float damage)
         {
             _health -= damage;
