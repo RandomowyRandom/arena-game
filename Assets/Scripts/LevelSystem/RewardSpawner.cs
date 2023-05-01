@@ -6,17 +6,17 @@ using UnityEngine.Serialization;
 
 namespace LevelSystem
 {
-    [RequireComponent(typeof(LevelEntity))]
+    [RequireComponent(typeof(PlayerLevel))]
     public class RewardSpawner: MonoBehaviour
     {
         [FormerlySerializedAs("_rewardPrefab")] [SerializeField]
         private List<GameObject> _rewardPrefabs;
         
-        private LevelEntity _levelEntity;
+        private PlayerLevel _levelEntity;
 
         private void Awake()
         {
-            _levelEntity = GetComponent<LevelEntity>();
+            _levelEntity = GetComponent<PlayerLevel>();
             _levelEntity.OnLevelUp += SpawnReward;
         }
 

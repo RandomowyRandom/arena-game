@@ -12,9 +12,14 @@ namespace EntitySystem
         private float _maxHealth;
         
         [SerializeField]
+        private int _requiredLevel = 0;
+        
+        [SerializeField]
         private bool _isStatic;
         
         public float MaxHealth => _maxHealth;
+        
+        public int RequiredLevel => _requiredLevel;
         
         public string Key => name;
         

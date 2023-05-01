@@ -1,10 +1,13 @@
 ﻿using System;
+using JetBrains.Annotations;
 using LevelSystem.Abstraction;
+using Player.Interfaces;
+using QFSW.QC;
 using UnityEngine;
 
 namespace LevelSystem
 {
-    public class LevelEntity: MonoBehaviour
+    public class PlayerLevel: MonoBehaviour, IPlayerLevel
     {
         [SerializeField]
         private LevelDatabase _levelDatabase;
@@ -19,6 +22,16 @@ namespace LevelSystem
         
         public int CurrentLevel => _currentLevel;
         public int CurrentExperience => _currentExperience;
+
+        private void Awake()
+        {
+            ServiceLocator.ServiceLocator.Instance.Register<IPlayerLevel>(this);
+        }
+
+        private void OnDestroy()
+        {
+            ServiceLocator.ServiceLocator.Instance.Deregister<IPlayerLevel>();
+        }
 
         public void AddExperience(int experience)
         {
@@ -42,5 +55,16 @@ namespace LevelSystem
             Instantiate(_gainExperienceEffect, collision.transform.position, Quaternion.identity);
             Destroy(collision);
         }
+
+        #region QC
+
+        [Command("log-level")] [UsedImplicitly]
+        private void CommandLogLevel()
+        {
+            Debug.Log($"Current level: {_currentLevel}");
+            Debug.Log($"Experience: {_currentExperience} / {_levelDatabase.GetLevel(_currentLevel).ExperienceRequired}");
+        }
+
+        #endregion
     }
 }

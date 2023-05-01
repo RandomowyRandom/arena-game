@@ -1,5 +1,6 @@
 ﻿using System;
 using EntitySystem.Abstraction;
+using Player.Interfaces;
 using TriangularAssets;
 using UnityEngine;
 
@@ -20,9 +21,13 @@ namespace EntitySystem
         
         public bool IsStatic => _data.IsStatic;
 
+        private IPlayerLevel PlayerLevel => _playerLevel ??= ServiceLocator.ServiceLocator.Instance.Get<IPlayerLevel>();
+        
         private EntityProjectileEffectHandler _effectHandler;
         
         private float _health;
+        
+        private IPlayerLevel _playerLevel;
 
         private void Awake()
         {
@@ -39,8 +44,11 @@ namespace EntitySystem
 
         public void TakeDamage(float damage)
         {
+            if (PlayerLevel.CurrentLevel < _data.RequiredLevel)
+                damage = 0;
+            
             _health -= damage;
-            OnDamageTaken?.Invoke(_health);
+            OnDamageTaken?.Invoke(damage);
 
             if (!(_health <= 0)) 
                 return;
