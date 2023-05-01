@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4787323143279092631}
   - component: {fileID: 6192692046659065105}
   - component: {fileID: 4595078467404532325}
+  - component: {fileID: -6870939489332418813}
   m_Layer: 0
   m_Name: SilverChest
   m_TagString: Untagged
@@ -264,6 +265,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad927df318354e97b96d8f350a2b6c31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6870939489332418813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4787323143279092637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb30cc47db7e4636b9f8221682fe6e47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageIndicator: {fileID: 6555825616068831193, guid: e75c9e3b24e5b2147b52223efebe2a78, type: 3}
 --- !u!1 &8652304722134949343
 GameObject:
   m_ObjectHideFlags: 0

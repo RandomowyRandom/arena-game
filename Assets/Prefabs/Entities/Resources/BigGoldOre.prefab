@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2931861312426724267}
   - component: {fileID: -601255169618957485}
   - component: {fileID: -7566442241650396870}
+  - component: {fileID: 4079239912211725039}
   m_Layer: 0
   m_Name: BigGoldOre
   m_TagString: Untagged
@@ -311,6 +312,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad927df318354e97b96d8f350a2b6c31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4079239912211725039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931861312426724257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb30cc47db7e4636b9f8221682fe6e47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageIndicator: {fileID: 6555825616068831193, guid: e75c9e3b24e5b2147b52223efebe2a78, type: 3}
 --- !u!1 &6300845516717947327
 GameObject:
   m_ObjectHideFlags: 0
