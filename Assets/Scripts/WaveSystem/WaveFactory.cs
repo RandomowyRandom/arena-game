@@ -25,6 +25,7 @@ namespace WaveSystem
         private float _difficultyRaise = 0.15f;
         
         private float _difficulty = 1;
+        private float _subWaveDelay = 2f;
 
         protected override void OnAfterDeserialize()
         {
@@ -44,14 +45,15 @@ namespace WaveSystem
                 var entities = GetEntitiesBasedOnDifficulty(subWavEnemyCount);
                 
                 subWave.Entities = entities;
-                subWave.SpawnDelay = 1f;
+                subWave.SpawnDelay = _subWaveDelay * .5f;
                 
                 subWaves.Add(subWave);
             }
             
             _difficulty += _difficultyRaise;
+            _subWaveDelay = Mathf.Clamp(_subWaveDelay - .1f, .25f, 2f);
             
-            return new Wave(subWaves, 2f);
+            return new Wave(subWaves, _subWaveDelay);
         }
         
         private List<Entity> GetEntitiesBasedOnDifficulty(int enemyCount)
