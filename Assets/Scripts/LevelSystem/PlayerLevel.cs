@@ -15,6 +15,8 @@ namespace LevelSystem
         [SerializeField]
         private ParticleSystem _gainExperienceEffect;
         
+        public event Action OnLevelChanged;
+        
         public event Action<int> OnLevelUp;
         
         private int _currentLevel = 1;
@@ -22,6 +24,7 @@ namespace LevelSystem
         
         public int CurrentLevel => _currentLevel;
         public int CurrentExperience => _currentExperience;
+        public int NextLevelExperience => _levelDatabase.GetLevel(_currentLevel).ExperienceRequired;
 
         private void Awake()
         {
@@ -36,6 +39,9 @@ namespace LevelSystem
         public void AddExperience(int experience)
         {
             _currentExperience += experience;
+            
+            OnLevelChanged?.Invoke();
+            
             if (_currentExperience < _levelDatabase.GetLevel(_currentLevel).ExperienceRequired) 
                 return;
             
