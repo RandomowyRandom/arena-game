@@ -13,6 +13,7 @@ namespace EntitySystem
         private SpriteRenderer _spriteRenderer;
         
         private readonly int _hitEffect = Shader.PropertyToID("_HitEffectBlend");
+        private readonly int _hitEffectColor = Shader.PropertyToID("_HitEffectColor");
 
         private void Awake()
         {
@@ -46,7 +47,7 @@ namespace EntitySystem
 
             var damageable = damage > 0;
             
-            _spriteRenderer.material.SetColor("_HitEffectColor", damageable ? Color.white : Color.red);
+            _spriteRenderer.material.SetColor(_hitEffectColor, damageable ? Color.white : Color.red);
             _spriteRenderer.material.SetFloat(_hitEffect, 1);
             
             if(_spriteRenderer == null)
