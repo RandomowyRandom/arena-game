@@ -22,5 +22,5 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _maxHealth: 300
-  _key: MITHRIL_ORE
+  _requiredLevel: 10
   _isStatic: 1

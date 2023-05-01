@@ -55,7 +55,7 @@ namespace WaveSystem
                 _waveManager.StartWave();
         }
 
-        public void SetState(bool state)
+        private void SetState(bool state)
         {
             _state = state;
             _light.gameObject.SetActive(state);

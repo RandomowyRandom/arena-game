@@ -13,6 +13,7 @@ namespace EntitySystem
         private SpriteRenderer _spriteRenderer;
         
         private readonly int _hitEffect = Shader.PropertyToID("_HitEffectBlend");
+        private readonly int _hitEffectColor = Shader.PropertyToID("_HitEffectColor");
 
         private void Awake()
         {
@@ -23,10 +24,13 @@ namespace EntitySystem
             _entity.OnDamageTaken += ScaleEnemy;
         }
 
-        private void ScaleEnemy(float obj)
+        private void ScaleEnemy(float damage)
         {
             transform.DOKill();
-
+             
+            if(damage <= 0)
+                return;
+            
             transform.localScale = Vector2.one * new Vector2(1, 1.3f);
             transform.DOScale(1f, 0.1f);
         }
@@ -37,16 +41,19 @@ namespace EntitySystem
             _spriteRenderer.DOKill();
         }
 
-        private void UpdateMaterial(float amount)
+        private void UpdateMaterial(float damage)
         {
             _spriteRenderer.material.DOKill();
+
+            var damageable = damage > 0;
             
+            _spriteRenderer.material.SetColor(_hitEffectColor, damageable ? Color.white : Color.red);
             _spriteRenderer.material.SetFloat(_hitEffect, 1);
             
             if(_spriteRenderer == null)
                 return;
             
-            _spriteRenderer.material.DOFloat(0, _hitEffect, 0.4f);
+            _spriteRenderer.material.DOFloat(0, _hitEffect,  damageable ? .4f : 1f);
         }
     }
 }
