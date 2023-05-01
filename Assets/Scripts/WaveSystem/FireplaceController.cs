@@ -89,13 +89,17 @@ namespace WaveSystem
         private void Disable(Wave wave)
         {
             SetState(false);
-            DOTween.To(() => _globalLight2D.intensity, x => _globalLight2D.intensity = x, 1f, 1f);
+            DOTween.To(
+                () => _globalLight2D.intensity, 
+                x => _globalLight2D.intensity = x, .9f, 1f);
         }
 
         private void Enable(Wave wave)
         {
             SetState(true);
-            DOTween.To(() => _globalLight2D.intensity, x => _globalLight2D.intensity = x, .35f, 1f);
+            DOTween.To(
+                () => _globalLight2D.intensity, 
+                x => _globalLight2D.intensity = x, .4f, 1f);
         }
     }
 }
