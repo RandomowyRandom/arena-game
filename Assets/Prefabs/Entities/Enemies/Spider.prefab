@@ -98,11 +98,11 @@ GameObject:
   - component: {fileID: 5507470878955383104}
   - component: {fileID: 5507470878955383111}
   - component: {fileID: 5507470878955383129}
-  - component: {fileID: 5507470878955383128}
   - component: {fileID: 4863836519104614061}
   - component: {fileID: 4863836519104614060}
   - component: {fileID: 3293224119833959979}
   - component: {fileID: 1184796252860307094}
+  - component: {fileID: -3912289716190795323}
   m_Layer: 0
   m_Name: Spider
   m_TagString: Untagged
@@ -293,33 +293,6 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &5507470878955383128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5507470878955383106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56e52c71a4b64749908203e2fdb6f4e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: _targetProvider
-      Entry: 7
-      Data: 0|EntitySystem.PlayerEntityProvider, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
 --- !u!114 &4863836519104614061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,3 +344,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageIndicator: {fileID: 6555825616068831193, guid: e75c9e3b24e5b2147b52223efebe2a78, type: 3}
+--- !u!114 &-3912289716190795323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5507470878955383106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fea9115401a4df6b0649c07820ab8bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _tasks
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[EntitySystem.Abstraction.IEntityTask,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|EntitySystem.EntityTask.TargetFollowEntityTask, Assembly-CSharp
+    - Name: _targetProvider
+      Entry: 7
+      Data: 2|EntitySystem.PlayerEntityProvider, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _duration
+      Entry: 4
+      Data: -1
+    - Name: _speed
+      Entry: 4
+      Data: 65
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 

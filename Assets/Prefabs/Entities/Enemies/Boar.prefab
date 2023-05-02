@@ -97,12 +97,12 @@ GameObject:
   - component: {fileID: 4618472564772760383}
   - component: {fileID: 4618472564772760382}
   - component: {fileID: 4618472564772760359}
-  - component: {fileID: 4618472564772760358}
   - component: {fileID: 5695288043864771795}
   - component: {fileID: 5695288043864771794}
   - component: {fileID: 4590608920536994468}
   - component: {fileID: -8637499691256948194}
   - component: {fileID: -2369450324674868513}
+  - component: {fileID: 4824399492631658294}
   m_Layer: 0
   m_Name: Boar
   m_TagString: Untagged
@@ -259,7 +259,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 20
+  m_LinearDrag: 13
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -267,33 +267,6 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &4618472564772760358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4618472564772760380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56e52c71a4b64749908203e2fdb6f4e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: _targetProvider
-      Entry: 7
-      Data: 0|EntitySystem.PlayerEntityProvider, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
 --- !u!114 &5695288043864771795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,3 +351,88 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageIndicator: {fileID: 6555825616068831193, guid: e75c9e3b24e5b2147b52223efebe2a78, type: 3}
+--- !u!114 &4824399492631658294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4618472564772760380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fea9115401a4df6b0649c07820ab8bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _tasks
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[EntitySystem.Abstraction.IEntityTask,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 7
+      Data: 1|EntitySystem.EntityTask.TargetFollowEntityTask, Assembly-CSharp
+    - Name: _targetProvider
+      Entry: 7
+      Data: 2|EntitySystem.PlayerEntityProvider, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _duration
+      Entry: 4
+      Data: 3
+    - Name: _speed
+      Entry: 4
+      Data: 35
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|EntitySystem.EntityTask.WaitForSecondsEntityTask, Assembly-CSharp
+    - Name: _duration
+      Entry: 4
+      Data: 0.8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|EntitySystem.EntityTask.DashToTargetEntityEffect, Assembly-CSharp
+    - Name: _targetProvider
+      Entry: 7
+      Data: 5|EntitySystem.PlayerEntityProvider, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _force
+      Entry: 4
+      Data: 45
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|EntitySystem.EntityTask.WaitForSecondsEntityTask, Assembly-CSharp
+    - Name: _duration
+      Entry: 4
+      Data: 0.8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 

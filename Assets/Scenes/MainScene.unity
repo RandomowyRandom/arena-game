@@ -38372,6 +38372,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 634056538}
+    - target: {fileID: 8129455809130317794, guid: 8ab5d2dcc6474214aa269a5a70f1cf4f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.21
+      objectReference: {fileID: 0}
     - target: {fileID: 8129455809263681361, guid: 8ab5d2dcc6474214aa269a5a70f1cf4f, type: 3}
       propertyPath: m_Name
       value: ForestFireplace
