@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 195590674318129940}
   - component: {fileID: 195590674318129939}
   - component: {fileID: 1806774103361084299}
+  - component: {fileID: 3855627058645499471}
+  - component: {fileID: 2597022620772742116}
   m_Layer: 0
   m_Name: BlueGoo
   m_TagString: Untagged
@@ -125,3 +127,59 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeToDestroy: 5
+--- !u!114 &3855627058645499471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195590674318129938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef74de5a8af946da9a49e2a31d74fedc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2597022620772742116}
+        m_TargetAssemblyTypeName: BuffSystem.CollisionBuff, Assembly-CSharp
+        m_MethodName: OnBuffHandlerEnter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onCollisionExit:
+    m_PersistentCalls:
+      m_Calls: []
+  _onCollisionStay:
+    m_PersistentCalls:
+      m_Calls: []
+  _includeTriggers: 1
+--- !u!114 &2597022620772742116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195590674318129938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d01df6597704b52b9e8a59c4ed34aa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _buffData: {fileID: 11400000, guid: f5020d8df3de50742a1653a8c173e587, type: 2}

@@ -68,5 +68,16 @@ namespace Stats
                 a.Defense - b.Defense
             );
         }
+        
+        public static StatsData operator -(StatsData a)
+        {
+            return new StatsData(
+                -a.Damage,
+                -a.Speed,
+                -a.FireRate,
+                -a.MaxHealth,
+                -a.Defense
+            );
+        }
     }
 }
