@@ -397,6 +397,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad927df318354e97b96d8f350a2b6c31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hitSound: {fileID: 8300000, guid: 38ee749178d2efb40915369aac992564, type: 3}
+  _levelLockedSound: {fileID: 8300000, guid: 74d6abc2585ce87479bbab6b3c20adcd, type: 3}
 --- !u!114 &6064284740884045697
 MonoBehaviour:
   m_ObjectHideFlags: 0

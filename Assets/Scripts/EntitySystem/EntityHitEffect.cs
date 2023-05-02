@@ -1,6 +1,4 @@
-﻿using System;
-using Cysharp.Threading.Tasks;
-using DG.Tweening;
+﻿using DG.Tweening;
 using UnityEngine;
 
 namespace EntitySystem
@@ -9,6 +7,12 @@ namespace EntitySystem
     [RequireComponent(typeof(SpriteRenderer))]
     public class EntityHitEffect: MonoBehaviour
     {
+        [SerializeField]
+        private AudioClip _hitSound;
+        
+        [SerializeField]
+        private AudioClip _levelLockedSound;
+        
         private Entity _entity;
         private SpriteRenderer _spriteRenderer;
         
@@ -47,8 +51,12 @@ namespace EntitySystem
 
             var damageable = damage > 0;
             
+            var soundEffect = damageable ? _hitSound : _levelLockedSound;
+            
             _spriteRenderer.material.SetColor(_hitEffectColor, damageable ? Color.white : Color.red);
             _spriteRenderer.material.SetFloat(_hitEffect, 1);
+            
+            AudioSource.PlayClipAtPoint(soundEffect, transform.position);
             
             if(_spriteRenderer == null)
                 return;
