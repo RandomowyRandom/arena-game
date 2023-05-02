@@ -4,5 +4,6 @@
     {
         Completed,
         Break,
+        Failed
     }
 }

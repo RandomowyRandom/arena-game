@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: -1194861503629681118}
   - component: {fileID: -6299141926117850925}
   - component: {fileID: 3477944286916021254}
+  - component: {fileID: 786313674999913745}
   m_Layer: 0
   m_Name: Bat
   m_TagString: Untagged
@@ -384,6 +385,9 @@ MonoBehaviour:
     - Name: _duration
       Entry: 4
       Data: 2
+    - Name: _speed
+      Entry: 4
+      Data: 40
     - Name: 
       Entry: 8
       Data: 
@@ -402,3 +406,23 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+--- !u!95 &786313674999913745
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4637590501584507413}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b89365dbd41b7ce4fb56ac8c56558314, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

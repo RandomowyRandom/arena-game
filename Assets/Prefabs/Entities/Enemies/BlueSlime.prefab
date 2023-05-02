@@ -366,7 +366,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 195590674318129938, guid: c6a415ae8c410ca4bb27c725fca880de, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -378,7 +379,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 1|EntitySystem.EntityTask.TargetFollowEntityTask, Assembly-CSharp
@@ -390,7 +391,19 @@ MonoBehaviour:
       Data: 
     - Name: _duration
       Entry: 4
-      Data: -1
+      Data: 0.1
+    - Name: _speed
+      Entry: 4
+      Data: 35
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|EntitySystem.EntityTask.InstantiateObjectEntityTask, Assembly-CSharp
+    - Name: _prefab
+      Entry: 10
+      Data: 0
     - Name: 
       Entry: 8
       Data: 

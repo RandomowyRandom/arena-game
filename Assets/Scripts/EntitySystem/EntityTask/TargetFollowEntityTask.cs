@@ -14,6 +14,9 @@ namespace EntitySystem.EntityTask
 
         [SerializeField]
         private float _duration;
+
+        [SerializeField] 
+        private float _speed = 40f;
         
         private float _elapsedTime;
         
@@ -28,18 +31,16 @@ namespace EntitySystem.EntityTask
             if (target == null)
                 return EnemyTaskResult.Break;
             
-            const float speed = 40f;
-            
             while (true)
             {
                 if (entity == null)
                     return EnemyTaskResult.Break;
                 
-                if (_elapsedTime >= _duration)
+                if (_elapsedTime >= _duration && _duration != -1)
                     return EnemyTaskResult.Completed;
                 
                 var direction = (target.transform.position - entity.transform.position).normalized;
-                var movementVector = direction * speed;
+                var movementVector = direction * _speed;
             
                 _rigidbody.AddForce(movementVector, ForceMode2D.Force);
 

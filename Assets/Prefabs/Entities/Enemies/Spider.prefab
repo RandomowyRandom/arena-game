@@ -384,6 +384,9 @@ MonoBehaviour:
     - Name: _duration
       Entry: 4
       Data: -1
+    - Name: _speed
+      Entry: 4
+      Data: 65
     - Name: 
       Entry: 8
       Data: 
