@@ -372,7 +372,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 4
     - Name: 
       Entry: 7
       Data: 1|EntitySystem.EntityTask.TargetFollowEntityTask, Assembly-CSharp
@@ -396,7 +396,31 @@ MonoBehaviour:
       Data: 3|EntitySystem.EntityTask.WaitForSecondsEntityTask, Assembly-CSharp
     - Name: _duration
       Entry: 4
-      Data: 0.5
+      Data: 0.2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|EntitySystem.EntityTask.DashToTargetEntityEffect, Assembly-CSharp
+    - Name: _targetProvider
+      Entry: 7
+      Data: 5|EntitySystem.PlayerEntityProvider, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _force
+      Entry: 4
+      Data: 20
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|EntitySystem.EntityTask.WaitForSecondsEntityTask, Assembly-CSharp
+    - Name: _duration
+      Entry: 4
+      Data: 0.4
     - Name: 
       Entry: 8
       Data: 

@@ -11,12 +11,14 @@ Material:
   m_Shader: {fileID: 4800000, guid: a36b7719ff0465b42ab1407d67672c5f, type: 3}
   m_ValidKeywords:
   - GLOW_ON
+  - GREYSCALEOUTLINE_ON
   - INNEROUTLINE_ON
   - OUTBASEPIXELPERF_ON
   - OUTBASE_ON
   - SHINE_ON
   - WIND_ON
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _GREYSCALEOUTLINE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -82,7 +84,7 @@ Material:
     - _AlphaOutlineGlow: 5
     - _AlphaOutlineMinAlpha: 0
     - _AlphaOutlinePower: 1
-    - _AlphaRoundThreshold: 0.5
+    - _AlphaRoundThreshold: 0.005
     - _BillboardY: 0
     - _BlurHD: 0
     - _BlurIntensity: 0
@@ -118,9 +120,9 @@ Material:
     - _FlickerAlpha: 0
     - _FlickerFreq: 0.2
     - _FlickerPercent: 0.05
-    - _GhostBlend: 1
-    - _GhostColorBoost: 1
-    - _GhostTransparency: 0
+    - _GhostBlend: 0
+    - _GhostColorBoost: 0
+    - _GhostTransparency: 0.329
     - _GlitchAmount: 3
     - _GlitchSize: 1
     - _Glow: 0.5
@@ -134,9 +136,9 @@ Material:
     - _GrassRadialBend: 0
     - _GrassSpeed: 2.1
     - _GrassWind: 0.2
-    - _GreyscaleBlend: 1
+    - _GreyscaleBlend: 0
     - _GreyscaleLuminosity: 0
-    - _GreyscaleOutline: 0
+    - _GreyscaleOutline: 1
     - _HandDrawnAmount: 1
     - _HandDrawnSpeed: 3.3
     - _HitEffectBlend: 0
@@ -180,7 +182,7 @@ Material:
     - _PinchUvAmount: 0.35
     - _PixelateSize: 512
     - _PosterizeGamma: 0.75
-    - _PosterizeNumColors: 8
+    - _PosterizeNumColors: 0
     - _PosterizeOutline: 0
     - _RandomSeed: 0
     - _RectSize: 1
