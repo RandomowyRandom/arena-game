@@ -31,7 +31,6 @@ namespace Player
 
         private void FixedUpdate()
         {
-
             _rigidbody2D.AddForce(GetMovementVector(), ForceMode2D.Force);
         }
         

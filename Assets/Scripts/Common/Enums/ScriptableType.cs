@@ -12,5 +12,6 @@
         CraftingRecipe,
         Accessory,
         WaveFactory,
+        Buff
     }
 }
