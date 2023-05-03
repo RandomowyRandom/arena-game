@@ -1,4 +1,5 @@
 ﻿using EntitySystem;
+using EntitySystem.Abstraction;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,7 +29,7 @@ namespace UI
             _entity.OnDamageTaken -= UpdateUI;
         }
 
-        private void UpdateUI(float damage)
+        private void UpdateUI(float damage, IDamageSource source)
         {
             SetHealthUI(_entity.Health, _entity.MaxHealth);
         }

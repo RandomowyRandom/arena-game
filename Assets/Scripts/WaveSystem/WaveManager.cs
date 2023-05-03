@@ -69,7 +69,7 @@ namespace WaveSystem
                     var spawnedEntity = Instantiate(entity, GetRandomPositionOutOfScreen(), Quaternion.identity);
                     
                     _spawnedEnemies.Add(spawnedEntity);
-                    spawnedEntity.OnDeath += () => _spawnedEnemies.Remove(spawnedEntity);
+                    spawnedEntity.OnDeath += _ => _spawnedEnemies.Remove(spawnedEntity);
                     
                     await UniTask.Delay(TimeSpan.FromSeconds(subWave.SpawnDelay));
                 }

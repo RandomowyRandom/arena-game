@@ -1,4 +1,5 @@
 ﻿using System;
+using EntitySystem.Abstraction;
 using Items;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
@@ -28,7 +29,7 @@ namespace EntitySystem
             _entity.OnDeath -= DropItems;
         }
 
-        private void DropItems()
+        private void DropItems(IDamageSource source)
         {
             var drops = _dropTable.GetDrops();
 

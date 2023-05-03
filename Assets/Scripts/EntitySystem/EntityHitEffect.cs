@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using EntitySystem.Abstraction;
 using UnityEngine;
 
 namespace EntitySystem
@@ -28,7 +29,7 @@ namespace EntitySystem
             _entity.OnDamageTaken += ScaleEnemy;
         }
 
-        private void ScaleEnemy(float damage)
+        private void ScaleEnemy(float damage, IDamageSource source)
         {
             transform.DOKill();
              
@@ -45,7 +46,7 @@ namespace EntitySystem
             _spriteRenderer.DOKill();
         }
 
-        private void UpdateMaterial(float damage)
+        private void UpdateMaterial(float damage, IDamageSource source)
         {
             _spriteRenderer.material.DOKill();
 

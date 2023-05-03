@@ -16,6 +16,9 @@ namespace EntitySystem
         
         [SerializeField]
         private bool _isStatic;
+
+        [SerializeField] 
+        private EntityAttackerGroup _attackerGroup;
         
         public float MaxHealth => _maxHealth;
         
@@ -24,5 +27,7 @@ namespace EntitySystem
         public string Key => name;
         
         public bool IsStatic => _isStatic;
+        
+        public EntityAttackerGroup AttackerGroup => _attackerGroup;
     }
 }

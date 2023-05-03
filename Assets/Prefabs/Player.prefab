@@ -111,6 +111,11 @@ GameObject:
   - component: {fileID: 2005232575}
   - component: {fileID: 2005232576}
   - component: {fileID: 2005232585}
+  - component: {fileID: 2005232578}
+  - component: {fileID: 2005232579}
+  - component: {fileID: 2005232580}
+  - component: {fileID: 2005232581}
+  - component: {fileID: 7676584407242295096}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -206,6 +211,7 @@ MonoBehaviour:
     - {fileID: 233742934}
     - {fileID: 2005232551}
     - {fileID: 2005232561}
+    - {fileID: 2005232580}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -217,7 +223,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 4
     - Name: 
       Entry: 10
       Data: 0
@@ -227,6 +233,9 @@ MonoBehaviour:
     - Name: 
       Entry: 10
       Data: 2
+    - Name: 
+      Entry: 10
+      Data: 3
     - Name: 
       Entry: 13
       Data: 
@@ -421,7 +430,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _capacity: 5
-  _startingItems: []
+  _startingItems:
+  - _itemData: {fileID: 11400000, guid: 5cd9f6b3404097d45bab0a1560aee0ba, type: 2}
+    _amount: 1
+    _gearRarity: {fileID: 11400000, guid: 7ff96bf0ebbc025429ee488993903671, type: 2}
 --- !u!114 &7041262447649520805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,13 +470,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2005232578}
+        m_TargetAssemblyTypeName: LevelSystem.LevelEntity, Assembly-CSharp
+        m_MethodName: OnExperienceProviderEnter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _onCollisionExit:
     m_PersistentCalls:
       m_Calls: []
   _onCollisionStay:
     m_PersistentCalls:
       m_Calls: []
-  _includeTriggers: 0
+  _includeTriggers: 1
 --- !u!114 &3334973587308119609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -477,6 +501,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dccf123b5ba144aeba0a29fd3b0b9a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 2005232581}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _damageLocks
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[EntitySystem.Abstraction.IDamageLock,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   _data: {fileID: 11400000, guid: 78a8924caf0e48d478b92b5fc13c0fe2, type: 2}
 --- !u!58 &233742944
 CircleCollider2D:
@@ -642,6 +692,83 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3553c6b5376c45fa9863d097b18ee92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2005232578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4857834470512048523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 552bca40c4df4ba8883313ea88ccc29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levelDatabase: {fileID: 11400000, guid: 2c6abf7383e5b7d4c812f9bc8df0bd46, type: 2}
+  _gainExperienceEffect: {fileID: 2085560291111961646, guid: 215475d2338b24b48be86e5669813ab3, type: 3}
+--- !u!114 &2005232579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4857834470512048523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 781ff06c07b1429e8d76579421ba9a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rewardPrefabs:
+  - {fileID: 662719082333613600, guid: f68f8653e394e8840b0feb31c77aebe3, type: 3}
+  - {fileID: 4787323143279092637, guid: dffa238d7402ec54facd178c2430668a, type: 3}
+  - {fileID: 8669758350897948235, guid: 7d3cd3ae9b1648548831cb045427d491, type: 3}
+--- !u!114 &2005232580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4857834470512048523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a379a51f6a47e09623d1c2d173e580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _buffToApply: {fileID: 0}
+--- !u!114 &2005232581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4857834470512048523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 312d1db4cdc945f2b11d1c07458c42f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _invincibilitySeconds: 0.8
+--- !u!114 &7676584407242295096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4857834470512048523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77f228779ead45a9ae36c527f18038da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8618184906701007138

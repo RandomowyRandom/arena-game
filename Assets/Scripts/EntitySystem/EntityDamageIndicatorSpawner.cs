@@ -1,5 +1,6 @@
 ﻿using System;
 using DG.Tweening;
+using EntitySystem.Abstraction;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -24,7 +25,7 @@ namespace EntitySystem
             _entity.OnDamageTaken -= SpawnDamageIndicator;
         }
 
-        private void SpawnDamageIndicator(float damage)
+        private void SpawnDamageIndicator(float damage, IDamageSource source)
         {
             var indicator = Instantiate(_damageIndicator, transform.position, Quaternion.identity);
             indicator.SetDamage(damage);

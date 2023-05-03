@@ -22,4 +22,6 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _maxHealth: 100
-  _key: PLAYER
+  _requiredLevel: 0
+  _isStatic: 0
+  _attackerGroup: 1

@@ -46,13 +46,14 @@ namespace Items.Effects
                 foreach (var effect in _projectileEffects)
                     projectile.AddEffect(effect);
             
+            projectile.AttackerGroup = EntityAttackerGroup.Player;
+            
             projectile.GetComponent<SpriteRenderer>().color = _projectileColor;
             projectile.Damage = PlayerStats.GetStatsData().Damage;
             
             var mousePosition = GetMousePosition();
             var direction = (mousePosition - (Vector2) user.GameObject.transform.position).normalized;
             
-            // rotate projectile
             projectile.transform.rotation = 
                 Quaternion.Euler(0, 0, Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg);
             

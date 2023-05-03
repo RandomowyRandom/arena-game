@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 3293224119833959979}
   - component: {fileID: 1184796252860307094}
   - component: {fileID: -3912289716190795323}
+  - component: {fileID: 5258695450720101822}
   m_Layer: 0
   m_Name: Spider
   m_TagString: Untagged
@@ -245,6 +246,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dccf123b5ba144aeba0a29fd3b0b9a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _damageLocks
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[EntitySystem.Abstraction.IDamageLock,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   _data: {fileID: 11400000, guid: 9e11cbc39a1d1ae41af906040017bb4e, type: 2}
 --- !u!61 &5507470878955383111
 BoxCollider2D:
@@ -398,3 +421,16 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+--- !u!114 &5258695450720101822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5507470878955383106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43c7c383b108443e94425c5255c57e9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _collisionDamage: 5
