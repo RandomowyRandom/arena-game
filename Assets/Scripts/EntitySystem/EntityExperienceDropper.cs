@@ -1,4 +1,5 @@
 ﻿using System;
+using EntitySystem.Abstraction;
 using LevelSystem;
 using UnityEngine;
 
@@ -26,7 +27,7 @@ namespace EntitySystem
             _entity.OnDeath -= SpawnOrbs;
         }
 
-        private void SpawnOrbs()
+        private void SpawnOrbs(IDamageSource source)
         {
             for (var i = 0; i < _experienceOrbAmount; i++)
             {

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using DG.Tweening;
+using EntitySystem;
 using EntitySystem.Abstraction;
 using ProjectileSystem.Abstraction;
 using Sirenix.OdinInspector;
@@ -18,9 +19,9 @@ namespace ProjectileSystem
         private Rigidbody2D _rigidbody2D;
         private SpriteRenderer _spriteRenderer;
 
-        private readonly List<IDamageable> _damageables = new();
-        
-        public List<IDamageable> DamagedEntities => _damageables;
+        private readonly List<IDamageable> _damagedEntities = new();
+
+        public EntityAttackerGroup AttackerGroup { get; set; }
         
         public void AddEffect(IProjectileEffect effect)
         {
@@ -43,5 +44,16 @@ namespace ProjectileSystem
 
         public GameObject Source { get; set; }
         public float Damage { get; set; }
+        public bool CanAttackEntity(Entity entity)
+        {
+            var contains = _damagedEntities.Contains(entity);
+            
+            return !contains;
+        }
+
+        public void EntityAttacked(Entity entity)
+        {
+            _damagedEntities.Add(entity);
+        }
     }
 }

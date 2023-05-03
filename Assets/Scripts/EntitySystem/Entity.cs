@@ -1,19 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using EntitySystem.Abstraction;
 using Player.Interfaces;
+using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using TriangularAssets;
 using UnityEngine;
 
 namespace EntitySystem
 {
     [RequireComponent(typeof(CollisionHandler))]
-    public class Entity : MonoBehaviour, IDamageable
+    public class Entity : SerializedMonoBehaviour, IDamageable
     {
         [SerializeField]
         private EntityData _data;
+        
+        [OdinSerialize]
+        private List<IDamageLock> _damageLocks = new();
 
-        public event Action<float> OnDamageTaken;
-        public event Action OnDeath;
+        public event Action<float, IDamageSource> OnDamageTaken;
+        public event Action<IDamageSource> OnDeath;
         
         public float Health => _health;
         
@@ -42,18 +49,22 @@ namespace EntitySystem
             OnDeath = null;
         }
 
-        public void TakeDamage(float damage)
+        public void TakeDamage(float damage, IDamageSource source)
         {
+            if(_damageLocks != null)
+                if (_damageLocks.Any(damageLock => damageLock.IsLocked))
+                    return;
+
             if (PlayerLevel.CurrentLevel < _data.RequiredLevel)
                 damage = 0;
             
             _health -= damage;
-            OnDamageTaken?.Invoke(damage);
+            OnDamageTaken?.Invoke(damage, source);
 
             if (!(_health <= 0)) 
                 return;
             
-            OnDeath?.Invoke();
+            OnDeath?.Invoke(source);
             Destroy(gameObject);
         }
 
@@ -63,19 +74,22 @@ namespace EntitySystem
             
             if(damageSource == null)
                 return;
-            
+
             if(gameObject == damageSource.Source)
                 return;
-
-            if(damageSource.DamagedEntities.Contains(this))
+            
+            if(!damageSource.CanAttackEntity(this))
                 return;
             
-            TakeDamage(damageSource.Damage);
+            if(damageSource.AttackerGroup == _data.AttackerGroup)
+                return;
+            
+            TakeDamage(damageSource.Damage, damageSource);
             
             if(_effectHandler != null)
                 _effectHandler.ApplyProjectileEffects(gameObjectCollision);
             
-            damageSource.DamagedEntities.Add(this);
+            damageSource.EntityAttacked(this);
         }
     }
 }

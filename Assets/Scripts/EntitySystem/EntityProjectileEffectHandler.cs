@@ -20,7 +20,7 @@ namespace EntitySystem
             if(projectile == null || projectile.Effects == null)
                 return;
             
-            if(projectile.DamagedEntities.Contains(_entity))
+            if(!projectile.CanAttackEntity(_entity))
                 return;
             
             foreach (var effect in projectile.Effects)
