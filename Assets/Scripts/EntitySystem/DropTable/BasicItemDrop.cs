@@ -6,7 +6,7 @@ using UnityEngine;
 namespace EntitySystem
 {
     [Serializable]
-    public class ItemDrop
+    public class BasicItemDrop
     {
         [OdinSerialize]
         private Item _item;

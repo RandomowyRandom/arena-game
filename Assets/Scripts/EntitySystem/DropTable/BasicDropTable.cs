@@ -4,13 +4,13 @@ using System.Linq;
 using Items;
 using Sirenix.Serialization;
 
-namespace EntitySystem
+namespace EntitySystem.DropTable
 {
     [Serializable]
-    public class DropTable
+    public class BasicDropTable: IDropTable
     {
         [OdinSerialize]
-        private List<ItemDrop> _drops = new();
+        private List<BasicItemDrop> _drops = new();
         
         public List<Item> GetDrops()
         {

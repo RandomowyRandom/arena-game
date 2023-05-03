@@ -721,8 +721,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rewardPrefabs:
-  - {fileID: 662719082333613600, guid: f68f8653e394e8840b0feb31c77aebe3, type: 3}
-  - {fileID: 4787323143279092637, guid: dffa238d7402ec54facd178c2430668a, type: 3}
   - {fileID: 8669758350897948235, guid: 7d3cd3ae9b1648548831cb045427d491, type: 3}
 --- !u!114 &2005232580
 MonoBehaviour:
@@ -771,6 +769,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77f228779ead45a9ae36c527f18038da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _virtualCamera: {fileID: 0}
+  _hitSound: {fileID: 0}
 --- !u!1 &8618184906701007138
 GameObject:
   m_ObjectHideFlags: 0
