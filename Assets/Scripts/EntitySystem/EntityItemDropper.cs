@@ -1,5 +1,6 @@
 ﻿using System;
 using EntitySystem.Abstraction;
+using EntitySystem.DropTable;
 using Items;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
@@ -11,7 +12,7 @@ namespace EntitySystem
     public class EntityItemDropper: SerializedMonoBehaviour
     {
         [OdinSerialize]
-        private DropTable _dropTable;
+        private IDropTable _dropTable;
         
         [SerializeField]
         private ItemWorld _itemWorldPrefab;
