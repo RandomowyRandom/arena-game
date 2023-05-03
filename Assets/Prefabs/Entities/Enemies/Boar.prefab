@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: -2369450324674868513}
   - component: {fileID: 4824399492631658294}
   - component: {fileID: -527540731032217994}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

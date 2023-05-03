@@ -21,6 +21,9 @@ namespace WaveSystem
         [SerializeField]
         private SpriteRenderer _fireplaceRenderer;
         
+        [SerializeField]
+        private SpriteRenderer _arenaRenderer;
+        
         [FormerlySerializedAs("_glowLight2D")] [SerializeField]
         private Light2D _globalLight2D;
         
@@ -92,6 +95,9 @@ namespace WaveSystem
             DOTween.To(
                 () => _globalLight2D.intensity, 
                 x => _globalLight2D.intensity = x, .9f, 1f);
+            
+            _arenaRenderer.gameObject.SetActive(false);
+            _arenaRenderer.material.DOColor(Color.clear, 1f);
         }
 
         private void Enable(Wave wave)
@@ -100,6 +106,9 @@ namespace WaveSystem
             DOTween.To(
                 () => _globalLight2D.intensity, 
                 x => _globalLight2D.intensity = x, .4f, 1f);
+            
+            _arenaRenderer.gameObject.SetActive(true);
+            _arenaRenderer.material.DOColor(Color.white, 1f);
         }
     }
 }

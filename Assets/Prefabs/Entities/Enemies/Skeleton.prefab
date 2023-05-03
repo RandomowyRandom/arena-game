@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 4072023056154911207}
   - component: {fileID: 7009650184479776436}
   - component: {fileID: 6920103162997232335}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
