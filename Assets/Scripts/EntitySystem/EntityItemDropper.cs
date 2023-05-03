@@ -32,6 +32,9 @@ namespace EntitySystem
 
         private void DropItems(IDamageSource source)
         {
+            if(_dropTable == null)
+                return;
+            
             var drops = _dropTable.GetDrops();
 
             foreach (var drop in drops)

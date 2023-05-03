@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 5288061225271810404}
   - component: {fileID: 8146984510264522591}
   - component: {fileID: 4592981610897401294}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BlueSlime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,79 +274,14 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 11400000, guid: ed17443e4ebffd24681a156d4a04acbb, type: 2}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
     - Name: _dropTable
-      Entry: 7
-      Data: 0|EntitySystem.DropTable, Assembly-CSharp
-    - Name: _drops
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[EntitySystem.ItemDrop, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 2|EntitySystem.ItemDrop, Assembly-CSharp
-    - Name: _item
-      Entry: 7
-      Data: 3|Items.Item, Assembly-CSharp
-    - Name: _itemData
-      Entry: 10
-      Data: 0
-    - Name: _amount
-      Entry: 3
-      Data: 1
-    - Name: _gearRarity
       Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: _chance
-      Entry: 4
-      Data: 0.05
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 4|EntitySystem.ItemDrop, Assembly-CSharp
-    - Name: _item
-      Entry: 7
-      Data: 5|Items.Item, Assembly-CSharp
-    - Name: _itemData
-      Entry: 10
-      Data: 0
-    - Name: _amount
-      Entry: 3
-      Data: 1
-    - Name: _gearRarity
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: _chance
-      Entry: 4
-      Data: 0.03
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
       Data: 
   _itemWorldPrefab: {fileID: 4956166285135844185, guid: 4909a5cc932cf8b4a8f682ba5aecb08a, type: 3}
 --- !u!114 &-8345884688567939605
