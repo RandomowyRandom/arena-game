@@ -1,5 +1,4 @@
-﻿using System;
-using EntitySystem.Abstraction;
+﻿using EntitySystem.Abstraction;
 using EntitySystem.DropTable;
 using Items;
 using Sirenix.OdinInspector;

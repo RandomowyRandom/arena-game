@@ -12,14 +12,7 @@ namespace BuffSystem
 {
     public class PlayerBuffHandler: SerializedMonoBehaviour, IBuffHandler, IStatsDataProvider
     {
-        [SerializeField]
-        private BuffData _buffToApply;
-
-        [Button]
-        private void Apply()
-        {
-            AddBuff(_buffToApply);
-        }
+        public event Action OnBuffChanged;
         
         public GameObject GameObject => gameObject;
         
@@ -27,9 +20,18 @@ namespace BuffSystem
 
         private StatsData _statsData = new();
 
+        private void Awake()
+        {
+            ServiceLocator.ServiceLocator.Instance.Register<IBuffHandler>(this);
+        }
+        
+        private void OnDestroy()
+        {
+            ServiceLocator.ServiceLocator.Instance.Deregister<IBuffHandler>();
+        }
+
         private void Update()
         {
-            // ReSharper disable once ForCanBeConvertedToForeach
             for (var i = 0; i < _buffs.Count; i++)
             {
                 var buff = _buffs[i];
@@ -49,9 +51,9 @@ namespace BuffSystem
             foreach (var buff in _buffs.Where(buff => buff.BuffData == buffData))
             {
                 buff.RemainingTime = buffData.Duration;
+                OnBuffChanged?.Invoke();
                 return;
             }
-            
             
             _buffs.Add(new Buff(buffData));
             var effects = buffData.Effects;
@@ -60,6 +62,8 @@ namespace BuffSystem
             {
                 effect.OnApply(this);
             }
+            
+            OnBuffChanged?.Invoke();
         }
 
         public void RemoveBuff(Buff buff)
@@ -71,6 +75,8 @@ namespace BuffSystem
             {
                 effect.OnRemove(this);
             }
+            
+            OnBuffChanged?.Invoke();
         }
         
         public List<Buff> GetBuffs()
