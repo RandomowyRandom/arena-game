@@ -1,5 +1,7 @@
 ﻿using System;
 using DG.Tweening;
+using InteractionSystem;
+using InteractionSystem.Abstraction;
 using Player;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
@@ -10,7 +12,7 @@ using UnityEngine.Serialization;
 
 namespace WaveSystem
 {
-    public class FireplaceController: SerializedMonoBehaviour
+    public class FireplaceController: SerializedMonoBehaviour, IInteractable
     {
         [SerializeField] 
         private SpriteRenderer _light;
@@ -30,10 +32,41 @@ namespace WaveSystem
         [OdinSerialize]
         private IWaveManager _waveManager;
         
+        [SerializeField]
+        private InteractionTextHandler _interactionTextHandler;
+        
+        [SerializeField]
+        private OutlineInteractionEffect _outlineInteractionEffect;
+        
+        public GameObject GameObject => gameObject;
+        public void Interact()
+        {
+            if(_waveManager.IsWaveInProgress)
+                return;
+            
+            _waveManager.StartWave();
+            OnHandlerExit(null);
+        }
+
+        public void OnHandlerEnter(IInteractionHandler handler)
+        {
+            if(_waveManager.IsWaveInProgress)
+                return;
+            
+            _fireplaceRenderer.material.SetFloat(_outlinePixelWidth, 1f);
+            _interactionTextHandler?.Show();
+            _outlineInteractionEffect?.Show();
+        }
+
+        public void OnHandlerExit(IInteractionHandler handler)
+        {
+            _fireplaceRenderer.material.SetFloat(_outlinePixelWidth, 0f);
+            _interactionTextHandler?.Hide();
+            _outlineInteractionEffect?.Hide();
+        }
+
         private bool _state;
-        private bool _isPlayerNearby;
         private readonly int _outlinePixelWidth = Shader.PropertyToID("_OutlinePixelWidth");
-        private readonly int _innerOutlineThickness = Shader.PropertyToID("_InnerOutlineThickness");
 
         private void Awake()
         {
@@ -46,49 +79,13 @@ namespace WaveSystem
             SetState(false);
         }
 
-        private void Update()
-        {
-            if(!_isPlayerNearby)
-                return;
-
-            if(_waveManager.IsWaveInProgress)
-                return;
-            
-            if (Keyboard.current.eKey.wasPressedThisFrame)
-                _waveManager.StartWave();
-        }
-
         private void SetState(bool state)
         {
             _state = state;
             _light.gameObject.SetActive(state);
             _light2D.gameObject.SetActive(state);
-            _fireplaceRenderer.material.SetFloat(_innerOutlineThickness, state ? 1f : 0f);
         }
 
-        public void OnPlayerEnter(GameObject collision)
-        {
-            var player = collision.GetComponent<PlayerMovement>();
-            if (player == null) 
-                return;
-            
-            if(_waveManager.IsWaveInProgress)
-                return;
-            
-            _fireplaceRenderer.material.SetFloat(_outlinePixelWidth, 1f);
-            _isPlayerNearby = true;
-        }
-        
-        public void OnPlayerExit(GameObject collision)
-        {
-            var player = collision.GetComponent<PlayerMovement>();
-            if (player == null) 
-                return;
-            
-            _fireplaceRenderer.material.SetFloat(_outlinePixelWidth, 0f);
-            _isPlayerNearby = false;
-        }
-        
         private void Disable(Wave wave)
         {
             SetState(false);
