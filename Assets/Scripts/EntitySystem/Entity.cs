@@ -67,6 +67,14 @@ namespace EntitySystem
             OnDeath?.Invoke(source);
             Destroy(gameObject);
         }
+        
+        public void InstantKill(IDamageSource source)
+        {
+            _health = 0;
+            OnDamageTaken?.Invoke(99999, source);
+            OnDeath?.Invoke(source);
+            Destroy(gameObject);
+        }
 
         public void OnDamageSourceEnter(GameObject gameObjectCollision)
         {
