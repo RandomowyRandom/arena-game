@@ -493,3 +493,15 @@ MonoBehaviour:
     BackgroundTexture: {fileID: 0}
     IsBackgroundRecursive: 0
     IsHidden: 0
+  - Type: 1
+    Key: Assets/Scriptables/Buff
+    Ordinal: 40
+    Priority: 0
+    IconType: 1
+    SmallIcon: {fileID: 2800000, guid: 4f39ee84fe526c64594d405e50bb41ae, type: 3}
+    LargeIcon: {fileID: 2800000, guid: 7ce12d75f7f8dca4a9e8b07957457f94, type: 3}
+    IsIconRecursive: 0
+    BackgroundType: 0
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 0
+    IsHidden: 0

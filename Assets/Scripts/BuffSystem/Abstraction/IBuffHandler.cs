@@ -1,11 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using ServiceLocator;
 using Stats;
 using UnityEngine;
 
 namespace BuffSystem.Abstraction
 {
-    public interface IBuffHandler
+    public interface IBuffHandler: IService
     {
+        public event Action OnBuffChanged;
         public GameObject GameObject { get; }
         
         public void UpdateStatsData(StatsData statsData);
