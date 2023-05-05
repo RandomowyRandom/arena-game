@@ -60,6 +60,9 @@ namespace InteractionSystem
             _intractables.Remove(interactable);
             
             interactable.OnHandlerExit(this);
+            
+            if(_currentInteractable == interactable)
+                _currentInteractable = null;
         }
 
         private IInteractable GetNearestInteractable()
