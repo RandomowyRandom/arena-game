@@ -415,7 +415,7 @@ MonoBehaviour:
       Data: 50
     - Name: _backOffSpeedMultiplier
       Entry: 4
-      Data: 0.75
+      Data: 0.6
     - Name: _minDistance
       Entry: 4
       Data: 3
