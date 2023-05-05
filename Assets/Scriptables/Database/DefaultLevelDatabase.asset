@@ -15,7 +15,10 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8669758350897948235, guid: 7d3cd3ae9b1648548831cb045427d491, type: 3}
+    - {fileID: 4787323143279092637, guid: dffa238d7402ec54facd178c2430668a, type: 3}
+    - {fileID: 662719082333613600, guid: f68f8653e394e8840b0feb31c77aebe3, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -27,7 +30,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 100
+      Data: 20
     - Name: 
       Entry: 7
       Data: 1|LevelSystem.Level, Assembly-CSharp
@@ -37,6 +40,9 @@ MonoBehaviour:
     - Name: _experienceRequired
       Entry: 3
       Data: 100
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -49,6 +55,9 @@ MonoBehaviour:
     - Name: _experienceRequired
       Entry: 3
       Data: 200
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -61,6 +70,9 @@ MonoBehaviour:
     - Name: _experienceRequired
       Entry: 3
       Data: 300
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -73,6 +85,9 @@ MonoBehaviour:
     - Name: _experienceRequired
       Entry: 3
       Data: 400
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -85,6 +100,9 @@ MonoBehaviour:
     - Name: _experienceRequired
       Entry: 3
       Data: 500
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -97,6 +115,9 @@ MonoBehaviour:
     - Name: _experienceRequired
       Entry: 3
       Data: 600
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -109,6 +130,9 @@ MonoBehaviour:
     - Name: _experienceRequired
       Entry: 3
       Data: 700
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -121,6 +145,9 @@ MonoBehaviour:
     - Name: _experienceRequired
       Entry: 3
       Data: 800
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -133,6 +160,9 @@ MonoBehaviour:
     - Name: _experienceRequired
       Entry: 3
       Data: 900
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -145,6 +175,9 @@ MonoBehaviour:
     - Name: _experienceRequired
       Entry: 3
       Data: 1000
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -157,6 +190,9 @@ MonoBehaviour:
     - Name: _experienceRequired
       Entry: 3
       Data: 1100
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -169,6 +205,9 @@ MonoBehaviour:
     - Name: _experienceRequired
       Entry: 3
       Data: 1200
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -181,6 +220,9 @@ MonoBehaviour:
     - Name: _experienceRequired
       Entry: 3
       Data: 1300
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -193,6 +235,9 @@ MonoBehaviour:
     - Name: _experienceRequired
       Entry: 3
       Data: 1400
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -205,6 +250,9 @@ MonoBehaviour:
     - Name: _experienceRequired
       Entry: 3
       Data: 1500
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -217,6 +265,9 @@ MonoBehaviour:
     - Name: _experienceRequired
       Entry: 3
       Data: 1600
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -229,6 +280,9 @@ MonoBehaviour:
     - Name: _experienceRequired
       Entry: 3
       Data: 1700
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -241,6 +295,9 @@ MonoBehaviour:
     - Name: _experienceRequired
       Entry: 3
       Data: 1800
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -253,6 +310,9 @@ MonoBehaviour:
     - Name: _experienceRequired
       Entry: 3
       Data: 1900
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -265,966 +325,9 @@ MonoBehaviour:
     - Name: _experienceRequired
       Entry: 3
       Data: 2000
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 21|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 21
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 2100
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 22|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 22
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 2200
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 23|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 23
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 2300
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 24|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 24
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 2400
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 25|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 25
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 2500
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 26|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 26
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 2600
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 27|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 27
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 2700
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 28|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 28
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 2800
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 29|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 29
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 2900
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 30|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 30
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 3000
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 31|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 31
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 3100
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 32|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 32
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 3200
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 33|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 33
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 3300
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 34|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 34
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 3400
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 35|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 35
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 3500
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 36|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 36
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 3600
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 37|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 37
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 3700
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 38|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 38
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 3800
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 39|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 39
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 3900
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 40|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 40
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 4000
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 41|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 41
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 4100
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 42|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 42
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 4200
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 43|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 43
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 4300
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 44|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 44
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 4400
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 45|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 45
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 4500
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 46|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 46
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 4600
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 47|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 47
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 4700
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 48|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 48
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 4800
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 49|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 49
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 4900
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 50|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 50
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 5000
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 51|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 51
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 5100
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 52|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 52
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 5200
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 53|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 53
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 5300
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 54|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 54
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 5400
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 55|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 55
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 5500
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 56|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 56
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 5600
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 57|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 57
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 5700
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 58|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 58
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 5800
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 59|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 59
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 5900
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 60|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 60
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 6000
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 61|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 61
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 6100
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 62|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 62
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 6200
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 63|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 63
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 6300
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 64|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 64
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 6400
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 65|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 65
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 6500
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 66|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 66
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 6600
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 67|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 67
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 6700
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 68|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 68
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 6800
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 69|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 69
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 6900
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 70|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 70
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 7000
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 71|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 71
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 7100
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 72|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 72
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 7200
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 73|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 73
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 7300
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 74|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 74
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 7400
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 75|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 75
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 7500
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 76|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 76
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 7600
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 77|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 77
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 7700
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 78|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 78
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 7800
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 79|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 79
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 7900
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 80|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 80
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 8000
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 81|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 81
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 8100
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 82|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 82
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 8200
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 83|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 83
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 8300
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 84|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 84
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 8400
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 85|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 85
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 8500
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 86|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 86
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 8600
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 87|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 87
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 8700
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 88|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 88
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 8800
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 89|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 89
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 8900
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 90|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 90
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 9000
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 91|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 91
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 9100
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 92|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 92
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 9200
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 93|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 93
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 9300
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 94|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 94
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 9400
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 95|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 95
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 9500
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 96|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 96
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 9600
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 97|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 97
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 9700
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 98|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 98
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 9800
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 99|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 99
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 9900
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 100|LevelSystem.Level, Assembly-CSharp
-    - Name: _levelNumber
-      Entry: 3
-      Data: 100
-    - Name: _experienceRequired
-      Entry: 3
-      Data: 10000
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -1234,4 +337,8 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  _levelAmount: 100
+  _levelAmount: 20
+  _levelRewardPrefabs:
+  - {fileID: 8669758350897948235, guid: 7d3cd3ae9b1648548831cb045427d491, type: 3}
+  - {fileID: 4787323143279092637, guid: dffa238d7402ec54facd178c2430668a, type: 3}
+  - {fileID: 662719082333613600, guid: f68f8653e394e8840b0feb31c77aebe3, type: 3}

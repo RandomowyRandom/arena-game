@@ -10,7 +10,7 @@ namespace LevelSystem
     [ScriptableFactoryElement]
     public class LevelDatabase: SerializedScriptableObject
     {
-        [OdinSerialize] [ReadOnly]
+        [OdinSerialize]
         private List<Level> _levels;
         
         public Level GetLevel(int levelNumber)
@@ -21,6 +21,8 @@ namespace LevelSystem
         [SerializeField]
         private int _levelAmount;
         
+        [SerializeField]
+        private List<GameObject> _levelRewardPrefabs;
         
         [Button]
         private void GenerateLevels()
@@ -31,7 +33,7 @@ namespace LevelSystem
                 _levels.Add(new Level
                 {
                     LevelNumber = i,
-                    ExperienceRequired = i * 100
+                    ExperienceRequired = i * 100,
                 });
             }
         }

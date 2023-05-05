@@ -11,6 +11,9 @@ namespace LevelSystem
         
         [SerializeField]
         private int _experienceRequired;
+        
+        [SerializeField]
+        private GameObject _levelRewardPrefab;
 
         public int LevelNumber
         {
@@ -22,6 +25,12 @@ namespace LevelSystem
         {
             get => _experienceRequired;
             set => _experienceRequired = value;
+        }
+        
+        public GameObject LevelRewardPrefab
+        {
+            get => _levelRewardPrefab;
+            set => _levelRewardPrefab = value;
         }
     }
 }
