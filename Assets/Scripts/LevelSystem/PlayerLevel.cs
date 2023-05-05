@@ -1,4 +1,6 @@
 ﻿using System;
+using Cinemachine;
+using DG.Tweening;
 using JetBrains.Annotations;
 using LevelSystem.Abstraction;
 using Player.Interfaces;
@@ -14,6 +16,15 @@ namespace LevelSystem
         
         [SerializeField]
         private ParticleSystem _gainExperienceEffect;
+        
+        [SerializeField]
+        private GameObject _levelUpEffect;
+        
+        [SerializeField]
+        private AudioClip _levelUpSound;
+
+        [SerializeField] 
+        private CinemachineVirtualCamera _virtualCamera;
         
         public event Action OnLevelChanged;
         
@@ -31,9 +42,20 @@ namespace LevelSystem
             ServiceLocator.ServiceLocator.Instance.Register<IPlayerLevel>(this);
         }
 
+        private void Start()
+        {
+            OnLevelUp += SpawnParticleEffect;
+            OnLevelUp += PlaySound;
+            OnLevelUp += PanCamera;
+        }
+
         private void OnDestroy()
         {
             ServiceLocator.ServiceLocator.Instance.Deregister<IPlayerLevel>();
+            
+            OnLevelUp -= SpawnParticleEffect;
+            OnLevelUp -= PlaySound;
+            OnLevelUp -= PanCamera;
         }
 
         public void AddExperience(int experience)
@@ -61,7 +83,25 @@ namespace LevelSystem
             Instantiate(_gainExperienceEffect, collision.transform.position, Quaternion.identity);
             Destroy(collision);
         }
-
+        
+        private void PanCamera(Level level)
+        {
+            _virtualCamera.m_Lens.OrthographicSize = 6;
+            
+            DOTween.To(() => _virtualCamera.m_Lens.OrthographicSize, x => _virtualCamera.m_Lens.OrthographicSize = x, 5, 1f)
+                .SetEase(Ease.OutCubic);
+        }
+        
+        private void SpawnParticleEffect(Level level)
+        {
+            Instantiate(_levelUpEffect, transform.position, Quaternion.identity);
+        }
+        
+        private void PlaySound(Level level)
+        {
+            AudioSource.PlayClipAtPoint(_levelUpSound, transform.position);
+        }
+        
         #region QC
 
         [Command("log-level")] [UsedImplicitly]

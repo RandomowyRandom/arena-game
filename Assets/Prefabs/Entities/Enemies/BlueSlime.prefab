@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _experienceOrbPrefab: {fileID: 4797993179183230533, guid: 9c48afd48a52b2543b2a6ac789bca1a6, type: 3}
-  _experienceOrbAmount: 6
+  _experienceOrbAmount: 3
 --- !u!114 &5288061225271810404
 MonoBehaviour:
   m_ObjectHideFlags: 0

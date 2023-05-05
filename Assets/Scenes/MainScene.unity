@@ -53131,6 +53131,10 @@ PrefabInstance:
       propertyPath: _inventoryTransforms.Array.data[1]
       value: 
       objectReference: {fileID: 484890957}
+    - target: {fileID: 2005232578, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
+      propertyPath: _virtualCamera
+      value: 
+      objectReference: {fileID: 1340896954}
     - target: {fileID: 2005232580, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
       propertyPath: serializationData.Prefab
       value: 

@@ -848,6 +848,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelDatabase: {fileID: 11400000, guid: 2c6abf7383e5b7d4c812f9bc8df0bd46, type: 2}
   _gainExperienceEffect: {fileID: 2085560291111961646, guid: 215475d2338b24b48be86e5669813ab3, type: 3}
+  _levelUpEffect: {fileID: 7766573361684570618, guid: fd7917e54b4722f46996efa6dbd66a4b, type: 3}
+  _levelUpSound: {fileID: 8300000, guid: b7c2feea54d97734592bed5b304e36c3, type: 3}
 --- !u!114 &2005232579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -860,8 +862,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 781ff06c07b1429e8d76579421ba9a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rewardPrefabs:
-  - {fileID: 8669758350897948235, guid: 7d3cd3ae9b1648548831cb045427d491, type: 3}
 --- !u!114 &2005232580
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -39,7 +39,7 @@ MonoBehaviour:
       Data: 1
     - Name: _experienceRequired
       Entry: 3
-      Data: 100
+      Data: 130
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 0
@@ -54,7 +54,7 @@ MonoBehaviour:
       Data: 2
     - Name: _experienceRequired
       Entry: 3
-      Data: 200
+      Data: 260
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
       Data: 3
     - Name: _experienceRequired
       Entry: 3
-      Data: 300
+      Data: 390
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 0
@@ -84,7 +84,7 @@ MonoBehaviour:
       Data: 4
     - Name: _experienceRequired
       Entry: 3
-      Data: 400
+      Data: 520
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
       Data: 5
     - Name: _experienceRequired
       Entry: 3
-      Data: 500
+      Data: 650
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 0
@@ -114,10 +114,10 @@ MonoBehaviour:
       Data: 6
     - Name: _experienceRequired
       Entry: 3
-      Data: 600
+      Data: 780
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -129,7 +129,7 @@ MonoBehaviour:
       Data: 7
     - Name: _experienceRequired
       Entry: 3
-      Data: 700
+      Data: 910
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 1
@@ -144,7 +144,7 @@ MonoBehaviour:
       Data: 8
     - Name: _experienceRequired
       Entry: 3
-      Data: 800
+      Data: 1040
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 1
@@ -159,7 +159,7 @@ MonoBehaviour:
       Data: 9
     - Name: _experienceRequired
       Entry: 3
-      Data: 900
+      Data: 1170
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 1
@@ -174,7 +174,7 @@ MonoBehaviour:
       Data: 10
     - Name: _experienceRequired
       Entry: 3
-      Data: 1000
+      Data: 1300
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 1
@@ -189,7 +189,7 @@ MonoBehaviour:
       Data: 11
     - Name: _experienceRequired
       Entry: 3
-      Data: 1100
+      Data: 1430
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 1
@@ -204,10 +204,10 @@ MonoBehaviour:
       Data: 12
     - Name: _experienceRequired
       Entry: 3
-      Data: 1200
+      Data: 1560
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -219,10 +219,10 @@ MonoBehaviour:
       Data: 13
     - Name: _experienceRequired
       Entry: 3
-      Data: 1300
+      Data: 1690
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -234,10 +234,10 @@ MonoBehaviour:
       Data: 14
     - Name: _experienceRequired
       Entry: 3
-      Data: 1400
+      Data: 1820
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -249,7 +249,7 @@ MonoBehaviour:
       Data: 15
     - Name: _experienceRequired
       Entry: 3
-      Data: 1500
+      Data: 1950
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 2
@@ -264,7 +264,7 @@ MonoBehaviour:
       Data: 16
     - Name: _experienceRequired
       Entry: 3
-      Data: 1600
+      Data: 2080
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 2
@@ -279,7 +279,7 @@ MonoBehaviour:
       Data: 17
     - Name: _experienceRequired
       Entry: 3
-      Data: 1700
+      Data: 2210
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 2
@@ -294,7 +294,7 @@ MonoBehaviour:
       Data: 18
     - Name: _experienceRequired
       Entry: 3
-      Data: 1800
+      Data: 2340
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 2
@@ -309,7 +309,7 @@ MonoBehaviour:
       Data: 19
     - Name: _experienceRequired
       Entry: 3
-      Data: 1900
+      Data: 2470
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 2
@@ -324,7 +324,7 @@ MonoBehaviour:
       Data: 20
     - Name: _experienceRequired
       Entry: 3
-      Data: 2000
+      Data: 2600
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 2
@@ -338,7 +338,4 @@ MonoBehaviour:
       Entry: 8
       Data: 
   _levelAmount: 20
-  _levelRewardPrefabs:
-  - {fileID: 8669758350897948235, guid: 7d3cd3ae9b1648548831cb045427d491, type: 3}
-  - {fileID: 4787323143279092637, guid: dffa238d7402ec54facd178c2430668a, type: 3}
-  - {fileID: 662719082333613600, guid: f68f8653e394e8840b0feb31c77aebe3, type: 3}
+  _experienceMultiplier: 1.3

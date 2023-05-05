@@ -31,7 +31,7 @@ namespace WaveSystem
             
             var enemiesString = string.Join(", ", enemies);
             
-            return $"Sub waves count: {_subWaves.Count}, Sub wave delay: {_subWaveDelay}; Enemies: {enemiesString}";
+            return $"enemy cap: {_enemyCap}; Enemies: {enemiesString}";
         }
     }
 }

@@ -31,6 +31,7 @@ namespace WaveSystem
         protected override void OnAfterDeserialize()
         {
             _difficulty = 1;
+            _enemyCap = 3;
         }
 
         public Wave GetWave()
@@ -52,7 +53,7 @@ namespace WaveSystem
             }
             
             _difficulty += _difficultyRaise;
-            _enemyCap += Mathf.CeilToInt(1 * _difficulty);
+            _enemyCap += Mathf.CeilToInt(1 * _difficulty * .5f);
             _subWaveDelay = Mathf.Clamp(_subWaveDelay - .1f, .25f, 2f);
             
             return new Wave(subWaves, _subWaveDelay, _enemyCap);
@@ -94,6 +95,7 @@ namespace WaveSystem
         private void ResetDifficulty()
         {
             _difficulty = 1;
+            _enemyCap = 3;
         }
     }
 }
