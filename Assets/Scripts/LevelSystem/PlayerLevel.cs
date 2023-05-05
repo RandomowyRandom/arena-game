@@ -17,7 +17,7 @@ namespace LevelSystem
         
         public event Action OnLevelChanged;
         
-        public event Action<int> OnLevelUp;
+        public event Action<Level> OnLevelUp;
         
         private int _currentLevel = 1;
         private int _currentExperience;
@@ -48,7 +48,7 @@ namespace LevelSystem
             _currentLevel++;
             _currentExperience = 0;
             
-            OnLevelUp?.Invoke(_currentLevel);
+            OnLevelUp?.Invoke(_levelDatabase.GetLevel(_currentLevel));
         }
         
         public void OnExperienceProviderEnter(GameObject collision)
