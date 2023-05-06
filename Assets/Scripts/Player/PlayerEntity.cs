@@ -23,6 +23,7 @@ namespace Player
         private Rigidbody2D _rigidbody2D;
         private SpriteRenderer _spriteRenderer;
         private readonly int _hitEffectBlend = Shader.PropertyToID("_HitEffectBlend");
+        private readonly int _hitEffectColor = Shader.PropertyToID("_HitEffectColor");
 
         private void Awake()
         {
@@ -39,6 +40,7 @@ namespace Player
 
         private async void ShowHitEffect(float damage, IDamageSource source)
         {
+            _spriteRenderer.material.SetColor(_hitEffectColor, Color.red);
             _spriteRenderer.material.SetFloat(_hitEffectBlend, 1);
             _spriteRenderer.material.DOFloat(0, _hitEffectBlend,  .3f);
             

@@ -1,9 +1,7 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
 using EntitySystem.Abstraction;
-using Mono.CSharp;
 using Player.Interfaces;
-using QFSW.QC;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -17,8 +15,13 @@ namespace Player
         
         [SerializeField]
         private float _dashForce = 100f;
+        
+        public event Action OnDash;
         public bool IsLocked { get; private set; }
 
+        const int DASH_LAYER = 10;
+        const int PLAYER_LAYER = 0;
+        
         private IPlayerStamina _playerStamina;
         
         private Rigidbody2D _rigidbody2D;
@@ -45,10 +48,14 @@ namespace Player
                 return;
             
             IsLocked = true;
+            gameObject.layer = DASH_LAYER;
+
             _rigidbody2D.AddForce(_move * _dashForce, ForceMode2D.Impulse);
             PlayerStamina.DrainStamina(_dashCost);
-            await UniTask.Delay(TimeSpan.FromSeconds(.15f));
+            OnDash?.Invoke();
             
+            await UniTask.Delay(TimeSpan.FromSeconds(.15f));
+            gameObject.layer = PLAYER_LAYER;
             IsLocked = false;
 
             Debug.Log("Dash performed");
