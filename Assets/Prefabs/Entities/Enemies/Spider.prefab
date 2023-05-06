@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: -3912289716190795323}
   - component: {fileID: 5258695450720101822}
   - component: {fileID: 880801535966052957}
+  - component: {fileID: 5333235238154440804}
   m_Layer: 8
   m_Name: Spider
   m_TagString: Untagged
@@ -400,19 +401,16 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 1|EntitySystem.EntityTask.TargetFollowEntityTask, Assembly-CSharp
-    - Name: _targetProvider
-      Entry: 7
-      Data: 2|EntitySystem.PlayerEntityProvider, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
+      Data: 1|EntitySystem.EntityTask.ObjectAwareTargetFollowEntityTask, Assembly-CSharp
     - Name: _duration
       Entry: 4
       Data: -1
     - Name: _speed
       Entry: 4
       Data: 65
+    - Name: _distanceTolerance
+      Entry: 4
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -455,3 +453,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5333235238154440804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5507470878955383106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7f1d5ab32e42fd9f1aff8d76f819b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _weight: -0.3
