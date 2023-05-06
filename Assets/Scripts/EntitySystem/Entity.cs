@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using EntitySystem.Abstraction;
+using Notifications.Abstraction;
 using Player.Interfaces;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using TriangularAssets;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace EntitySystem
 {
@@ -30,11 +32,15 @@ namespace EntitySystem
 
         private IPlayerLevel PlayerLevel => _playerLevel ??= ServiceLocator.ServiceLocator.Instance.Get<IPlayerLevel>();
         
+        private IPlayerNotificationHandler NotificationHandler => _notificationHandler ??= ServiceLocator.ServiceLocator.Instance.Get<IPlayerNotificationHandler>();
+        
         private EntityProjectileEffectHandler _effectHandler;
         
         private float _health;
         
         private IPlayerLevel _playerLevel;
+        
+        private IPlayerNotificationHandler _notificationHandler;
 
         private void Awake()
         {
@@ -56,7 +62,10 @@ namespace EntitySystem
                     return;
 
             if (PlayerLevel.CurrentLevel < _data.RequiredLevel)
+            {
+                NotificationHandler.TrySendNotification($"Requires level <color=\"red\"> <size=120%> {_data.RequiredLevel}!");
                 damage = 0;
+            }
             
             _health -= damage;
             OnDamageTaken?.Invoke(damage, source);

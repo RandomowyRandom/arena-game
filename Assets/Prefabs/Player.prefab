@@ -255,6 +255,8 @@ GameObject:
   - component: {fileID: 2005232580}
   - component: {fileID: 2005232581}
   - component: {fileID: 7676584407242295096}
+  - component: {fileID: 2005232597}
+  - component: {fileID: 7125102490229933763}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -850,6 +852,7 @@ MonoBehaviour:
   _gainExperienceEffect: {fileID: 2085560291111961646, guid: 215475d2338b24b48be86e5669813ab3, type: 3}
   _levelUpEffect: {fileID: 7766573361684570618, guid: fd7917e54b4722f46996efa6dbd66a4b, type: 3}
   _levelUpSound: {fileID: 8300000, guid: b7c2feea54d97734592bed5b304e36c3, type: 3}
+  _virtualCamera: {fileID: 0}
 --- !u!114 &2005232579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -910,6 +913,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _virtualCamera: {fileID: 0}
   _hitSound: {fileID: 8300000, guid: 2c674a958ca37d1408e734bf88b93708, type: 3}
+--- !u!114 &2005232597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4857834470512048523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb902100c73b436e8c498559c0b7d20f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _walkSounds:
+  - {fileID: 8300000, guid: f8ae3a2c0dd84544882400ac5655f800, type: 3}
+  - {fileID: 8300000, guid: d5a11d02f300aae4cae99fa66dbc67f5, type: 3}
+  - {fileID: 8300000, guid: c99d84a9dc4aee64aa25788843c73992, type: 3}
+  - {fileID: 8300000, guid: d3daf13960b32e84c8546f36b81332a2, type: 3}
+  - {fileID: 8300000, guid: de9898477cec5ac40bc790c031be3094, type: 3}
+  - {fileID: 8300000, guid: 6c824c6e6a28ebd44bd102a3924d7b58, type: 3}
+--- !u!114 &7125102490229933763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4857834470512048523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f105e6be122e4aa09c3644e637448a3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _notificationPrefab: {fileID: 5035341095018278661, guid: 007476ad5e4e14f409d95f31765c746b, type: 3}
 --- !u!1 &8618184906701007138
 GameObject:
   m_ObjectHideFlags: 0
