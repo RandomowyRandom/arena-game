@@ -257,6 +257,7 @@ GameObject:
   - component: {fileID: 7676584407242295096}
   - component: {fileID: 2005232597}
   - component: {fileID: 7125102490229933763}
+  - component: {fileID: 8792347711535029453}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -488,6 +489,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8792347711535029453}
+        m_TargetAssemblyTypeName: Player.PlayerDashHandler, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 351f2ccd-1f9f-44bf-9bec-d62ac5c5f408
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
@@ -540,9 +553,9 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 233742928}
-        m_TargetAssemblyTypeName: Player.PlayerMovement, Assembly-CSharp
-        m_MethodName: OnSprint
+      - m_Target: {fileID: 8792347711535029453}
+        m_TargetAssemblyTypeName: Player.PlayerDashHandler, Assembly-CSharp
+        m_MethodName: TryDash
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -552,8 +565,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 5ae8c97c-88b4-4cf1-84f1-80342533c253
-    m_ActionName: Player/Sprint[/Keyboard/shift]
+    m_ActionId: a799ba60-fa3d-44d8-a836-a419d4179962
+    m_ActionName: Player/Dash[/Keyboard/leftShift]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -945,6 +958,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _notificationPrefab: {fileID: 5035341095018278661, guid: 007476ad5e4e14f409d95f31765c746b, type: 3}
+--- !u!114 &8792347711535029453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4857834470512048523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3dc275c51e54fc58a71c2a30c1fe528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dashCost: 30
+  _dashForce: 38
 --- !u!1 &8618184906701007138
 GameObject:
   m_ObjectHideFlags: 0
