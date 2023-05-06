@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: -869189299732668438}
   - component: {fileID: 1856652866633891998}
   - component: {fileID: 1155488132153375941}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SmallCopperOre
   m_TagString: Untagged
   m_Icon: {fileID: 0}

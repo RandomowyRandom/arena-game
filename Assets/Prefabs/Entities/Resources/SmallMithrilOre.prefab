@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: -4552286481757144408}
   - component: {fileID: -5505299339990233448}
   - component: {fileID: 7625901039059888670}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SmallMithrilOre
   m_TagString: Untagged
   m_Icon: {fileID: 0}

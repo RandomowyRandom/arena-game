@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -6017529236921242578}
   - component: {fileID: 3521095427837254253}
   - component: {fileID: -3056141118346900990}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SmallStone
   m_TagString: Untagged
   m_Icon: {fileID: 0}

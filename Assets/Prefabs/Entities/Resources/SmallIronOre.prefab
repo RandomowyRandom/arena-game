@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 4341794787710036083}
   - component: {fileID: -5518479678348707187}
   - component: {fileID: -9185745685770463107}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SmallIronOre
   m_TagString: Untagged
   m_Icon: {fileID: 0}

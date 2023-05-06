@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 4603221154484739947}
   - component: {fileID: -6336352189974036315}
   - component: {fileID: 9159520695514722190}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SmallGoldOre
   m_TagString: Untagged
   m_Icon: {fileID: 0}

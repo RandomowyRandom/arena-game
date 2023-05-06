@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeToDestroy: 5
+  _useDoTween: 1
 --- !u!114 &3855627058645499471
 MonoBehaviour:
   m_ObjectHideFlags: 0
