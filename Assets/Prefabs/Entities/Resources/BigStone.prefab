@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -5783072649043770545}
   - component: {fileID: -4333948181340843727}
   - component: {fileID: -2042655458731524763}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BigStone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,6 +173,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dccf123b5ba144aeba0a29fd3b0b9a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _damageLocks
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[EntitySystem.Abstraction.IDamageLock,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   _data: {fileID: 11400000, guid: c9d74e25531477640a7f2d373c121639, type: 2}
 --- !u!114 &2530176304263761362
 MonoBehaviour:
@@ -199,17 +221,17 @@ MonoBehaviour:
     SerializationNodes:
     - Name: _dropTable
       Entry: 7
-      Data: 0|EntitySystem.DropTable, Assembly-CSharp
+      Data: 0|EntitySystem.DropTable.BasicDropTable, Assembly-CSharp
     - Name: _drops
       Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[EntitySystem.ItemDrop, Assembly-CSharp]],
+      Data: 1|System.Collections.Generic.List`1[[EntitySystem.BasicItemDrop, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 3
     - Name: 
       Entry: 7
-      Data: 2|EntitySystem.ItemDrop, Assembly-CSharp
+      Data: 2|EntitySystem.BasicItemDrop, Assembly-CSharp
     - Name: _item
       Entry: 7
       Data: 3|Items.Item, Assembly-CSharp
@@ -218,7 +240,7 @@ MonoBehaviour:
       Data: 0
     - Name: _amount
       Entry: 3
-      Data: 1
+      Data: 3
     - Name: _gearRarity
       Entry: 6
       Data: 
@@ -233,7 +255,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 4|EntitySystem.ItemDrop, Assembly-CSharp
+      Data: 4|EntitySystem.BasicItemDrop, Assembly-CSharp
     - Name: _item
       Entry: 7
       Data: 5|Items.Item, Assembly-CSharp
@@ -251,42 +273,18 @@ MonoBehaviour:
       Data: 
     - Name: _chance
       Entry: 4
-      Data: 0.5
+      Data: 0.6
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 6|EntitySystem.ItemDrop, Assembly-CSharp
+      Data: 6|EntitySystem.BasicItemDrop, Assembly-CSharp
     - Name: _item
       Entry: 7
       Data: 7|Items.Item, Assembly-CSharp
     - Name: _itemData
       Entry: 10
-      Data: 0
-    - Name: _amount
-      Entry: 3
-      Data: 2
-    - Name: _gearRarity
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: _chance
-      Entry: 4
-      Data: 0.15
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 8|EntitySystem.ItemDrop, Assembly-CSharp
-    - Name: _item
-      Entry: 7
-      Data: 9|Items.Item, Assembly-CSharp
-    - Name: _itemData
-      Entry: 10
       Data: 1
     - Name: _amount
       Entry: 3
@@ -299,7 +297,7 @@ MonoBehaviour:
       Data: 
     - Name: _chance
       Entry: 4
-      Data: 0.005
+      Data: 0.007
     - Name: 
       Entry: 8
       Data: 

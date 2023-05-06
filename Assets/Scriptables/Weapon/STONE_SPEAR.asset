@@ -100,7 +100,7 @@ MonoBehaviour:
       Data: 5|Items.Effects.PushItemUserItemEffect, Assembly-CSharp
     - Name: _force
       Entry: 4
-      Data: 17
+      Data: 4
     - Name: 
       Entry: 8
       Data: 

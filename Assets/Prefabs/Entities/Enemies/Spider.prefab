@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 1184796252860307094}
   - component: {fileID: -3912289716190795323}
   - component: {fileID: 5258695450720101822}
+  - component: {fileID: 880801535966052957}
   m_Layer: 8
   m_Name: Spider
   m_TagString: Untagged
@@ -119,7 +120,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5507470878955383106}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5152936, y: -2.5743995, z: 0}
+  m_LocalPosition: {x: -4.5152936, y: -2.574399, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -355,7 +356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _experienceOrbPrefab: {fileID: 4797993179183230533, guid: 9c48afd48a52b2543b2a6ac789bca1a6, type: 3}
-  _experienceOrbAmount: 4
+  _experienceOrbAmount: 2
 --- !u!114 &1184796252860307094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,3 +435,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collisionDamage: 5
+--- !u!95 &880801535966052957
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5507470878955383106}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 42cb4e3dfad6ead4399b8b242ca1f373, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -214,14 +214,248 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: a86f937ca05c7fa48b7ae0609e21d741, type: 2}
+    - {fileID: 11400000, guid: 31284351e7846d94db4a0661bd8ab03e, type: 2}
+    - {fileID: 11400000, guid: 5c195031c99381746be310fcb34488b7, type: 2}
+    - {fileID: 11400000, guid: 7ff96bf0ebbc025429ee488993903671, type: 2}
+    - {fileID: 11400000, guid: 97253760ac5e87145bb085845ce78f23, type: 2}
+    - {fileID: 11400000, guid: 78a5ff1308597d94dae02ed4a4fd5f28, type: 2}
+    - {fileID: 11400000, guid: f1e28381fff555547816aa91c26b363c, type: 2}
+    - {fileID: 11400000, guid: ed17443e4ebffd24681a156d4a04acbb, type: 2}
+    - {fileID: 11400000, guid: df6c254545ebd434199c4fb5cab660f8, type: 2}
+    - {fileID: 11400000, guid: b7ccf37902d9b6345ac0f9a27c652cb1, type: 2}
+    - {fileID: 11400000, guid: 87d3aa677b1d65b46b9c9170b0fc143e, type: 2}
+    - {fileID: 11400000, guid: 1fcfc79e2e470484e8fa6db4a2a09e37, type: 2}
+    - {fileID: 11400000, guid: be2abb5f77bea6842b5e9581b0c80877, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
     - Name: _dropTable
+      Entry: 7
+      Data: 0|EntitySystem.DropTable.AdvancedDropTable, Assembly-CSharp
+    - Name: _guaranteedDrops
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[System.Collections.Generic.List`1[[Items.Item,
+        Assembly-CSharp]], mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[Items.Item, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 12
+    - Name: 
+      Entry: 7
+      Data: 3|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 0
+    - Name: _amount
+      Entry: 3
+      Data: 4
+    - Name: _gearRarity
       Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 1
+    - Name: _amount
+      Entry: 3
+      Data: 12
+    - Name: _gearRarity
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 2
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: _gearRarity
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 4
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: _gearRarity
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 7|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 5
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: _gearRarity
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 8|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 6
+    - Name: _amount
+      Entry: 3
+      Data: 9
+    - Name: _gearRarity
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 7
+    - Name: _amount
+      Entry: 3
+      Data: 2
+    - Name: _gearRarity
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 10|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 8
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: _gearRarity
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 11|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 9
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: _gearRarity
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 12|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 10
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: _gearRarity
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 13|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 11
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: _gearRarity
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 14|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 12
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: _gearRarity
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _chanceDrops
+      Entry: 7
+      Data: 15|System.Collections.Generic.List`1[[EntitySystem.BasicItemDrop, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
   _itemWorldPrefab: {fileID: 4956166285135844185, guid: 4909a5cc932cf8b4a8f682ba5aecb08a, type: 3}
 --- !u!114 &2210514171998902444

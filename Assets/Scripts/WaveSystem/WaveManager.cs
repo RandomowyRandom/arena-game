@@ -66,6 +66,8 @@ namespace WaveSystem
                 OnSubWaveStart?.Invoke(subWave);
                 foreach (var entity in subWave.Entities)
                 {
+                    await UniTask.WaitUntil(() => _spawnedEnemies.Count < _wave.EnemyCap);
+                    
                     var spawnedEntity = Instantiate(entity, GetRandomPositionOutOfScreen(), Quaternion.identity);
                     
                     _spawnedEnemies.Add(spawnedEntity);

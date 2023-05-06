@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: -2369450324674868513}
   - component: {fileID: 4824399492631658294}
   - component: {fileID: -527540731032217994}
+  - component: {fileID: 5441584325338046171}
   m_Layer: 8
   m_Name: Boar
   m_TagString: Untagged
@@ -168,12 +169,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 090954e204d56494ea25a59b82c13ea7, type: 3}
+  m_Sprite: {fileID: 346146722, guid: 090954e204d56494ea25a59b82c13ea7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -332,9 +333,9 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.21875}
+    pivot: {x: 0.46875, y: 0.21875}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 2.56, y: 2.56}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -362,7 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _experienceOrbPrefab: {fileID: 4797993179183230533, guid: 9c48afd48a52b2543b2a6ac789bca1a6, type: 3}
-  _experienceOrbAmount: 9
+  _experienceOrbAmount: 6
 --- !u!114 &-2369450324674868513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,3 +475,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collisionDamage: 20
+--- !u!95 &5441584325338046171
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4618472564772760380}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 78be768029a5fd541af20f93304f5b83, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
