@@ -102,7 +102,7 @@ MonoBehaviour:
       Data: 650
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 0
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -117,7 +117,7 @@ MonoBehaviour:
       Data: 780
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 0
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -177,7 +177,7 @@ MonoBehaviour:
       Data: 1300
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -192,7 +192,7 @@ MonoBehaviour:
       Data: 1430
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -207,7 +207,7 @@ MonoBehaviour:
       Data: 1560
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -222,7 +222,7 @@ MonoBehaviour:
       Data: 1690
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -237,7 +237,7 @@ MonoBehaviour:
       Data: 1820
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 8
       Data: 

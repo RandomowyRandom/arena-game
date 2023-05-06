@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _experienceOrbPrefab: {fileID: 4797993179183230533, guid: 9c48afd48a52b2543b2a6ac789bca1a6, type: 3}
-  _experienceOrbAmount: 6
+  _experienceOrbAmount: 7
 --- !u!114 &-2369450324674868513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,7 +414,7 @@ MonoBehaviour:
       Data: 5
     - Name: _speed
       Entry: 4
-      Data: 40
+      Data: 50
     - Name: _distanceTolerance
       Entry: 4
       Data: 2

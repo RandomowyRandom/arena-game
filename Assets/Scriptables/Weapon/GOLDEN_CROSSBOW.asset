@@ -208,7 +208,7 @@ MonoBehaviour:
       Data: 14|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 10
+      Data: 9
     - Name: _speed
       Entry: 4
       Data: 0
@@ -238,7 +238,7 @@ MonoBehaviour:
       Data: 16|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 11.25
+      Data: 10.25
     - Name: _speed
       Entry: 4
       Data: 0
@@ -268,7 +268,7 @@ MonoBehaviour:
       Data: 18|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 12.5
+      Data: 11.5
     - Name: _speed
       Entry: 4
       Data: 0
