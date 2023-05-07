@@ -28,13 +28,21 @@ namespace Notifications
             _notificationTimer -= Time.deltaTime;
         }
 
-        public void TrySendNotification(string notificationText)
+        public void TrySendNotification(string notificationText, float shownTime = 1f)
         {
             if (_notificationTimer > 0f)
                 return;
             
             var notification = Instantiate(_notificationPrefab, transform.position, Quaternion.identity);
-            notification.SetNotificationText(notificationText);
+            notification.SetNotificationText(notificationText, shownTime);
+            
+            _notificationTimer = _notificationDelay;
+        }
+
+        public void ForceSendNotification(string notificationText, float shownTime = 1f)
+        {
+            var notification = Instantiate(_notificationPrefab, transform.position, Quaternion.identity);
+            notification.SetNotificationText(notificationText, shownTime);
             
             _notificationTimer = _notificationDelay;
         }

@@ -15,6 +15,9 @@ namespace LevelSystem
         [SerializeField]
         private GameObject _levelRewardPrefab;
 
+        [SerializeField] 
+        private string _levelInfo;
+
         public int LevelNumber
         {
             get => _levelNumber;
@@ -31,6 +34,12 @@ namespace LevelSystem
         {
             get => _levelRewardPrefab;
             set => _levelRewardPrefab = value;
+        }
+        
+        public string LevelInfo
+        {
+            get => _levelInfo;
+            set => _levelInfo = value;
         }
     }
 }

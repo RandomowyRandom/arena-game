@@ -43,6 +43,9 @@ MonoBehaviour:
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 0
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -58,6 +61,9 @@ MonoBehaviour:
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 0
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -73,6 +79,9 @@ MonoBehaviour:
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 0
+    - Name: _levelInfo
+      Entry: 1
+      Data: You can now mine<color=#92a1b9><size=120%> IRON
     - Name: 
       Entry: 8
       Data: 
@@ -88,6 +97,9 @@ MonoBehaviour:
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 0
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -103,6 +115,9 @@ MonoBehaviour:
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 1
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -118,6 +133,9 @@ MonoBehaviour:
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 1
+    - Name: _levelInfo
+      Entry: 1
+      Data: You can now mine <color="yellow"><size=120%>GOLD
     - Name: 
       Entry: 8
       Data: 
@@ -133,6 +151,9 @@ MonoBehaviour:
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 1
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -148,6 +169,9 @@ MonoBehaviour:
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 1
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -163,6 +187,9 @@ MonoBehaviour:
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 1
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -178,6 +205,9 @@ MonoBehaviour:
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 2
+    - Name: _levelInfo
+      Entry: 1
+      Data: You can now mine <color="green"><size=120%>MITHRIL
     - Name: 
       Entry: 8
       Data: 
@@ -193,6 +223,9 @@ MonoBehaviour:
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 2
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -208,6 +241,9 @@ MonoBehaviour:
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 2
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -223,6 +259,9 @@ MonoBehaviour:
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 2
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -238,6 +277,9 @@ MonoBehaviour:
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 2
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -253,6 +295,9 @@ MonoBehaviour:
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 2
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -268,6 +313,9 @@ MonoBehaviour:
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 2
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -283,6 +331,9 @@ MonoBehaviour:
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 2
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -298,6 +349,9 @@ MonoBehaviour:
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 2
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -313,6 +367,9 @@ MonoBehaviour:
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 2
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -328,6 +385,9 @@ MonoBehaviour:
     - Name: _levelRewardPrefab
       Entry: 10
       Data: 2
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 

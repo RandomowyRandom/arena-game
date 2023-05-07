@@ -1,10 +1,14 @@
 ﻿using System;
 using Cinemachine;
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using JetBrains.Annotations;
 using LevelSystem.Abstraction;
+using Notifications.Abstraction;
 using Player.Interfaces;
 using QFSW.QC;
+using Sirenix.Utilities;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace LevelSystem
@@ -33,6 +37,8 @@ namespace LevelSystem
         private int _currentLevel = 1;
         private int _currentExperience;
         
+        private IPlayerNotificationHandler _notificationHandler;
+        
         public int CurrentLevel => _currentLevel;
         public int CurrentExperience => _currentExperience;
         public int NextLevelExperience => _levelDatabase.GetLevel(_currentLevel).ExperienceRequired;
@@ -44,9 +50,12 @@ namespace LevelSystem
 
         private void Start()
         {
+            _notificationHandler = ServiceLocator.ServiceLocator.Instance.Get<IPlayerNotificationHandler>();
+            
             OnLevelUp += SpawnParticleEffect;
             OnLevelUp += PlaySound;
             OnLevelUp += PanCamera;
+            OnLevelUp += InstantiateNotification;
         }
 
         private void OnDestroy()
@@ -100,6 +109,14 @@ namespace LevelSystem
         private void PlaySound(Level level)
         {
             AudioSource.PlayClipAtPoint(_levelUpSound, transform.position);
+        }
+        
+        private void InstantiateNotification(Level level)
+        {
+            if(level.LevelInfo.IsNullOrWhitespace())
+                return;
+            
+            _notificationHandler.ForceSendNotification(level.LevelInfo, 3f);
         }
         
         #region QC
