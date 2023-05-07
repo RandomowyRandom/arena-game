@@ -56,7 +56,7 @@ MonoBehaviour:
       Data: 0
     - Name: _defense
       Entry: 4
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -86,7 +86,7 @@ MonoBehaviour:
       Data: 0
     - Name: _defense
       Entry: 4
-      Data: 2
+      Data: 1.3
     - Name: 
       Entry: 8
       Data: 
@@ -116,7 +116,7 @@ MonoBehaviour:
       Data: 0
     - Name: _defense
       Entry: 4
-      Data: 2
+      Data: 1.6
     - Name: 
       Entry: 8
       Data: 
@@ -146,7 +146,7 @@ MonoBehaviour:
       Data: 0
     - Name: _defense
       Entry: 4
-      Data: 2
+      Data: 1.9000001
     - Name: 
       Entry: 8
       Data: 
@@ -176,7 +176,7 @@ MonoBehaviour:
       Data: 0
     - Name: _defense
       Entry: 4
-      Data: 2
+      Data: 2.2
     - Name: 
       Entry: 8
       Data: 
@@ -194,3 +194,4 @@ MonoBehaviour:
   _description: wooden
   _maxStack: 1
   _equipmentType: 2
+  _defenseIncreasePerLevel: 0.3

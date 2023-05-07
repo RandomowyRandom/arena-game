@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
 using Player.Interfaces;
@@ -9,6 +8,7 @@ using Sirenix.Serialization;
 using Stats;
 using Stats.Interfaces;
 using UnityEngine;
+// ReSharper disable CompareOfFloatsByEqualityOperator
 
 namespace Player
 {
@@ -16,6 +16,9 @@ namespace Player
     {
         [SerializeField]
         private StatsData _defaultStats;
+        
+        [SerializeField]
+        private StatsData _cappedStats;
         
         [OdinSerialize]
         private List<IStatsDataProvider> _statsDataProviders;
@@ -41,10 +44,19 @@ namespace Player
                 _defaultStats.Defense
             );
             
-            return _statsDataProviders
+            var finalStats = _statsDataProviders
                 .Aggregate(statsData, 
                     (current, statsDataProvider) => current + statsDataProvider
                         .GetStatsData(null));
+
+            return new StatsData(
+                
+                Mathf.Clamp(finalStats.Damage, 1, _cappedStats.Damage == -1 ? float.MaxValue : _cappedStats.Damage),
+                Mathf.Clamp(finalStats.Speed, 1, _cappedStats.Speed == -1 ? float.MaxValue : _cappedStats.Speed),
+                Mathf.Clamp(finalStats.FireRate, .1f, _cappedStats.FireRate == -1 ? float.MaxValue : _cappedStats.FireRate),
+                Mathf.Clamp(finalStats.MaxHealth, 25, _cappedStats.MaxHealth == -1 ? float.MaxValue : _cappedStats.MaxHealth),
+                Mathf.Clamp(finalStats.Defense, 0, _cappedStats.Defense == -1 ? float.MaxValue : _cappedStats.Defense)
+            );
         }
 
         #region QC

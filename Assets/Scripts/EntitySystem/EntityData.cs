@@ -12,10 +12,22 @@ namespace EntitySystem
         private float _maxHealth;
         
         [SerializeField]
-        private string _key;
+        private int _requiredLevel = 0;
+        
+        [SerializeField]
+        private bool _isStatic;
+
+        [SerializeField] 
+        private EntityAttackerGroup _attackerGroup;
         
         public float MaxHealth => _maxHealth;
         
-        public string Key => _key;
+        public int RequiredLevel => _requiredLevel;
+        
+        public string Key => name;
+        
+        public bool IsStatic => _isStatic;
+        
+        public EntityAttackerGroup AttackerGroup => _attackerGroup;
     }
 }

@@ -22,14 +22,12 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _entities:
-  - {fileID: 1085831635514189995, guid: 2732fa87657842748a8f676032057715, type: 3}
-  - {fileID: 1085831635514189995, guid: 3497570ac769a074890dd1de261120c8, type: 3}
-  - {fileID: 1085831635514189995, guid: 3497570ac769a074890dd1de261120c8, type: 3}
-  - {fileID: 1085831635514189995, guid: 3497570ac769a074890dd1de261120c8, type: 3}
-  - {fileID: 1085831635514189995, guid: 3497570ac769a074890dd1de261120c8, type: 3}
-  - {fileID: 1085831635514189995, guid: 3497570ac769a074890dd1de261120c8, type: 3}
-  - {fileID: 1085831635514189995, guid: 3497570ac769a074890dd1de261120c8, type: 3}
+  - {fileID: 4637590501584507415, guid: 20492d715b15f804fa5fe4cee8906305, type: 3}
+  - {fileID: 5507470878955383104, guid: 36c92c04ab4567a4a92ae77f25c6d787, type: 3}
+  - {fileID: 3748062702778602467, guid: 117ed5fca5d3b6a4b8b88f5d7f37ad70, type: 3}
+  - {fileID: 7250216071847878193, guid: b87ece13843d53f478edb012dc42c75f, type: 3}
+  - {fileID: 4618472564772760382, guid: 87506342eca5e5e48b91051d9a1b23ec, type: 3}
   _subWaveCountFactor: 4
   _subwaveEnemyCountFactor: 10
   _enemyDifficultyFactor: 2
-  _difficultyRaise: 0.1
+  _difficultyRaise: 0.15

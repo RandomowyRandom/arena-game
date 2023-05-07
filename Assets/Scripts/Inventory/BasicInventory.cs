@@ -12,7 +12,9 @@ namespace Inventory
     {
         [SerializeField]
         private int _capacity = 25;
-     
+        
+        [SerializeField]
+        private List<Item> _startingItems = new();
         public event Action OnInventoryChanged;
         
         public Item[] Items => _items;
@@ -24,6 +26,14 @@ namespace Inventory
         private void Awake()
         {
             _items = new Item[Capacity];
+        }
+
+        private void Start()
+        {
+            foreach (var item in _startingItems)
+            {
+                TryAddItem(item);
+            }
         }
 
         public int Capacity => _capacity;

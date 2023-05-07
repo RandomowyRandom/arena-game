@@ -7,5 +7,7 @@ namespace Player.Interfaces
     {
         public event Action OnUsableItemChanged;
         public UsableItem GetUsableItem();
+        
+        public void ConsumeItem(UsableItem item);
     }
 }

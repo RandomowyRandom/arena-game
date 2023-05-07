@@ -16,31 +16,275 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 69ee7552a6396aa43b1a1547c0f72566, type: 3}
+    - {fileID: 6220283805649785671, guid: c09c62d55865de64586693b1db0627da, type: 3}
     - {fileID: 11400000, guid: 7ff96bf0ebbc025429ee488993903671, type: 2}
+    - {fileID: 11400000, guid: a24912256fd91a845bd6f489827a3d3b, type: 2}
+    - {fileID: 11400000, guid: d8917f73eb0309040ad9ef636dc22eae, type: 2}
+    - {fileID: 11400000, guid: cea9beb5a9fdacc448777c52afac584b, type: 2}
+    - {fileID: 11400000, guid: 5c3c3f83f3bff214caedaf5ea0b51356, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
     - Name: _effects
-      Entry: 6
-      Data: 
-    - Name: _rarityData
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Items.RaritySystem.GearRarityData,
+      Data: 0|System.Collections.Generic.List`1[[Items.Abstraction.IItemEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 11
+    - Name: 
+      Entry: 7
+      Data: 1|Items.Effects.RangedSquashVisualItemEffect, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|Items.Effects.PlaySoundItemEffect, Assembly-CSharp
+    - Name: _clip
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
+    - Name: _projectilePrefab
+      Entry: 10
+      Data: 1
+    - Name: _force
+      Entry: 4
+      Data: 80
+    - Name: _forceMode
+      Entry: 3
+      Data: 1
+    - Name: _projectileColor
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 0.247706428
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _projectileEffects
+      Entry: 7
+      Data: 4|System.Collections.Generic.List`1[[ProjectileSystem.Abstraction.IProjectileEffect,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 1|Items.RaritySystem.GearRarityData, Assembly-CSharp
-    - Name: _gearRarity
+      Data: 5|ProjectileSystem.Effects.ApplyKnockBackProjectileEffect, Assembly-CSharp
+    - Name: _force
+      Entry: 4
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|Items.Effects.WaitForSecondsItemEffect, Assembly-CSharp
+    - Name: _seconds
+      Entry: 4
+      Data: 0.15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 7|Items.Effects.RangedSquashVisualItemEffect, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 8|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
+    - Name: _projectilePrefab
+      Entry: 10
+      Data: 1
+    - Name: _force
+      Entry: 4
+      Data: 75
+    - Name: _forceMode
+      Entry: 3
+      Data: 1
+    - Name: _projectileColor
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 0.247706428
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _projectileEffects
+      Entry: 7
+      Data: 9|System.Collections.Generic.List`1[[ProjectileSystem.Abstraction.IProjectileEffect,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 10|ProjectileSystem.Effects.ApplyKnockBackProjectileEffect, Assembly-CSharp
+    - Name: _force
+      Entry: 4
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 11|Items.Effects.PlaySoundItemEffect, Assembly-CSharp
+    - Name: _clip
       Entry: 10
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 12|Items.Effects.WaitForSecondsItemEffect, Assembly-CSharp
+    - Name: _seconds
+      Entry: 4
+      Data: 0.15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 13|Items.Effects.RangedSquashVisualItemEffect, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 14|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
+    - Name: _projectilePrefab
+      Entry: 10
+      Data: 1
+    - Name: _force
+      Entry: 4
+      Data: 70
+    - Name: _forceMode
+      Entry: 3
+      Data: 1
+    - Name: _projectileColor
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 0.247706428
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _projectileEffects
+      Entry: 7
+      Data: 15|System.Collections.Generic.List`1[[ProjectileSystem.Abstraction.IProjectileEffect,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 16|ProjectileSystem.Effects.ApplyKnockBackProjectileEffect, Assembly-CSharp
+    - Name: _force
+      Entry: 4
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 17|Items.Effects.PlaySoundItemEffect, Assembly-CSharp
+    - Name: _clip
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _rarityData
+      Entry: 7
+      Data: 18|System.Collections.Generic.List`1[[Items.RaritySystem.GearRarityData,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: 19|Items.RaritySystem.GearRarityData, Assembly-CSharp
+    - Name: _gearRarity
+      Entry: 10
+      Data: 2
     - Name: _statsData
       Entry: 7
-      Data: 2|Stats.StatsData, Assembly-CSharp
+      Data: 20|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 16
@@ -49,7 +293,127 @@ MonoBehaviour:
       Data: 0
     - Name: _fireRate
       Entry: 4
-      Data: 0.4
+      Data: 0.2
+    - Name: _maxHealth
+      Entry: 4
+      Data: 0
+    - Name: _defense
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 21|Items.RaritySystem.GearRarityData, Assembly-CSharp
+    - Name: _gearRarity
+      Entry: 10
+      Data: 3
+    - Name: _statsData
+      Entry: 7
+      Data: 22|Stats.StatsData, Assembly-CSharp
+    - Name: _damage
+      Entry: 4
+      Data: 17.5
+    - Name: _speed
+      Entry: 4
+      Data: 0
+    - Name: _fireRate
+      Entry: 4
+      Data: 0.2
+    - Name: _maxHealth
+      Entry: 4
+      Data: 0
+    - Name: _defense
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 23|Items.RaritySystem.GearRarityData, Assembly-CSharp
+    - Name: _gearRarity
+      Entry: 10
+      Data: 4
+    - Name: _statsData
+      Entry: 7
+      Data: 24|Stats.StatsData, Assembly-CSharp
+    - Name: _damage
+      Entry: 4
+      Data: 19
+    - Name: _speed
+      Entry: 4
+      Data: 0
+    - Name: _fireRate
+      Entry: 4
+      Data: 0.2
+    - Name: _maxHealth
+      Entry: 4
+      Data: 0
+    - Name: _defense
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 25|Items.RaritySystem.GearRarityData, Assembly-CSharp
+    - Name: _gearRarity
+      Entry: 10
+      Data: 5
+    - Name: _statsData
+      Entry: 7
+      Data: 26|Stats.StatsData, Assembly-CSharp
+    - Name: _damage
+      Entry: 4
+      Data: 20.5
+    - Name: _speed
+      Entry: 4
+      Data: 0
+    - Name: _fireRate
+      Entry: 4
+      Data: 0.18
+    - Name: _maxHealth
+      Entry: 4
+      Data: 0
+    - Name: _defense
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 27|Items.RaritySystem.GearRarityData, Assembly-CSharp
+    - Name: _gearRarity
+      Entry: 10
+      Data: 6
+    - Name: _statsData
+      Entry: 7
+      Data: 28|Stats.StatsData, Assembly-CSharp
+    - Name: _damage
+      Entry: 4
+      Data: 21.5
+    - Name: _speed
+      Entry: 4
+      Data: 0
+    - Name: _fireRate
+      Entry: 4
+      Data: 0.15
     - Name: _maxHealth
       Entry: 4
       Data: 0
@@ -69,7 +433,8 @@ MonoBehaviour:
       Entry: 8
       Data: 
   _displayName: Fiery crossbow
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 43670e6b717352149959fb95a19c30e3, type: 3}
   _description: Inflicts fire
   _maxStack: 1
   _consumeOnUse: 0
+  _damageIncreasePerLevel: 1

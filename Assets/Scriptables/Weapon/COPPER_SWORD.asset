@@ -17,7 +17,12 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 6220283805649785671, guid: 904da2b18d667814abd782c12e1a1581, type: 3}
+    - {fileID: 8300000, guid: b7720ffeb861dac44810518de0e0089b, type: 3}
     - {fileID: 11400000, guid: 7ff96bf0ebbc025429ee488993903671, type: 2}
+    - {fileID: 11400000, guid: a24912256fd91a845bd6f489827a3d3b, type: 2}
+    - {fileID: 11400000, guid: d8917f73eb0309040ad9ef636dc22eae, type: 2}
+    - {fileID: 11400000, guid: cea9beb5a9fdacc448777c52afac584b, type: 2}
+    - {fileID: 11400000, guid: 5c3c3f83f3bff214caedaf5ea0b51356, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -29,7 +34,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 7
       Data: 1|Items.Effects.MeleeScaleVisualItemEffect, Assembly-CSharp
@@ -44,13 +49,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 2|Items.Effects.InstantiateMeleeProjectileItemEffect, Assembly-CSharp
+      Data: 2|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
     - Name: _projectilePrefab
       Entry: 10
       Data: 0
     - Name: _force
       Entry: 4
-      Data: 20
+      Data: 25
     - Name: _forceMode
       Entry: 3
       Data: 1
@@ -62,16 +67,47 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 4
-      Data: 0.5053438
+      Data: 0.7141847
     - Name: 
       Entry: 4
-      Data: 0.3176471
+      Data: 0.4764151
     - Name: 
       Entry: 4
       Data: 1
     - Name: 
       Entry: 8
       Data: 
+    - Name: _projectileEffects
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[ProjectileSystem.Abstraction.IProjectileEffect,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 4|ProjectileSystem.Effects.ApplyKnockBackProjectileEffect, Assembly-CSharp
+    - Name: _force
+      Entry: 4
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|Items.Effects.PlaySoundItemEffect, Assembly-CSharp
+    - Name: _clip
+      Entry: 10
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -83,29 +119,149 @@ MonoBehaviour:
       Data: 
     - Name: _rarityData
       Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[Items.RaritySystem.GearRarityData,
+      Data: 6|System.Collections.Generic.List`1[[Items.RaritySystem.GearRarityData,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 5
     - Name: 
       Entry: 7
-      Data: 4|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 7|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
-      Data: 1
+      Data: 2
     - Name: _statsData
       Entry: 7
-      Data: 5|Stats.StatsData, Assembly-CSharp
+      Data: 8|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 8
+      Data: 11
     - Name: _speed
       Entry: 4
       Data: 0
     - Name: _fireRate
       Entry: 4
       Data: 0.5
+    - Name: _maxHealth
+      Entry: 4
+      Data: 0
+    - Name: _defense
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|Items.RaritySystem.GearRarityData, Assembly-CSharp
+    - Name: _gearRarity
+      Entry: 10
+      Data: 3
+    - Name: _statsData
+      Entry: 7
+      Data: 10|Stats.StatsData, Assembly-CSharp
+    - Name: _damage
+      Entry: 4
+      Data: 12
+    - Name: _speed
+      Entry: 4
+      Data: 0
+    - Name: _fireRate
+      Entry: 4
+      Data: 0.5
+    - Name: _maxHealth
+      Entry: 4
+      Data: 0
+    - Name: _defense
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 11|Items.RaritySystem.GearRarityData, Assembly-CSharp
+    - Name: _gearRarity
+      Entry: 10
+      Data: 4
+    - Name: _statsData
+      Entry: 7
+      Data: 12|Stats.StatsData, Assembly-CSharp
+    - Name: _damage
+      Entry: 4
+      Data: 13
+    - Name: _speed
+      Entry: 4
+      Data: 0
+    - Name: _fireRate
+      Entry: 4
+      Data: 0.5
+    - Name: _maxHealth
+      Entry: 4
+      Data: 0
+    - Name: _defense
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 13|Items.RaritySystem.GearRarityData, Assembly-CSharp
+    - Name: _gearRarity
+      Entry: 10
+      Data: 5
+    - Name: _statsData
+      Entry: 7
+      Data: 14|Stats.StatsData, Assembly-CSharp
+    - Name: _damage
+      Entry: 4
+      Data: 14
+    - Name: _speed
+      Entry: 4
+      Data: 0
+    - Name: _fireRate
+      Entry: 4
+      Data: 0.47
+    - Name: _maxHealth
+      Entry: 4
+      Data: 0
+    - Name: _defense
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 15|Items.RaritySystem.GearRarityData, Assembly-CSharp
+    - Name: _gearRarity
+      Entry: 10
+      Data: 6
+    - Name: _statsData
+      Entry: 7
+      Data: 16|Stats.StatsData, Assembly-CSharp
+    - Name: _damage
+      Entry: 4
+      Data: 15
+    - Name: _speed
+      Entry: 4
+      Data: 0
+    - Name: _fireRate
+      Entry: 4
+      Data: 0.45
     - Name: _maxHealth
       Entry: 4
       Data: 0
@@ -129,3 +285,4 @@ MonoBehaviour:
   _description: 
   _maxStack: 1
   _consumeOnUse: 0
+  _damageIncreasePerLevel: 1

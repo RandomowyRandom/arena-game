@@ -19,6 +19,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1384386db39eef74d96f62752ff0f234, type: 2}
     - {fileID: 11400000, guid: 9a7341f9a37634f4fbb81ac2ac364e19, type: 2}
     - {fileID: 11400000, guid: 474748b8d37d7a844838b6d3221ea1a9, type: 2}
+    - {fileID: 11400000, guid: 9676b87daf40f1e42af682a32edfd4e6, type: 2}
     - {fileID: 11400000, guid: f02d6b62283b77e4288cb3e242e52e26, type: 2}
     - {fileID: 11400000, guid: f25148785e1498e42b69d6677619c5bf, type: 2}
     - {fileID: 11400000, guid: ae898ccdc5c497e44a5bd23936d5fe8d, type: 2}
@@ -42,8 +43,11 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 357a375b70cb03a43a582228160fb66f, type: 2}
     - {fileID: 11400000, guid: 8e5d241fa5991be458acd167f095ffd4, type: 2}
     - {fileID: 11400000, guid: b7f12b1ef0f27754d94d942a0222d6ee, type: 2}
+    - {fileID: 11400000, guid: df6c254545ebd434199c4fb5cab660f8, type: 2}
     - {fileID: 11400000, guid: c2f0bf6036eb07242976aa9d34bb2fc5, type: 2}
     - {fileID: 11400000, guid: 15ef4b42ab9fcae46bf9a1c3aabfe699, type: 2}
+    - {fileID: 11400000, guid: f1e28381fff555547816aa91c26b363c, type: 2}
+    - {fileID: 11400000, guid: ed17443e4ebffd24681a156d4a04acbb, type: 2}
     - {fileID: 11400000, guid: 7c2fce353265b73449e040c3678cc176, type: 2}
     - {fileID: 11400000, guid: 705818e0d254e2240bdfd08b20d2ca88, type: 2}
     - {fileID: 11400000, guid: fecb9f0fa428f604299c5d28ff36d38a, type: 2}
@@ -57,6 +61,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 29db3cb41ec41944d93f03fef1328ed9, type: 2}
     - {fileID: 11400000, guid: a051a68d78723a4479221cd1923762a9, type: 2}
     - {fileID: 11400000, guid: b7e1e927137f0104691ecc55a2d3aa54, type: 2}
+    - {fileID: 11400000, guid: 25cc81a80f572e043b274cc55ca1b706, type: 2}
     - {fileID: 11400000, guid: aebbc128da9873f40b87f3d42b2fdc26, type: 2}
     - {fileID: 11400000, guid: 4e1452f97fe4c4d43bd7e7cbd4c5d6ca, type: 2}
     - {fileID: 11400000, guid: 0974c5b09519a1840a581549d9c2b86c, type: 2}
@@ -69,6 +74,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 4e0b077d45b88db43b304ffa57d79bca, type: 2}
     - {fileID: 11400000, guid: c760c982095238742b24d7adc78b2079, type: 2}
     - {fileID: 11400000, guid: 5cd9f6b3404097d45bab0a1560aee0ba, type: 2}
+    - {fileID: 11400000, guid: 893618c5518171a4fbfa414b759849c6, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -87,7 +93,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 53
+      Data: 59
     - Name: 
       Entry: 7
       Data: 
@@ -129,7 +135,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: AZURITE_RING
+      Data: ANCIENT_GOLDEN_RING
     - Name: $v
       Entry: 10
       Data: 3
@@ -141,7 +147,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: CORDIERITE_RING
+      Data: AZURITE_RING
     - Name: $v
       Entry: 10
       Data: 4
@@ -153,7 +159,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: CUPRITE_RING
+      Data: CORDIERITE_RING
     - Name: $v
       Entry: 10
       Data: 5
@@ -165,7 +171,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: DIAMOND_RING
+      Data: CUPRITE_RING
     - Name: $v
       Entry: 10
       Data: 6
@@ -177,7 +183,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: EMERALD_RING
+      Data: DIAMOND_RING
     - Name: $v
       Entry: 10
       Data: 7
@@ -189,7 +195,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: OPAL_RING
+      Data: EMERALD_RING
     - Name: $v
       Entry: 10
       Data: 8
@@ -201,7 +207,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: RUBY_RING
+      Data: OPAL_RING
     - Name: $v
       Entry: 10
       Data: 9
@@ -213,7 +219,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: SAPPHIRE_RING
+      Data: RUBY_RING
     - Name: $v
       Entry: 10
       Data: 10
@@ -225,7 +231,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: COPPER_CHESTPLATE
+      Data: SAPPHIRE_RING
     - Name: $v
       Entry: 10
       Data: 11
@@ -237,7 +243,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: COPPER_HELMET
+      Data: COPPER_CHESTPLATE
     - Name: $v
       Entry: 10
       Data: 12
@@ -249,7 +255,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: COPPER_LEGGINGS
+      Data: COPPER_HELMET
     - Name: $v
       Entry: 10
       Data: 13
@@ -261,7 +267,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: GOLDEN_CHESTPLATE
+      Data: COPPER_LEGGINGS
     - Name: $v
       Entry: 10
       Data: 14
@@ -273,7 +279,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: GOLDEN_HELMET
+      Data: GOLDEN_CHESTPLATE
     - Name: $v
       Entry: 10
       Data: 15
@@ -285,7 +291,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: GOLDEN_LEGGINGS
+      Data: GOLDEN_HELMET
     - Name: $v
       Entry: 10
       Data: 16
@@ -297,7 +303,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: IRON_CHESTPLATE
+      Data: GOLDEN_LEGGINGS
     - Name: $v
       Entry: 10
       Data: 17
@@ -309,7 +315,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: IRON_HELMET
+      Data: IRON_CHESTPLATE
     - Name: $v
       Entry: 10
       Data: 18
@@ -321,7 +327,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: IRON_LEGGINGS
+      Data: IRON_HELMET
     - Name: $v
       Entry: 10
       Data: 19
@@ -333,7 +339,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: MITHRIL_CHESTPLATE
+      Data: IRON_LEGGINGS
     - Name: $v
       Entry: 10
       Data: 20
@@ -345,7 +351,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: MITHRIL_HELMET
+      Data: MITHRIL_CHESTPLATE
     - Name: $v
       Entry: 10
       Data: 21
@@ -357,7 +363,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: MITHRIL_LEGGINGS
+      Data: MITHRIL_HELMET
     - Name: $v
       Entry: 10
       Data: 22
@@ -369,7 +375,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: WOODEN_CHESTPLATE
+      Data: MITHRIL_LEGGINGS
     - Name: $v
       Entry: 10
       Data: 23
@@ -381,7 +387,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: WOODEN_HELMET
+      Data: WOODEN_CHESTPLATE
     - Name: $v
       Entry: 10
       Data: 24
@@ -393,7 +399,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: WOODEN_LEGGINGS
+      Data: WOODEN_HELMET
     - Name: $v
       Entry: 10
       Data: 25
@@ -405,7 +411,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: COPPER_INGOT
+      Data: WOODEN_LEGGINGS
     - Name: $v
       Entry: 10
       Data: 26
@@ -417,7 +423,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: COPPER_ORE
+      Data: ALEXANDRITE
     - Name: $v
       Entry: 10
       Data: 27
@@ -429,7 +435,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: GOLD_INGOT
+      Data: COPPER_INGOT
     - Name: $v
       Entry: 10
       Data: 28
@@ -441,7 +447,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: GOLD_ORE
+      Data: COPPER_ORE
     - Name: $v
       Entry: 10
       Data: 29
@@ -453,7 +459,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: GRASS
+      Data: FIERY_WOOD
     - Name: $v
       Entry: 10
       Data: 30
@@ -465,7 +471,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: IRON_INGOT
+      Data: FROZEN_STONE
     - Name: $v
       Entry: 10
       Data: 31
@@ -477,7 +483,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: IRON_ORE
+      Data: GOLD_INGOT
     - Name: $v
       Entry: 10
       Data: 32
@@ -489,7 +495,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: MITHRIL_INGOT
+      Data: GOLD_ORE
     - Name: $v
       Entry: 10
       Data: 33
@@ -501,7 +507,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: MITHRIL_ORE
+      Data: GRASS
     - Name: $v
       Entry: 10
       Data: 34
@@ -513,7 +519,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: STICK
+      Data: IRON_INGOT
     - Name: $v
       Entry: 10
       Data: 35
@@ -525,7 +531,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: STONE
+      Data: IRON_ORE
     - Name: $v
       Entry: 10
       Data: 36
@@ -537,7 +543,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: WOODEN_PLANK
+      Data: MITHRIL_INGOT
     - Name: $v
       Entry: 10
       Data: 37
@@ -549,7 +555,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: ANCIENT_GOLDEN_SWORD
+      Data: MITHRIL_ORE
     - Name: $v
       Entry: 10
       Data: 38
@@ -561,7 +567,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: COPPER_SPEAR
+      Data: STICK
     - Name: $v
       Entry: 10
       Data: 39
@@ -573,7 +579,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: COPPER_SWORD
+      Data: STONE
     - Name: $v
       Entry: 10
       Data: 40
@@ -585,7 +591,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: FIERY_CROSSBOW
+      Data: WOODEN_PLANK
     - Name: $v
       Entry: 10
       Data: 41
@@ -597,7 +603,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: FROZEN_SHORTSWORD
+      Data: ANCIENT_GOLDEN_SWORD
     - Name: $v
       Entry: 10
       Data: 42
@@ -609,7 +615,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: FUSION_TWOSHOT
+      Data: COPPER_SPEAR
     - Name: $v
       Entry: 10
       Data: 43
@@ -621,7 +627,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: GOLDEN_CROSSBOW
+      Data: COPPER_SWORD
     - Name: $v
       Entry: 10
       Data: 44
@@ -633,7 +639,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: GOLDEN_SWORD
+      Data: DEV_SWORD
     - Name: $v
       Entry: 10
       Data: 45
@@ -645,7 +651,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: IRON_BOW
+      Data: FIERY_CROSSBOW
     - Name: $v
       Entry: 10
       Data: 46
@@ -657,7 +663,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: IRON_GREATSWORD
+      Data: FROZEN_SHORTSWORD
     - Name: $v
       Entry: 10
       Data: 47
@@ -669,7 +675,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: MITHRIL_KNIVES
+      Data: FUSION_TWOSHOT
     - Name: $v
       Entry: 10
       Data: 48
@@ -681,7 +687,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: PRINCE_AIDENS_SWORD
+      Data: GOLDEN_CROSSBOW
     - Name: $v
       Entry: 10
       Data: 49
@@ -693,7 +699,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: STONE_SPEAR
+      Data: GOLDEN_SWORD
     - Name: $v
       Entry: 10
       Data: 50
@@ -705,7 +711,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: WOODEN_BOW
+      Data: IRON_BOW
     - Name: $v
       Entry: 10
       Data: 51
@@ -717,10 +723,82 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: WOODEN_SWORD
+      Data: IRON_GREATSWORD
     - Name: $v
       Entry: 10
       Data: 52
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: MITHRIL_KNIVES
+    - Name: $v
+      Entry: 10
+      Data: 53
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: PRINCE_AIDENS_SWORD
+    - Name: $v
+      Entry: 10
+      Data: 54
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: STONE_SPEAR
+    - Name: $v
+      Entry: 10
+      Data: 55
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: WOODEN_BOW
+    - Name: $v
+      Entry: 10
+      Data: 56
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: WOODEN_SWORD
+    - Name: $v
+      Entry: 10
+      Data: 57
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: HEAL_POTION_I
+    - Name: $v
+      Entry: 10
+      Data: 58
     - Name: 
       Entry: 8
       Data: 
@@ -734,6 +812,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1384386db39eef74d96f62752ff0f234, type: 2}
   - {fileID: 11400000, guid: 9a7341f9a37634f4fbb81ac2ac364e19, type: 2}
   - {fileID: 11400000, guid: 474748b8d37d7a844838b6d3221ea1a9, type: 2}
+  - {fileID: 11400000, guid: 9676b87daf40f1e42af682a32edfd4e6, type: 2}
   - {fileID: 11400000, guid: f02d6b62283b77e4288cb3e242e52e26, type: 2}
   - {fileID: 11400000, guid: f25148785e1498e42b69d6677619c5bf, type: 2}
   - {fileID: 11400000, guid: ae898ccdc5c497e44a5bd23936d5fe8d, type: 2}
@@ -757,8 +836,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 357a375b70cb03a43a582228160fb66f, type: 2}
   - {fileID: 11400000, guid: 8e5d241fa5991be458acd167f095ffd4, type: 2}
   - {fileID: 11400000, guid: b7f12b1ef0f27754d94d942a0222d6ee, type: 2}
+  - {fileID: 11400000, guid: df6c254545ebd434199c4fb5cab660f8, type: 2}
   - {fileID: 11400000, guid: c2f0bf6036eb07242976aa9d34bb2fc5, type: 2}
   - {fileID: 11400000, guid: 15ef4b42ab9fcae46bf9a1c3aabfe699, type: 2}
+  - {fileID: 11400000, guid: f1e28381fff555547816aa91c26b363c, type: 2}
+  - {fileID: 11400000, guid: ed17443e4ebffd24681a156d4a04acbb, type: 2}
   - {fileID: 11400000, guid: 7c2fce353265b73449e040c3678cc176, type: 2}
   - {fileID: 11400000, guid: 705818e0d254e2240bdfd08b20d2ca88, type: 2}
   - {fileID: 11400000, guid: fecb9f0fa428f604299c5d28ff36d38a, type: 2}
@@ -772,6 +854,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 29db3cb41ec41944d93f03fef1328ed9, type: 2}
   - {fileID: 11400000, guid: a051a68d78723a4479221cd1923762a9, type: 2}
   - {fileID: 11400000, guid: b7e1e927137f0104691ecc55a2d3aa54, type: 2}
+  - {fileID: 11400000, guid: 25cc81a80f572e043b274cc55ca1b706, type: 2}
   - {fileID: 11400000, guid: aebbc128da9873f40b87f3d42b2fdc26, type: 2}
   - {fileID: 11400000, guid: 4e1452f97fe4c4d43bd7e7cbd4c5d6ca, type: 2}
   - {fileID: 11400000, guid: 0974c5b09519a1840a581549d9c2b86c, type: 2}
@@ -784,3 +867,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4e0b077d45b88db43b304ffa57d79bca, type: 2}
   - {fileID: 11400000, guid: c760c982095238742b24d7adc78b2079, type: 2}
   - {fileID: 11400000, guid: 5cd9f6b3404097d45bab0a1560aee0ba, type: 2}
+  - {fileID: 11400000, guid: 893618c5518171a4fbfa414b759849c6, type: 2}

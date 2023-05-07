@@ -10,6 +10,8 @@ namespace WaveSystem
         public event Action<SubWave> OnSubWaveStart;
         public event Action<SubWave> OnSubWaveEnd;
         
+        public bool IsWaveInProgress { get; }
+        
         public void SetWave(Wave wave);
         
         public void StartWave();

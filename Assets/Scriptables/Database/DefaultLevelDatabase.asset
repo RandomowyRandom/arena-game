@@ -1,0 +1,401 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d98a7adea8d243a08bb98d6b7ff9976c, type: 3}
+  m_Name: DefaultLevelDatabase
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 8669758350897948235, guid: 7d3cd3ae9b1648548831cb045427d491, type: 3}
+    - {fileID: 4787323143279092637, guid: dffa238d7402ec54facd178c2430668a, type: 3}
+    - {fileID: 662719082333613600, guid: f68f8653e394e8840b0feb31c77aebe3, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _levels
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[LevelSystem.Level, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 20
+    - Name: 
+      Entry: 7
+      Data: 1|LevelSystem.Level, Assembly-CSharp
+    - Name: _levelNumber
+      Entry: 3
+      Data: 1
+    - Name: _experienceRequired
+      Entry: 3
+      Data: 130
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 0
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|LevelSystem.Level, Assembly-CSharp
+    - Name: _levelNumber
+      Entry: 3
+      Data: 2
+    - Name: _experienceRequired
+      Entry: 3
+      Data: 260
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 0
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|LevelSystem.Level, Assembly-CSharp
+    - Name: _levelNumber
+      Entry: 3
+      Data: 3
+    - Name: _experienceRequired
+      Entry: 3
+      Data: 390
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 0
+    - Name: _levelInfo
+      Entry: 1
+      Data: You can now mine<color=#92a1b9><size=120%> IRON
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|LevelSystem.Level, Assembly-CSharp
+    - Name: _levelNumber
+      Entry: 3
+      Data: 4
+    - Name: _experienceRequired
+      Entry: 3
+      Data: 520
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 0
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|LevelSystem.Level, Assembly-CSharp
+    - Name: _levelNumber
+      Entry: 3
+      Data: 5
+    - Name: _experienceRequired
+      Entry: 3
+      Data: 650
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 1
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|LevelSystem.Level, Assembly-CSharp
+    - Name: _levelNumber
+      Entry: 3
+      Data: 6
+    - Name: _experienceRequired
+      Entry: 3
+      Data: 780
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 1
+    - Name: _levelInfo
+      Entry: 1
+      Data: You can now mine <color="yellow"><size=120%>GOLD
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 7|LevelSystem.Level, Assembly-CSharp
+    - Name: _levelNumber
+      Entry: 3
+      Data: 7
+    - Name: _experienceRequired
+      Entry: 3
+      Data: 910
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 1
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 8|LevelSystem.Level, Assembly-CSharp
+    - Name: _levelNumber
+      Entry: 3
+      Data: 8
+    - Name: _experienceRequired
+      Entry: 3
+      Data: 1040
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 1
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|LevelSystem.Level, Assembly-CSharp
+    - Name: _levelNumber
+      Entry: 3
+      Data: 9
+    - Name: _experienceRequired
+      Entry: 3
+      Data: 1170
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 1
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 10|LevelSystem.Level, Assembly-CSharp
+    - Name: _levelNumber
+      Entry: 3
+      Data: 10
+    - Name: _experienceRequired
+      Entry: 3
+      Data: 1300
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 2
+    - Name: _levelInfo
+      Entry: 1
+      Data: You can now mine <color="green"><size=120%>MITHRIL
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 11|LevelSystem.Level, Assembly-CSharp
+    - Name: _levelNumber
+      Entry: 3
+      Data: 11
+    - Name: _experienceRequired
+      Entry: 3
+      Data: 1430
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 2
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 12|LevelSystem.Level, Assembly-CSharp
+    - Name: _levelNumber
+      Entry: 3
+      Data: 12
+    - Name: _experienceRequired
+      Entry: 3
+      Data: 1560
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 2
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 13|LevelSystem.Level, Assembly-CSharp
+    - Name: _levelNumber
+      Entry: 3
+      Data: 13
+    - Name: _experienceRequired
+      Entry: 3
+      Data: 1690
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 2
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 14|LevelSystem.Level, Assembly-CSharp
+    - Name: _levelNumber
+      Entry: 3
+      Data: 14
+    - Name: _experienceRequired
+      Entry: 3
+      Data: 1820
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 2
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 15|LevelSystem.Level, Assembly-CSharp
+    - Name: _levelNumber
+      Entry: 3
+      Data: 15
+    - Name: _experienceRequired
+      Entry: 3
+      Data: 1950
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 2
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 16|LevelSystem.Level, Assembly-CSharp
+    - Name: _levelNumber
+      Entry: 3
+      Data: 16
+    - Name: _experienceRequired
+      Entry: 3
+      Data: 2080
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 2
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 17|LevelSystem.Level, Assembly-CSharp
+    - Name: _levelNumber
+      Entry: 3
+      Data: 17
+    - Name: _experienceRequired
+      Entry: 3
+      Data: 2210
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 2
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 18|LevelSystem.Level, Assembly-CSharp
+    - Name: _levelNumber
+      Entry: 3
+      Data: 18
+    - Name: _experienceRequired
+      Entry: 3
+      Data: 2340
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 2
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 19|LevelSystem.Level, Assembly-CSharp
+    - Name: _levelNumber
+      Entry: 3
+      Data: 19
+    - Name: _experienceRequired
+      Entry: 3
+      Data: 2470
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 2
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 20|LevelSystem.Level, Assembly-CSharp
+    - Name: _levelNumber
+      Entry: 3
+      Data: 20
+    - Name: _experienceRequired
+      Entry: 3
+      Data: 2600
+    - Name: _levelRewardPrefab
+      Entry: 10
+      Data: 2
+    - Name: _levelInfo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  _levelAmount: 20
+  _experienceMultiplier: 1.3
