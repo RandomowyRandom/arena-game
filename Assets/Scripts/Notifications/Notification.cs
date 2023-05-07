@@ -10,17 +10,14 @@ namespace Notifications
         [SerializeField]
         private TMP_Text _notificationText;
 
-        private void Start()
+        public void SetNotificationText(string text, float shownTime = 1f)
         {
-            transform.DOMoveY(transform.position.y + 2f, 1f).OnComplete(() =>
+            _notificationText.text = text;
+            
+            transform.DOMoveY(transform.position.y + 2f, shownTime).OnComplete(() =>
             {
                 _notificationText.DOFade(0, .2f).OnComplete(() => Destroy(gameObject));
             });
-        }
-
-        public void SetNotificationText(string text)
-        {
-            _notificationText.text = text;
         }
     }
 }
