@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Cysharp.Threading.Tasks;
 using Items;
 using Items.Abstraction;
@@ -18,6 +20,9 @@ namespace Player
         [OdinSerialize]
         private IUsableItemProvider _usableItemProvider;
         
+        [OdinSerialize]
+        private List<IItemUseLock> _itemUseLocks;
+        
         [SerializeField]
         private GameObject _parentGameObject;
         
@@ -29,19 +34,6 @@ namespace Player
         private float _useDelay;
         
         private bool _useLock;
-        
-        public async UniTask<bool> TryUseItem(UsableItem item)
-        {
-            if (IsLocked)
-                return false;
-
-            _useLock = true;
-            await item.OnUse(this);
-            _useLock = false;
-            
-            _useDelay = ServiceLocator.ServiceLocator.Instance.Get<IPlayerStats>().GetStatsData().FireRate;
-            return true;
-        }
 
         private void Update()
         {
@@ -53,6 +45,24 @@ namespace Player
             var usableItem = _usableItemProvider.GetUsableItem();
             if(usableItem != null)
                 TryUseItem(usableItem).Forget();
+        }
+        
+        public async UniTask<bool> TryUseItem(UsableItem item)
+        {
+            if (_itemUseLocks.Any(l => l.IsLocked))
+                return false;
+
+            _useLock = true;
+            await item.OnUse(this);
+            _useLock = false;
+            
+            _useDelay = ServiceLocator.ServiceLocator.Instance.Get<IPlayerStats>().GetStatsData().FireRate;
+            return true;
+        }
+
+        public void ConsumeItem(UsableItem item)
+        {
+            _usableItemProvider.ConsumeItem(item);
         }
     }
 }

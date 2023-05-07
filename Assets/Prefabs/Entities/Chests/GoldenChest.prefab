@@ -224,6 +224,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: df6c254545ebd434199c4fb5cab660f8, type: 2}
     - {fileID: 11400000, guid: 9676b87daf40f1e42af682a32edfd4e6, type: 2}
     - {fileID: 11400000, guid: a24912256fd91a845bd6f489827a3d3b, type: 2}
+    - {fileID: 11400000, guid: 893618c5518171a4fbfa414b759849c6, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -368,7 +369,31 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 11|EntitySystem.BasicItemDrop, Assembly-CSharp
+    - Name: _item
+      Entry: 7
+      Data: 12|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 9
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: _gearRarity
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _chance
+      Entry: 4
+      Data: 0.15
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 

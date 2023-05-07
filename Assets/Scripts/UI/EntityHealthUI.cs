@@ -20,6 +20,7 @@ namespace UI
         private void Start()
         {
             _entity.OnDamageTaken += UpdateUI;
+            _entity.OnHeal += amount => UpdateUI(amount, null);
             
             SetHealthUI(_entity.Health, _entity.MaxHealth);
         }

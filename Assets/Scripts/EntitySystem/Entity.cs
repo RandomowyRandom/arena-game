@@ -23,7 +23,9 @@ namespace EntitySystem
 
         public event Action<float, IDamageSource> OnDamageTaken;
         public event Action<IDamageSource> OnDeath;
-        
+
+        public event Action<float> OnHeal; 
+
         public float Health => _health;
         
         public float MaxHealth => _data.MaxHealth;
@@ -55,6 +57,14 @@ namespace EntitySystem
             OnDeath = null;
         }
 
+        public void Heal(float amount)
+        {
+            _health += amount;
+            _health = Mathf.Clamp(_health, 0, _data.MaxHealth);
+            
+            OnHeal?.Invoke(amount);
+        }
+        
         public void TakeDamage(float damage, IDamageSource source)
         {
             if(_damageLocks != null)

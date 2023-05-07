@@ -13,11 +13,6 @@ namespace Items.ItemDataSystem
         [OdinSerialize] 
         private List<IItemEffect> _effects;
         
-        [SerializeField]
-        private bool _consumeOnUse;
-        
-        public bool ConsumeOnUse => _consumeOnUse;
-        
         public async UniTask OnUse(IItemUser user)
         {
             if(_effects == null)
