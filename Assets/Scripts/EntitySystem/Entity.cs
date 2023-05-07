@@ -20,6 +20,9 @@ namespace EntitySystem
         
         [OdinSerialize]
         private List<IDamageLock> _damageLocks = new();
+        
+        [OdinSerialize]
+        private List<IDamageProcessor> _damageProcessors = new();
 
         public event Action<float, IDamageSource> OnDamageTaken;
         public event Action<IDamageSource> OnDeath;
@@ -76,9 +79,13 @@ namespace EntitySystem
                 NotificationHandler.TrySendNotification($"Requires level <color=\"red\"> <size=120%> {_data.RequiredLevel}!");
                 damage = 0;
             }
-            
-            _health -= damage;
-            OnDamageTaken?.Invoke(damage, source);
+
+            var processedDamage = 
+                _damageProcessors.Aggregate(damage, (current, damageProcessor) => 
+                    damageProcessor.Process(current));
+
+            _health -= processedDamage;
+            OnDamageTaken?.Invoke(processedDamage, source);
 
             if (!(_health <= 0)) 
                 return;

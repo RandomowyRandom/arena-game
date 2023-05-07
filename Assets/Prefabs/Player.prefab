@@ -5072,6 +5072,8 @@ GameObject:
   - component: {fileID: 8792347711535029453}
   - component: {fileID: 1535052510656991150}
   - component: {fileID: 2249936656328729199}
+  - component: {fileID: 3330762920828824583}
+  - component: {fileID: 3288190084903759145}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -5507,6 +5509,19 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: _damageProcessors
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[EntitySystem.IDamageProcessor, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   _data: {fileID: 11400000, guid: 78a8924caf0e48d478b92b5fc13c0fe2, type: 2}
 --- !u!58 &233742944
 CircleCollider2D:
@@ -5834,6 +5849,52 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _weight: 1
+--- !u!114 &3330762920828824583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4857834470512048523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274beb24095749b5851928976275c91b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 233742934}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _usableItemProvider
+      Entry: 10
+      Data: 0
+--- !u!114 &3288190084903759145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4857834470512048523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ffb66fe93584573a3637ceee6033ba7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
 --- !u!1 &8618184906701007138
 GameObject:
   m_ObjectHideFlags: 0
@@ -5921,6 +5982,25 @@ MonoBehaviour:
     - Name: _usableItemProvider
       Entry: 10
       Data: 0
+    - Name: _itemUseLocks
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Items.Abstraction.IItemUseLock,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   _parentGameObject: {fileID: 4857834470512048523}
 --- !u!1 &8879232156482763354
 GameObject:
