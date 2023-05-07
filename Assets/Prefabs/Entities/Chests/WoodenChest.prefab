@@ -282,6 +282,19 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: _damageProcessors
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[EntitySystem.IDamageProcessor, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   _data: {fileID: 11400000, guid: 53b97e42551f45345a3f1be392c343c0, type: 2}
 --- !u!114 &8669758350897948225
 MonoBehaviour:
@@ -603,7 +616,7 @@ MonoBehaviour:
       Data: 
     - Name: _chance
       Entry: 4
-      Data: 0.15
+      Data: 0.2
     - Name: 
       Entry: 8
       Data: 
