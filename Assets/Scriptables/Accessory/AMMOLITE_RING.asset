@@ -47,7 +47,7 @@ MonoBehaviour:
       Data: 6
     - Name: _speed
       Entry: 4
-      Data: 5.1
+      Data: 1.7
     - Name: _fireRate
       Entry: 4
       Data: -0.1
@@ -77,7 +77,7 @@ MonoBehaviour:
       Data: 6.2
     - Name: _speed
       Entry: 4
-      Data: 5.2
+      Data: 1.7
     - Name: _fireRate
       Entry: 4
       Data: -0.1
@@ -107,7 +107,7 @@ MonoBehaviour:
       Data: 6.4
     - Name: _speed
       Entry: 4
-      Data: 5.3
+      Data: 1.7
     - Name: _fireRate
       Entry: 4
       Data: -0.1
@@ -137,7 +137,7 @@ MonoBehaviour:
       Data: 6.6
     - Name: _speed
       Entry: 4
-      Data: 5.4
+      Data: 1.7
     - Name: _fireRate
       Entry: 4
       Data: -0.11
@@ -167,7 +167,7 @@ MonoBehaviour:
       Data: 6.8
     - Name: _speed
       Entry: 4
-      Data: 5.5
+      Data: 1.7
     - Name: _fireRate
       Entry: 4
       Data: -0.13
@@ -194,3 +194,4 @@ MonoBehaviour:
   _description: 
   _maxStack: 1
   _equipmentType: 3
+  _defenseIncreasePerLevel: 1

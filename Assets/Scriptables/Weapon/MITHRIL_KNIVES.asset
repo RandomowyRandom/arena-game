@@ -125,13 +125,13 @@ MonoBehaviour:
       Data: 7|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 20
+      Data: 17
     - Name: _speed
       Entry: 4
       Data: 0
     - Name: _fireRate
       Entry: 4
-      Data: -0.1
+      Data: -0.06
     - Name: _maxHealth
       Entry: 4
       Data: 0
@@ -155,13 +155,13 @@ MonoBehaviour:
       Data: 9|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 21.5
+      Data: 18
     - Name: _speed
       Entry: 4
       Data: 0
     - Name: _fireRate
       Entry: 4
-      Data: -0.1
+      Data: -0.06
     - Name: _maxHealth
       Entry: 4
       Data: 0
@@ -185,13 +185,13 @@ MonoBehaviour:
       Data: 11|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 23
+      Data: 19
     - Name: _speed
       Entry: 4
       Data: 0
     - Name: _fireRate
       Entry: 4
-      Data: -0.1
+      Data: -0.06
     - Name: _maxHealth
       Entry: 4
       Data: 0
@@ -215,13 +215,13 @@ MonoBehaviour:
       Data: 13|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 24.5
+      Data: 22
     - Name: _speed
       Entry: 4
       Data: 0
     - Name: _fireRate
       Entry: 4
-      Data: -0.12
+      Data: -0.08
     - Name: _maxHealth
       Entry: 4
       Data: 0
@@ -245,13 +245,13 @@ MonoBehaviour:
       Data: 15|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 26
+      Data: 25
     - Name: _speed
       Entry: 4
       Data: 0
     - Name: _fireRate
       Entry: 4
-      Data: -0.14
+      Data: -0.1
     - Name: _maxHealth
       Entry: 4
       Data: 0
