@@ -47,7 +47,7 @@ MonoBehaviour:
       Data: 10
     - Name: _speed
       Entry: 4
-      Data: 10
+      Data: 3.3
     - Name: _fireRate
       Entry: 4
       Data: -0.15
@@ -77,7 +77,7 @@ MonoBehaviour:
       Data: 11.75
     - Name: _speed
       Entry: 4
-      Data: 10
+      Data: 3.3
     - Name: _fireRate
       Entry: 4
       Data: -0.15
@@ -107,7 +107,7 @@ MonoBehaviour:
       Data: 13.5
     - Name: _speed
       Entry: 4
-      Data: 11
+      Data: 3.5
     - Name: _fireRate
       Entry: 4
       Data: -0.15
@@ -137,7 +137,7 @@ MonoBehaviour:
       Data: 15.25
     - Name: _speed
       Entry: 4
-      Data: 10
+      Data: 3.5
     - Name: _fireRate
       Entry: 4
       Data: -0.16
@@ -167,7 +167,7 @@ MonoBehaviour:
       Data: 18.75
     - Name: _speed
       Entry: 4
-      Data: 12
+      Data: 3.6
     - Name: _fireRate
       Entry: 4
       Data: -0.17
@@ -194,3 +194,4 @@ MonoBehaviour:
   _description: Has a chance to shoot a magical projectile
   _maxStack: 1
   _equipmentType: 3
+  _defenseIncreasePerLevel: 1

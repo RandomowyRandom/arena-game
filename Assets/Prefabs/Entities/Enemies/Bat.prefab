@@ -407,7 +407,7 @@ MonoBehaviour:
       Data: 4
     - Name: _speed
       Entry: 4
-      Data: 40
+      Data: 43
     - Name: _distanceTolerance
       Entry: 4
       Data: 0.2
@@ -434,7 +434,7 @@ MonoBehaviour:
       Data: 
     - Name: _force
       Entry: 4
-      Data: 20
+      Data: 35
     - Name: 
       Entry: 8
       Data: 

@@ -393,7 +393,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 652327570797259414, guid: d64283546ed2d6541a4ecfaf42a9de53, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -405,7 +406,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 6
     - Name: 
       Entry: 7
       Data: 1|EntitySystem.EntityTask.ObjectAwareTargetFollowEntityTask, Assembly-CSharp
@@ -448,6 +449,36 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 5|EntitySystem.EntityTask.WaitForSecondsEntityTask, Assembly-CSharp
+    - Name: _duration
+      Entry: 4
+      Data: 0.1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|EntitySystem.EntityTask.ShootProjectileEntityTask, Assembly-CSharp
+    - Name: _targetProvider
+      Entry: 7
+      Data: 7|EntitySystem.PlayerEntityProvider, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _projectilePrefab
+      Entry: 10
+      Data: 0
+    - Name: _predictTargetPosition
+      Entry: 5
+      Data: false
+    - Name: _force
+      Entry: 4
+      Data: 90
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 8|EntitySystem.EntityTask.WaitForSecondsEntityTask, Assembly-CSharp
     - Name: _duration
       Entry: 4
       Data: 0.6

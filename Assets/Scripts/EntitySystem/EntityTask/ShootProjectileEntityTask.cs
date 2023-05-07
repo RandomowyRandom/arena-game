@@ -37,6 +37,9 @@ namespace EntitySystem.EntityTask
             {
                 var direction = (target.transform.position - entity.transform.position).normalized;
                 projectile.AddForce(direction * _force, ForceMode2D.Impulse);
+                
+                var angle = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
+                projectile.rotation = angle;
             }
             else
             {
@@ -45,6 +48,9 @@ namespace EntitySystem.EntityTask
                 var targetPosition = target.transform.position + (Vector3)_targetRigidbody.velocity * time;
                 var newDirection = (targetPosition - entity.transform.position).normalized;
                 projectile.AddForce(newDirection * _force, ForceMode2D.Impulse);
+                
+                var angle = Mathf.Atan2(-newDirection.y, -newDirection.x) * Mathf.Rad2Deg;
+                projectile.rotation = angle;
             }
             
             return UniTask.FromResult(EnemyTaskResult.Completed);
