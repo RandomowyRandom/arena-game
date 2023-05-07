@@ -12,6 +12,7 @@
         CraftingRecipe,
         Accessory,
         WaveFactory,
-        Buff
+        Buff,
+        Potion,
     }
 }

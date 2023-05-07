@@ -60,6 +60,17 @@ namespace Player
             return null;
         }
 
+        public void ConsumeItem(UsableItem item)
+        {
+            if(CurrentItem == null)
+                return;
+            
+            var currentItemInSlot = _hotbarInventory.GetItem(_currentHotbarSlot);
+            
+            if(CurrentItem.ItemData == item)
+                _hotbarInventory.SetItem(_currentHotbarSlot, new Item(item, currentItemInSlot.Amount - 1));
+        }
+
         private void SetCurrentHotbarSlot(int slotIndex)
         {
             if (!_initialized)

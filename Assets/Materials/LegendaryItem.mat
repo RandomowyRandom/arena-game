@@ -10,6 +10,7 @@ Material:
   m_Name: LegendaryItem
   m_Shader: {fileID: 4800000, guid: a53f4bb29f3644b43b5075c6dcfecb32, type: 3}
   m_ValidKeywords:
+  - OUTBASEPIXELPERF_ON
   - OUTBASE_ON
   - OUTTEX_ON
   - SHAKEUV_ON
@@ -171,7 +172,7 @@ Material:
     - _OutlineDistortTexXSpeed: 5
     - _OutlineDistortTexYSpeed: 5
     - _OutlineGlow: 1
-    - _OutlinePixelWidth: 100
+    - _OutlinePixelWidth: 1
     - _OutlineTexXSpeed: 2
     - _OutlineTexYSpeed: 2
     - _OutlineWidth: 0.2

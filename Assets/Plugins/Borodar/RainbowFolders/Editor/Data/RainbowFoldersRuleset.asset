@@ -505,3 +505,15 @@ MonoBehaviour:
     BackgroundTexture: {fileID: 0}
     IsBackgroundRecursive: 0
     IsHidden: 0
+  - Type: 1
+    Key: Assets/Scriptables/Potion
+    Ordinal: 41
+    Priority: 0
+    IconType: 1
+    SmallIcon: {fileID: 2800000, guid: e3bdb1c3ff7a7cb4ca6c89ac4e4e881b, type: 3}
+    LargeIcon: {fileID: 2800000, guid: 1ec32d35d9d6af24ea3fe64e1d9a2596, type: 3}
+    IsIconRecursive: 0
+    BackgroundType: 0
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 0
+    IsHidden: 0
