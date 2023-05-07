@@ -268,6 +268,19 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: _damageProcessors
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[EntitySystem.IDamageProcessor, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   _data: {fileID: 11400000, guid: ec2a046bab2a7db4fa877a42eb1a0dbd, type: 2}
 --- !u!61 &7250216071847878198
 BoxCollider2D:
