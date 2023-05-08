@@ -1512,7 +1512,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      (Txt)BasicTiles_19: -8152403601014270731
       (Txt)BasicTiles_42: 4583543720816150644
       (Txt)BasicTiles_10: -6103435661147239856
       (Txt)BasicTiles_37: -467097585843290642
@@ -1561,8 +1560,9 @@ TextureImporter:
       (Txt)BasicTiles_7: -8237400757376502724
       (Txt)BasicTiles_8: -2929642574475075070
       (Txt)BasicTiles_38: 7355746856466564449
-      (Txt)BasicTiles_29: 1096176009011265561
+      (Txt)BasicTiles_19: -8152403601014270731
       (Txt)BasicTiles_39: -675663760302856686
+      (Txt)BasicTiles_29: 1096176009011265561
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
