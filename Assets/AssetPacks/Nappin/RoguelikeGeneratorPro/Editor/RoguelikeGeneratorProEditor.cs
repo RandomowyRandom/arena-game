@@ -2279,7 +2279,7 @@ namespace RoguelikeGeneratorPro
                 GUILayout.Label("Empty Tile", alignGUILeft, GUILayout.ExpandWidth(true));
 
                 if(_generation == genType.generateObj) _emptyTileObj.objectReferenceValue = EditorGUILayout.ObjectField(script.emptyTileObj, typeof(GameObject), true) as GameObject;
-                else _emptyTile.objectReferenceValue = EditorGUILayout.ObjectField(script.emptyTile, typeof(Tile), true) as Tile;
+                else _emptyTile.objectReferenceValue = EditorGUILayout.ObjectField(script.emptyTile, typeof(TileBase), true) as TileBase;
 
                 EditorGUILayout.EndVertical();
                 GUILayout.Label(empty_txt, alignGUIRight, GUILayout.ExpandWidth(true));
@@ -2357,13 +2357,13 @@ namespace RoguelikeGeneratorPro
         }
 
 
-        private void DisplayTileBlock(string _label, Texture _texture, SerializedProperty _sProperty, Tile _tile)
+        private void DisplayTileBlock(string _label, Texture _texture, SerializedProperty _sProperty, TileBase _tile)
         {
             EditorGUILayout.BeginHorizontal();
 
             EditorGUILayout.BeginVertical();
             GUILayout.Label(_label, alignGUILeft, GUILayout.ExpandWidth(true));
-            _sProperty.objectReferenceValue = EditorGUILayout.ObjectField(_tile, typeof(Tile), true) as Tile;
+            _sProperty.objectReferenceValue = EditorGUILayout.ObjectField(_tile, typeof(TileBase), true) as TileBase;
             EditorGUILayout.EndVertical();
             GUILayout.Label(_texture, alignGUIRight, GUILayout.ExpandWidth(true));
 
