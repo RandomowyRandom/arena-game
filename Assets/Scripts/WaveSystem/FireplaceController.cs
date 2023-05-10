@@ -1,12 +1,10 @@
-﻿using System;
+﻿using System.Linq;
 using DG.Tweening;
 using InteractionSystem;
 using InteractionSystem.Abstraction;
-using Player;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Serialization;
 
@@ -26,17 +24,14 @@ namespace WaveSystem
         [SerializeField]
         private SpriteRenderer _arenaRenderer;
         
-        [FormerlySerializedAs("_glowLight2D")] [SerializeField]
-        private Light2D _globalLight2D;
-        
-        [OdinSerialize]
-        private IWaveManager _waveManager;
-        
         [SerializeField]
         private InteractionTextHandler _interactionTextHandler;
         
         [SerializeField]
         private OutlineInteractionEffect _outlineInteractionEffect;
+        
+        private Light2D _globalLight2D;
+        private IWaveManager _waveManager;
         
         public GameObject GameObject => gameObject;
         public void Interact()
@@ -67,15 +62,15 @@ namespace WaveSystem
 
         private bool _state;
         private readonly int _outlinePixelWidth = Shader.PropertyToID("_OutlinePixelWidth");
-
-        private void Awake()
-        {
-            _waveManager.OnWaveStart += Enable;
-            _waveManager.OnWaveEnd += Disable;
-        }
-
+        
         private void Start()
         {
+            _waveManager = ServiceLocator.ServiceLocator.Instance.Get<IWaveManager>();
+            _globalLight2D = FindObjectsOfType<Light2D>().Where(l => l.lightType == Light2D.LightType.Global).ToArray()[0];
+            
+            _waveManager.OnWaveStart += Enable;
+            _waveManager.OnWaveEnd += Disable;
+            
             SetState(false);
         }
 
