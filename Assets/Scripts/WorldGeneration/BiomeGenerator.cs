@@ -40,15 +40,11 @@ namespace WorldGeneration
         {
             _generator.RigenenerateLevel();
 
-            // this is a bit of a hack, but generator each time creates a new tilemap, so we need to find it
             CacheTilemaps();
-            
-            MergeTilemaps(_floorTilemap, _overlayTilemap);
+            var tilePresence = GetTilePresence(_emptyTilemap, _wallTilemap);
 
             _floorTilemap.GetComponent<Renderer>().sortingOrder = -1;
-            _emptyTilemap.GetComponent<Renderer>().sortingOrder = -1;
             
-            var tilePresence = GetTilePresence(_emptyTilemap, _wallTilemap);
             _fireplacePosition = FindLargestCircleCenter(tilePresence);
 
             Debug.Log(_fireplacePosition);
@@ -56,18 +52,22 @@ namespace WorldGeneration
             var fireplaceWorldPosition = GetWorldPositionFromTilemapPosition(new Vector3Int(_fireplacePosition.x, _fireplacePosition.y, 0));
             Instantiate(_fireplacePrefab, fireplaceWorldPosition, Quaternion.identity);
 
+            MergeTilemaps(_floorTilemap, _overlayTilemap);
+            MergeTilemaps(_wallTilemap, _emptyTilemap);
+            
             _playerEntity.transform.position = fireplaceWorldPosition - new Vector2(0, -2);
         }
 
         private void CacheTilemaps()
         {
+            // this is a bit of a hack, but generator each time creates a new tilemap, so we need to find it
             _emptyTilemap = transform.GetChild(0).GetChild(2).GetComponent<Tilemap>();
             _wallTilemap = transform.GetChild(0).GetChild(1).GetComponent<Tilemap>();
             _overlayTilemap = transform.GetChild(0).GetChild(3).GetComponent<Tilemap>();
             _floorTilemap = transform.GetChild(0).GetChild(0).GetComponent<Tilemap>();
         }
 
-        private void MergeTilemaps(Tilemap margeTo, Tilemap mergeFrom)
+        private void MergeTilemaps(Tilemap margeTo, Tilemap mergeFrom, bool destroyMergeFrom = true)
         {
             var cellBounds = mergeFrom.cellBounds;
             for (var x = cellBounds.xMin; x < cellBounds.xMax; x++)
@@ -84,7 +84,10 @@ namespace WorldGeneration
                 }
             }
             
-            mergeFrom.ClearAllTiles();
+            if(destroyMergeFrom)
+                Destroy(mergeFrom.gameObject);
+            else
+                mergeFrom.ClearAllTiles();
         }
         
         private bool[,] GetTilePresence(Tilemap tilemap1, Tilemap tilemap2)
