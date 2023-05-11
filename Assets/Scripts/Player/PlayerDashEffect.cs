@@ -49,7 +49,7 @@ namespace Player
             
             _spriteRenderer.material.SetFloat(_hitEffectBlend, 1f);
             _spriteRenderer.material.SetColor(_hitEffectColor, Color.yellow);
-            _virtualCamera.m_Lens.OrthographicSize = 5.5f;
+            _virtualCamera.m_Lens.OrthographicSize = 6.9f;
             _dashParticles.Play();
             AudioSource.PlayClipAtPoint(_dashSound, transform.position);
             transform.localScale = new Vector3(1.3f, .8f, 1);
@@ -58,7 +58,7 @@ namespace Player
             DOTween.To(
                 () => _virtualCamera.m_Lens.OrthographicSize, 
                 x => _virtualCamera.m_Lens.OrthographicSize = x, 
-                5f, .25f);
+                6.3f, .25f);
             transform.DOScale(Vector3.one, .2f);
             _spriteRenderer.material.DOFloat(0, _hitEffectBlend, .2f);
             await UniTask.Delay(TimeSpan.FromSeconds(.1f));

@@ -46,12 +46,12 @@ namespace Player
             
             AudioSource.PlayClipAtPoint(_hitSound, transform.position);
             Time.timeScale = 0f;
-            _virtualCamera.m_Lens.OrthographicSize = 4.2f;
+            _virtualCamera.m_Lens.OrthographicSize = 4.9f;
             await UniTask.Delay(TimeSpan.FromSeconds(.1f), DelayType.Realtime);
             DOTween.To(
                 () => _virtualCamera.m_Lens.OrthographicSize, 
                 x => _virtualCamera.m_Lens.OrthographicSize = x, 
-                5f, .3f);
+                6.3f, .3f);
             
             Time.timeScale = 1f;
         }

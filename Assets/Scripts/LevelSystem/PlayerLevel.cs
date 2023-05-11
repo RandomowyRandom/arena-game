@@ -95,9 +95,9 @@ namespace LevelSystem
         
         private void PanCamera(Level level)
         {
-            _virtualCamera.m_Lens.OrthographicSize = 6;
+            _virtualCamera.m_Lens.OrthographicSize = 7.3f;
             
-            DOTween.To(() => _virtualCamera.m_Lens.OrthographicSize, x => _virtualCamera.m_Lens.OrthographicSize = x, 5, 1f)
+            DOTween.To(() => _virtualCamera.m_Lens.OrthographicSize, x => _virtualCamera.m_Lens.OrthographicSize = x, 6.3f, 1f)
                 .SetEase(Ease.OutCubic);
         }
         
