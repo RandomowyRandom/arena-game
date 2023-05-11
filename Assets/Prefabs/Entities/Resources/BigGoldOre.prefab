@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -601255169618957485}
   - component: {fileID: -7566442241650396870}
   - component: {fileID: 4079239912211725039}
+  - component: {fileID: 6525992992519448002}
   m_Layer: 9
   m_Name: BigGoldOre
   m_TagString: Untagged
@@ -195,6 +196,19 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: _damageProcessors
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[EntitySystem.IDamageProcessor, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   _data: {fileID: 11400000, guid: 4ea047702c7ace749a1b86b564197299, type: 2}
 --- !u!114 &2931861312426724267
 MonoBehaviour:
@@ -349,6 +363,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageIndicator: {fileID: 6555825616068831193, guid: e75c9e3b24e5b2147b52223efebe2a78, type: 3}
+--- !u!114 &6525992992519448002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931861312426724257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7f1d5ab32e42fd9f1aff8d76f819b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _weight: -0.3
 --- !u!1 &6300845516717947327
 GameObject:
   m_ObjectHideFlags: 0

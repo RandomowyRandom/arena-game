@@ -80187,7 +80187,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -81658,6 +81658,7 @@ GameObject:
   - component: {fileID: 1203020497}
   - component: {fileID: 1203020498}
   - component: {fileID: 1203020499}
+  - component: {fileID: 1203020500}
   m_Layer: 0
   m_Name: BaseGenerator
   m_TagString: Untagged
@@ -81692,7 +81693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d4f4bc4e28a9ba41b5a5a814435cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelSize: {x: 100, y: 100}
+  levelSize: {x: 80, y: 60}
   tileSize: 1
   percentLevelToFill: 70
   spawnCornerWalls: 1
@@ -82001,6 +82002,83 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fireplacePrefab: {fileID: 8129455809263681365, guid: 8ab5d2dcc6474214aa269a5a70f1cf4f, type: 3}
   _playerEntity: {fileID: 2005232625}
+--- !u!114 &1203020500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203020496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b12baa57afa5401fbbfcd2fc3f7ce15b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _randomPointCount: 250
+  _percentageOfAllRandomPoints: 0.3
+  _resourceGroups:
+  - _resourcePrefabs:
+    - _resourcePrefab: {fileID: 3621709206064312194, guid: f48a75173e877f74684191abaf8fa110, type: 3}
+      _chance: 0.7
+    - _resourcePrefab: {fileID: 7237044341157734758, guid: 3a3d70a32154d2a429546d146eeaed0f, type: 3}
+      _chance: 0.3
+    _startSpawnChance: 0.5
+    _chanceFollOff: 0.1
+    _groupSize: {x: 11, y: 11}
+    _percentageCoverage: 0.1
+  - _resourcePrefabs:
+    - _resourcePrefab: {fileID: 2268759984707524892, guid: e21f925273aff0348a747583aff0f3e8, type: 3}
+      _chance: 0.7
+    - _resourcePrefab: {fileID: 9094995047937489891, guid: 5fd6ea4b323a5514684d2b7bdeede518, type: 3}
+      _chance: 0.3
+    _startSpawnChance: 0.8
+    _chanceFollOff: 0.15
+    _groupSize: {x: 17, y: 17}
+    _percentageCoverage: 0.3
+  - _resourcePrefabs:
+    - _resourcePrefab: {fileID: 354067270852212649, guid: 7963bea492054e24faf9683041354201, type: 3}
+      _chance: 1
+    _startSpawnChance: 0.4
+    _chanceFollOff: 0.2
+    _groupSize: {x: 7, y: 7}
+    _percentageCoverage: 0.1
+  - _resourcePrefabs:
+    - _resourcePrefab: {fileID: 4267049502297209857, guid: f640eb45925886549a16238c9f21a408, type: 3}
+      _chance: 0.7
+    - _resourcePrefab: {fileID: 2796837717018697430, guid: bf4800a828a10d945bf4ae578ce8134a, type: 3}
+      _chance: 0.3
+    _startSpawnChance: 0.5
+    _chanceFollOff: 0.1
+    _groupSize: {x: 11, y: 11}
+    _percentageCoverage: 0.1
+  - _resourcePrefabs:
+    - _resourcePrefab: {fileID: 2931861312426724257, guid: b3c4cfc79667508419ca162f1cb0f2f5, type: 3}
+      _chance: 0.7
+    - _resourcePrefab: {fileID: 8432503717114699612, guid: 575195085d5d6404686de488d876220d, type: 3}
+      _chance: 0.3
+    _startSpawnChance: 0.5
+    _chanceFollOff: 0.1
+    _groupSize: {x: 11, y: 11}
+    _percentageCoverage: 0.1
+  - _resourcePrefabs:
+    - _resourcePrefab: {fileID: 4869632929779141202, guid: 48b08c1b1e940384ca041b82c445517b, type: 3}
+      _chance: 0.7
+    - _resourcePrefab: {fileID: 2831485062929809176, guid: cf22c4d08bd53384eacc41cfa0fc892f, type: 3}
+      _chance: 0.3
+    _startSpawnChance: 0.5
+    _chanceFollOff: 0.1
+    _groupSize: {x: 11, y: 11}
+    _percentageCoverage: 0.1
+  - _resourcePrefabs:
+    - _resourcePrefab: {fileID: 2530176304263761368, guid: 235436f20323ed24e9c5e0db63316324, type: 3}
+      _chance: 0.6
+    - _resourcePrefab: {fileID: 1190555262996832711, guid: f6b4728fd68c79f4c93b592268c9a0bd, type: 3}
+      _chance: 0.4
+    _startSpawnChance: 0.6
+    _chanceFollOff: 0.1
+    _groupSize: {x: 11, y: 11}
+    _percentageCoverage: 0.2
+  _randomPositionOffset: {x: 0.4, y: 0.4}
 --- !u!1 &1213403474
 GameObject:
   m_ObjectHideFlags: 0
@@ -82196,7 +82274,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1412009868}
   m_Lens:
     FieldOfView: 34
-    OrthographicSize: 5
+    OrthographicSize: 6.3
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
