@@ -1,17 +1,15 @@
 ﻿using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace UI.Inventory
 {
     public class ItemPreview: MonoBehaviour
     {
         [SerializeField]
-        private TMP_Text _itemNameText;
-        
-        [SerializeField]
         private TMP_Text _itemDescriptionText;
-
+        
         private void Start()
         {
             ItemSlotUI.OnMouseEnterItemSlot += DisplayInfo;
@@ -31,19 +29,13 @@ namespace UI.Inventory
                 ClearInfo(slot, data);
                 return;
             }
-
-            _itemNameText.text = slot.Item.ToString();
-            _itemDescriptionText.text = slot.Item.ItemData.Description;
             
-            _itemNameText.color = slot.Item.IsRarityItem ? slot.Item.GearRarity.Color : Color.white;
+            _itemDescriptionText.text = slot.Item.GetTooltip();
         }
 
         private void ClearInfo(ItemSlotUI slot, PointerEventData data)
         {
-            _itemNameText.text = string.Empty;
             _itemDescriptionText.text = string.Empty;
-            
-            _itemNameText.color = Color.white;
         }
     }
 }
