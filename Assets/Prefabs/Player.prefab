@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 4463687211104810243}
   - component: {fileID: 1707821946575103225}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: PlayerMeleeStreaText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6195,8 +6195,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a232e11191f146b4849918ba571981b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageIncrease: 0.1
-  _maxDamageIncrease: 2
+  _damageIncrease: 0.05
+  _maxDamageIncrease: 1.5
 --- !u!114 &3343963380541424202
 MonoBehaviour:
   m_ObjectHideFlags: 0

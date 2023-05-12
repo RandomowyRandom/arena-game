@@ -19,6 +19,8 @@ namespace WorldGeneration
         
         public event Action<bool[,]> OnTerrainGenerated; 
 
+        private const int TERRAIN_LAYER = 11;
+        
         private RoguelikeGeneratorPro.RoguelikeGeneratorPro _generator;
         
         private Tilemap _emptyTilemap;
@@ -59,6 +61,8 @@ namespace WorldGeneration
 
             MergeTilemaps(_floorTilemap, _overlayTilemap);
             MergeTilemaps(_wallTilemap, _emptyTilemap);
+            
+            _wallTilemap.gameObject.layer = TERRAIN_LAYER;
             
             OnTerrainGenerated?.Invoke(tilePresence);
             

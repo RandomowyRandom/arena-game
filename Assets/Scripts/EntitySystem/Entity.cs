@@ -70,6 +70,9 @@ namespace EntitySystem
         
         public void TakeDamage(float damage, IDamageSource source)
         {
+            if(gameObject == null)
+                return;
+            
             if(_damageLocks != null)
                 if (_damageLocks.Any(damageLock => damageLock.IsLocked))
                     return;

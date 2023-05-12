@@ -45,7 +45,7 @@ namespace Player
 
         private void OnMeleeProjectileHit(MeleeProjectile projectile)
         {
-            _streakTimer = PlayerStats.GetStatsData().FireRate * 2f;
+            _streakTimer = PlayerStats.GetStatsData().FireRate * 2.3f;
             _currentDamageMultiplier += _damageIncrease;
             
             _currentDamageMultiplier = Mathf.Clamp(_currentDamageMultiplier, 1f, _maxDamageIncrease);
