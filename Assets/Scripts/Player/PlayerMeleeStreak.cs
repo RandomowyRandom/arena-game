@@ -13,7 +13,10 @@ namespace Player
         [SerializeField]
         private float _maxDamageIncrease = 2f;
         
+        public event Action OnMeleeStreakChanged;
+        
         public float DamageMultiplier => _currentDamageMultiplier;
+        public float CurrentStreakTimer => _streakTimer;
 
         private float _streakTimer;
         
@@ -46,14 +49,21 @@ namespace Player
             _currentDamageMultiplier += _damageIncrease;
             
             _currentDamageMultiplier = Mathf.Clamp(_currentDamageMultiplier, 1f, _maxDamageIncrease);
+            OnMeleeStreakChanged?.Invoke();
         }
 
         private void Update()
         {
-            _streakTimer -= Time.deltaTime;
+            if(_streakTimer <= 0f)
+                return;
             
+            _streakTimer -= Time.deltaTime;
+
             if (_streakTimer <= 0f)
+            {
                 _currentDamageMultiplier = 1f;
+                OnMeleeStreakChanged?.Invoke();
+            }
         }
     }
 }

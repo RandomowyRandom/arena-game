@@ -33,7 +33,8 @@ namespace EntitySystem
 
         private void Start()
         {
-            _entitySpriteRenderer ??= GetComponent<SpriteRenderer>();
+            if(_entitySpriteRenderer == null)
+                _entitySpriteRenderer = GetComponentInChildren<SpriteRenderer>();
         }
 
         private void ScaleEnemy(float damage, IDamageSource source)
