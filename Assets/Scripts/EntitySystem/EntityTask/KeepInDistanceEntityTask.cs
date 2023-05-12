@@ -1,6 +1,7 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
 using EntitySystem.Abstraction;
+using EntitySystem.ObjectAwareFollow.Abstraction;
 using Sirenix.Serialization;
 using UnityEngine;
 
@@ -31,6 +32,12 @@ namespace EntitySystem.EntityTask
         
         private Rigidbody2D _rigidbody;
         
+        private IObjectAwareFollowManager _followManager;
+        
+        private IObjectAwareFollowManager FollowManager => 
+            _followManager ??= 
+                ServiceLocator.ServiceLocator.Instance.Get<IObjectAwareFollowManager>();
+        
         public async UniTask<EnemyTaskResult> Execute(EntityBehaviour entity)
         {
             _rigidbody = entity.GetComponent<Rigidbody2D>();
@@ -54,12 +61,20 @@ namespace EntitySystem.EntityTask
                 
                 // check if we are too close
                 var isTooClose = distance < _minDistance;
-                
-                var direction = (target.transform.position - entity.transform.position).normalized;
-                var movementVector = direction * _speed;
-                movementVector *= isTooClose ? -_backOffSpeedMultiplier : 1;
-            
-                _rigidbody.AddForce(movementVector, ForceMode2D.Force);
+
+                if (isTooClose)
+                {
+                    var direction = (target.transform.position - entity.transform.position).normalized;
+                    var movementVector = direction * _speed;
+                    movementVector *= -_backOffSpeedMultiplier;
+                    _rigidbody.AddForce(movementVector, ForceMode2D.Force);
+                }
+                else
+                {
+                    var direction = FollowManager.GetVectorForTransform(entity.transform);
+                    var movementVector = direction * _speed;
+                    _rigidbody.AddForce(movementVector, ForceMode2D.Force);
+                }
 
                 _elapsedTime += Time.fixedDeltaTime;
                 await UniTask.WaitForFixedUpdate();
