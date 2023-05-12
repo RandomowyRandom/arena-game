@@ -1,11 +1,12 @@
-﻿using DG.Tweening;
+﻿using System;
+using DG.Tweening;
 using EntitySystem.Abstraction;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace EntitySystem
 {
     [RequireComponent(typeof(Entity))]
-    [RequireComponent(typeof(SpriteRenderer))]
     public class EntityHitEffect: MonoBehaviour
     {
         [SerializeField]
@@ -14,8 +15,10 @@ namespace EntitySystem
         [SerializeField]
         private AudioClip _levelLockedSound;
         
+        [SerializeField]
+        private SpriteRenderer _entitySpriteRenderer;
+        
         private Entity _entity;
-        private SpriteRenderer _spriteRenderer;
         
         private readonly int _hitEffect = Shader.PropertyToID("_HitEffectBlend");
         private readonly int _hitEffectColor = Shader.PropertyToID("_HitEffectColor");
@@ -23,10 +26,14 @@ namespace EntitySystem
         private void Awake()
         {
             _entity = GetComponent<Entity>();
-            _spriteRenderer = GetComponent<SpriteRenderer>();
             
             _entity.OnDamageTaken += UpdateMaterial;
             _entity.OnDamageTaken += ScaleEnemy;
+        }
+
+        private void Start()
+        {
+            _entitySpriteRenderer ??= GetComponent<SpriteRenderer>();
         }
 
         private void ScaleEnemy(float damage, IDamageSource source)
@@ -43,26 +50,26 @@ namespace EntitySystem
         private void OnDestroy()
         {
             _entity.OnDamageTaken -= UpdateMaterial;
-            _spriteRenderer.DOKill();
+            _entitySpriteRenderer.DOKill();
         }
 
         private void UpdateMaterial(float damage, IDamageSource source)
         {
-            _spriteRenderer.material.DOKill();
+            _entitySpriteRenderer.material.DOKill();
 
             var damageable = damage > 0;
             
             var soundEffect = damageable ? _hitSound : _levelLockedSound;
             
-            _spriteRenderer.material.SetColor(_hitEffectColor, damageable ? Color.white : Color.red);
-            _spriteRenderer.material.SetFloat(_hitEffect, 1);
+            _entitySpriteRenderer.material.SetColor(_hitEffectColor, damageable ? Color.white : Color.red);
+            _entitySpriteRenderer.material.SetFloat(_hitEffect, 1);
             
             AudioSource.PlayClipAtPoint(soundEffect, transform.position);
             
-            if(_spriteRenderer == null)
+            if(_entitySpriteRenderer == null)
                 return;
             
-            _spriteRenderer.material.DOFloat(0, _hitEffect,  damageable ? .4f : 1f);
+            _entitySpriteRenderer.material.DOFloat(0, _hitEffect,  damageable ? .4f : 1f);
         }
     }
 }

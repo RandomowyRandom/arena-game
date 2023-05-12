@@ -270,6 +270,19 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: _damageProcessors
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[EntitySystem.IDamageProcessor, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   _data: {fileID: 11400000, guid: 9e11cbc39a1d1ae41af906040017bb4e, type: 2}
 --- !u!61 &5507470878955383111
 BoxCollider2D:
@@ -332,6 +345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hitSound: {fileID: 8300000, guid: 38ee749178d2efb40915369aac992564, type: 3}
   _levelLockedSound: {fileID: 8300000, guid: 74d6abc2585ce87479bbab6b3c20adcd, type: 3}
+  _entitySpriteRenderer: {fileID: 5507470878955383110}
 --- !u!114 &4863836519104614060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,7 +421,7 @@ MonoBehaviour:
       Data: -1
     - Name: _speed
       Entry: 4
-      Data: 65
+      Data: 70
     - Name: _distanceTolerance
       Entry: 4
       Data: 0

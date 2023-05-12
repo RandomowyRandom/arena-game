@@ -21,5 +21,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  _maxHealth: 30
+  _maxHealth: 25
+  _requiredLevel: 0
   _isStatic: 0
+  _attackerGroup: 0
