@@ -53,7 +53,7 @@ namespace WaveSystem
             }
             
             _difficulty += _difficultyRaise;
-            _enemyCap += Mathf.CeilToInt(1 * _difficulty * .4f);
+            _enemyCap += Mathf.CeilToInt(1 * _difficulty * .25f);
             _subWaveDelay = Mathf.Clamp(_subWaveDelay - .1f, .25f, 2f);
             
             return new Wave(subWaves, _subWaveDelay, _enemyCap);
