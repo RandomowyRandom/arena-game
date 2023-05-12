@@ -50535,14 +50535,6 @@ PrefabInstance:
       value: '"path":"_usableItemProvider","value":$eref:2'
       objectReference: {fileID: 0}
     - target: {fileID: 1679763617177288053, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
-      propertyPath: serializationData.ReferencedUnityObjects.Array.data[1]
-      value: 
-      objectReference: {fileID: 832360663}
-    - target: {fileID: 1679763617177288053, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
-      propertyPath: serializationData.ReferencedUnityObjects.Array.data[2]
-      value: 
-      objectReference: {fileID: 2005232619}
-    - target: {fileID: 1679763617177288053, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
       value: 3
       objectReference: {fileID: 0}

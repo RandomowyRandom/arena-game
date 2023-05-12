@@ -21,6 +21,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  _maxHealth: 9999
-  _key: GREEN_DINO
-  _isStatic: 0
+  _maxHealth: 99999
+  _requiredLevel: 0
+  _isStatic: 1
+  _attackerGroup: 0

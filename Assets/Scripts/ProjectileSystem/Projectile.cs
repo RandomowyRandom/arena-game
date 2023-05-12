@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using DG.Tweening;
 using EntitySystem;
 using EntitySystem.Abstraction;
@@ -13,6 +14,8 @@ namespace ProjectileSystem
     [RequireComponent(typeof(SpriteRenderer))]
     public class Projectile: SerializedMonoBehaviour, IDamageSource
     {
+        public event Action<Entity> OnEntityHit; 
+
         public List<IProjectileEffect> Effects => _effects;
         
         private readonly List<IProjectileEffect> _effects = new();
@@ -54,6 +57,8 @@ namespace ProjectileSystem
         public void EntityAttacked(Entity entity)
         {
             _damagedEntities.Add(entity);
+            
+            OnEntityHit?.Invoke(entity);
         }
     }
 }

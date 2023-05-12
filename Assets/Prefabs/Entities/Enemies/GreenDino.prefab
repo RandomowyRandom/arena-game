@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 1619545926}
   - component: {fileID: 1619545927}
   - component: {fileID: -201187086102357487}
-  - component: {fileID: -5235346522752124450}
   m_Layer: 8
   m_Name: GreenDino
   m_TagString: Untagged
@@ -309,58 +308,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageIndicator: {fileID: 6555825616068831193, guid: e75c9e3b24e5b2147b52223efebe2a78, type: 3}
---- !u!114 &-5235346522752124450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1085831635514189993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fea9115401a4df6b0649c07820ab8bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: _tasks
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[EntitySystem.Abstraction.IEntityTask,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|EntitySystem.EntityTask.TargetFollowEntityTask, Assembly-CSharp
-    - Name: _targetProvider
-      Entry: 7
-      Data: 2|EntitySystem.PlayerEntityProvider, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: _duration
-      Entry: 4
-      Data: -1
-    - Name: _speed
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
 --- !u!1 &6599137950370571373
 GameObject:
   m_ObjectHideFlags: 0

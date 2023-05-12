@@ -5906,6 +5906,7 @@ GameObject:
   - component: {fileID: 7456438246736556561}
   - component: {fileID: 4710309355608420230}
   - component: {fileID: 1679763617177288053}
+  - component: {fileID: 3606497069281277297}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Untagged
@@ -6002,6 +6003,21 @@ MonoBehaviour:
       Entry: 8
       Data: 
   _parentGameObject: {fileID: 4857834470512048523}
+--- !u!114 &3606497069281277297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8618184906701007138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a232e11191f146b4849918ba571981b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _streakTime: 0.7
+  _damageIncrease: 0.1
+  _maxDamageIncrease: 2
 --- !u!1 &8879232156482763354
 GameObject:
   m_ObjectHideFlags: 0
