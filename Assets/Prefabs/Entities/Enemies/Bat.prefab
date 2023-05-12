@@ -345,6 +345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hitSound: {fileID: 8300000, guid: 38ee749178d2efb40915369aac992564, type: 3}
   _levelLockedSound: {fileID: 8300000, guid: 74d6abc2585ce87479bbab6b3c20adcd, type: 3}
+  _entitySpriteRenderer: {fileID: 4637590501584507409}
 --- !u!114 &5714401500757210619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,7 +400,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 2965548746906788105, guid: bbb7c303515ca1a468da5e80763d6730, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -411,7 +413,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 6
     - Name: 
       Entry: 7
       Data: 1|EntitySystem.EntityTask.ObjectAwareTargetFollowEntityTask, Assembly-CSharp
@@ -454,6 +456,36 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 5|EntitySystem.EntityTask.WaitForSecondsEntityTask, Assembly-CSharp
+    - Name: _duration
+      Entry: 4
+      Data: 0.1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|EntitySystem.EntityTask.ShootProjectileEntityTask, Assembly-CSharp
+    - Name: _targetProvider
+      Entry: 7
+      Data: 7|EntitySystem.PlayerEntityProvider, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _projectilePrefab
+      Entry: 10
+      Data: 0
+    - Name: _predictTargetPosition
+      Entry: 5
+      Data: false
+    - Name: _force
+      Entry: 4
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 8|EntitySystem.EntityTask.WaitForSecondsEntityTask, Assembly-CSharp
     - Name: _duration
       Entry: 4
       Data: 0.3
