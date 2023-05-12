@@ -54329,6 +54329,10 @@ PrefabInstance:
       propertyPath: _inventoryTransforms.Array.data[1]
       value: 
       objectReference: {fileID: 484890957}
+    - target: {fileID: 2005232576, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2005232578, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
       propertyPath: _virtualCamera
       value: 
@@ -54337,6 +54341,10 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 2005232580, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
+    - target: {fileID: 2005232585, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2112977338, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
       propertyPath: serializationData.Prefab
       value: 
@@ -54433,6 +54441,10 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 2249936656328729199, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
+    - target: {fileID: 3097826084151632861, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3288190084903759145, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
       propertyPath: serializationData.Prefab
       value: 
@@ -54485,6 +54497,10 @@ PrefabInstance:
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[0]
       value: 
       objectReference: {fileID: 2005232620}
+    - target: {fileID: 4022358050578404861, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.063
+      objectReference: {fileID: 0}
     - target: {fileID: 4710309355608420230, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
       propertyPath: serializationData.Prefab
       value: 
@@ -54509,6 +54525,18 @@ PrefabInstance:
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[0]
       value: 
       objectReference: {fileID: 233742934}
+    - target: {fileID: 4721479230188049926, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721479230188049926, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.124
+      objectReference: {fileID: 0}
+    - target: {fileID: 4857834470512048520, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2139677799, guid: 8c15c3d52b25f2442aa0354e69bc82bd, type: 3}
     - target: {fileID: 4857834470512048521, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
       propertyPath: m_RootOrder
       value: 1
