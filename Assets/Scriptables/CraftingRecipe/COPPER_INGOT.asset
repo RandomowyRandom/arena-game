@@ -71,3 +71,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: _requiredLevel
+      Entry: 3
+      Data: 1

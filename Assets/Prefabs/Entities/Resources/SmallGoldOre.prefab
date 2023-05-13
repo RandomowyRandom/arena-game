@@ -310,7 +310,7 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 11400000, guid: 705818e0d254e2240bdfd08b20d2ca88, type: 2}
+    - {fileID: 11400000, guid: 7c2fce353265b73449e040c3678cc176, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -337,7 +337,7 @@ MonoBehaviour:
       Data: 0
     - Name: _amount
       Entry: 3
-      Data: 4
+      Data: 2
     - Name: _gearRarity
       Entry: 6
       Data: 
@@ -361,7 +361,7 @@ MonoBehaviour:
       Data: 0
     - Name: _amount
       Entry: 3
-      Data: 3
+      Data: 1
     - Name: _gearRarity
       Entry: 6
       Data: 
@@ -434,6 +434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hitSound: {fileID: 8300000, guid: 38ee749178d2efb40915369aac992564, type: 3}
   _levelLockedSound: {fileID: 8300000, guid: 74d6abc2585ce87479bbab6b3c20adcd, type: 3}
+  _entitySpriteRenderer: {fileID: 0}
 --- !u!114 &9159520695514722190
 MonoBehaviour:
   m_ObjectHideFlags: 0
