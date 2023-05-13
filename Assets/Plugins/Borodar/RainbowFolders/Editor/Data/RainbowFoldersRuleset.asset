@@ -517,3 +517,15 @@ MonoBehaviour:
     BackgroundTexture: {fileID: 0}
     IsBackgroundRecursive: 0
     IsHidden: 0
+  - Type: 1
+    Key: Assets/Prefabs/Crafter
+    Ordinal: 42
+    Priority: 0
+    IconType: 1
+    SmallIcon: {fileID: 2800000, guid: 1691c169877d0384e94ccb906be5033f, type: 3}
+    LargeIcon: {fileID: 2800000, guid: 8c49da9b1e0254446a061c32e1aa1f7c, type: 3}
+    IsIconRecursive: 0
+    BackgroundType: 0
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 0
+    IsHidden: 0

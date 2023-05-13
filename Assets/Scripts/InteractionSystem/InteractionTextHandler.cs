@@ -21,6 +21,12 @@ namespace InteractionSystem
             _textComponent.text = _text;
             Hide();
         }
+        
+        public void SetText(string text)
+        {
+            _text = text;
+            _textComponent.text = _text;
+        }
 
         public void Show()
         {

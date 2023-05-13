@@ -17,8 +17,13 @@ namespace Crafting
         [OdinSerialize]
         private ICraftingResultProvider _resultProvider;
         
+        [OdinSerialize]
+        private int _requiredLevel;
+        
         public List<Item> Ingredients => _ingredients;
         public Item Result => _resultProvider.GetResult();
+        
+        public int RequiredLevel => _requiredLevel;
         
         public string Key => name;
 
