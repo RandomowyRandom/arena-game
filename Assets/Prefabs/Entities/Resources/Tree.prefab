@@ -227,6 +227,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: 1092548eece441b468e2c2ccbdd301b2, type: 2}
+    - {fileID: 11400000, guid: 8e5b2c0912d91704faa6eb87cd562097, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -241,7 +242,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 7
       Data: 2|EntitySystem.BasicItemDrop, Assembly-CSharp
@@ -291,6 +292,30 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 6|EntitySystem.BasicItemDrop, Assembly-CSharp
+    - Name: _item
+      Entry: 7
+      Data: 7|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 1
+    - Name: _amount
+      Entry: 3
+      Data: 3
+    - Name: _gearRarity
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _chance
+      Entry: 4
+      Data: 0.6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -326,6 +351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hitSound: {fileID: 8300000, guid: 38ee749178d2efb40915369aac992564, type: 3}
   _levelLockedSound: {fileID: 8300000, guid: 74d6abc2585ce87479bbab6b3c20adcd, type: 3}
+  _entitySpriteRenderer: {fileID: 0}
 --- !u!114 &6727561715287801322
 MonoBehaviour:
   m_ObjectHideFlags: 0

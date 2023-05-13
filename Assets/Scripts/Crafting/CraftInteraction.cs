@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Crafting.Abstraction;
 using InteractionSystem;
 using InteractionSystem.Abstraction;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Crafting.Abstraction
+namespace Crafting
 {
     public class CraftInteraction: SerializedMonoBehaviour, IInteractable
     {
@@ -13,6 +13,8 @@ namespace Crafting.Abstraction
         
         [SerializeField]
         private InteractionTextHandler _interactionTextHandler;
+        
+        public ICraftingHandler CraftingHandler { get; set; }
         
         private OutlineInteractionEffect _outlineInteractionEffect;
         public GameObject GameObject => gameObject;
@@ -32,7 +34,7 @@ namespace Crafting.Abstraction
         
         public void Interact()
         {
-            
+            CraftingHandler.TryCraft(_recipe);
         }
 
         public void OnHandlerEnter(IInteractionHandler handler)

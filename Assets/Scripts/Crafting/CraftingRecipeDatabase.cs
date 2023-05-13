@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Common.Attributes;
 using Inventory.Interfaces;
@@ -73,6 +74,20 @@ namespace Crafting
                 recipe => recipe.Ingredients
                     .Sum(ingredient => ingredient.Amount))
                     .ToList();
+        }
+        
+        public List<CraftingRecipe> GetRecipesByTypeAndLevel(Type type, int minLevel, int maxLevel)
+        {
+            return _recipes
+                .Where(recipe => recipe.Result.ItemData.GetType() == type 
+                                 && recipe.RequiredLevel >= minLevel 
+                                 && recipe.RequiredLevel <= maxLevel)
+                .ToList();
+        }
+        
+        public List<CraftingRecipe> GetRecipesForLevel(int level)
+        {
+            return _recipes.Where(recipe => recipe.RequiredLevel == level).ToList();
         }
 
         [InfoBox("Runtime tests", InfoMessageType.Warning)]

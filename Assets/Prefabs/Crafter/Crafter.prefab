@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1459616626315940694}
   - component: {fileID: 1459616626315940689}
-  - component: {fileID: 1459616626315940688}
   - component: {fileID: 2082338041}
+  - component: {fileID: 1459616626315940688}
   m_Layer: 0
   m_Name: Crafter
   m_TagString: Untagged
@@ -57,6 +57,81 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _craftingRecipeDatabase: {fileID: 11400000, guid: 87d30faa21d28d440900a85926c2ba7e, type: 2}
+--- !u!114 &2082338041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459616626315940695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63573e47130d46e0bd6c961ca07d8ac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 1459616626315940689}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _craftingHandler
+      Entry: 10
+      Data: 0
+    - Name: _craftingStationDatas
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Crafting.CraftingStationData, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 1|Crafting.CraftingStationData, Assembly-CSharp
+    - Name: _itemType
+      Entry: 7
+      Data: 2|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: Items.ItemDataSystem.Weapon, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _amount
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|Crafting.CraftingStationData, Assembly-CSharp
+    - Name: _itemType
+      Entry: 7
+      Data: 4|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: Items.ItemDataSystem.Equipment, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  _craftInteractionPrefab: {fileID: 1344353487, guid: 95da78080502333498f3bba697631455, type: 3}
 --- !u!212 &1459616626315940688
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -109,32 +184,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2082338041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459616626315940695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63573e47130d46e0bd6c961ca07d8ac3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 1459616626315940689}
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: _craftingHandler
-      Entry: 10
-      Data: 0
-  _craftInteractionPrefab: {fileID: 1344353487, guid: 95da78080502333498f3bba697631455, type: 3}
 --- !u!1 &1459616626500853414
 GameObject:
   m_ObjectHideFlags: 0
