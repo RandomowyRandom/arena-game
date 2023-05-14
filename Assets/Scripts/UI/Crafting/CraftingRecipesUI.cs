@@ -14,17 +14,17 @@ namespace UI.Crafting
     public class CraftingRecipesUI: SerializedMonoBehaviour, ICraftingRecipeProvider
     {
         [SerializeField]
-        private CraftingRecipeSlotUI _recipeSlotPrefab;
+        private CraftingRecipePreview _recipeSlotPrefab;
         
         [SerializeField]
-        private RectTransform _recipeSlotsPanel;
+        private Transform _recipeSlotsPanel;
         
         [OdinSerialize]
         private ICraftingHandler _craftingHandler;
         
         public event Action OnRecipeChanged;
 
-        private readonly List<CraftingRecipeSlotUI> _recipeSlots = new();
+        private readonly List<CraftingRecipePreview> _recipeSlots = new();
 
         private IInventory _playerInventory;
         

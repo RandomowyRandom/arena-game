@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 namespace UI.Crafting
 {
-    public class CraftingRecipeSlotUI: MonoBehaviour, IPointerDownHandler
+    public class CraftingRecipePreview: MonoBehaviour
     {
         [SerializeField]
-        private Image _itemImage;
+        private SpriteRenderer _itemImage;
         
         [SerializeField]
-        private Image _slotImage;
+        private SpriteRenderer _slotImage;
 
         [SerializeField]
         private Color _craftableColor = Color.white;
@@ -33,14 +33,6 @@ namespace UI.Crafting
             
             _itemImage.color = isCraftable ? _craftableColor : _availableColor;
             _slotImage.color = isCraftable ? _craftableColor : _availableColor;
-        }
-
-        public void OnPointerDown(PointerEventData eventData)
-        {
-            if (eventData.button != PointerEventData.InputButton.Left)
-                return;
-            
-            OnRecipeSelected?.Invoke(_recipe);
         }
     }
 }

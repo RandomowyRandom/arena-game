@@ -1,5 +1,6 @@
 ﻿using System;
 using Crafting;
+using Crafting.Abstraction;
 using Inventory.Interfaces;
 using Player.Interfaces;
 using Sirenix.OdinInspector;
@@ -10,22 +11,16 @@ using UnityEngine.UI;
 
 namespace UI.Crafting
 {
-    public class CraftingHandlerUI: SerializedMonoBehaviour
+    public class CraftingHandlerPreview: SerializedMonoBehaviour
     {
         [SerializeField]
-        private Image _resultImage;
+        private Transform _ingredientsPanel;
         
         [SerializeField]
-        private Button _craftButton;
+        private CraftingIngredientPreview _ingredientPrefab;
         
-        [SerializeField]
-        private RectTransform _ingredientsPanel;
-        
-        [SerializeField]
-        private CraftingIngredientUI _ingredientPrefab;
-        
-        [SerializeField]
-        private CraftingHandler _craftingHandler;
+        [OdinSerialize]
+        private ICraftingHandler _craftingHandler;
         
         [OdinSerialize]
         private ICraftingRecipeProvider _recipeProvider;
@@ -38,12 +33,10 @@ namespace UI.Crafting
             
             _recipeProvider.OnRecipeChanged += RefreshUI;
             
-            _craftButton.onClick.AddListener(Craft);
-            
             RefreshUI();
         }
 
-        private void Craft()
+        public void Craft()
         {
             var result = _craftingHandler.TryCraft(_recipeProvider.GetRecipe());
             
@@ -52,11 +45,20 @@ namespace UI.Crafting
 
         private void RefreshUI()
         {
+            const int maxHorizontalSize = 3;
+            const int maxVerticalSize = 2;
+            
+            const float xIncrement = .6f;
+            const float yIncrement = -.45f;
+            
+            var x = 0f;
+            var y = 0f;
+            
+            var xItemAmount = 0;
+            var yItemAmount = 0;
+            
             var recipe = _recipeProvider.GetRecipe();
 
-            _resultImage.sprite = recipe != null ? recipe.Result.ItemData.Icon : null;
-            _resultImage.color = recipe == null ? Color.clear : Color.white;
-            
             foreach (Transform child in _ingredientsPanel)
             {
                 Destroy(child.gameObject);
@@ -69,12 +71,22 @@ namespace UI.Crafting
             {
                 var newIngredient = Instantiate(_ingredientPrefab, _ingredientsPanel);
 
-                var hasEnough = _playerInventory.HasItem(ingredient, out _);
-                var isCraftable = _craftingHandler.CanCraft(recipe);
+                if(xItemAmount >= maxHorizontalSize)
+                {
+                    xItemAmount = 0;
+                    x = 0;
+                    yItemAmount++;
+                    y += yIncrement;
+                }
                 
-                _resultImage.color = isCraftable ? Color.white : new Color(1f, 1f, 1f, 0.33f);
-
+                newIngredient.transform.localPosition = new Vector3(x, y, 0);
+                
+                var hasEnough = _playerInventory.HasItem(ingredient, out _);
+                
                 newIngredient.SetIngredient(ingredient, hasEnough);
+                
+                xItemAmount++;
+                x += xIncrement;
             }
         }
     }

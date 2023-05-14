@@ -80711,14 +80711,14 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
+    - Name: _craftingHandler
+      Entry: 6
+      Data: 
     - Name: _recipeProvider
       Entry: 10
       Data: 0
-  _resultImage: {fileID: 2028594129}
-  _craftButton: {fileID: 815996014}
   _ingredientsPanel: {fileID: 1108333261}
   _ingredientPrefab: {fileID: 3540732574613463079, guid: 1615a3a9131095449b39122a0ac1ddbb, type: 3}
-  _craftingHandler: {fileID: 0}
 --- !u!1 &924531625
 GameObject:
   m_ObjectHideFlags: 0

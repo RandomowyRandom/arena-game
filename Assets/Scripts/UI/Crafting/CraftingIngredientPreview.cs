@@ -5,20 +5,13 @@ using UnityEngine.UI;
 
 namespace UI.Crafting
 {
-    public class CraftingIngredientUI: MonoBehaviour
+    public class CraftingIngredientPreview: MonoBehaviour
     {
         [SerializeField]
-        private Image _itemImage;
+        private SpriteRenderer _itemImage;
         
         [SerializeField]
         private TMP_Text _amountText;
-        
-        [Header("Item sprite")]
-        [SerializeField]
-        private Color _hasItemColor = Color.white;
-        
-        [SerializeField]
-        private Color _noItemColor = Color.white;
         
         [Header("Item amount")]
         [SerializeField]
@@ -32,7 +25,6 @@ namespace UI.Crafting
             _itemImage.sprite = ingredient.ItemData.Icon;
             _amountText.text = ingredient.Amount.ToString();
             
-            _itemImage.color = enough ? _hasItemColor : _noItemColor;
             _amountText.color = enough ? _hasItemColorAmount : _noItemColorAmount;
         }
     }
