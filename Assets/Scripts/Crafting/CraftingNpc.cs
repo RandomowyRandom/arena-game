@@ -32,18 +32,17 @@ namespace Crafting
         [SerializeField]
         private SpriteRenderer _cloudRenderer;
 
+        private IWaveManager _waveManager;
         public event Action OnRecipeChanged;
 
         private IPlayerLevel _playerLevel;
 
-        private IWaveManager _waveManager;
-        
         private CraftInteraction _selectedInteraction;
-        
+
         private void Start()
         {
+            _waveManager = GetComponentInParent<IWaveManager>();
             _playerLevel = ServiceLocator.ServiceLocator.Instance.Get<IPlayerLevel>();
-            _waveManager = ServiceLocator.ServiceLocator.Instance.Get<IWaveManager>();
             InstantiateCraftInteractions();
             
             _waveManager.OnWaveStart += HideNpc;
@@ -51,17 +50,17 @@ namespace Crafting
             
             HideNpc(null);
         }
-        
-        public CraftingRecipe GetRecipe()
-        {
-            return _selectedInteraction == null ? null : _selectedInteraction.GetRecipe();
-        }
-
         private void OnDestroy()
         {
             _waveManager.OnWaveStart -= HideNpc;
             _waveManager.OnWaveEnd -= ShowNpc;
         }
+
+        public CraftingRecipe GetRecipe()
+        {
+            return _selectedInteraction == null ? null : _selectedInteraction.GetRecipe();
+        }
+
 
         private void ShowNpc(Wave wave)
         {

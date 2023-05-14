@@ -30,8 +30,10 @@ namespace WaveSystem
         [SerializeField]
         private OutlineInteractionEffect _outlineInteractionEffect;
         
-        private Light2D _globalLight2D;
+        [OdinSerialize]
         private IWaveManager _waveManager;
+        
+        private Light2D _globalLight2D;
         
         public GameObject GameObject => gameObject;
         public void Interact()
@@ -47,6 +49,8 @@ namespace WaveSystem
         {
             if(_waveManager.IsWaveInProgress)
                 return;
+            
+            ServiceLocator.ServiceLocator.Instance.ForceRegister(_waveManager);
             
             _fireplaceRenderer.material.SetFloat(_outlinePixelWidth, 1f);
             _interactionTextHandler?.Show();
@@ -65,7 +69,6 @@ namespace WaveSystem
         
         private void Start()
         {
-            _waveManager = ServiceLocator.ServiceLocator.Instance.Get<IWaveManager>();
             _globalLight2D = FindObjectsOfType<Light2D>().Where(l => l.lightType == Light2D.LightType.Global).ToArray()[0];
             
             _waveManager.OnWaveStart += Enable;

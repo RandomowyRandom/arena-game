@@ -12,9 +12,6 @@ namespace WorldGeneration
     {
         [OdinSerialize]
         private List<BiomeGroup> _groups;
-
-        [SerializeField]
-        private Vector2 _startingBiomePosition;
         
         private void Start()
         {
@@ -27,7 +24,7 @@ namespace WorldGeneration
         private void GenerateGroup(BiomeGroup group)
         {
             var mainBiome = group.BiomeTerrainGenerators[0];
-            var mainBiomePosition = _startingBiomePosition;
+            var mainBiomePosition = group.StartingBiomePosition;
             
             mainBiome.BiomePosition = mainBiomePosition;
 

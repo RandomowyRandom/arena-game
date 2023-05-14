@@ -22,11 +22,16 @@ namespace InteractionSystem
             if(_intractables.Count == 0)
                 return;
             
-            _currentInteractable = GetNearestInteractable();
+            var newInteractable = GetNearestInteractable();
 
+            if (newInteractable == _currentInteractable)
+                return;
+            
+            _currentInteractable = newInteractable;
+            
             foreach (var interactable in _intractables.Where(interactable => interactable != _currentInteractable))
                 interactable.OnHandlerExit(this);
-
+            
             _currentInteractable.OnHandlerEnter(this);
         }
 
