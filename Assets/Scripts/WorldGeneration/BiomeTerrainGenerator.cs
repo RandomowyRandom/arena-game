@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using Player;
+using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using WaveSystem;
@@ -7,17 +10,28 @@ using WaveSystem;
 namespace WorldGeneration
 {
     [RequireComponent(typeof(RoguelikeGeneratorPro.RoguelikeGeneratorPro))]
-    public class BiomeTerrainGenerator: MonoBehaviour
+    public class BiomeTerrainGenerator: SerializedMonoBehaviour
     {
         [Header("Prefabs")]
-        [SerializeField]
+        [OdinSerialize]
+        private bool _hasFireplace;
+        [OdinSerialize] [ShowIf(nameof(_hasFireplace))]
         private FireplaceController _fireplacePrefab;
         
         [Header("References")]
-        [SerializeField]
+        [OdinSerialize]
+        private bool _spawnPlayerHere;
+        [OdinSerialize] [ShowIf(nameof(_spawnPlayerHere))]
         private PlayerEntity _playerEntity;
         
-        public event Action<bool[,]> OnTerrainGenerated; 
+        [Header("Configs")]
+        [SerializeField]
+        private int _edgeRemovalSize = 1;
+        
+        public event Action<bool[,]> OnTerrainGenerated;
+
+        public Vector2 BiomePosition { get; set; }
+        public Vector2 BiomeSize => _generator.GetLevelSize();
 
         private const int TERRAIN_LAYER = 11;
         
@@ -34,12 +48,7 @@ namespace WorldGeneration
             _generator = GetComponent<RoguelikeGeneratorPro.RoguelikeGeneratorPro>();
         }
 
-        private void Start()
-        {
-            GenerateBiome();
-        }
-
-        private void GenerateBiome()
+        public void GenerateBiome()
         {
             _generator.RigenenerateLevel();
 
@@ -54,20 +63,28 @@ namespace WorldGeneration
             _fireplacePosition = BiomeGenerationHelper.FindLargestCircleCenter(tilePresence);
             
             tilePresence[_fireplacePosition.x, _fireplacePosition.y] = true;
-            
+
             var fireplaceWorldPosition = BiomeGenerationHelper.GetWorldPositionFromTilemapPosition(new Vector3Int(_fireplacePosition.x, _fireplacePosition.y, 0), transform);
-            Instantiate(_fireplacePrefab, fireplaceWorldPosition, Quaternion.identity);
-            DisableTilePresenceInRadius(tilePresence, _fireplacePosition, 15);
+            
+            if (_hasFireplace)
+            {
+                Instantiate(_fireplacePrefab, fireplaceWorldPosition, Quaternion.identity, transform);
+                DisableTilePresenceInRadius(tilePresence, _fireplacePosition, 15);
+            }
 
             MergeTilemaps(_floorTilemap, _overlayTilemap);
             MergeTilemaps(_wallTilemap, _emptyTilemap);
             
+            RemoveEdgesFromTilemap(_wallTilemap, _edgeRemovalSize);
+            
             _wallTilemap.gameObject.layer = TERRAIN_LAYER;
+
+            transform.position = new Vector2(BiomePosition.x, BiomePosition.y);
             
             OnTerrainGenerated?.Invoke(tilePresence);
             
-            // TODO: later move player teleportation to other class
-            _playerEntity.transform.position = fireplaceWorldPosition - new Vector2(0, -2);
+            if(_spawnPlayerHere)
+                _playerEntity.transform.position = fireplaceWorldPosition - new Vector2(0, -2);
         }
         
 
@@ -116,6 +133,33 @@ namespace WorldGeneration
                 Destroy(mergeFrom.gameObject);
             else
                 mergeFrom.ClearAllTiles();
+        }
+
+        private void RemoveEdgesFromTilemap(Tilemap tilemap, int edgeThickness = 1)
+        {
+            var cellBounds = tilemap.cellBounds;
+            var edges = new List<Vector3Int>(); 
+
+            
+            for (var x = cellBounds.xMin; x < cellBounds.xMax; x++)
+            {
+                for (var y = cellBounds.yMin; y < cellBounds.yMax; y++)
+                {
+                    var tilePos = new Vector3Int(x, y, 0);
+                    var tile = tilemap.GetTile(tilePos);
+                    
+                    if(tile == null)
+                        continue;
+                    
+                    if (x < cellBounds.xMin + edgeThickness || x >= cellBounds.xMax - edgeThickness ||
+                        y < cellBounds.yMin + edgeThickness || y >= cellBounds.yMax - edgeThickness)
+                    {
+                        edges.Add(tilePos);
+                    }
+                }
+            }
+            
+            tilemap.SetTiles(edges.ToArray(), new TileBase[edges.Count]);
         }
     }
 }

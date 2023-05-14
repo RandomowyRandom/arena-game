@@ -15,9 +15,6 @@ namespace WaveSystem
         [SerializeField]
         private WaveFactory _waveFactory;
         
-        [SerializeField]
-        private Transform _playerTransform;
-        
         public event Action<Wave> OnWaveStart;
         public event Action<Wave> OnWaveEnd;
         public event Action<SubWave> OnSubWaveStart;
@@ -33,15 +30,9 @@ namespace WaveSystem
         private void Awake()
         {
             ServiceLocator.ServiceLocator.Instance.Register<IWaveManager>(this);
-            
             SetWave(_waveFactory.GetWave());
         }
 
-        private void OnDestroy()
-        {
-            ServiceLocator.ServiceLocator.Instance.Deregister<IWaveManager>();
-        }
-        
         public void SetWave(Wave wave)
         {
             _wave = wave;
@@ -86,13 +77,14 @@ namespace WaveSystem
 
         private Vector2 GetRandomPositionOutOfScreen()
         {
-            const float distanceFromPlayer = 10f;
+            const float distanceFromFireplace = 17.5f;
             
-            var randomPosition = UnityEngine.Random.insideUnitCircle.normalized * distanceFromPlayer;
+            var randomPosition = UnityEngine.Random.insideUnitCircle.normalized * distanceFromFireplace;
             
-            randomPosition *= UnityEngine.Random.Range(1f, 1.3f);
+            var posToReturn = transform.position + new Vector3(randomPosition.x, randomPosition.y, 0);
+            Debug.DrawRay(posToReturn, Vector3.up, Color.red, 100f);
             
-            return _playerTransform.position + new Vector3(randomPosition.x, randomPosition.y, 0);
+            return posToReturn;
         }
 
         #region QC
