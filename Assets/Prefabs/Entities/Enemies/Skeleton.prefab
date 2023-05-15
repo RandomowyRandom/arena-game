@@ -399,7 +399,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 631570037369323858, guid: bb30068da237ef34bbc241181b3e36e4, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -458,8 +459,8 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: _projectilePrefab
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: _predictTargetPosition
       Entry: 5
       Data: true
