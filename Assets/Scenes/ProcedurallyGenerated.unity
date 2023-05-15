@@ -1283,7 +1283,7 @@ MonoBehaviour:
   emptyTile: {fileID: 11400000, guid: 7336e6a5025141241961e78aa75e1ebb, type: 2}
   patternFloorTile: {fileID: 11400000, guid: 0b31d0ae6e94a7a4e8ecbd3f712fc44c, type: 2}
   randomFloorTile: {fileID: 11400000, guid: 3034e2fc1dd02dd458a202af9295f560, type: 2}
-  floorTile_1: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
+  floorTile_1: {fileID: 11400000, guid: 7b92be4ebabfade458de3477a5a9d513, type: 2}
   floorTile_2: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_3: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_4: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
@@ -51686,7 +51686,7 @@ MonoBehaviour:
   emptyTile: {fileID: 11400000, guid: 7336e6a5025141241961e78aa75e1ebb, type: 2}
   patternFloorTile: {fileID: 11400000, guid: 0b31d0ae6e94a7a4e8ecbd3f712fc44c, type: 2}
   randomFloorTile: {fileID: 11400000, guid: 3034e2fc1dd02dd458a202af9295f560, type: 2}
-  floorTile_1: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
+  floorTile_1: {fileID: 11400000, guid: 7b92be4ebabfade458de3477a5a9d513, type: 2}
   floorTile_2: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_3: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_4: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
@@ -52140,7 +52140,7 @@ MonoBehaviour:
   emptyTile: {fileID: 11400000, guid: 7336e6a5025141241961e78aa75e1ebb, type: 2}
   patternFloorTile: {fileID: 11400000, guid: 0b31d0ae6e94a7a4e8ecbd3f712fc44c, type: 2}
   randomFloorTile: {fileID: 11400000, guid: 3034e2fc1dd02dd458a202af9295f560, type: 2}
-  floorTile_1: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
+  floorTile_1: {fileID: 11400000, guid: 7b92be4ebabfade458de3477a5a9d513, type: 2}
   floorTile_2: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_3: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_4: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
@@ -82180,7 +82180,7 @@ MonoBehaviour:
   emptyTile: {fileID: 11400000, guid: 7336e6a5025141241961e78aa75e1ebb, type: 2}
   patternFloorTile: {fileID: 11400000, guid: 0b31d0ae6e94a7a4e8ecbd3f712fc44c, type: 2}
   randomFloorTile: {fileID: 11400000, guid: 3034e2fc1dd02dd458a202af9295f560, type: 2}
-  floorTile_1: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
+  floorTile_1: {fileID: 11400000, guid: 7b92be4ebabfade458de3477a5a9d513, type: 2}
   floorTile_2: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_3: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_4: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
@@ -83399,7 +83399,7 @@ MonoBehaviour:
   emptyTile: {fileID: 11400000, guid: 7336e6a5025141241961e78aa75e1ebb, type: 2}
   patternFloorTile: {fileID: 11400000, guid: 0b31d0ae6e94a7a4e8ecbd3f712fc44c, type: 2}
   randomFloorTile: {fileID: 11400000, guid: 3034e2fc1dd02dd458a202af9295f560, type: 2}
-  floorTile_1: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
+  floorTile_1: {fileID: 11400000, guid: 7b92be4ebabfade458de3477a5a9d513, type: 2}
   floorTile_2: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_3: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_4: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
@@ -84411,7 +84411,7 @@ MonoBehaviour:
   emptyTile: {fileID: 11400000, guid: 7336e6a5025141241961e78aa75e1ebb, type: 2}
   patternFloorTile: {fileID: 11400000, guid: 0b31d0ae6e94a7a4e8ecbd3f712fc44c, type: 2}
   randomFloorTile: {fileID: 11400000, guid: 3034e2fc1dd02dd458a202af9295f560, type: 2}
-  floorTile_1: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
+  floorTile_1: {fileID: 11400000, guid: 7b92be4ebabfade458de3477a5a9d513, type: 2}
   floorTile_2: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_3: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_4: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
@@ -84608,12 +84608,12 @@ MonoBehaviour:
   chunkChance3x3: 100
   patternFloor: 1
   noiseScaleFloor: {x: 0.1, y: 0.1}
-  noiseCutoffFloor: 0.5
+  noiseCutoffFloor: 1
   patternWall: 1
   noiseScaleWall: {x: 0.1, y: 0.1}
-  noiseCutoffWall: 0.5
-  randomFloorOverlayChance: 1
-  randomWallOverlayChance: 1
+  noiseCutoffWall: 1
+  randomFloorOverlayChance: 0
+  randomWallOverlayChance: 0
   tabSelected: 1
   generation: 1
   fillAllTiles: 0
@@ -84752,7 +84752,7 @@ MonoBehaviour:
   emptyTile: {fileID: 11400000, guid: 7336e6a5025141241961e78aa75e1ebb, type: 2}
   patternFloorTile: {fileID: 11400000, guid: 0b31d0ae6e94a7a4e8ecbd3f712fc44c, type: 2}
   randomFloorTile: {fileID: 11400000, guid: 3034e2fc1dd02dd458a202af9295f560, type: 2}
-  floorTile_1: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
+  floorTile_1: {fileID: 11400000, guid: 7b92be4ebabfade458de3477a5a9d513, type: 2}
   floorTile_2: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_3: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_4: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
@@ -86052,12 +86052,12 @@ MonoBehaviour:
   chunkChance3x3: 0
   patternFloor: 1
   noiseScaleFloor: {x: 0.1, y: 0.1}
-  noiseCutoffFloor: 0.5
+  noiseCutoffFloor: 1
   patternWall: 1
   noiseScaleWall: {x: 0.1, y: 0.1}
   noiseCutoffWall: 0.5
-  randomFloorOverlayChance: 1
-  randomWallOverlayChance: 1
+  randomFloorOverlayChance: 0
+  randomWallOverlayChance: 0
   tabSelected: 1
   generation: 1
   fillAllTiles: 0
@@ -86196,7 +86196,7 @@ MonoBehaviour:
   emptyTile: {fileID: 11400000, guid: 7336e6a5025141241961e78aa75e1ebb, type: 2}
   patternFloorTile: {fileID: 11400000, guid: 0b31d0ae6e94a7a4e8ecbd3f712fc44c, type: 2}
   randomFloorTile: {fileID: 11400000, guid: 3034e2fc1dd02dd458a202af9295f560, type: 2}
-  floorTile_1: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
+  floorTile_1: {fileID: 11400000, guid: 7b92be4ebabfade458de3477a5a9d513, type: 2}
   floorTile_2: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_3: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_4: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
