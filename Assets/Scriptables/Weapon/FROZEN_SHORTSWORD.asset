@@ -55,7 +55,7 @@ MonoBehaviour:
       Data: 0
     - Name: _force
       Entry: 4
-      Data: 45
+      Data: 50
     - Name: _forceMode
       Entry: 3
       Data: 1
@@ -284,5 +284,4 @@ MonoBehaviour:
   _icon: {fileID: 21300000, guid: d972fbc7f9ad14841b8b6f37408d13ee, type: 3}
   _description: Slow enemies down
   _maxStack: 1
-  _consumeOnUse: 0
   _damageIncreasePerLevel: 1

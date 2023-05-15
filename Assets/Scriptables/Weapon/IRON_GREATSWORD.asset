@@ -147,7 +147,7 @@ MonoBehaviour:
       Data: 18
     - Name: _speed
       Entry: 4
-      Data: -1
+      Data: -0.6
     - Name: _fireRate
       Entry: 4
       Data: 1.2
@@ -156,7 +156,7 @@ MonoBehaviour:
       Data: 0
     - Name: _defense
       Entry: 4
-      Data: 0
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -177,7 +177,7 @@ MonoBehaviour:
       Data: 20
     - Name: _speed
       Entry: 4
-      Data: -1
+      Data: -0.6
     - Name: _fireRate
       Entry: 4
       Data: 1.2
@@ -186,7 +186,7 @@ MonoBehaviour:
       Data: 0
     - Name: _defense
       Entry: 4
-      Data: 0
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -207,7 +207,7 @@ MonoBehaviour:
       Data: 22
     - Name: _speed
       Entry: 4
-      Data: -1
+      Data: -0.6
     - Name: _fireRate
       Entry: 4
       Data: 1.2
@@ -216,7 +216,7 @@ MonoBehaviour:
       Data: 0
     - Name: _defense
       Entry: 4
-      Data: 0
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -237,7 +237,7 @@ MonoBehaviour:
       Data: 24
     - Name: _speed
       Entry: 4
-      Data: -0.8
+      Data: -0.5
     - Name: _fireRate
       Entry: 4
       Data: 1.1
@@ -246,7 +246,7 @@ MonoBehaviour:
       Data: 0
     - Name: _defense
       Entry: 4
-      Data: 0
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -267,7 +267,7 @@ MonoBehaviour:
       Data: 26
     - Name: _speed
       Entry: 4
-      Data: -0.5
+      Data: -0.4
     - Name: _fireRate
       Entry: 4
       Data: 1
@@ -276,7 +276,7 @@ MonoBehaviour:
       Data: 0
     - Name: _defense
       Entry: 4
-      Data: 0
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -293,5 +293,4 @@ MonoBehaviour:
   _icon: {fileID: 21300000, guid: 258d67aab4db66748a6ea72916e130e3, type: 3}
   _description: 
   _maxStack: 1
-  _consumeOnUse: 0
   _damageIncreasePerLevel: 2

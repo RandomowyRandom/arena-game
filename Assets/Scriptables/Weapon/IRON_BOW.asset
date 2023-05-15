@@ -135,7 +135,7 @@ MonoBehaviour:
       Data: 0
     - Name: _fireRate
       Entry: 4
-      Data: 0.35
+      Data: 0.4
     - Name: _maxHealth
       Entry: 4
       Data: 0
@@ -165,7 +165,7 @@ MonoBehaviour:
       Data: 0
     - Name: _fireRate
       Entry: 4
-      Data: 0.35
+      Data: 0.4
     - Name: _maxHealth
       Entry: 4
       Data: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
       Data: 0
     - Name: _fireRate
       Entry: 4
-      Data: 0.35
+      Data: 0.4
     - Name: _maxHealth
       Entry: 4
       Data: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
       Data: 0
     - Name: _fireRate
       Entry: 4
-      Data: 0.3
+      Data: 0.4
     - Name: _maxHealth
       Entry: 4
       Data: 0
@@ -255,7 +255,7 @@ MonoBehaviour:
       Data: 0
     - Name: _fireRate
       Entry: 4
-      Data: 0.26
+      Data: 0.34
     - Name: _maxHealth
       Entry: 4
       Data: 0
@@ -278,5 +278,4 @@ MonoBehaviour:
   _icon: {fileID: 21300000, guid: ace7790b4eb387b4a8db96d607e198e2, type: 3}
   _description: 
   _maxStack: 1
-  _consumeOnUse: 0
   _damageIncreasePerLevel: 1
