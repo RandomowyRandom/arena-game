@@ -55,7 +55,7 @@ MonoBehaviour:
       Data: 0
     - Name: _force
       Entry: 4
-      Data: 35
+      Data: 40
     - Name: _forceMode
       Entry: 3
       Data: 1
@@ -284,5 +284,4 @@ MonoBehaviour:
   _icon: {fileID: 21300000, guid: f22f2833f1c5e2847bece88c2c1a3337, type: 3}
   _description: 
   _maxStack: 1
-  _consumeOnUse: 0
   _damageIncreasePerLevel: 1

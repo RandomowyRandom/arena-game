@@ -86,13 +86,19 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 5|ProjectileSystem.Effects.ApplyKnockBackProjectileEffect, Assembly-CSharp
     - Name: _force
       Entry: 4
       Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|ProjectileSystem.Effects.DestroyOnHitProjectileEffect, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -107,7 +113,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 6|Items.Effects.WaitForSecondsItemEffect, Assembly-CSharp
+      Data: 7|Items.Effects.WaitForSecondsItemEffect, Assembly-CSharp
     - Name: _seconds
       Entry: 4
       Data: 0.15
@@ -116,13 +122,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 7|Items.Effects.RangedSquashVisualItemEffect, Assembly-CSharp
+      Data: 8|Items.Effects.RangedSquashVisualItemEffect, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 8|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
+      Data: 9|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
     - Name: _projectilePrefab
       Entry: 10
       Data: 1
@@ -152,17 +158,23 @@ MonoBehaviour:
       Data: 
     - Name: _projectileEffects
       Entry: 7
-      Data: 9|System.Collections.Generic.List`1[[ProjectileSystem.Abstraction.IProjectileEffect,
+      Data: 10|System.Collections.Generic.List`1[[ProjectileSystem.Abstraction.IProjectileEffect,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
-      Data: 10|ProjectileSystem.Effects.ApplyKnockBackProjectileEffect, Assembly-CSharp
+      Data: 11|ProjectileSystem.Effects.ApplyKnockBackProjectileEffect, Assembly-CSharp
     - Name: _force
       Entry: 4
       Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 12|ProjectileSystem.Effects.DestroyOnHitProjectileEffect, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -177,7 +189,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 11|Items.Effects.PlaySoundItemEffect, Assembly-CSharp
+      Data: 13|Items.Effects.PlaySoundItemEffect, Assembly-CSharp
     - Name: _clip
       Entry: 10
       Data: 0
@@ -186,7 +198,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 12|Items.Effects.WaitForSecondsItemEffect, Assembly-CSharp
+      Data: 14|Items.Effects.WaitForSecondsItemEffect, Assembly-CSharp
     - Name: _seconds
       Entry: 4
       Data: 0.15
@@ -195,13 +207,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 13|Items.Effects.RangedSquashVisualItemEffect, Assembly-CSharp
+      Data: 15|Items.Effects.RangedSquashVisualItemEffect, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 14|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
+      Data: 16|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
     - Name: _projectilePrefab
       Entry: 10
       Data: 1
@@ -231,17 +243,23 @@ MonoBehaviour:
       Data: 
     - Name: _projectileEffects
       Entry: 7
-      Data: 15|System.Collections.Generic.List`1[[ProjectileSystem.Abstraction.IProjectileEffect,
+      Data: 17|System.Collections.Generic.List`1[[ProjectileSystem.Abstraction.IProjectileEffect,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
-      Data: 16|ProjectileSystem.Effects.ApplyKnockBackProjectileEffect, Assembly-CSharp
+      Data: 18|ProjectileSystem.Effects.ApplyKnockBackProjectileEffect, Assembly-CSharp
     - Name: _force
       Entry: 4
       Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 19|ProjectileSystem.Effects.DestroyOnHitProjectileEffect, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -256,7 +274,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 17|Items.Effects.PlaySoundItemEffect, Assembly-CSharp
+      Data: 20|Items.Effects.PlaySoundItemEffect, Assembly-CSharp
     - Name: _clip
       Entry: 10
       Data: 0
@@ -271,23 +289,23 @@ MonoBehaviour:
       Data: 
     - Name: _rarityData
       Entry: 7
-      Data: 18|System.Collections.Generic.List`1[[Items.RaritySystem.GearRarityData,
+      Data: 21|System.Collections.Generic.List`1[[Items.RaritySystem.GearRarityData,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 5
     - Name: 
       Entry: 7
-      Data: 19|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 22|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 2
     - Name: _statsData
       Entry: 7
-      Data: 20|Stats.StatsData, Assembly-CSharp
+      Data: 23|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 16
+      Data: 18
     - Name: _speed
       Entry: 4
       Data: 0
@@ -308,16 +326,16 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 21|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 24|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 3
     - Name: _statsData
       Entry: 7
-      Data: 22|Stats.StatsData, Assembly-CSharp
+      Data: 25|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 17.5
+      Data: 19.5
     - Name: _speed
       Entry: 4
       Data: 0
@@ -338,16 +356,16 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 23|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 26|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 4
     - Name: _statsData
       Entry: 7
-      Data: 24|Stats.StatsData, Assembly-CSharp
+      Data: 27|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 19
+      Data: 21
     - Name: _speed
       Entry: 4
       Data: 0
@@ -368,16 +386,16 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 25|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 28|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 5
     - Name: _statsData
       Entry: 7
-      Data: 26|Stats.StatsData, Assembly-CSharp
+      Data: 29|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 20.5
+      Data: 22.5
     - Name: _speed
       Entry: 4
       Data: 0
@@ -398,16 +416,16 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 27|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 30|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 6
     - Name: _statsData
       Entry: 7
-      Data: 28|Stats.StatsData, Assembly-CSharp
+      Data: 31|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 21.5
+      Data: 24
     - Name: _speed
       Entry: 4
       Data: 0
@@ -436,5 +454,4 @@ MonoBehaviour:
   _icon: {fileID: 21300000, guid: 43670e6b717352149959fb95a19c30e3, type: 3}
   _description: Inflicts fire
   _maxStack: 1
-  _consumeOnUse: 0
   _damageIncreasePerLevel: 1
