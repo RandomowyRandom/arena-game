@@ -6,6 +6,8 @@ using Sirenix.Serialization;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using WaveSystem;
+using static RoguelikeGeneratorPro.RoguelikeGeneratorPro.overlayType;
+using static RoguelikeGeneratorPro.RoguelikeGeneratorPro.tileType;
 
 namespace WorldGeneration
 {
@@ -24,6 +26,27 @@ namespace WorldGeneration
         [OdinSerialize] [ShowIf(nameof(_spawnPlayerHere))]
         private PlayerEntity _playerEntity;
         
+        [Header("Tiles")]
+        [OdinSerialize]
+        private TileBase _wallTile;
+        
+        [OdinSerialize]
+        private TileBase _floorTile;
+        
+        [OdinSerialize]
+        private TileBase _overlayTile;
+        
+        [Header("Tilemaps")]
+        
+        [SerializeField]
+        private Tilemap _wallTilemap;
+
+        [SerializeField]
+        private Tilemap _floorTilemap;
+
+        [SerializeField]
+        private Tilemap _overlayTilemap;
+        
         [Header("Configs")]
         [SerializeField]
         private int _edgeRemovalSize = 1;
@@ -32,16 +55,8 @@ namespace WorldGeneration
 
         public Vector2 BiomePosition { get; set; }
         public Vector2 BiomeSize => _generator.GetLevelSize();
-
-        private const int TERRAIN_LAYER = 11;
-        
         private RoguelikeGeneratorPro.RoguelikeGeneratorPro _generator;
-        
-        private Tilemap _emptyTilemap;
-        private Tilemap _wallTilemap;
-        private Tilemap _overlayTilemap;
-        private Tilemap _floorTilemap;
-        
+
         private Vector2Int _fireplacePosition;
         private void Awake()
         {
@@ -51,9 +66,10 @@ namespace WorldGeneration
         public void GenerateBiome()
         {
             _generator.RigenenerateLevel();
-
-            CacheTilemaps();
-            var tilePresence = BiomeGenerationHelper.GetTilePresence(_emptyTilemap, _wallTilemap);
+            
+            PlaceTiles();
+            
+            var tilePresence = BiomeGenerationHelper.GetTilePresence(_wallTilemap);
 
             var wallTilemapRenderer = _wallTilemap.GetComponent<TilemapRenderer>();
             var floorTilemapRenderer = _floorTilemap.GetComponent<TilemapRenderer>();
@@ -72,13 +88,8 @@ namespace WorldGeneration
                 DisableTilePresenceInRadius(tilePresence, _fireplacePosition, 15);
             }
 
-            MergeTilemaps(_floorTilemap, _overlayTilemap);
-            MergeTilemaps(_wallTilemap, _emptyTilemap);
-            
             RemoveEdgesFromTilemap(_wallTilemap, _edgeRemovalSize);
             
-            _wallTilemap.gameObject.layer = TERRAIN_LAYER;
-
             transform.position = new Vector2(BiomePosition.x, BiomePosition.y);
             
             OnTerrainGenerated?.Invoke(tilePresence);
@@ -86,7 +97,66 @@ namespace WorldGeneration
             if(_spawnPlayerHere)
                 _playerEntity.transform.position = fireplaceWorldPosition - new Vector2(0, -2);
         }
-        
+
+        private void PlaceTiles()
+        {
+            var tiles = _generator.GetTiles();
+            var overlay = _generator.GetOverlayTiles();
+
+            var wallTiles = new List<PositionTile>();
+            var floorTiles = new List<PositionTile>();
+            var overlayTiles = new List<PositionTile>();
+
+            for (var x = 0; x < tiles.GetLength(0); x++)
+            {
+                for (var y = 0; y < tiles.GetLength(1); y++)
+                {
+                    var tile = tiles[x, y];
+                    var overlayTile = overlay[x, y];
+                    if(tile is wall or RoguelikeGeneratorPro.RoguelikeGeneratorPro.tileType.empty)
+                        wallTiles.Add(new PositionTile
+                        {
+                            Position = new Vector2Int(x, y),
+                            Tile = tile
+                        });
+                    
+                    if(overlayTile is floorRandom or floorPattern)
+                        overlayTiles.Add(new PositionTile
+                        {
+                            Position = new Vector2Int(x, y),
+                            Tile = floor
+                        });
+                    
+                    floorTiles.Add(new PositionTile
+                    {
+                        Position = new Vector2Int(x, y),
+                        Tile = floor
+                    });
+                }
+            }
+            
+            _wallTilemap.SetTiles
+                (wallTiles.ConvertAll(
+                    tile => new Vector3Int(tile.Position.x, tile.Position.y, 0))
+                    .ToArray(), 
+                    wallTiles.ConvertAll(_ => _wallTile)
+                     .ToArray());
+
+            _floorTilemap.SetTiles(
+                floorTiles.ConvertAll(
+                    tile => new Vector3Int(tile.Position.x, tile.Position.y, 0))
+                    .ToArray(), 
+                floorTiles.ConvertAll(_ => _floorTile)
+                    .ToArray());
+            
+            _overlayTilemap.SetTiles(
+                overlayTiles.ConvertAll(
+                    tile => new Vector3Int(tile.Position.x, tile.Position.y, 0))
+                    .ToArray(),
+                overlayTiles.ConvertAll(_ => _overlayTile)
+                    .ToArray());
+        }
+
 
         private void DisableTilePresenceInRadius(bool[,] tilePresence, Vector2Int center, int radius)
         {
@@ -101,15 +171,6 @@ namespace WorldGeneration
                     tilePresence[x, y] = true;
                 }
             }
-        }
-        
-        private void CacheTilemaps()
-        {
-            // this is a bit of a hack, but generator each time creates a new tilemap, so we need to find it
-            _emptyTilemap = transform.GetChild(0).GetChild(2).GetComponent<Tilemap>();
-            _wallTilemap = transform.GetChild(0).GetChild(1).GetComponent<Tilemap>();
-            _overlayTilemap = transform.GetChild(0).GetChild(3).GetComponent<Tilemap>();
-            _floorTilemap = transform.GetChild(0).GetChild(0).GetComponent<Tilemap>();
         }
 
         private void MergeTilemaps(Tilemap margeTo, Tilemap mergeFrom, bool destroyMergeFrom = true)
@@ -138,9 +199,8 @@ namespace WorldGeneration
         private void RemoveEdgesFromTilemap(Tilemap tilemap, int edgeThickness = 1)
         {
             var cellBounds = tilemap.cellBounds;
-            var edges = new List<Vector3Int>(); 
+            var edges = new List<Vector3Int>();
 
-            
             for (var x = cellBounds.xMin; x < cellBounds.xMax; x++)
             {
                 for (var y = cellBounds.yMin; y < cellBounds.yMax; y++)

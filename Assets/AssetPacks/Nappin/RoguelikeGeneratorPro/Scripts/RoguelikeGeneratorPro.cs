@@ -383,7 +383,6 @@ namespace RoguelikeGeneratorPro
 
         public void RigenenerateLevel()
         {
-            Clear();
             AssignSeed();
             GenerateLevel();
 
@@ -448,7 +447,7 @@ namespace RoguelikeGeneratorPro
 
             //create level parents
             if (generation == genType.generateObj) CreateObjParents();
-            else CreateTilesParents();
+            else if(generation == genType.generateTile) CreateTilesParents();
 
             //instanciate tiles
             tiles = new tileType[levelSize.x, levelSize.y];

@@ -24,6 +24,25 @@ namespace WorldGeneration
 
             return tilePresence;
         }
+
+        public static bool[,] GetTilePresence(Tilemap tilemap)
+        {
+            var cellBounds = tilemap.cellBounds;
+            var tilePresence = new bool[cellBounds.size.x, cellBounds.size.y];
+            
+            for (var x = tilemap.cellBounds.xMin; x < tilemap.cellBounds.xMax; x++)
+            {
+                for (var y = tilemap.cellBounds.yMin; y < tilemap.cellBounds.yMax; y++)
+                {
+                    var tilePos = new Vector3Int(x, y, 0);
+
+                    var tilePresent = tilemap.HasTile(tilePos);
+                    tilePresence[x - tilemap.cellBounds.xMin, y - cellBounds.yMin] = tilePresent ? true : false;
+                }
+            }
+            
+            return tilePresence;
+        }
         
         public static Vector2Int FindLargestCircleCenter(bool[,] grid) {
             var width = grid.GetLength(0);
