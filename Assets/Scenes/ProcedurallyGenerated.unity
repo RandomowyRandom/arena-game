@@ -1104,9 +1104,8 @@ GameObject:
   - component: {fileID: 199221488}
   - component: {fileID: 199221491}
   - component: {fileID: 199221490}
-  - component: {fileID: 199221489}
   m_Layer: 0
-  m_Name: SmallForestGenerator (3)
+  m_Name: SmallSnowGenerator (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1128,83 +1127,6 @@ Transform:
   m_Father: {fileID: 794071549}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &199221489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 199221487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b12baa57afa5401fbbfcd2fc3f7ce15b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _randomPointCount: 50
-  _percentageOfAllRandomPoints: 0.6
-  _resourceGroups:
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 3621709206064312194, guid: f48a75173e877f74684191abaf8fa110, type: 3}
-      _chance: 0.7
-    - _resourcePrefab: {fileID: 7237044341157734758, guid: 3a3d70a32154d2a429546d146eeaed0f, type: 3}
-      _chance: 0.3
-    _startSpawnChance: 0.5
-    _chanceFollOff: 0.1
-    _groupSize: {x: 11, y: 11}
-    _percentageCoverage: 0.1
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 2268759984707524892, guid: e21f925273aff0348a747583aff0f3e8, type: 3}
-      _chance: 0.7
-    - _resourcePrefab: {fileID: 9094995047937489891, guid: 5fd6ea4b323a5514684d2b7bdeede518, type: 3}
-      _chance: 0.3
-    _startSpawnChance: 0.8
-    _chanceFollOff: 0.15
-    _groupSize: {x: 17, y: 17}
-    _percentageCoverage: 0.3
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 354067270852212649, guid: 7963bea492054e24faf9683041354201, type: 3}
-      _chance: 1
-    _startSpawnChance: 0.4
-    _chanceFollOff: 0.2
-    _groupSize: {x: 7, y: 7}
-    _percentageCoverage: 0.1
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 4267049502297209857, guid: f640eb45925886549a16238c9f21a408, type: 3}
-      _chance: 0.7
-    - _resourcePrefab: {fileID: 2796837717018697430, guid: bf4800a828a10d945bf4ae578ce8134a, type: 3}
-      _chance: 0.3
-    _startSpawnChance: 0.5
-    _chanceFollOff: 0.1
-    _groupSize: {x: 11, y: 11}
-    _percentageCoverage: 0.1
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 2931861312426724257, guid: b3c4cfc79667508419ca162f1cb0f2f5, type: 3}
-      _chance: 0.7
-    - _resourcePrefab: {fileID: 8432503717114699612, guid: 575195085d5d6404686de488d876220d, type: 3}
-      _chance: 0.3
-    _startSpawnChance: 0.5
-    _chanceFollOff: 0.1
-    _groupSize: {x: 11, y: 11}
-    _percentageCoverage: 0.1
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 4869632929779141202, guid: 48b08c1b1e940384ca041b82c445517b, type: 3}
-      _chance: 0.7
-    - _resourcePrefab: {fileID: 2831485062929809176, guid: cf22c4d08bd53384eacc41cfa0fc892f, type: 3}
-      _chance: 0.3
-    _startSpawnChance: 0.5
-    _chanceFollOff: 0.1
-    _groupSize: {x: 11, y: 11}
-    _percentageCoverage: 0.1
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 2530176304263761368, guid: 235436f20323ed24e9c5e0db63316324, type: 3}
-      _chance: 0.6
-    - _resourcePrefab: {fileID: 1190555262996832711, guid: f6b4728fd68c79f4c93b592268c9a0bd, type: 3}
-      _chance: 0.4
-    _startSpawnChance: 0.6
-    _chanceFollOff: 0.1
-    _groupSize: {x: 11, y: 11}
-    _percentageCoverage: 0.2
-  _randomPositionOffset: {x: 0.4, y: 0.4}
 --- !u!114 &199221490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1223,9 +1145,9 @@ MonoBehaviour:
     ReferencedUnityObjects:
     - {fileID: 8129455809263681365, guid: 8ab5d2dcc6474214aa269a5a70f1cf4f, type: 3}
     - {fileID: 2005232625}
-    - {fileID: 11400000, guid: 7336e6a5025141241961e78aa75e1ebb, type: 2}
-    - {fileID: 11400000, guid: 7b92be4ebabfade458de3477a5a9d513, type: 2}
-    - {fileID: 11400000, guid: 3064cc968ae509f4394c2b2d8003aa93, type: 2}
+    - {fileID: 11400000, guid: af97db22d261a5648867b4a97576c56e, type: 2}
+    - {fileID: 11400000, guid: d1e19576a0f8a1a43a2beb7e6346f9a8, type: 2}
+    - {fileID: 11400000, guid: 9977d20ad065b464ead6e53987443076, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -52113,9 +52035,8 @@ GameObject:
   - component: {fileID: 311151134}
   - component: {fileID: 311151137}
   - component: {fileID: 311151136}
-  - component: {fileID: 311151135}
   m_Layer: 0
-  m_Name: SmallForestGenerator (4)
+  m_Name: SmallSnowGenerator (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52137,83 +52058,6 @@ Transform:
   m_Father: {fileID: 794071549}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &311151135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 311151133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b12baa57afa5401fbbfcd2fc3f7ce15b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _randomPointCount: 50
-  _percentageOfAllRandomPoints: 0.6
-  _resourceGroups:
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 3621709206064312194, guid: f48a75173e877f74684191abaf8fa110, type: 3}
-      _chance: 0.7
-    - _resourcePrefab: {fileID: 7237044341157734758, guid: 3a3d70a32154d2a429546d146eeaed0f, type: 3}
-      _chance: 0.3
-    _startSpawnChance: 0.5
-    _chanceFollOff: 0.1
-    _groupSize: {x: 11, y: 11}
-    _percentageCoverage: 0.1
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 2268759984707524892, guid: e21f925273aff0348a747583aff0f3e8, type: 3}
-      _chance: 0.7
-    - _resourcePrefab: {fileID: 9094995047937489891, guid: 5fd6ea4b323a5514684d2b7bdeede518, type: 3}
-      _chance: 0.3
-    _startSpawnChance: 0.8
-    _chanceFollOff: 0.15
-    _groupSize: {x: 17, y: 17}
-    _percentageCoverage: 0.3
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 354067270852212649, guid: 7963bea492054e24faf9683041354201, type: 3}
-      _chance: 1
-    _startSpawnChance: 0.4
-    _chanceFollOff: 0.2
-    _groupSize: {x: 7, y: 7}
-    _percentageCoverage: 0.1
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 4267049502297209857, guid: f640eb45925886549a16238c9f21a408, type: 3}
-      _chance: 0.7
-    - _resourcePrefab: {fileID: 2796837717018697430, guid: bf4800a828a10d945bf4ae578ce8134a, type: 3}
-      _chance: 0.3
-    _startSpawnChance: 0.5
-    _chanceFollOff: 0.1
-    _groupSize: {x: 11, y: 11}
-    _percentageCoverage: 0.1
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 2931861312426724257, guid: b3c4cfc79667508419ca162f1cb0f2f5, type: 3}
-      _chance: 0.7
-    - _resourcePrefab: {fileID: 8432503717114699612, guid: 575195085d5d6404686de488d876220d, type: 3}
-      _chance: 0.3
-    _startSpawnChance: 0.5
-    _chanceFollOff: 0.1
-    _groupSize: {x: 11, y: 11}
-    _percentageCoverage: 0.1
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 4869632929779141202, guid: 48b08c1b1e940384ca041b82c445517b, type: 3}
-      _chance: 0.7
-    - _resourcePrefab: {fileID: 2831485062929809176, guid: cf22c4d08bd53384eacc41cfa0fc892f, type: 3}
-      _chance: 0.3
-    _startSpawnChance: 0.5
-    _chanceFollOff: 0.1
-    _groupSize: {x: 11, y: 11}
-    _percentageCoverage: 0.1
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 2530176304263761368, guid: 235436f20323ed24e9c5e0db63316324, type: 3}
-      _chance: 0.6
-    - _resourcePrefab: {fileID: 1190555262996832711, guid: f6b4728fd68c79f4c93b592268c9a0bd, type: 3}
-      _chance: 0.4
-    _startSpawnChance: 0.6
-    _chanceFollOff: 0.1
-    _groupSize: {x: 11, y: 11}
-    _percentageCoverage: 0.2
-  _randomPositionOffset: {x: 0.4, y: 0.4}
 --- !u!114 &311151136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52232,9 +52076,9 @@ MonoBehaviour:
     ReferencedUnityObjects:
     - {fileID: 8129455809263681365, guid: 8ab5d2dcc6474214aa269a5a70f1cf4f, type: 3}
     - {fileID: 2005232625}
-    - {fileID: 11400000, guid: 7336e6a5025141241961e78aa75e1ebb, type: 2}
-    - {fileID: 11400000, guid: 7b92be4ebabfade458de3477a5a9d513, type: 2}
-    - {fileID: 11400000, guid: 3064cc968ae509f4394c2b2d8003aa93, type: 2}
+    - {fileID: 11400000, guid: af97db22d261a5648867b4a97576c56e, type: 2}
+    - {fileID: 11400000, guid: d1e19576a0f8a1a43a2beb7e6346f9a8, type: 2}
+    - {fileID: 11400000, guid: 9977d20ad065b464ead6e53987443076, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -84912,9 +84756,8 @@ GameObject:
   - component: {fileID: 1072076561}
   - component: {fileID: 1072076564}
   - component: {fileID: 1072076563}
-  - component: {fileID: 1072076562}
   m_Layer: 0
-  m_Name: ForestGenerator (1)
+  m_Name: SnowGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84936,83 +84779,6 @@ Transform:
   m_Father: {fileID: 794071549}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1072076562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072076560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b12baa57afa5401fbbfcd2fc3f7ce15b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _randomPointCount: 250
-  _percentageOfAllRandomPoints: 0.3
-  _resourceGroups:
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 3621709206064312194, guid: f48a75173e877f74684191abaf8fa110, type: 3}
-      _chance: 0.7
-    - _resourcePrefab: {fileID: 7237044341157734758, guid: 3a3d70a32154d2a429546d146eeaed0f, type: 3}
-      _chance: 0.3
-    _startSpawnChance: 0.5
-    _chanceFollOff: 0.1
-    _groupSize: {x: 11, y: 11}
-    _percentageCoverage: 0.1
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 2268759984707524892, guid: e21f925273aff0348a747583aff0f3e8, type: 3}
-      _chance: 0.7
-    - _resourcePrefab: {fileID: 9094995047937489891, guid: 5fd6ea4b323a5514684d2b7bdeede518, type: 3}
-      _chance: 0.3
-    _startSpawnChance: 0.8
-    _chanceFollOff: 0.15
-    _groupSize: {x: 17, y: 17}
-    _percentageCoverage: 0.3
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 354067270852212649, guid: 7963bea492054e24faf9683041354201, type: 3}
-      _chance: 1
-    _startSpawnChance: 0.4
-    _chanceFollOff: 0.2
-    _groupSize: {x: 7, y: 7}
-    _percentageCoverage: 0.1
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 4267049502297209857, guid: f640eb45925886549a16238c9f21a408, type: 3}
-      _chance: 0.7
-    - _resourcePrefab: {fileID: 2796837717018697430, guid: bf4800a828a10d945bf4ae578ce8134a, type: 3}
-      _chance: 0.3
-    _startSpawnChance: 0.5
-    _chanceFollOff: 0.1
-    _groupSize: {x: 11, y: 11}
-    _percentageCoverage: 0.1
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 2931861312426724257, guid: b3c4cfc79667508419ca162f1cb0f2f5, type: 3}
-      _chance: 0.7
-    - _resourcePrefab: {fileID: 8432503717114699612, guid: 575195085d5d6404686de488d876220d, type: 3}
-      _chance: 0.3
-    _startSpawnChance: 0.5
-    _chanceFollOff: 0.1
-    _groupSize: {x: 11, y: 11}
-    _percentageCoverage: 0.1
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 4869632929779141202, guid: 48b08c1b1e940384ca041b82c445517b, type: 3}
-      _chance: 0.7
-    - _resourcePrefab: {fileID: 2831485062929809176, guid: cf22c4d08bd53384eacc41cfa0fc892f, type: 3}
-      _chance: 0.3
-    _startSpawnChance: 0.5
-    _chanceFollOff: 0.1
-    _groupSize: {x: 11, y: 11}
-    _percentageCoverage: 0.1
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 2530176304263761368, guid: 235436f20323ed24e9c5e0db63316324, type: 3}
-      _chance: 0.6
-    - _resourcePrefab: {fileID: 1190555262996832711, guid: f6b4728fd68c79f4c93b592268c9a0bd, type: 3}
-      _chance: 0.4
-    _startSpawnChance: 0.6
-    _chanceFollOff: 0.1
-    _groupSize: {x: 11, y: 11}
-    _percentageCoverage: 0.2
-  _randomPositionOffset: {x: 0.4, y: 0.4}
 --- !u!114 &1072076563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85031,9 +84797,9 @@ MonoBehaviour:
     ReferencedUnityObjects:
     - {fileID: 8129455809263681365, guid: 8ab5d2dcc6474214aa269a5a70f1cf4f, type: 3}
     - {fileID: 2005232625}
-    - {fileID: 11400000, guid: 7336e6a5025141241961e78aa75e1ebb, type: 2}
-    - {fileID: 11400000, guid: 7b92be4ebabfade458de3477a5a9d513, type: 2}
-    - {fileID: 11400000, guid: 3064cc968ae509f4394c2b2d8003aa93, type: 2}
+    - {fileID: 11400000, guid: af97db22d261a5648867b4a97576c56e, type: 2}
+    - {fileID: 11400000, guid: d1e19576a0f8a1a43a2beb7e6346f9a8, type: 2}
+    - {fileID: 11400000, guid: 9977d20ad065b464ead6e53987443076, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -88597,9 +88363,8 @@ GameObject:
   - component: {fileID: 1666897397}
   - component: {fileID: 1666897400}
   - component: {fileID: 1666897399}
-  - component: {fileID: 1666897398}
   m_Layer: 0
-  m_Name: SmallForestGenerator (5)
+  m_Name: SmallSnowGenerator (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88621,83 +88386,6 @@ Transform:
   m_Father: {fileID: 794071549}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1666897398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666897396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b12baa57afa5401fbbfcd2fc3f7ce15b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _randomPointCount: 50
-  _percentageOfAllRandomPoints: 0.6
-  _resourceGroups:
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 3621709206064312194, guid: f48a75173e877f74684191abaf8fa110, type: 3}
-      _chance: 0.7
-    - _resourcePrefab: {fileID: 7237044341157734758, guid: 3a3d70a32154d2a429546d146eeaed0f, type: 3}
-      _chance: 0.3
-    _startSpawnChance: 0.5
-    _chanceFollOff: 0.1
-    _groupSize: {x: 11, y: 11}
-    _percentageCoverage: 0.1
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 2268759984707524892, guid: e21f925273aff0348a747583aff0f3e8, type: 3}
-      _chance: 0.7
-    - _resourcePrefab: {fileID: 9094995047937489891, guid: 5fd6ea4b323a5514684d2b7bdeede518, type: 3}
-      _chance: 0.3
-    _startSpawnChance: 0.8
-    _chanceFollOff: 0.15
-    _groupSize: {x: 17, y: 17}
-    _percentageCoverage: 0.3
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 354067270852212649, guid: 7963bea492054e24faf9683041354201, type: 3}
-      _chance: 1
-    _startSpawnChance: 0.4
-    _chanceFollOff: 0.2
-    _groupSize: {x: 7, y: 7}
-    _percentageCoverage: 0.1
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 4267049502297209857, guid: f640eb45925886549a16238c9f21a408, type: 3}
-      _chance: 0.7
-    - _resourcePrefab: {fileID: 2796837717018697430, guid: bf4800a828a10d945bf4ae578ce8134a, type: 3}
-      _chance: 0.3
-    _startSpawnChance: 0.5
-    _chanceFollOff: 0.1
-    _groupSize: {x: 11, y: 11}
-    _percentageCoverage: 0.1
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 2931861312426724257, guid: b3c4cfc79667508419ca162f1cb0f2f5, type: 3}
-      _chance: 0.7
-    - _resourcePrefab: {fileID: 8432503717114699612, guid: 575195085d5d6404686de488d876220d, type: 3}
-      _chance: 0.3
-    _startSpawnChance: 0.5
-    _chanceFollOff: 0.1
-    _groupSize: {x: 11, y: 11}
-    _percentageCoverage: 0.1
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 4869632929779141202, guid: 48b08c1b1e940384ca041b82c445517b, type: 3}
-      _chance: 0.7
-    - _resourcePrefab: {fileID: 2831485062929809176, guid: cf22c4d08bd53384eacc41cfa0fc892f, type: 3}
-      _chance: 0.3
-    _startSpawnChance: 0.5
-    _chanceFollOff: 0.1
-    _groupSize: {x: 11, y: 11}
-    _percentageCoverage: 0.1
-  - _resourcePrefabs:
-    - _resourcePrefab: {fileID: 2530176304263761368, guid: 235436f20323ed24e9c5e0db63316324, type: 3}
-      _chance: 0.6
-    - _resourcePrefab: {fileID: 1190555262996832711, guid: f6b4728fd68c79f4c93b592268c9a0bd, type: 3}
-      _chance: 0.4
-    _startSpawnChance: 0.6
-    _chanceFollOff: 0.1
-    _groupSize: {x: 11, y: 11}
-    _percentageCoverage: 0.2
-  _randomPositionOffset: {x: 0.4, y: 0.4}
 --- !u!114 &1666897399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88716,9 +88404,9 @@ MonoBehaviour:
     ReferencedUnityObjects:
     - {fileID: 8129455809263681365, guid: 8ab5d2dcc6474214aa269a5a70f1cf4f, type: 3}
     - {fileID: 2005232625}
-    - {fileID: 11400000, guid: 7336e6a5025141241961e78aa75e1ebb, type: 2}
-    - {fileID: 11400000, guid: 7b92be4ebabfade458de3477a5a9d513, type: 2}
-    - {fileID: 11400000, guid: 3064cc968ae509f4394c2b2d8003aa93, type: 2}
+    - {fileID: 11400000, guid: af97db22d261a5648867b4a97576c56e, type: 2}
+    - {fileID: 11400000, guid: d1e19576a0f8a1a43a2beb7e6346f9a8, type: 2}
+    - {fileID: 11400000, guid: 9977d20ad065b464ead6e53987443076, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
