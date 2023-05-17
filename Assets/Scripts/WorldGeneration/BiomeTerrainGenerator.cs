@@ -71,11 +71,6 @@ namespace WorldGeneration
             
             var tilePresence = BiomeGenerationHelper.GetTilePresence(_wallTilemap);
 
-            var wallTilemapRenderer = _wallTilemap.GetComponent<TilemapRenderer>();
-            var floorTilemapRenderer = _floorTilemap.GetComponent<TilemapRenderer>();
-            floorTilemapRenderer.sortingOrder = -2;
-            wallTilemapRenderer.mode = TilemapRenderer.Mode.Individual;
-            
             _fireplacePosition = BiomeGenerationHelper.FindLargestCircleCenter(tilePresence);
             
             tilePresence[_fireplacePosition.x, _fireplacePosition.y] = true;

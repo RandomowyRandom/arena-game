@@ -369,7 +369,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -569,6 +569,18 @@ MonoBehaviour:
     BackgroundTexture: {fileID: 0}
     IsBackgroundRecursive: 0
     IsHidden: 0
+  - Type: 0
+    Name: 
+    GameObject: {fileID: 148512814}
+    Ordinal: 9
+    Priority: 0
+    IconType: 1
+    IconTexture: {fileID: 2800000, guid: e0da28959b63ff5409f996f9d8f50ef0, type: 3}
+    IsIconRecursive: 0
+    BackgroundType: 0
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 0
+    IsHidden: 0
 --- !u!1 &117717380
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,6 +697,13 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 1203020499}
+    - {fileID: 1181204804}
+    - {fileID: 623285760}
+    - {fileID: 239283682}
+    - {fileID: 1072076563}
+    - {fileID: 199221490}
+    - {fileID: 311151136}
+    - {fileID: 1666897399}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -696,7 +715,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 1|WorldGeneration.BiomeGroup, Assembly-CSharp
@@ -706,10 +725,19 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 4
     - Name: 
       Entry: 10
       Data: 0
+    - Name: 
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 10
+      Data: 3
     - Name: 
       Entry: 13
       Data: 
@@ -725,6 +753,49 @@ MonoBehaviour:
     - Name: 
       Entry: 4
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|WorldGeneration.BiomeGroup, Assembly-CSharp
+    - Name: _biomeTerrainGenerators
+      Entry: 7
+      Data: 4|System.Collections.Generic.List`1[[WorldGeneration.BiomeTerrainGenerator,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 10
+      Data: 7
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _startingBiomePosition
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 160
+    - Name: 
+      Entry: 4
+      Data: 100
     - Name: 
       Entry: 8
       Data: 
@@ -1184,7 +1255,7 @@ MonoBehaviour:
   _wallTilemap: {fileID: 832224856}
   _floorTilemap: {fileID: 880534248}
   _overlayTilemap: {fileID: 1562453713}
-  _edgeRemovalSize: 3
+  _edgeRemovalSize: 2
 --- !u!114 &199221491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1220,10 +1291,10 @@ MonoBehaviour:
   patternWall: 1
   noiseScaleWall: {x: 0.1, y: 0.1}
   noiseCutoffWall: 0.5
-  randomFloorOverlayChance: 1
+  randomFloorOverlayChance: 30
   randomWallOverlayChance: 1
-  tabSelected: 1
-  generation: 1
+  tabSelected: 2
+  generation: 2
   fillAllTiles: 0
   drawCorners: 1
   drawEmptyTiles: 1
@@ -1358,8 +1429,8 @@ MonoBehaviour:
   randomWallTileObj_14: {fileID: 5020728210928582457, guid: a6ccd4ba6ecfe2b4392943c65f1c4644, type: 3}
   randomWallTileObj_15: {fileID: 5020728210928582457, guid: 76b3f3c9defbdf342989adb6e03cd10a, type: 3}
   emptyTile: {fileID: 11400000, guid: 7336e6a5025141241961e78aa75e1ebb, type: 2}
-  patternFloorTile: {fileID: 11400000, guid: 0b31d0ae6e94a7a4e8ecbd3f712fc44c, type: 2}
-  randomFloorTile: {fileID: 11400000, guid: 3034e2fc1dd02dd458a202af9295f560, type: 2}
+  patternFloorTile: {fileID: 0}
+  randomFloorTile: {fileID: 0}
   floorTile_1: {fileID: 11400000, guid: 7b92be4ebabfade458de3477a5a9d513, type: 2}
   floorTile_2: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_3: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
@@ -51603,7 +51674,7 @@ MonoBehaviour:
   _wallTilemap: {fileID: 1822175083}
   _floorTilemap: {fileID: 751780009}
   _overlayTilemap: {fileID: 2062612077}
-  _edgeRemovalSize: 3
+  _edgeRemovalSize: 2
 --- !u!114 &239283683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51639,10 +51710,10 @@ MonoBehaviour:
   patternWall: 1
   noiseScaleWall: {x: 0.1, y: 0.1}
   noiseCutoffWall: 0.5
-  randomFloorOverlayChance: 1
+  randomFloorOverlayChance: 30
   randomWallOverlayChance: 1
-  tabSelected: 1
-  generation: 1
+  tabSelected: 2
+  generation: 2
   fillAllTiles: 0
   drawCorners: 1
   drawEmptyTiles: 1
@@ -51777,8 +51848,8 @@ MonoBehaviour:
   randomWallTileObj_14: {fileID: 5020728210928582457, guid: a6ccd4ba6ecfe2b4392943c65f1c4644, type: 3}
   randomWallTileObj_15: {fileID: 5020728210928582457, guid: 76b3f3c9defbdf342989adb6e03cd10a, type: 3}
   emptyTile: {fileID: 11400000, guid: 7336e6a5025141241961e78aa75e1ebb, type: 2}
-  patternFloorTile: {fileID: 11400000, guid: 0b31d0ae6e94a7a4e8ecbd3f712fc44c, type: 2}
-  randomFloorTile: {fileID: 11400000, guid: 3034e2fc1dd02dd458a202af9295f560, type: 2}
+  patternFloorTile: {fileID: 0}
+  randomFloorTile: {fileID: 0}
   floorTile_1: {fileID: 11400000, guid: 7b92be4ebabfade458de3477a5a9d513, type: 2}
   floorTile_2: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_3: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
@@ -51942,7 +52013,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 356529585}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &284097799
 TilemapRenderer:
@@ -51984,7 +52055,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -52193,7 +52264,7 @@ MonoBehaviour:
   _wallTilemap: {fileID: 1286868078}
   _floorTilemap: {fileID: 735430192}
   _overlayTilemap: {fileID: 2000856495}
-  _edgeRemovalSize: 3
+  _edgeRemovalSize: 2
 --- !u!114 &311151137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52229,10 +52300,10 @@ MonoBehaviour:
   patternWall: 1
   noiseScaleWall: {x: 0.1, y: 0.1}
   noiseCutoffWall: 0.5
-  randomFloorOverlayChance: 1
+  randomFloorOverlayChance: 30
   randomWallOverlayChance: 1
-  tabSelected: 1
-  generation: 1
+  tabSelected: 2
+  generation: 2
   fillAllTiles: 0
   drawCorners: 1
   drawEmptyTiles: 1
@@ -52367,8 +52438,8 @@ MonoBehaviour:
   randomWallTileObj_14: {fileID: 5020728210928582457, guid: a6ccd4ba6ecfe2b4392943c65f1c4644, type: 3}
   randomWallTileObj_15: {fileID: 5020728210928582457, guid: 76b3f3c9defbdf342989adb6e03cd10a, type: 3}
   emptyTile: {fileID: 11400000, guid: 7336e6a5025141241961e78aa75e1ebb, type: 2}
-  patternFloorTile: {fileID: 11400000, guid: 0b31d0ae6e94a7a4e8ecbd3f712fc44c, type: 2}
-  randomFloorTile: {fileID: 11400000, guid: 3034e2fc1dd02dd458a202af9295f560, type: 2}
+  patternFloorTile: {fileID: 0}
+  randomFloorTile: {fileID: 0}
   floorTile_1: {fileID: 11400000, guid: 7b92be4ebabfade458de3477a5a9d513, type: 2}
   floorTile_2: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_3: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
@@ -52530,9 +52601,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1316503928}
   - {fileID: 353264140}
   - {fileID: 1125302464}
-  - {fileID: 1316503928}
   m_Father: {fileID: 623285758}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -81589,7 +81660,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 324536900}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &353264141
 TilemapRenderer:
@@ -81631,7 +81702,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -81707,9 +81778,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1894928983}
   - {fileID: 284097798}
   - {fileID: 1163907670}
-  - {fileID: 1894928983}
   m_Father: {fileID: 1666897397}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -82221,7 +82292,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2135199355}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &531071656
 TilemapRenderer:
@@ -82263,7 +82334,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -82583,7 +82654,7 @@ MonoBehaviour:
   _wallTilemap: {fileID: 1125302466}
   _floorTilemap: {fileID: 353264142}
   _overlayTilemap: {fileID: 1316503930}
-  _edgeRemovalSize: 3
+  _edgeRemovalSize: 2
 --- !u!114 &623285761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82619,10 +82690,10 @@ MonoBehaviour:
   patternWall: 1
   noiseScaleWall: {x: 0.1, y: 0.1}
   noiseCutoffWall: 0.5
-  randomFloorOverlayChance: 1
+  randomFloorOverlayChance: 30
   randomWallOverlayChance: 1
-  tabSelected: 1
-  generation: 1
+  tabSelected: 2
+  generation: 2
   fillAllTiles: 0
   drawCorners: 1
   drawEmptyTiles: 1
@@ -82757,8 +82828,8 @@ MonoBehaviour:
   randomWallTileObj_14: {fileID: 5020728210928582457, guid: a6ccd4ba6ecfe2b4392943c65f1c4644, type: 3}
   randomWallTileObj_15: {fileID: 5020728210928582457, guid: 76b3f3c9defbdf342989adb6e03cd10a, type: 3}
   emptyTile: {fileID: 11400000, guid: 7336e6a5025141241961e78aa75e1ebb, type: 2}
-  patternFloorTile: {fileID: 11400000, guid: 0b31d0ae6e94a7a4e8ecbd3f712fc44c, type: 2}
-  randomFloorTile: {fileID: 11400000, guid: 3034e2fc1dd02dd458a202af9295f560, type: 2}
+  patternFloorTile: {fileID: 0}
+  randomFloorTile: {fileID: 0}
   floorTile_1: {fileID: 11400000, guid: 7b92be4ebabfade458de3477a5a9d513, type: 2}
   floorTile_2: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_3: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
@@ -82953,7 +83024,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1881154906}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &695551096
 TilemapRenderer:
@@ -82995,7 +83066,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -83073,7 +83144,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1068272467}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &735430191
 TilemapRenderer:
@@ -83115,7 +83186,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -83193,7 +83264,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2135199355}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &748520378
 TilemapRenderer:
@@ -83235,7 +83306,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -83313,7 +83384,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 860267220}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &751780008
 TilemapRenderer:
@@ -83355,7 +83426,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -83666,7 +83737,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1876302116}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &832224855
 TilemapRenderer:
@@ -83795,9 +83866,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2062612075}
   - {fileID: 751780007}
   - {fileID: 1822175081}
-  - {fileID: 2062612075}
   m_Father: {fileID: 239283680}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -83844,7 +83915,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1801357582}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &874418606
 TilemapRenderer:
@@ -83886,7 +83957,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -83964,7 +84035,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1876302116}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &880534247
 TilemapRenderer:
@@ -84006,7 +84077,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -84366,7 +84437,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1881154906}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &948244557
 TilemapRenderer:
@@ -84408,7 +84479,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -84562,7 +84633,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1801357582}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &991249731
 TilemapRenderer:
@@ -84604,7 +84675,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -84812,9 +84883,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2000856493}
   - {fileID: 735430190}
   - {fileID: 1286868076}
-  - {fileID: 2000856493}
   m_Father: {fileID: 311151134}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -85028,10 +85099,10 @@ MonoBehaviour:
   patternWall: 1
   noiseScaleWall: {x: 0.1, y: 0.1}
   noiseCutoffWall: 0.5
-  randomFloorOverlayChance: 1
+  randomFloorOverlayChance: 35
   randomWallOverlayChance: 1
-  tabSelected: 1
-  generation: 1
+  tabSelected: 2
+  generation: 2
   fillAllTiles: 0
   drawCorners: 1
   drawEmptyTiles: 1
@@ -85166,8 +85237,8 @@ MonoBehaviour:
   randomWallTileObj_14: {fileID: 5020728210928582457, guid: a6ccd4ba6ecfe2b4392943c65f1c4644, type: 3}
   randomWallTileObj_15: {fileID: 5020728210928582457, guid: 76b3f3c9defbdf342989adb6e03cd10a, type: 3}
   emptyTile: {fileID: 11400000, guid: 7336e6a5025141241961e78aa75e1ebb, type: 2}
-  patternFloorTile: {fileID: 11400000, guid: 0b31d0ae6e94a7a4e8ecbd3f712fc44c, type: 2}
-  randomFloorTile: {fileID: 11400000, guid: 3034e2fc1dd02dd458a202af9295f560, type: 2}
+  patternFloorTile: {fileID: 0}
+  randomFloorTile: {fileID: 0}
   floorTile_1: {fileID: 11400000, guid: 7b92be4ebabfade458de3477a5a9d513, type: 2}
   floorTile_2: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_3: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
@@ -85652,7 +85723,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 324536900}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1125302465
 TilemapRenderer:
@@ -85907,7 +85978,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 356529585}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1163907671
 TilemapRenderer:
@@ -86260,7 +86331,7 @@ MonoBehaviour:
   _wallTilemap: {fileID: 1256570584}
   _floorTilemap: {fileID: 748520379}
   _overlayTilemap: {fileID: 531071657}
-  _edgeRemovalSize: 3
+  _edgeRemovalSize: 2
 --- !u!114 &1181204805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86296,10 +86367,10 @@ MonoBehaviour:
   patternWall: 1
   noiseScaleWall: {x: 0.1, y: 0.1}
   noiseCutoffWall: 0.5
-  randomFloorOverlayChance: 1
+  randomFloorOverlayChance: 30
   randomWallOverlayChance: 1
-  tabSelected: 1
-  generation: 1
+  tabSelected: 2
+  generation: 2
   fillAllTiles: 0
   drawCorners: 1
   drawEmptyTiles: 1
@@ -86434,8 +86505,8 @@ MonoBehaviour:
   randomWallTileObj_14: {fileID: 5020728210928582457, guid: a6ccd4ba6ecfe2b4392943c65f1c4644, type: 3}
   randomWallTileObj_15: {fileID: 5020728210928582457, guid: 76b3f3c9defbdf342989adb6e03cd10a, type: 3}
   emptyTile: {fileID: 11400000, guid: 7336e6a5025141241961e78aa75e1ebb, type: 2}
-  patternFloorTile: {fileID: 11400000, guid: 0b31d0ae6e94a7a4e8ecbd3f712fc44c, type: 2}
-  randomFloorTile: {fileID: 11400000, guid: 3034e2fc1dd02dd458a202af9295f560, type: 2}
+  patternFloorTile: {fileID: 0}
+  randomFloorTile: {fileID: 0}
   floorTile_1: {fileID: 11400000, guid: 7b92be4ebabfade458de3477a5a9d513, type: 2}
   floorTile_2: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_3: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
@@ -86634,10 +86705,10 @@ MonoBehaviour:
   chunkChance3x3: 100
   patternFloor: 1
   noiseScaleFloor: {x: 0.1, y: 0.1}
-  noiseCutoffFloor: 0.491
+  noiseCutoffFloor: 0.5
   patternWall: 1
   noiseScaleWall: {x: 0.1, y: 0.1}
-  noiseCutoffWall: 0.463
+  noiseCutoffWall: 0.5
   randomFloorOverlayChance: 35
   randomWallOverlayChance: 0
   tabSelected: 2
@@ -87172,7 +87243,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2135199355}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1256570583
 TilemapRenderer:
@@ -87328,7 +87399,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1068272467}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1286868077
 TilemapRenderer:
@@ -87448,7 +87519,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 324536900}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1316503929
 TilemapRenderer:
@@ -87490,7 +87561,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -88199,7 +88270,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1876302116}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1562453712
 TilemapRenderer:
@@ -88241,7 +88312,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -88319,7 +88390,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1801357582}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1595489378
 TilemapRenderer:
@@ -88677,7 +88748,7 @@ MonoBehaviour:
   _wallTilemap: {fileID: 1163907672}
   _floorTilemap: {fileID: 284097800}
   _overlayTilemap: {fileID: 1894928985}
-  _edgeRemovalSize: 3
+  _edgeRemovalSize: 2
 --- !u!114 &1666897400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88709,14 +88780,14 @@ MonoBehaviour:
   chunkChance3x3: 0
   patternFloor: 1
   noiseScaleFloor: {x: 0.1, y: 0.1}
-  noiseCutoffFloor: 1
+  noiseCutoffFloor: 0.5
   patternWall: 1
   noiseScaleWall: {x: 0.1, y: 0.1}
   noiseCutoffWall: 0.5
-  randomFloorOverlayChance: 0
+  randomFloorOverlayChance: 30
   randomWallOverlayChance: 0
-  tabSelected: 1
-  generation: 1
+  tabSelected: 2
+  generation: 2
   fillAllTiles: 0
   drawCorners: 1
   drawEmptyTiles: 1
@@ -88851,8 +88922,8 @@ MonoBehaviour:
   randomWallTileObj_14: {fileID: 5020728210928582457, guid: a6ccd4ba6ecfe2b4392943c65f1c4644, type: 3}
   randomWallTileObj_15: {fileID: 5020728210928582457, guid: 76b3f3c9defbdf342989adb6e03cd10a, type: 3}
   emptyTile: {fileID: 11400000, guid: 7336e6a5025141241961e78aa75e1ebb, type: 2}
-  patternFloorTile: {fileID: 11400000, guid: 0b31d0ae6e94a7a4e8ecbd3f712fc44c, type: 2}
-  randomFloorTile: {fileID: 11400000, guid: 3034e2fc1dd02dd458a202af9295f560, type: 2}
+  patternFloorTile: {fileID: 0}
+  randomFloorTile: {fileID: 0}
   floorTile_1: {fileID: 11400000, guid: 7b92be4ebabfade458de3477a5a9d513, type: 2}
   floorTile_2: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
   floorTile_3: {fileID: 11400000, guid: 75fd690a6559d6a478631d7d957a9d13, type: 2}
@@ -89621,9 +89692,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 991249730}
   - {fileID: 874418605}
   - {fileID: 1595489377}
-  - {fileID: 991249730}
   m_Father: {fileID: 1072076561}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -89670,7 +89741,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 860267220}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1822175082
 TilemapRenderer:
@@ -89850,9 +89921,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1562453711}
   - {fileID: 880534246}
   - {fileID: 832224854}
-  - {fileID: 1562453711}
   m_Father: {fileID: 199221488}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -89897,8 +89968,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 948244556}
   - {fileID: 695551095}
+  - {fileID: 948244556}
   - {fileID: 42369312}
   m_Father: {fileID: 1203020497}
   m_RootOrder: 0
@@ -89946,7 +90017,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 356529585}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1894928984
 TilemapRenderer:
@@ -89988,7 +90059,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -90149,7 +90220,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1068272467}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &2000856494
 TilemapRenderer:
@@ -90191,7 +90262,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -90524,7 +90595,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 860267220}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &2062612076
 TilemapRenderer:
@@ -90566,7 +90637,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -90752,9 +90823,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 531071655}
   - {fileID: 748520377}
   - {fileID: 1256570582}
-  - {fileID: 531071655}
   m_Father: {fileID: 1181204802}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
