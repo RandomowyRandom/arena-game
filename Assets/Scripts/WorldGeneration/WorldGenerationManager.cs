@@ -60,7 +60,7 @@ namespace WorldGeneration
         
         private bool IsDirectionTooClose(Vector2 direction, List<Vector2> listOfTakenDirections)
         {
-            return listOfTakenDirections.Any(takenDirection => Vector2.Distance(direction, takenDirection) < .3f);
+            return listOfTakenDirections.Any(takenDirection => Vector2.Distance(direction, takenDirection) < .4f);
         }
     }
 }
