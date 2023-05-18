@@ -12,10 +12,15 @@ namespace MusicSystem
     {
         [SerializeField]
         private Playlist _playlist;
+        
+        [SerializeField] [Range(0f, 1f)]
+        private float _maxVolume = 1f;
 
         private AudioSource _audioSource;
         
         private IWaveManager _waveManager;
+        
+        private bool _isLocked;
         
         private void Awake()
         {
@@ -58,7 +63,7 @@ namespace MusicSystem
             var transitionTrack = _playlist.CombatEndClip;
             var track = _playlist.OutOfCombatClips.GetRandomElement();
             await PlayTrackUntilFinished(transitionTrack, 0f, 1f);
-            
+
             PlayTrack(track, 1f, 1f);
             _audioSource.loop = true;
         }
@@ -75,7 +80,7 @@ namespace MusicSystem
             {
                 _audioSource.clip = clip;
                 _audioSource.Play();
-                DOTween.To(() => _audioSource.volume, x => _audioSource.volume = x, 1f, toTime);
+                DOTween.To(() => _audioSource.volume, x => _audioSource.volume = x, _maxVolume, toTime);
             });
         }
 

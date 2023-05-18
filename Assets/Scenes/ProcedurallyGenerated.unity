@@ -83094,6 +83094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playlist: {fileID: 11400000, guid: 3097949dbb689f24c98b0e4c7e4b6dcd, type: 2}
+  _maxVolume: 0.35
 --- !u!82 &519420035
 AudioSource:
   m_ObjectHideFlags: 0
