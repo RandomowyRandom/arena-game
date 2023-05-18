@@ -14,5 +14,6 @@
         WaveFactory,
         Buff,
         Potion,
+        Playlist,
     }
 }
