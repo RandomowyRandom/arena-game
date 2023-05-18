@@ -278,5 +278,5 @@ MonoBehaviour:
   _icon: {fileID: 21300000, guid: 2f2d92fe68dbb7444a076303b89d1163, type: 3}
   _description: Wooden range
   _maxStack: 1
-  _consumeOnUse: 0
+  _requiredLevel: 1
   _damageIncreasePerLevel: 0.35

@@ -19,20 +19,24 @@ namespace InteractionSystem
         
         private void FixedUpdate()
         {
-            if(_intractables.Count == 0)
-                return;
-            
             var newInteractable = GetNearestInteractable();
 
             if (newInteractable == _currentInteractable)
                 return;
+
+            if (newInteractable == null)
+            {
+                _currentInteractable?.OnHandlerExit(this);
+                _currentInteractable = null;
+                return;
+            }
             
             _currentInteractable = newInteractable;
             
             foreach (var interactable in _intractables.Where(interactable => interactable != _currentInteractable))
-                interactable.OnHandlerExit(this);
+                interactable?.OnHandlerExit(this);
             
-            _currentInteractable.OnHandlerEnter(this);
+            _currentInteractable?.OnHandlerEnter(this);
         }
 
         private void Update()
@@ -51,8 +55,6 @@ namespace InteractionSystem
                 return;
             
             _intractables.Add(interactable);
-            
-            interactable.OnHandlerEnter(this);
         }
         
         public void OnInteractableExit(GameObject collision)
@@ -63,20 +65,18 @@ namespace InteractionSystem
                 return;
             
             _intractables.Remove(interactable);
-            
-            interactable.OnHandlerExit(this);
-            
-            if(_currentInteractable == interactable)
-                _currentInteractable = null;
         }
 
         private IInteractable GetNearestInteractable()
         {
-            return _intractables.OrderBy
-                (x => Vector3.Distance(
-                    x.GameObject.transform.position,
-                    transform.position))
-                .FirstOrDefault();
+            var interactables = _intractables.OrderBy
+            (x => Vector3.Distance(
+                x.GameObject.transform.position,
+                transform.position)).ToList();
+            
+            interactables = interactables.Where(x => x != null).ToList();
+            
+            return interactables.FirstOrDefault();
         }
     }
 }

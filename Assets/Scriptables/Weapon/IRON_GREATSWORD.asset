@@ -293,4 +293,5 @@ MonoBehaviour:
   _icon: {fileID: 21300000, guid: 258d67aab4db66748a6ea72916e130e3, type: 3}
   _description: 
   _maxStack: 1
+  _requiredLevel: 5
   _damageIncreasePerLevel: 2

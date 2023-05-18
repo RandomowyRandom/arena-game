@@ -16,9 +16,7 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 8669758350897948235, guid: 7d3cd3ae9b1648548831cb045427d491, type: 3}
-    - {fileID: 4787323143279092637, guid: dffa238d7402ec54facd178c2430668a, type: 3}
-    - {fileID: 662719082333613600, guid: f68f8653e394e8840b0feb31c77aebe3, type: 3}
+    - {fileID: 3535736021708267638, guid: f9716007508942d47bf4efaf9273ab30, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -114,7 +112,7 @@ MonoBehaviour:
       Data: 650
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 1
+      Data: 0
     - Name: _levelInfo
       Entry: 6
       Data: 
@@ -132,7 +130,7 @@ MonoBehaviour:
       Data: 780
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 1
+      Data: 0
     - Name: _levelInfo
       Entry: 1
       Data: You can now mine <color="yellow"><size=120%>GOLD
@@ -150,7 +148,7 @@ MonoBehaviour:
       Data: 910
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 1
+      Data: 0
     - Name: _levelInfo
       Entry: 6
       Data: 
@@ -168,7 +166,7 @@ MonoBehaviour:
       Data: 1040
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 1
+      Data: 0
     - Name: _levelInfo
       Entry: 6
       Data: 
@@ -186,7 +184,7 @@ MonoBehaviour:
       Data: 1170
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 1
+      Data: 0
     - Name: _levelInfo
       Entry: 6
       Data: 
@@ -204,7 +202,7 @@ MonoBehaviour:
       Data: 1300
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 2
+      Data: 0
     - Name: _levelInfo
       Entry: 1
       Data: You can now mine <color="green"><size=120%>MITHRIL
@@ -222,7 +220,7 @@ MonoBehaviour:
       Data: 1430
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 2
+      Data: 0
     - Name: _levelInfo
       Entry: 6
       Data: 
@@ -240,7 +238,7 @@ MonoBehaviour:
       Data: 1560
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 2
+      Data: 0
     - Name: _levelInfo
       Entry: 6
       Data: 
@@ -258,7 +256,7 @@ MonoBehaviour:
       Data: 1690
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 2
+      Data: 0
     - Name: _levelInfo
       Entry: 6
       Data: 
@@ -276,7 +274,7 @@ MonoBehaviour:
       Data: 1820
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 2
+      Data: 0
     - Name: _levelInfo
       Entry: 6
       Data: 
@@ -294,7 +292,7 @@ MonoBehaviour:
       Data: 1950
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 2
+      Data: 0
     - Name: _levelInfo
       Entry: 6
       Data: 
@@ -312,7 +310,7 @@ MonoBehaviour:
       Data: 2080
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 2
+      Data: 0
     - Name: _levelInfo
       Entry: 6
       Data: 
@@ -330,7 +328,7 @@ MonoBehaviour:
       Data: 2210
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 2
+      Data: 0
     - Name: _levelInfo
       Entry: 6
       Data: 
@@ -348,7 +346,7 @@ MonoBehaviour:
       Data: 2340
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 2
+      Data: 0
     - Name: _levelInfo
       Entry: 6
       Data: 
@@ -366,7 +364,7 @@ MonoBehaviour:
       Data: 2470
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 2
+      Data: 0
     - Name: _levelInfo
       Entry: 6
       Data: 
@@ -384,7 +382,7 @@ MonoBehaviour:
       Data: 2600
     - Name: _levelRewardPrefab
       Entry: 10
-      Data: 2
+      Data: 0
     - Name: _levelInfo
       Entry: 6
       Data: 

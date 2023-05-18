@@ -42,5 +42,20 @@ namespace Items
             Debug.LogError($"Item with key {key} not found in database {name}.");
             throw new NotImplementedException();
         }
+        
+        public List<ItemData> GetItemDataByQuery(Func<ItemData, bool> query)
+        {
+            RefreshDatabase();
+            
+            var items = new List<ItemData>();
+
+            foreach (var item in _items.Values)
+            {
+                if (query(item))
+                    items.Add(item);
+            }
+
+            return items;
+        }
     }
 }
