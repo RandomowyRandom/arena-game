@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211de1395bdc4a2c822b21916eceee9a, type: 3}
+  m_Name: Forest
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _outOfCombatClips:
+  - {fileID: 8300000, guid: 0979b2939d9013f4b89a9382852320ae, type: 3}
+  - {fileID: 8300000, guid: f82a39023b2687649a071457f13ce8ac, type: 3}
+  _combatClip: {fileID: 8300000, guid: 3f6dcf1192445d84bb227a75aebec1d2, type: 3}
+  _combatEndClip: {fileID: 8300000, guid: 635a543b562c5c442a189c31faf2315c, type: 3}
+  _bossClip: {fileID: 8300000, guid: 3f6dcf1192445d84bb227a75aebec1d2, type: 3}
