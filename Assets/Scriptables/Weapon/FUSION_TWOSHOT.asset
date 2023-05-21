@@ -357,5 +357,5 @@ MonoBehaviour:
   _icon: {fileID: 21300000, guid: e2ded97f8d26b3d48a7d7363a3d56cfe, type: 3}
   _description: Shoots two sharp arrows
   _maxStack: 1
-  _consumeOnUse: 0
+  _requiredLevel: 10
   _damageIncreasePerLevel: 1

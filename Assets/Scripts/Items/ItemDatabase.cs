@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Common.Attributes;
 using Items.ItemDataSystem;
 using Sirenix.OdinInspector;
@@ -41,6 +42,26 @@ namespace Items
             
             Debug.LogError($"Item with key {key} not found in database {name}.");
             throw new NotImplementedException();
+        }
+        
+        public List<ItemData> GetItemDataByQuery(Func<ItemData, bool> query)
+        {
+            RefreshDatabase();
+            
+            var items = new List<ItemData>();
+
+            foreach (var item in _items.Values)
+            {
+                if (query(item))
+                    items.Add(item);
+            }
+
+            return items;
+        }
+
+        public List<ItemData> GetItemData()
+        {
+            return new List<ItemData>(_items.Values.ToList());
         }
     }
 }

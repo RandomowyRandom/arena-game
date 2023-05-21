@@ -19,6 +19,9 @@ namespace Items.ItemDataSystem
         
         [SerializeField]
         private int _maxStack;
+        
+        [SerializeField]
+        private int _requiredLevel;
 
         public string Key => name;
         
@@ -31,6 +34,8 @@ namespace Items.ItemDataSystem
         public int MaxStack => _maxStack;
         
         public bool IsStackable => _maxStack > 1;
+        
+        public int RequiredLevel => _requiredLevel;
 
         public override string ToString()
         {

@@ -5895,6 +5895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 781ff06c07b1429e8d76579421ba9a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rewardSpawnEffectPrefab: {fileID: 7766573361684570618, guid: fd7917e54b4722f46996efa6dbd66a4b, type: 3}
 --- !u!114 &2005232580
 MonoBehaviour:
   m_ObjectHideFlags: 0

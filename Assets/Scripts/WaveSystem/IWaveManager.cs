@@ -1,5 +1,6 @@
 ﻿using System;
 using ServiceLocator;
+using UnityEngine;
 
 namespace WaveSystem
 {
@@ -11,6 +12,8 @@ namespace WaveSystem
         public event Action<SubWave> OnSubWaveEnd;
         
         public bool IsWaveInProgress { get; }
+        
+        public GameObject GameObject { get; }
         
         public void SetWave(Wave wave);
         
