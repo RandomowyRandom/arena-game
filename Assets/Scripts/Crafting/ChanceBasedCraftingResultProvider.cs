@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using Items;
+using Items.ItemDataSystem;
+using Items.RaritySystem;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
@@ -14,18 +16,20 @@ namespace Crafting
         [OdinSerialize]
         private List<ChanceBasedCraftingResult> _possibleResults;
         
-        [Button]
-        private void SetDefaultChances()
+        public void SetDefaultChances(List<GearRarity> rarities, ItemData item)
         {
-            _possibleResults.Clear();
+            _possibleResults = new();
             var chances = new[] { 0.04f, 0.08f, 0.25f, 0.5f, 1f };
 
-            foreach (var chance in chances)
+            for (var i = 0; i < chances.Length; i++)
             {
+                var chance = chances[i];
+                var rarity = rarities[i];
+                
                 _possibleResults.Add(new ChanceBasedCraftingResult
                 {
                     Chance = chance,
-                    Result = null
+                    Result = new Item(item, 1, rarity)
                 });
             }
         }

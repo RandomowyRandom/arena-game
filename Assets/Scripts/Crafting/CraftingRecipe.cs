@@ -20,13 +20,23 @@ namespace Crafting
         [OdinSerialize]
         private int _requiredLevel;
         
-        public List<Item> Ingredients => _ingredients;
+        public List<Item> Ingredients
+        {
+            get => _ingredients;
+            set => _ingredients = value;
+        }
+
         public Item Result => _resultProvider.GetResult();
         
         public int RequiredLevel => _requiredLevel;
         
         public string Key => name;
 
+        public void SetResultProvider(ICraftingResultProvider resultProvider)
+        {
+            _resultProvider = resultProvider;
+        } 
+        
         [InfoBox("Runtime only")]
         [Button]
         private void AddNeededItems()

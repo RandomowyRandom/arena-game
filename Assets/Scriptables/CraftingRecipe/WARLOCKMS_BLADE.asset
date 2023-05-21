@@ -15,17 +15,221 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: ecae45177ab6ddb45b0c3f02a5e26c5c, type: 2}
+    - {fileID: 11400000, guid: 581c6410b37e70f4799d4ab3349b7b49, type: 2}
+    - {fileID: 11400000, guid: 7c2fce353265b73449e040c3678cc176, type: 2}
+    - {fileID: 11400000, guid: f8524364b90bc7846bed42cbe95ed146, type: 2}
+    - {fileID: 11400000, guid: 5c3c3f83f3bff214caedaf5ea0b51356, type: 2}
+    - {fileID: 11400000, guid: cea9beb5a9fdacc448777c52afac584b, type: 2}
+    - {fileID: 11400000, guid: d8917f73eb0309040ad9ef636dc22eae, type: 2}
+    - {fileID: 11400000, guid: a24912256fd91a845bd6f489827a3d3b, type: 2}
+    - {fileID: 11400000, guid: 7ff96bf0ebbc025429ee488993903671, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
     - Name: _ingredients
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Items.Item, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 1|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 0
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: _gearRarity
       Entry: 6
       Data: 
-    - Name: _resultProvider
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 1
+    - Name: _amount
+      Entry: 3
+      Data: 24
+    - Name: _gearRarity
       Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 2
+    - Name: _amount
+      Entry: 3
+      Data: 4
+    - Name: _gearRarity
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _resultProvider
+      Entry: 7
+      Data: 4|Crafting.ChanceBasedCraftingResultProvider, Assembly-CSharp
+    - Name: _possibleResults
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[Crafting.ChanceBasedCraftingResultProvider+ChanceBasedCraftingResult,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: 6|Crafting.ChanceBasedCraftingResultProvider+ChanceBasedCraftingResult,
+        Assembly-CSharp
+    - Name: _result
+      Entry: 7
+      Data: 7|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 3
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: _gearRarity
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _chance
+      Entry: 4
+      Data: 0.04
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 8|Crafting.ChanceBasedCraftingResultProvider+ChanceBasedCraftingResult,
+        Assembly-CSharp
+    - Name: _result
+      Entry: 7
+      Data: 9|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 3
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: _gearRarity
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _chance
+      Entry: 4
+      Data: 0.08
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 10|Crafting.ChanceBasedCraftingResultProvider+ChanceBasedCraftingResult,
+        Assembly-CSharp
+    - Name: _result
+      Entry: 7
+      Data: 11|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 3
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: _gearRarity
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _chance
+      Entry: 4
+      Data: 0.25
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 12|Crafting.ChanceBasedCraftingResultProvider+ChanceBasedCraftingResult,
+        Assembly-CSharp
+    - Name: _result
+      Entry: 7
+      Data: 13|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 3
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: _gearRarity
+      Entry: 10
+      Data: 7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _chance
+      Entry: 4
+      Data: 0.5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 14|Crafting.ChanceBasedCraftingResultProvider+ChanceBasedCraftingResult,
+        Assembly-CSharp
+    - Name: _result
+      Entry: 7
+      Data: 15|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 3
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: _gearRarity
+      Entry: 10
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _chance
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: _requiredLevel
       Entry: 3
