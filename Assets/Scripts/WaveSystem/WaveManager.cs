@@ -21,6 +21,7 @@ namespace WaveSystem
         public event Action<SubWave> OnSubWaveEnd;
 
         public bool IsWaveInProgress { get; private set; }
+        public GameObject GameObject => gameObject;
 
         private Wave _wave;
         

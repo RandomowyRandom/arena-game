@@ -30,12 +30,18 @@ namespace InteractionSystem
 
         public void Show()
         {
+            if(this == null)
+                return;
+            
             transform.DOLocalMove( _initialPosition + Vector2.up * 0.5f, .18f);
             _textComponent.DOFade(1, .18f);
         }
         
         public void Hide()
         {
+            if(this == null)
+                return;
+            
             transform.DOLocalMove(_initialPosition, .18f);
             _textComponent.DOFade(0, .18f);
         }

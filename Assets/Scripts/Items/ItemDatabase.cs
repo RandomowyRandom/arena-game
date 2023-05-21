@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Common.Attributes;
 using Items.ItemDataSystem;
 using Sirenix.OdinInspector;
@@ -56,6 +57,11 @@ namespace Items
             }
 
             return items;
+        }
+
+        public List<ItemData> GetItemData()
+        {
+            return new List<ItemData>(_items.Values.ToList());
         }
     }
 }

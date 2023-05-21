@@ -18,12 +18,18 @@ namespace InteractionSystem
 
         public void Show()
         {
-            _spriteRenderer.material.SetFloat(_outlinePixelWidth, 1f);
+            if(this == null)
+                return;
+            
+            _spriteRenderer?.material.SetFloat(_outlinePixelWidth, 1f);
         }
         
         public void Hide()
         {
-            _spriteRenderer.material.SetFloat(_outlinePixelWidth, 0f);
+            if(this == null)
+                return;
+            
+            _spriteRenderer?.material.SetFloat(_outlinePixelWidth, 0f);
         }
     }
 }

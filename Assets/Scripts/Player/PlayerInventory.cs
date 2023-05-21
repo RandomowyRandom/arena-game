@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using ConsoleExtensions.Suggestors;
 using Inventory;
 using Inventory.Interfaces;
 using Items;
+using Items.ItemDataSystem;
 using Items.RaritySystem;
 using JetBrains.Annotations;
 using Player.Interfaces;
@@ -32,7 +34,7 @@ namespace Player
         public int Capacity => _inventory.Capacity + _hotbar.Capacity;
         public bool IsFull => _inventory.IsFull && _hotbar.IsFull;
         public Item[] Items => _inventory.Items.Concat(_hotbar.Items).ToArray();
-
+        
         private void Awake()
         {
             ServiceLocator.ServiceLocator.Instance.Register<IPlayerInventory>(this);
@@ -126,7 +128,7 @@ namespace Player
         
         
         [Command("add-item")] [UsedImplicitly]
-        private void CommandAddItem(string key, int amount)
+        private void CommandAddItem([ItemDataKey] string key, int amount)
         {
             var itemData = _itemDatabase.GetItemData(key);
             if (itemData == null)
@@ -141,7 +143,7 @@ namespace Player
         }
         
         [Command("remove-item")] [UsedImplicitly]
-        private void CommandRemoveItem(string key, int amount)
+        private void CommandRemoveItem([ItemDataKey] string key, int amount)
         {
             var itemData = _itemDatabase.GetItemData(key);
             if (itemData == null)

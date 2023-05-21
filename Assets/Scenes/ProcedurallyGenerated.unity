@@ -95000,6 +95000,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Systems
       objectReference: {fileID: 0}
+    - target: {fileID: 6676982659674018609, guid: d70e097a41bc7124486ce601567a54de, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 4087
+      objectReference: {fileID: 0}
     - target: {fileID: 6677589889404420261, guid: d70e097a41bc7124486ce601567a54de, type: 3}
       propertyPath: _activateOnStartup
       value: 0
