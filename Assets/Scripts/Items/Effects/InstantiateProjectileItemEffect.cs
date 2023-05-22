@@ -25,6 +25,9 @@ namespace Items.Effects
         private float _force = 25;
         
         [SerializeField]
+        private float _damageMultiplier = 1f;
+        
+        [SerializeField]
         private ForceMode2D _forceMode = ForceMode2D.Impulse;
         
         [SerializeField]
@@ -49,7 +52,7 @@ namespace Items.Effects
             projectile.AttackerGroup = EntityAttackerGroup.Player;
             
             projectile.GetComponent<SpriteRenderer>().color = _projectileColor;
-            projectile.Damage = PlayerStats.GetStatsData().Damage;
+            projectile.Damage = PlayerStats.GetStatsData().Damage * _damageMultiplier;
             
             var mousePosition = GetMousePosition();
             var direction = (mousePosition - (Vector2) user.GameObject.transform.position).normalized;

@@ -25,8 +25,8 @@ namespace ItemSelection
         {
             _playerLevel = ServiceLocator.ServiceLocator.Instance.Get<IPlayerLevel>();
 
-            var minLevel = Math.Clamp(_playerLevel.CurrentLevel - 5, 0, int.MaxValue);
-            var maxLevel = _playerLevel.CurrentLevel;
+            var minLevel = Math.Clamp(_playerLevel.CurrentLevel - 4, 0, int.MaxValue);
+            var maxLevel = _playerLevel.CurrentLevel + 3;
             
             _itemPool = _itemDatabase.GetItemDataByQuery(
                 item => item.RequiredLevel >= minLevel && item.RequiredLevel <= maxLevel).ToList();

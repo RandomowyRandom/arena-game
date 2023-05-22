@@ -55,24 +55,33 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8e5b2c0912d91704faa6eb87cd562097, type: 2}
     - {fileID: 11400000, guid: d0eb9b4b1a113ae4abf01a6ec9adb801, type: 2}
     - {fileID: 11400000, guid: 1092548eece441b468e2c2ccbdd301b2, type: 2}
-    - {fileID: 11400000, guid: 29db3cb41ec41944d93f03fef1328ed9, type: 2}
+    - {fileID: 11400000, guid: 893618c5518171a4fbfa414b759849c6, type: 2}
+    - {fileID: 11400000, guid: 9196f012f0861e048b90ac5d56fc6e08, type: 2}
+    - {fileID: 11400000, guid: 76f408041f5d1a94f8d47f3a240b765e, type: 2}
+    - {fileID: 11400000, guid: d2145849c970e0b49a8f807de5654776, type: 2}
     - {fileID: 11400000, guid: a051a68d78723a4479221cd1923762a9, type: 2}
     - {fileID: 11400000, guid: b7e1e927137f0104691ecc55a2d3aa54, type: 2}
     - {fileID: 11400000, guid: 25cc81a80f572e043b274cc55ca1b706, type: 2}
+    - {fileID: 11400000, guid: 098dd501a5ff06e44885b4e67f104477, type: 2}
+    - {fileID: 11400000, guid: 29db3cb41ec41944d93f03fef1328ed9, type: 2}
     - {fileID: 11400000, guid: aebbc128da9873f40b87f3d42b2fdc26, type: 2}
     - {fileID: 11400000, guid: 4e1452f97fe4c4d43bd7e7cbd4c5d6ca, type: 2}
     - {fileID: 11400000, guid: 0974c5b09519a1840a581549d9c2b86c, type: 2}
     - {fileID: 11400000, guid: b7ccf37902d9b6345ac0f9a27c652cb1, type: 2}
     - {fileID: 11400000, guid: 8b04078c2a1577444a26c1f57c0d57c1, type: 2}
     - {fileID: 11400000, guid: 1135907777c22b1418ad7b21107005cf, type: 2}
+    - {fileID: 11400000, guid: e933c375961d5cf4a8db11f90689db52, type: 2}
     - {fileID: 11400000, guid: ecae45177ab6ddb45b0c3f02a5e26c5c, type: 2}
+    - {fileID: 11400000, guid: 2437ca5d81ba25f48afde8d93508853a, type: 2}
     - {fileID: 11400000, guid: a7f4edc93d413b14cac33b8bf096cd9a, type: 2}
+    - {fileID: 11400000, guid: 3a7a0d46ced7d694cadd95667757e80b, type: 2}
     - {fileID: 11400000, guid: 1d997c2a213e16d458fb13e946c79c34, type: 2}
+    - {fileID: 11400000, guid: 1c566210ffde6774aaa35c889891c54e, type: 2}
     - {fileID: 11400000, guid: 4e0b077d45b88db43b304ffa57d79bca, type: 2}
+    - {fileID: 11400000, guid: f8524364b90bc7846bed42cbe95ed146, type: 2}
     - {fileID: 11400000, guid: c760c982095238742b24d7adc78b2079, type: 2}
+    - {fileID: 11400000, guid: dbc23c4f8223f8240bda11d22fb92ee1, type: 2}
     - {fileID: 11400000, guid: 5cd9f6b3404097d45bab0a1560aee0ba, type: 2}
-    - {fileID: 11400000, guid: 893618c5518171a4fbfa414b759849c6, type: 2}
-    - {fileID: 11400000, guid: 9196f012f0861e048b90ac5d56fc6e08, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -91,7 +100,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 57
+      Data: 66
     - Name: 
       Entry: 7
       Data: 
@@ -565,7 +574,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: ANCIENT_GOLDEN_SWORD
+      Data: HEAL_POTION_I
     - Name: $v
       Entry: 10
       Data: 39
@@ -577,7 +586,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: COPPER_SPEAR
+      Data: HEAL_POTION_DEV
     - Name: $v
       Entry: 10
       Data: 40
@@ -589,7 +598,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: COPPER_SWORD
+      Data: ARIS_WINTER_BRINGER
     - Name: $v
       Entry: 10
       Data: 41
@@ -601,7 +610,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: DEV_SWORD
+      Data: COPPER_JAVELIN
     - Name: $v
       Entry: 10
       Data: 42
@@ -613,7 +622,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: FIERY_CROSSBOW
+      Data: COPPER_SPEAR
     - Name: $v
       Entry: 10
       Data: 43
@@ -625,7 +634,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: FROZEN_SHORTSWORD
+      Data: COPPER_SWORD
     - Name: $v
       Entry: 10
       Data: 44
@@ -637,7 +646,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: FUSION_TWOSHOT
+      Data: DEV_SWORD
     - Name: $v
       Entry: 10
       Data: 45
@@ -649,7 +658,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: GOLDEN_CROSSBOW
+      Data: ENCHANTED_COPPER_SWORD
     - Name: $v
       Entry: 10
       Data: 46
@@ -661,7 +670,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: GOLDEN_SWORD
+      Data: ENCHANTED_GOLDEN_SWORD
     - Name: $v
       Entry: 10
       Data: 47
@@ -673,7 +682,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: IRON_BOW
+      Data: FIERY_CROSSBOW
     - Name: $v
       Entry: 10
       Data: 48
@@ -685,7 +694,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: IRON_GREATSWORD
+      Data: FROZEN_SHORTSWORD
     - Name: $v
       Entry: 10
       Data: 49
@@ -697,7 +706,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: MITHRIL_KNIVES
+      Data: FUSION_TWOSHOT
     - Name: $v
       Entry: 10
       Data: 50
@@ -709,7 +718,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: PRINCE_AIDENS_SWORD
+      Data: GOLDEN_CROSSBOW
     - Name: $v
       Entry: 10
       Data: 51
@@ -721,7 +730,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: STONE_SPEAR
+      Data: GOLDEN_SWORD
     - Name: $v
       Entry: 10
       Data: 52
@@ -733,7 +742,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: WOODEN_BOW
+      Data: IRON_BOW
     - Name: $v
       Entry: 10
       Data: 53
@@ -745,7 +754,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: WOODEN_SWORD
+      Data: IRON_CROSSBOW
     - Name: $v
       Entry: 10
       Data: 54
@@ -757,7 +766,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: HEAL_POTION_I
+      Data: IRON_GREATSWORD
     - Name: $v
       Entry: 10
       Data: 55
@@ -769,10 +778,118 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: HEAL_POTION_DEV
+      Data: KHILOS_SPRINGSHOT
     - Name: $v
       Entry: 10
       Data: 56
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: MITHRIL_KNIVES
+    - Name: $v
+      Entry: 10
+      Data: 57
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: POISONOUS_SHARDS
+    - Name: $v
+      Entry: 10
+      Data: 58
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: PRINCE_AIDENS_SWORD
+    - Name: $v
+      Entry: 10
+      Data: 59
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: STONE_JAVELIN
+    - Name: $v
+      Entry: 10
+      Data: 60
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: STONE_SPEAR
+    - Name: $v
+      Entry: 10
+      Data: 61
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: WARLOCKMS_BLADE
+    - Name: $v
+      Entry: 10
+      Data: 62
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: WOODEN_BOW
+    - Name: $v
+      Entry: 10
+      Data: 63
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: WOODEN_CROSSBOW
+    - Name: $v
+      Entry: 10
+      Data: 64
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: WOODEN_SWORD
+    - Name: $v
+      Entry: 10
+      Data: 65
     - Name: 
       Entry: 8
       Data: 
@@ -822,21 +939,30 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8e5b2c0912d91704faa6eb87cd562097, type: 2}
   - {fileID: 11400000, guid: d0eb9b4b1a113ae4abf01a6ec9adb801, type: 2}
   - {fileID: 11400000, guid: 1092548eece441b468e2c2ccbdd301b2, type: 2}
-  - {fileID: 11400000, guid: 29db3cb41ec41944d93f03fef1328ed9, type: 2}
+  - {fileID: 11400000, guid: 893618c5518171a4fbfa414b759849c6, type: 2}
+  - {fileID: 11400000, guid: 9196f012f0861e048b90ac5d56fc6e08, type: 2}
+  - {fileID: 11400000, guid: 76f408041f5d1a94f8d47f3a240b765e, type: 2}
+  - {fileID: 11400000, guid: d2145849c970e0b49a8f807de5654776, type: 2}
   - {fileID: 11400000, guid: a051a68d78723a4479221cd1923762a9, type: 2}
   - {fileID: 11400000, guid: b7e1e927137f0104691ecc55a2d3aa54, type: 2}
   - {fileID: 11400000, guid: 25cc81a80f572e043b274cc55ca1b706, type: 2}
+  - {fileID: 11400000, guid: 098dd501a5ff06e44885b4e67f104477, type: 2}
+  - {fileID: 11400000, guid: 29db3cb41ec41944d93f03fef1328ed9, type: 2}
   - {fileID: 11400000, guid: aebbc128da9873f40b87f3d42b2fdc26, type: 2}
   - {fileID: 11400000, guid: 4e1452f97fe4c4d43bd7e7cbd4c5d6ca, type: 2}
   - {fileID: 11400000, guid: 0974c5b09519a1840a581549d9c2b86c, type: 2}
   - {fileID: 11400000, guid: b7ccf37902d9b6345ac0f9a27c652cb1, type: 2}
   - {fileID: 11400000, guid: 8b04078c2a1577444a26c1f57c0d57c1, type: 2}
   - {fileID: 11400000, guid: 1135907777c22b1418ad7b21107005cf, type: 2}
+  - {fileID: 11400000, guid: e933c375961d5cf4a8db11f90689db52, type: 2}
   - {fileID: 11400000, guid: ecae45177ab6ddb45b0c3f02a5e26c5c, type: 2}
+  - {fileID: 11400000, guid: 2437ca5d81ba25f48afde8d93508853a, type: 2}
   - {fileID: 11400000, guid: a7f4edc93d413b14cac33b8bf096cd9a, type: 2}
+  - {fileID: 11400000, guid: 3a7a0d46ced7d694cadd95667757e80b, type: 2}
   - {fileID: 11400000, guid: 1d997c2a213e16d458fb13e946c79c34, type: 2}
+  - {fileID: 11400000, guid: 1c566210ffde6774aaa35c889891c54e, type: 2}
   - {fileID: 11400000, guid: 4e0b077d45b88db43b304ffa57d79bca, type: 2}
+  - {fileID: 11400000, guid: f8524364b90bc7846bed42cbe95ed146, type: 2}
   - {fileID: 11400000, guid: c760c982095238742b24d7adc78b2079, type: 2}
+  - {fileID: 11400000, guid: dbc23c4f8223f8240bda11d22fb92ee1, type: 2}
   - {fileID: 11400000, guid: 5cd9f6b3404097d45bab0a1560aee0ba, type: 2}
-  - {fileID: 11400000, guid: 893618c5518171a4fbfa414b759849c6, type: 2}
-  - {fileID: 11400000, guid: 9196f012f0861e048b90ac5d56fc6e08, type: 2}

@@ -14,6 +14,8 @@ namespace ProjectileSystem
     [RequireComponent(typeof(SpriteRenderer))]
     public class Projectile: SerializedMonoBehaviour, IDamageSource
     {
+        [SerializeField]
+        private bool _velocityDestruction = true;
         public event Action<Entity> OnEntityHit; 
 
         public List<IProjectileEffect> Effects => _effects;
@@ -31,6 +33,11 @@ namespace ProjectileSystem
             _effects.Add(effect);
         }
         
+        public void ResetDamagedEntities()
+        {
+            _damagedEntities.Clear();
+        }
+        
         private void Awake() 
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -39,6 +46,9 @@ namespace ProjectileSystem
 
         private void Update()
         {
+            if (!_velocityDestruction) 
+                return;
+            
             if (_rigidbody2D.velocity.magnitude > .3f) 
                 return;
             

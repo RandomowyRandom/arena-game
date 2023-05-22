@@ -59,6 +59,9 @@ MonoBehaviour:
     - Name: _force
       Entry: 4
       Data: 80
+    - Name: _damageMultiplier
+      Entry: 4
+      Data: 1
     - Name: _forceMode
       Entry: 3
       Data: 1
@@ -135,6 +138,9 @@ MonoBehaviour:
     - Name: _force
       Entry: 4
       Data: 75
+    - Name: _damageMultiplier
+      Entry: 4
+      Data: 1
     - Name: _forceMode
       Entry: 3
       Data: 1
@@ -220,6 +226,9 @@ MonoBehaviour:
     - Name: _force
       Entry: 4
       Data: 70
+    - Name: _damageMultiplier
+      Entry: 4
+      Data: 1
     - Name: _forceMode
       Entry: 3
       Data: 1
