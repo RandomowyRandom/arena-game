@@ -39,7 +39,10 @@ namespace Items
         }
         
         // for odin serialization
-        public Item(){}
+        public Item()
+        {
+            Amount = 1;
+        }
 
         public ItemData ItemData
         {

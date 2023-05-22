@@ -8,17 +8,21 @@ namespace WaveSystem
         private List<SubWave> _subWaves;
         private float _subWaveDelay;
         private int _enemyCap;
+        private int _index;
         
-        public Wave(List<SubWave> subWaves, float subWaveDelay, int enemyCap)
+        public Wave(List<SubWave> subWaves, float subWaveDelay, int enemyCap, int index)
         {
             _subWaves = subWaves;
             _subWaveDelay = subWaveDelay;
             _enemyCap = enemyCap;
+            _index = index;
         }
         
         public List<SubWave> SubWaves => _subWaves;
         public float SubWaveDelay => _subWaveDelay;
         public int EnemyCap => _enemyCap;
+        
+        public int Index => _index;
 
         public override string ToString()
         {

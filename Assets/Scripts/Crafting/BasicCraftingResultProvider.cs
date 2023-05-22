@@ -14,5 +14,10 @@ namespace Crafting
         {
             return _result;
         }
+        
+        public void SetResult(Item result)
+        {
+            _result = result;
+        }
     }
 }

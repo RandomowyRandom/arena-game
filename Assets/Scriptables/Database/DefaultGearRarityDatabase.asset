@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3a809ed6fea435581558b638ad814e4, type: 3}
+  m_Name: DefaultGearRarityDatabase
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _rarities:
+  - {fileID: 11400000, guid: 5c3c3f83f3bff214caedaf5ea0b51356, type: 2}
+  - {fileID: 11400000, guid: cea9beb5a9fdacc448777c52afac584b, type: 2}
+  - {fileID: 11400000, guid: d8917f73eb0309040ad9ef636dc22eae, type: 2}
+  - {fileID: 11400000, guid: a24912256fd91a845bd6f489827a3d3b, type: 2}
+  - {fileID: 11400000, guid: 7ff96bf0ebbc025429ee488993903671, type: 2}

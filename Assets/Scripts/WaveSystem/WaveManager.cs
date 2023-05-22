@@ -31,7 +31,6 @@ namespace WaveSystem
         private void Awake()
         {
             ServiceLocator.ServiceLocator.Instance.Register<IWaveManager>(this);
-            SetWave(_waveFactory.GetWave());
         }
 
         public void SetWave(Wave wave)
@@ -42,11 +41,11 @@ namespace WaveSystem
         }
         public async void StartWave()
         {
+            SetWave(_waveFactory.GetWave());
+
             IsWaveInProgress = true;
             await SpawnEnemies();
             IsWaveInProgress = false;
-            
-            SetWave(_waveFactory.GetWave());
         }
 
         private async UniTask SpawnEnemies()

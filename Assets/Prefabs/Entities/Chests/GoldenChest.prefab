@@ -229,14 +229,13 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: a86f937ca05c7fa48b7ae0609e21d741, type: 2}
-    - {fileID: 11400000, guid: 31284351e7846d94db4a0661bd8ab03e, type: 2}
     - {fileID: 11400000, guid: 97253760ac5e87145bb085845ce78f23, type: 2}
     - {fileID: 11400000, guid: 7ff96bf0ebbc025429ee488993903671, type: 2}
-    - {fileID: 11400000, guid: f1e28381fff555547816aa91c26b363c, type: 2}
-    - {fileID: 11400000, guid: ed17443e4ebffd24681a156d4a04acbb, type: 2}
-    - {fileID: 11400000, guid: df6c254545ebd434199c4fb5cab660f8, type: 2}
-    - {fileID: 11400000, guid: 9676b87daf40f1e42af682a32edfd4e6, type: 2}
-    - {fileID: 11400000, guid: a24912256fd91a845bd6f489827a3d3b, type: 2}
+    - {fileID: 11400000, guid: 5c195031c99381746be310fcb34488b7, type: 2}
+    - {fileID: 11400000, guid: 78a5ff1308597d94dae02ed4a4fd5f28, type: 2}
+    - {fileID: 11400000, guid: 87d3aa677b1d65b46b9c9170b0fc143e, type: 2}
+    - {fileID: 11400000, guid: 1fcfc79e2e470484e8fa6db4a2a09e37, type: 2}
+    - {fileID: 11400000, guid: be2abb5f77bea6842b5e9581b0c80877, type: 2}
     - {fileID: 11400000, guid: 893618c5518171a4fbfa414b759849c6, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -267,7 +266,7 @@ MonoBehaviour:
       Data: 0
     - Name: _amount
       Entry: 3
-      Data: 4
+      Data: 10
     - Name: _gearRarity
       Entry: 6
       Data: 
@@ -282,10 +281,10 @@ MonoBehaviour:
       Data: 1
     - Name: _amount
       Entry: 3
-      Data: 12
+      Data: 1
     - Name: _gearRarity
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -294,13 +293,13 @@ MonoBehaviour:
       Data: 5|Items.Item, Assembly-CSharp
     - Name: _itemData
       Entry: 10
-      Data: 2
+      Data: 3
     - Name: _amount
       Entry: 3
       Data: 1
     - Name: _gearRarity
       Entry: 10
-      Data: 3
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -312,10 +311,10 @@ MonoBehaviour:
       Data: 4
     - Name: _amount
       Entry: 3
-      Data: 9
+      Data: 1
     - Name: _gearRarity
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -327,10 +326,10 @@ MonoBehaviour:
       Data: 5
     - Name: _amount
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: _gearRarity
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -344,8 +343,8 @@ MonoBehaviour:
       Entry: 3
       Data: 1
     - Name: _gearRarity
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -360,7 +359,7 @@ MonoBehaviour:
       Data: 1
     - Name: _gearRarity
       Entry: 10
-      Data: 8
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -391,7 +390,7 @@ MonoBehaviour:
       Data: 12|Items.Item, Assembly-CSharp
     - Name: _itemData
       Entry: 10
-      Data: 9
+      Data: 8
     - Name: _amount
       Entry: 3
       Data: 1
@@ -403,7 +402,7 @@ MonoBehaviour:
       Data: 
     - Name: _chance
       Entry: 4
-      Data: 0.2
+      Data: 0.9
     - Name: 
       Entry: 8
       Data: 
@@ -443,6 +442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hitSound: {fileID: 8300000, guid: 38ee749178d2efb40915369aac992564, type: 3}
   _levelLockedSound: {fileID: 8300000, guid: 74d6abc2585ce87479bbab6b3c20adcd, type: 3}
+  _entitySpriteRenderer: {fileID: 0}
 --- !u!114 &-8327188987864945118
 MonoBehaviour:
   m_ObjectHideFlags: 0

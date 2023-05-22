@@ -31,11 +31,15 @@ namespace Crafting
         
         [SerializeField]
         private SpriteRenderer _cloudRenderer;
+        
+        [SerializeField]
+        private int _spawnInterval = 5;
 
         private IWaveManager _waveManager;
         public event Action OnRecipeChanged;
 
         private IPlayerLevel _playerLevel;
+        private IPlayerInventory _playerInventory;
 
         private CraftInteraction _selectedInteraction;
 
@@ -43,17 +47,18 @@ namespace Crafting
         {
             _waveManager = GetComponentInParent<IWaveManager>();
             _playerLevel = ServiceLocator.ServiceLocator.Instance.Get<IPlayerLevel>();
+            _playerInventory = ServiceLocator.ServiceLocator.Instance.Get<IPlayerInventory>();
             InstantiateCraftInteractions();
             
-            _waveManager.OnWaveStart += HideNpc;
-            _waveManager.OnWaveEnd += ShowNpc;
+            _waveManager.OnWaveStart += TryHideNpc;
+            _waveManager.OnWaveEnd += TryShowNpc;
             
-            HideNpc(null);
+            TryHideNpc(null);
         }
         private void OnDestroy()
         {
-            _waveManager.OnWaveStart -= HideNpc;
-            _waveManager.OnWaveEnd -= ShowNpc;
+            _waveManager.OnWaveStart -= TryHideNpc;
+            _waveManager.OnWaveEnd -= TryShowNpc;
         }
 
         public CraftingRecipe GetRecipe()
@@ -62,15 +67,18 @@ namespace Crafting
         }
 
 
-        private void ShowNpc(Wave wave)
+        private void TryShowNpc(Wave wave)
         {
+            if(wave.Index % _spawnInterval != 0)
+                return;
+            
             gameObject.SetActive(true);
             InstantiateCraftInteractions();
             
             DeselectInteraction(null);
         }
 
-        private void HideNpc(Wave wave)
+        private void TryHideNpc(Wave wave)
         {
             gameObject.SetActive(false);
         }
@@ -85,7 +93,7 @@ namespace Crafting
             foreach (var data in _craftingStationDatas)
             {
                 var recipes = _craftingHandler.CraftingRecipeDatabase
-                    .GetRecipesByTypeAndLevel(data.ItemType, _playerLevel.CurrentLevel - 2, _playerLevel.CurrentLevel);
+                    .GetAvailableRecipes(_playerInventory.Inventory);
                 
                 recipes.Shuffle();
                 

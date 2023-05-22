@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Common.Extensions;
 using Items;
 using Items.ItemDataSystem;
@@ -24,9 +25,11 @@ namespace ItemSelection
         {
             _playerLevel = ServiceLocator.ServiceLocator.Instance.Get<IPlayerLevel>();
 
+            var minLevel = Math.Clamp(_playerLevel.CurrentLevel - 5, 0, int.MaxValue);
+            var maxLevel = _playerLevel.CurrentLevel;
+            
             _itemPool = _itemDatabase.GetItemDataByQuery(
-                item => item is Weapon or Equipment
-                        && item.RequiredLevel <= _playerLevel.CurrentLevel);
+                item => item.RequiredLevel >= minLevel && item.RequiredLevel <= maxLevel).ToList();
 
             SpawnItems();
         }
