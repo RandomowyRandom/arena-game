@@ -1,5 +1,6 @@
 ﻿using EntitySystem;
 using EntitySystem.Abstraction;
+using PlayerUpgradeSystem.Abstraction;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,11 +17,16 @@ namespace UI
         
         [SerializeField]
         private Entity _entity;
-
+        
+        private IPlayerUpgradeHandler _playerUpgradeHandler;
+        
         private void Start()
         {
+            _playerUpgradeHandler = ServiceLocator.ServiceLocator.Instance.Get<IPlayerUpgradeHandler>();
+            
             _entity.OnDamageTaken += UpdateUI;
             _entity.OnHeal += amount => UpdateUI(amount, null);
+            _playerUpgradeHandler.OnUpgradeChanged += () => SetHealthUI(_entity.Health, _entity.MaxHealth);
             
             SetHealthUI(_entity.Health, _entity.MaxHealth);
         }

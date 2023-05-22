@@ -31,8 +31,12 @@ namespace EntitySystem
 
         public float Health => _health;
         
-        public float MaxHealth => _data.MaxHealth;
-        
+        public float MaxHealth
+        {
+            get => _data.MaxHealth;
+            set => _data.MaxHealth = value;
+        }
+
         public bool IsStatic => _data.IsStatic;
 
         private IPlayerLevel PlayerLevel => _playerLevel ??= ServiceLocator.ServiceLocator.Instance.Get<IPlayerLevel>();

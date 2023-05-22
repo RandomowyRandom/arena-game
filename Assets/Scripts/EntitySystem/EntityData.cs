@@ -20,8 +20,19 @@ namespace EntitySystem
         [SerializeField] 
         private EntityAttackerGroup _attackerGroup;
         
-        public float MaxHealth => _maxHealth;
-        
+        private float _currentMaxHealth;
+
+        protected override void OnAfterDeserialize()
+        {
+            _currentMaxHealth = _maxHealth;
+        }
+
+        public float MaxHealth
+        {
+            get => _currentMaxHealth;
+            set => _currentMaxHealth = value;
+        }
+
         public int RequiredLevel => _requiredLevel;
         
         public string Key => name;
