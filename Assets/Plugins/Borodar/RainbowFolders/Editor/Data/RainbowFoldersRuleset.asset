@@ -529,3 +529,15 @@ MonoBehaviour:
     BackgroundTexture: {fileID: 0}
     IsBackgroundRecursive: 0
     IsHidden: 0
+  - Type: 1
+    Key: Assets/Scriptables/Playlist
+    Ordinal: 43
+    Priority: 0
+    IconType: 1
+    SmallIcon: {fileID: 2800000, guid: 604b663dcf1358047b331e4aa5b96ccd, type: 3}
+    LargeIcon: {fileID: 2800000, guid: 9dd07414bf3ce304a82d6b47be3c5c2e, type: 3}
+    IsIconRecursive: 0
+    BackgroundType: 0
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 0
+    IsHidden: 0

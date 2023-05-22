@@ -29,5 +29,5 @@ MonoBehaviour:
   - {fileID: 4618472564772760382, guid: 87506342eca5e5e48b91051d9a1b23ec, type: 3}
   _subWaveCountFactor: 4
   _subwaveEnemyCountFactor: 10
-  _enemyDifficultyFactor: 2
-  _difficultyRaise: 0.15
+  _enemyDifficultyFactor: 1.4
+  _difficultyRaise: 0.2

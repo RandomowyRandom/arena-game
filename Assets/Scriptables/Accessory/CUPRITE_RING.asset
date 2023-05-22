@@ -193,6 +193,6 @@ MonoBehaviour:
   _icon: {fileID: 21300000, guid: 589cccf20cf06624883058367611a0e8, type: 3}
   _description: 
   _maxStack: 1
-  _requiredLevel: 7
+  _requiredLevel: 6
   _equipmentType: 3
   _defenseIncreasePerLevel: 1

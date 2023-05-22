@@ -27,11 +27,14 @@ namespace WaveSystem
         private float _difficulty = 1;
         private float _subWaveDelay = 2f;
         private int _enemyCap = 3;
+        
+        private int _waveIndex = 1;
 
         protected override void OnAfterDeserialize()
         {
             _difficulty = 1;
             _enemyCap = 3;
+            _waveIndex = 1;
         }
 
         public Wave GetWave()
@@ -56,7 +59,7 @@ namespace WaveSystem
             _enemyCap += Mathf.CeilToInt(1 * _difficulty * .25f);
             _subWaveDelay = Mathf.Clamp(_subWaveDelay - .1f, .25f, 2f);
             
-            return new Wave(subWaves, _subWaveDelay, _enemyCap);
+            return new Wave(subWaves, _subWaveDelay, _enemyCap, _waveIndex++);
         }
         
         private List<Entity> GetEntitiesBasedOnDifficulty(int enemyCount)

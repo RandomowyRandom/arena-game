@@ -16,9 +16,9 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 11400000, guid: 1135907777c22b1418ad7b21107005cf, type: 2}
+    - {fileID: 11400000, guid: ecae45177ab6ddb45b0c3f02a5e26c5c, type: 2}
     - {fileID: 11400000, guid: 581c6410b37e70f4799d4ab3349b7b49, type: 2}
-    - {fileID: 11400000, guid: fecb9f0fa428f604299c5d28ff36d38a, type: 2}
+    - {fileID: 11400000, guid: a86f937ca05c7fa48b7ae0609e21d741, type: 2}
     - {fileID: 11400000, guid: e933c375961d5cf4a8db11f90689db52, type: 2}
     - {fileID: 11400000, guid: 5c3c3f83f3bff214caedaf5ea0b51356, type: 2}
     - {fileID: 11400000, guid: cea9beb5a9fdacc448777c52afac584b, type: 2}
@@ -59,7 +59,7 @@ MonoBehaviour:
       Data: 1
     - Name: _amount
       Entry: 3
-      Data: 14
+      Data: 24
     - Name: _gearRarity
       Entry: 6
       Data: 
@@ -74,7 +74,7 @@ MonoBehaviour:
       Data: 2
     - Name: _amount
       Entry: 3
-      Data: 4
+      Data: 12
     - Name: _gearRarity
       Entry: 6
       Data: 
@@ -233,4 +233,4 @@ MonoBehaviour:
       Data: 
     - Name: _requiredLevel
       Entry: 3
-      Data: 0
+      Data: 8

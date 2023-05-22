@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b96aac1ade3a4bb2a8f69b77101453a7, type: 3}
-  m_Name: ENCHANTED_GOLDEN_SWORD
+  m_Name: ENCHANTED_COPPER_SWORD
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 11400000, guid: 1135907777c22b1418ad7b21107005cf, type: 2}
-    - {fileID: 11400000, guid: 7c2fce353265b73449e040c3678cc176, type: 2}
+    - {fileID: 11400000, guid: b7e1e927137f0104691ecc55a2d3aa54, type: 2}
+    - {fileID: 11400000, guid: c2f0bf6036eb07242976aa9d34bb2fc5, type: 2}
     - {fileID: 11400000, guid: 581c6410b37e70f4799d4ab3349b7b49, type: 2}
-    - {fileID: 11400000, guid: 29db3cb41ec41944d93f03fef1328ed9, type: 2}
+    - {fileID: 11400000, guid: 098dd501a5ff06e44885b4e67f104477, type: 2}
     - {fileID: 11400000, guid: 5c3c3f83f3bff214caedaf5ea0b51356, type: 2}
     - {fileID: 11400000, guid: cea9beb5a9fdacc448777c52afac584b, type: 2}
     - {fileID: 11400000, guid: d8917f73eb0309040ad9ef636dc22eae, type: 2}
@@ -74,7 +74,7 @@ MonoBehaviour:
       Data: 2
     - Name: _amount
       Entry: 3
-      Data: 14
+      Data: 3
     - Name: _gearRarity
       Entry: 6
       Data: 
@@ -233,4 +233,4 @@ MonoBehaviour:
       Data: 
     - Name: _requiredLevel
       Entry: 3
-      Data: 0
+      Data: 5

@@ -60,7 +60,7 @@ MonoBehaviour:
       Data: 
     - Name: _duration
       Entry: 4
-      Data: 120
+      Data: 90
     - Name: _icon
       Entry: 10
       Data: 1

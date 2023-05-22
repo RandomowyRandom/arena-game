@@ -90,7 +90,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
       Data: 1|Crafting.CraftingStationData, Assembly-CSharp
@@ -105,25 +105,7 @@ MonoBehaviour:
       Data: 
     - Name: _amount
       Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|Crafting.CraftingStationData, Assembly-CSharp
-    - Name: _itemType
-      Entry: 7
-      Data: 4|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: Items.ItemDataSystem.Equipment, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: _amount
-      Entry: 3
-      Data: 1
+      Data: 3
     - Name: 
       Entry: 8
       Data: 
@@ -136,6 +118,7 @@ MonoBehaviour:
   _craftInteractionPrefab: {fileID: 1344353487, guid: 95da78080502333498f3bba697631455, type: 3}
   _tooltipText: {fileID: 8093370622363699977}
   _cloudRenderer: {fileID: 659841793646896289}
+  _spawnInterval: 5
 --- !u!212 &1459616626315940688
 SpriteRenderer:
   m_ObjectHideFlags: 0

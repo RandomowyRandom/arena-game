@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b96aac1ade3a4bb2a8f69b77101453a7, type: 3}
-  m_Name: STONE_JAVELIN
+  m_Name: ARIS_WINTER_BRINGER
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 11400000, guid: 4e0b077d45b88db43b304ffa57d79bca, type: 2}
-    - {fileID: 11400000, guid: c2f0bf6036eb07242976aa9d34bb2fc5, type: 2}
-    - {fileID: 11400000, guid: 581c6410b37e70f4799d4ab3349b7b49, type: 2}
-    - {fileID: 11400000, guid: 1c566210ffde6774aaa35c889891c54e, type: 2}
+    - {fileID: 11400000, guid: 4e1452f97fe4c4d43bd7e7cbd4c5d6ca, type: 2}
+    - {fileID: 11400000, guid: a86f937ca05c7fa48b7ae0609e21d741, type: 2}
+    - {fileID: 11400000, guid: 7c2fce353265b73449e040c3678cc176, type: 2}
+    - {fileID: 11400000, guid: 76f408041f5d1a94f8d47f3a240b765e, type: 2}
     - {fileID: 11400000, guid: 5c3c3f83f3bff214caedaf5ea0b51356, type: 2}
     - {fileID: 11400000, guid: cea9beb5a9fdacc448777c52afac584b, type: 2}
     - {fileID: 11400000, guid: d8917f73eb0309040ad9ef636dc22eae, type: 2}
@@ -59,7 +59,7 @@ MonoBehaviour:
       Data: 1
     - Name: _amount
       Entry: 3
-      Data: 6
+      Data: 13
     - Name: _gearRarity
       Entry: 6
       Data: 
@@ -233,4 +233,4 @@ MonoBehaviour:
       Data: 
     - Name: _requiredLevel
       Entry: 3
-      Data: 0
+      Data: 13

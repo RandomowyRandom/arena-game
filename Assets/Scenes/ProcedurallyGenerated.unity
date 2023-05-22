@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 39196608}
   - component: {fileID: 39196607}
   - component: {fileID: 39196606}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -494,7 +494,7 @@ GameObject:
   - component: {fileID: 42369317}
   - component: {fileID: 42369316}
   - component: {fileID: 42369315}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85210,7 +85210,7 @@ GameObject:
   - component: {fileID: 815720308}
   - component: {fileID: 815720307}
   - component: {fileID: 815720306}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85517,7 +85517,7 @@ GameObject:
   - component: {fileID: 832224859}
   - component: {fileID: 832224858}
   - component: {fileID: 832224857}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87656,7 +87656,7 @@ GameObject:
   - component: {fileID: 1125302469}
   - component: {fileID: 1125302468}
   - component: {fileID: 1125302467}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87975,7 +87975,7 @@ GameObject:
   - component: {fileID: 1163907675}
   - component: {fileID: 1163907674}
   - component: {fileID: 1163907673}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89424,7 +89424,7 @@ GameObject:
   - component: {fileID: 1256570587}
   - component: {fileID: 1256570586}
   - component: {fileID: 1256570585}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89644,7 +89644,7 @@ GameObject:
   - component: {fileID: 1286868081}
   - component: {fileID: 1286868080}
   - component: {fileID: 1286868079}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91331,7 +91331,7 @@ GameObject:
   - component: {fileID: 1587918123}
   - component: {fileID: 1587918122}
   - component: {fileID: 1587918121}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91515,7 +91515,7 @@ GameObject:
   - component: {fileID: 1595489382}
   - component: {fileID: 1595489381}
   - component: {fileID: 1595489380}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92899,7 +92899,7 @@ GameObject:
   - component: {fileID: 1822175086}
   - component: {fileID: 1822175085}
   - component: {fileID: 1822175084}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93751,7 +93751,7 @@ GameObject:
   - component: {fileID: 1914122468}
   - component: {fileID: 1914122467}
   - component: {fileID: 1914122466}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
