@@ -45,6 +45,9 @@ namespace Player
 
         private void OnMeleeProjectileHit(MeleeProjectile projectile)
         {
+            if(!projectile.SustainCombo)
+                return;
+            
             _streakTimer = PlayerStats.GetStatsData().FireRate * 2.3f;
             _currentDamageMultiplier += _damageIncrease;
             

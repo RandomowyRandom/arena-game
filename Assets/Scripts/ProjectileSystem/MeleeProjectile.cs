@@ -8,7 +8,11 @@ namespace ProjectileSystem
     [RequireComponent(typeof(Projectile))]
     public class MeleeProjectile: MonoBehaviour
     {
+        [SerializeField]
+        private bool _sustainCombo = true;
         public static event Action<MeleeProjectile> OnMeleeProjectileHit;
+        
+        public bool SustainCombo => _sustainCombo;
         
         private Projectile _projectile;
 

@@ -16,6 +16,8 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
+    - {fileID: 2823495041795817442, guid: 6d40ae8039079ef4a89714a7af6d14bb, type: 3}
+    - {fileID: 6220283805649785671, guid: a44c6633f2ad74a4d885251194a197ad, type: 3}
     - {fileID: 11400000, guid: 7ff96bf0ebbc025429ee488993903671, type: 2}
     - {fileID: 11400000, guid: a24912256fd91a845bd6f489827a3d3b, type: 2}
     - {fileID: 11400000, guid: d8917f73eb0309040ad9ef636dc22eae, type: 2}
@@ -27,24 +29,162 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes:
     - Name: _effects
-      Entry: 6
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Items.Abstraction.IItemEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 1|Items.Effects.MeleeScaleVisualItemEffect, Assembly-CSharp
+    - Name: _scaleDuration
+      Entry: 4
+      Data: 0.2
+    - Name: _rotationDuration
+      Entry: 4
+      Data: 0.15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
+    - Name: _projectilePrefab
+      Entry: 10
+      Data: 0
+    - Name: _force
+      Entry: 4
+      Data: 17
+    - Name: _damageMultiplier
+      Entry: 4
+      Data: 0.5
+    - Name: _forceMode
+      Entry: 3
+      Data: 1
+    - Name: _projectileColor
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0.980808735
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _projectileEffects
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[ProjectileSystem.Abstraction.IProjectileEffect,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 4|ProjectileSystem.Effects.ApplyKnockBackProjectileEffect, Assembly-CSharp
+    - Name: _force
+      Entry: 4
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
+    - Name: _projectilePrefab
+      Entry: 10
+      Data: 1
+    - Name: _force
+      Entry: 4
+      Data: 35
+    - Name: _damageMultiplier
+      Entry: 4
+      Data: 1
+    - Name: _forceMode
+      Entry: 3
+      Data: 1
+    - Name: _projectileColor
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0.9803922
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _projectileEffects
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[ProjectileSystem.Abstraction.IProjectileEffect,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 7|ProjectileSystem.Effects.ApplyKnockBackProjectileEffect, Assembly-CSharp
+    - Name: _force
+      Entry: 4
+      Data: 35
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: _rarityData
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Items.RaritySystem.GearRarityData,
+      Data: 8|System.Collections.Generic.List`1[[Items.RaritySystem.GearRarityData,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 5
     - Name: 
       Entry: 7
-      Data: 1|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 9|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
-      Data: 0
+      Data: 2
     - Name: _statsData
       Entry: 7
-      Data: 2|Stats.StatsData, Assembly-CSharp
+      Data: 10|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 35
@@ -68,13 +208,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 3|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 11|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
-      Data: 1
+      Data: 3
     - Name: _statsData
       Entry: 7
-      Data: 4|Stats.StatsData, Assembly-CSharp
+      Data: 12|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 38.5
@@ -98,13 +238,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 5|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 13|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
-      Data: 2
+      Data: 4
     - Name: _statsData
       Entry: 7
-      Data: 6|Stats.StatsData, Assembly-CSharp
+      Data: 14|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 42
@@ -128,13 +268,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 7|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 15|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
-      Data: 3
+      Data: 5
     - Name: _statsData
       Entry: 7
-      Data: 8|Stats.StatsData, Assembly-CSharp
+      Data: 16|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 45.5
@@ -158,13 +298,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 9|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 17|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
-      Data: 4
+      Data: 6
     - Name: _statsData
       Entry: 7
-      Data: 10|Stats.StatsData, Assembly-CSharp
+      Data: 18|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 49
