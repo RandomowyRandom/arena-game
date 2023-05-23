@@ -26,7 +26,7 @@ namespace UI
             
             _entity.OnDamageTaken += UpdateUI;
             _entity.OnHeal += amount => UpdateUI(amount, null);
-            _playerUpgradeHandler.OnUpgradeChanged += () => SetHealthUI(_entity.Health, _entity.MaxHealth);
+            _playerUpgradeHandler.OnEffectChanged += () => SetHealthUI(_entity.Health, _entity.MaxHealth);
             
             SetHealthUI(_entity.Health, _entity.MaxHealth);
         }

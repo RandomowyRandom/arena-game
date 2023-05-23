@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9ee8831fdff41459174d2ec490edc27, type: 3}
-  m_Name: MAX_HEALTH
+  m_Name: SPEED_UP
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -27,7 +27,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
       Data: 1|PlayerUpgradeSystem.Effects.StatsPlayerUpgradeEffect, Assembly-CSharp
@@ -39,13 +39,13 @@ MonoBehaviour:
       Data: 0
     - Name: _speed
       Entry: 4
-      Data: 0
+      Data: 0.2
     - Name: _fireRate
       Entry: 4
       Data: 0
     - Name: _maxHealth
       Entry: 4
-      Data: 20
+      Data: 0
     - Name: _defense
       Entry: 4
       Data: 0
@@ -56,19 +56,10 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
-      Entry: 7
-      Data: 3|PlayerUpgradeSystem.Effects.HealPlayerUpgradeEffect, Assembly-CSharp
-    - Name: _amount
-      Entry: 4
-      Data: 20
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
-  _icon: {fileID: 21300000, guid: 16d2d04fa8f08f346847c1d6e0f54888, type: 3}
-  _description: +20 Max health
+  _icon: {fileID: 21300000, guid: 247c7f5604734bc42a39ea1dd2f59f3f, type: 3}
+  _description: +0.2 Speed

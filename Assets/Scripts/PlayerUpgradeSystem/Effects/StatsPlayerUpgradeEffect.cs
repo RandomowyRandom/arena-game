@@ -11,9 +11,6 @@ namespace PlayerUpgradeSystem.Effects
         [SerializeField]
         private StatsData _playerStats = new();
         
-        [SerializeField]
-        private string _displayName;
-        
         public void OnObtain(PlayerUpgradeHandler playerUpgradeHandler)
         {
             playerUpgradeHandler.StatsData += _playerStats;
@@ -22,11 +19,6 @@ namespace PlayerUpgradeSystem.Effects
         public void OnRemove(PlayerUpgradeHandler playerUpgradeHandler)
         {
             playerUpgradeHandler.StatsData -= _playerStats;
-        }
-
-        public string GetDescription()
-        {
-            return _displayName;
         }
     }
 }

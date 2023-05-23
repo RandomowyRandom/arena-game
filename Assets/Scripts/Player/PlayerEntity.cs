@@ -39,7 +39,7 @@ namespace Player
             _spriteRenderer = GetComponent<SpriteRenderer>();
             _upgradeHandler = GetComponent<PlayerUpgradeHandler>();
             _playerStats = GetComponent<PlayerStats>();
-            _upgradeHandler.OnUpgradeChanged += UpdateHealth;
+            _upgradeHandler.OnEffectChanged += UpdateHealth;
         }
 
         private void Start()
@@ -52,7 +52,7 @@ namespace Player
         {
             _entity.OnDamageTaken -= ApplyKnockBack;
             _entity.OnDamageTaken -= ShowHitEffect;
-            _upgradeHandler.OnUpgradeChanged -= UpdateHealth;
+            _upgradeHandler.OnEffectChanged -= UpdateHealth;
         }
         
         private void UpdateHealth()

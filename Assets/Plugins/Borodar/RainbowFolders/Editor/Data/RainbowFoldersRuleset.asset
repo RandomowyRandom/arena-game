@@ -541,3 +541,15 @@ MonoBehaviour:
     BackgroundTexture: {fileID: 0}
     IsBackgroundRecursive: 0
     IsHidden: 0
+  - Type: 1
+    Key: Assets/Scriptables/PlayerUpgrade
+    Ordinal: 44
+    Priority: 0
+    IconType: 1
+    SmallIcon: {fileID: 2800000, guid: db466c90f3b454944b05409914a6a5f6, type: 3}
+    LargeIcon: {fileID: 2800000, guid: 7f17fa6e8251f2e4fbf3c65560daf34a, type: 3}
+    IsIconRecursive: 0
+    BackgroundType: 0
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 0
+    IsHidden: 0

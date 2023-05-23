@@ -14,7 +14,7 @@ namespace PlayerUpgradeSystem
         [SerializeField]
         private PlayerUpgrade _playerUpgrade;
         
-        public event Action OnUpgradeChanged;
+        public event Action OnEffectChanged;
 
         [Button("Add Upgrade")]
         private void AddUpgrade()
@@ -42,9 +42,8 @@ namespace PlayerUpgradeSystem
             foreach (var effect in playerUpgrade.PlayerUpgradeEffects)
             {
                 effect.OnObtain(this);
-                OnUpgradeChanged?.Invoke();
+                OnEffectChanged?.Invoke();
             }
-            
         }
         
         public void RemoveUpgrade(PlayerUpgrade playerUpgrade)
@@ -56,7 +55,7 @@ namespace PlayerUpgradeSystem
                 effect.OnRemove(this);
             }
             
-            OnUpgradeChanged?.Invoke();
+            OnEffectChanged?.Invoke();
         }
         
         public StatsData GetStatsData(GearRarity gearRarity)
