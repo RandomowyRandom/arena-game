@@ -4,6 +4,9 @@ using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using EntitySystem;
 using EntitySystem.Abstraction;
+using PlayerUpgradeSystem;
+using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using UnityEngine;
 
 namespace Player
@@ -11,7 +14,9 @@ namespace Player
     [RequireComponent(typeof(Entity))]
     [RequireComponent(typeof(Rigidbody2D))]
     [RequireComponent(typeof(SpriteRenderer))]
-    public class PlayerEntity: MonoBehaviour
+    [RequireComponent(typeof(PlayerStats))]
+    [RequireComponent(typeof(PlayerUpgradeHandler))]
+    public class PlayerEntity: SerializedMonoBehaviour
     {
         [SerializeField]
         private CinemachineVirtualCamera _virtualCamera;
@@ -22,6 +27,8 @@ namespace Player
         private Entity _entity;
         private Rigidbody2D _rigidbody2D;
         private SpriteRenderer _spriteRenderer;
+        private PlayerUpgradeHandler _upgradeHandler;
+        private PlayerStats _playerStats;
         private readonly int _hitEffectBlend = Shader.PropertyToID("_HitEffectBlend");
         private readonly int _hitEffectColor = Shader.PropertyToID("_HitEffectColor");
 
@@ -30,12 +37,27 @@ namespace Player
             _entity = GetComponent<Entity>();
             _rigidbody2D = GetComponent<Rigidbody2D>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
+            _upgradeHandler = GetComponent<PlayerUpgradeHandler>();
+            _playerStats = GetComponent<PlayerStats>();
+            _upgradeHandler.OnEffectChanged += UpdateHealth;
         }
 
         private void Start()
         {
             _entity.OnDamageTaken += ApplyKnockBack;
             _entity.OnDamageTaken += ShowHitEffect;
+        }
+
+        private void OnDestroy()
+        {
+            _entity.OnDamageTaken -= ApplyKnockBack;
+            _entity.OnDamageTaken -= ShowHitEffect;
+            _upgradeHandler.OnEffectChanged -= UpdateHealth;
+        }
+        
+        private void UpdateHealth()
+        {
+            _entity.MaxHealth = _playerStats.GetStatsData().MaxHealth;
         }
 
         private async void ShowHitEffect(float damage, IDamageSource source)
@@ -54,13 +76,6 @@ namespace Player
                 6.3f, .3f);
             
             Time.timeScale = 1f;
-        }
-
-
-        private void OnDestroy()
-        {
-            _entity.OnDamageTaken -= ApplyKnockBack;
-            _entity.OnDamageTaken -= ShowHitEffect;
         }
 
         private void ApplyKnockBack(float damage, IDamageSource source)

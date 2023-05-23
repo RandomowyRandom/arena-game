@@ -15,5 +15,6 @@
         Buff,
         Potion,
         Playlist,
+        PlayerUpgrade,
     }
 }
