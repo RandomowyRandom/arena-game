@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77ff0a4e48464d89a81eaf5274ec21a7, type: 3}
-  m_Name: IRON_BOW
+  m_Name: MITHRIL_GREATSWORD
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 6220283805649785671, guid: e4cc0ac6985a209488cb83ebd2c3a38e, type: 3}
-    - {fileID: 8300000, guid: 69ee7552a6396aa43b1a1547c0f72566, type: 3}
+    - {fileID: 6220283805649785671, guid: a44c6633f2ad74a4d885251194a197ad, type: 3}
+    - {fileID: 8300000, guid: b7720ffeb861dac44810518de0e0089b, type: 3}
     - {fileID: 11400000, guid: 7ff96bf0ebbc025429ee488993903671, type: 2}
     - {fileID: 11400000, guid: a24912256fd91a845bd6f489827a3d3b, type: 2}
     - {fileID: 11400000, guid: d8917f73eb0309040ad9ef636dc22eae, type: 2}
@@ -34,10 +34,16 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 4
     - Name: 
       Entry: 7
-      Data: 1|Items.Effects.RangedSquashVisualItemEffect, Assembly-CSharp
+      Data: 1|Items.Effects.MeleeScaleVisualItemEffect, Assembly-CSharp
+    - Name: _scaleDuration
+      Entry: 4
+      Data: 0.2
+    - Name: _rotationDuration
+      Entry: 4
+      Data: 0.15
     - Name: 
       Entry: 8
       Data: 
@@ -61,13 +67,13 @@ MonoBehaviour:
       Data: UnityEngine.Color, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 0.8207547
+      Data: 0.28773582
     - Name: 
       Entry: 4
-      Data: 0.8207547
+      Data: 1
     - Name: 
       Entry: 4
-      Data: 0.8207547
+      Data: 0.4094554
     - Name: 
       Entry: 4
       Data: 1
@@ -86,7 +92,7 @@ MonoBehaviour:
       Data: 4|ProjectileSystem.Effects.ApplyKnockBackProjectileEffect, Assembly-CSharp
     - Name: _force
       Entry: 4
-      Data: 4
+      Data: 25
     - Name: 
       Entry: 8
       Data: 
@@ -101,7 +107,16 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 5|Items.Effects.PlaySoundItemEffect, Assembly-CSharp
+      Data: 5|Items.Effects.PushItemUserItemEffect, Assembly-CSharp
+    - Name: _force
+      Entry: 4
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|Items.Effects.PlaySoundItemEffect, Assembly-CSharp
     - Name: _clip
       Entry: 10
       Data: 1
@@ -116,35 +131,35 @@ MonoBehaviour:
       Data: 
     - Name: _rarityData
       Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[Items.RaritySystem.GearRarityData,
+      Data: 7|System.Collections.Generic.List`1[[Items.RaritySystem.GearRarityData,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 5
     - Name: 
       Entry: 7
-      Data: 7|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 8|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 2
     - Name: _statsData
       Entry: 7
-      Data: 8|Stats.StatsData, Assembly-CSharp
+      Data: 9|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 6
+      Data: 38
     - Name: _speed
       Entry: 4
-      Data: 0
+      Data: -1.2
     - Name: _fireRate
       Entry: 4
-      Data: 0.5
+      Data: 1
     - Name: _maxHealth
       Entry: 4
       Data: 0
     - Name: _defense
       Entry: 4
-      Data: 0
+      Data: 17
     - Name: 
       Entry: 8
       Data: 
@@ -153,28 +168,28 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 9|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 10|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 3
     - Name: _statsData
       Entry: 7
-      Data: 10|Stats.StatsData, Assembly-CSharp
+      Data: 11|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 7
+      Data: 42.5
     - Name: _speed
       Entry: 4
-      Data: 0
+      Data: -1.2
     - Name: _fireRate
       Entry: 4
-      Data: 0.5
+      Data: 1
     - Name: _maxHealth
       Entry: 4
       Data: 0
     - Name: _defense
       Entry: 4
-      Data: 0
+      Data: 17
     - Name: 
       Entry: 8
       Data: 
@@ -183,28 +198,28 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 11|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 12|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 4
     - Name: _statsData
       Entry: 7
-      Data: 12|Stats.StatsData, Assembly-CSharp
+      Data: 13|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 8
+      Data: 45
     - Name: _speed
       Entry: 4
-      Data: 0
+      Data: -1.2
     - Name: _fireRate
       Entry: 4
-      Data: 0.5
+      Data: 1
     - Name: _maxHealth
       Entry: 4
       Data: 0
     - Name: _defense
       Entry: 4
-      Data: 0
+      Data: 17
     - Name: 
       Entry: 8
       Data: 
@@ -213,28 +228,28 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 13|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 14|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 5
     - Name: _statsData
       Entry: 7
-      Data: 14|Stats.StatsData, Assembly-CSharp
+      Data: 15|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 9
+      Data: 47.5
     - Name: _speed
       Entry: 4
-      Data: 0
+      Data: -1.2
     - Name: _fireRate
       Entry: 4
-      Data: 0.5
+      Data: 1
     - Name: _maxHealth
       Entry: 4
       Data: 0
     - Name: _defense
       Entry: 4
-      Data: 0
+      Data: 17
     - Name: 
       Entry: 8
       Data: 
@@ -243,28 +258,28 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 15|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 16|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 6
     - Name: _statsData
       Entry: 7
-      Data: 16|Stats.StatsData, Assembly-CSharp
+      Data: 17|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 10
+      Data: 50
     - Name: _speed
       Entry: 4
-      Data: 0
+      Data: -1.2
     - Name: _fireRate
       Entry: 4
-      Data: 0.48
+      Data: 1
     - Name: _maxHealth
       Entry: 4
       Data: 0
     - Name: _defense
       Entry: 4
-      Data: 0
+      Data: 17
     - Name: 
       Entry: 8
       Data: 
@@ -277,9 +292,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  _displayName: Iron bow
-  _icon: {fileID: 21300000, guid: ace7790b4eb387b4a8db96d607e198e2, type: 3}
+  _displayName: Warlockm's blade
+  _icon: {fileID: 21300000, guid: b751d82c5ad1a5349937fbd92ae88708, type: 3}
   _description: 
   _maxStack: 1
-  _requiredLevel: 5
-  _damageIncreasePerLevel: 1
+  _requiredLevel: 9
+  _damageIncreasePerLevel: 4.5

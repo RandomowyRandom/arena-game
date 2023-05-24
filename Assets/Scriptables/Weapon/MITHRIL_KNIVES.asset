@@ -54,7 +54,7 @@ MonoBehaviour:
       Data: 0
     - Name: _force
       Entry: 4
-      Data: 50
+      Data: 55
     - Name: _damageMultiplier
       Entry: 4
       Data: 1

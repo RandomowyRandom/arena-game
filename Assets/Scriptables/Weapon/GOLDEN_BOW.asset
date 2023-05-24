@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77ff0a4e48464d89a81eaf5274ec21a7, type: 3}
-  m_Name: IRON_BOW
+  m_Name: GOLDEN_BOW
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -49,7 +49,7 @@ MonoBehaviour:
       Data: 0
     - Name: _force
       Entry: 4
-      Data: 60
+      Data: 73
     - Name: _damageMultiplier
       Entry: 4
       Data: 1
@@ -61,13 +61,13 @@ MonoBehaviour:
       Data: UnityEngine.Color, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 0.8207547
+      Data: 1
     - Name: 
       Entry: 4
-      Data: 0.8207547
+      Data: 0.9268302
     - Name: 
       Entry: 4
-      Data: 0.8207547
+      Data: 0.2028302
     - Name: 
       Entry: 4
       Data: 1
@@ -132,13 +132,13 @@ MonoBehaviour:
       Data: 8|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 6
+      Data: 9
     - Name: _speed
       Entry: 4
       Data: 0
     - Name: _fireRate
       Entry: 4
-      Data: 0.5
+      Data: 0.4
     - Name: _maxHealth
       Entry: 4
       Data: 0
@@ -162,13 +162,13 @@ MonoBehaviour:
       Data: 10|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 7
+      Data: 10
     - Name: _speed
       Entry: 4
       Data: 0
     - Name: _fireRate
       Entry: 4
-      Data: 0.5
+      Data: 0.4
     - Name: _maxHealth
       Entry: 4
       Data: 0
@@ -192,13 +192,13 @@ MonoBehaviour:
       Data: 12|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 8
+      Data: 11
     - Name: _speed
       Entry: 4
       Data: 0
     - Name: _fireRate
       Entry: 4
-      Data: 0.5
+      Data: 0.4
     - Name: _maxHealth
       Entry: 4
       Data: 0
@@ -222,13 +222,13 @@ MonoBehaviour:
       Data: 14|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 9
+      Data: 12
     - Name: _speed
       Entry: 4
       Data: 0
     - Name: _fireRate
       Entry: 4
-      Data: 0.5
+      Data: 0.4
     - Name: _maxHealth
       Entry: 4
       Data: 0
@@ -252,13 +252,13 @@ MonoBehaviour:
       Data: 16|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
-      Data: 10
+      Data: 13
     - Name: _speed
       Entry: 4
       Data: 0
     - Name: _fireRate
       Entry: 4
-      Data: 0.48
+      Data: 0.34
     - Name: _maxHealth
       Entry: 4
       Data: 0
@@ -281,5 +281,5 @@ MonoBehaviour:
   _icon: {fileID: 21300000, guid: ace7790b4eb387b4a8db96d607e198e2, type: 3}
   _description: 
   _maxStack: 1
-  _requiredLevel: 5
+  _requiredLevel: 7
   _damageIncreasePerLevel: 1
