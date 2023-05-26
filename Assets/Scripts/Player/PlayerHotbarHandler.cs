@@ -25,10 +25,10 @@ namespace Player
         private IItemUseLock _itemUseLock;
         
         [OdinSerialize]
-        private InstantiateSlotsInventoryUI _hotbarUI;
+        private InstantiatedSlotsInventoryUI _hotbarUI;
         
         public event Action OnUsableItemChanged;
-
+        
         private int _currentHotbarSlot = 0;
         
         private int LastHotbarSlot => _hotbarInventory.Capacity - 1;
@@ -37,11 +37,13 @@ namespace Player
         private readonly List<HotbarSlotUI> _hotbarSlots = new();
         
         public Item CurrentItem => _hotbarInventory.Items[_currentHotbarSlot];
-        
 
         private void Start()
         {
             _hotbarInventory.OnInventoryChanged += OnUsableItemChanged;
+            
+            Initialize();
+            // SetCurrentHotbarSlot(0);
         }
         
         private void OnDestroy()
@@ -73,9 +75,9 @@ namespace Player
 
         private void SetCurrentHotbarSlot(int slotIndex)
         {
-            if (!_initialized)
-                Initialize();
-
+            if(slotIndex == _currentHotbarSlot)
+                return;
+            
             _currentHotbarSlot = slotIndex;
             _hotbarSlots[_currentHotbarSlot].SetSelected(true);
             
@@ -95,6 +97,7 @@ namespace Player
             foreach (var slot in _hotbarUI.Slots)
             {
                 var hotbarSlot = slot.GetComponent<HotbarSlotUI>();
+                hotbarSlot.ItemUseLock = _itemUseLock;
 
                 if (hotbarSlot == null)
                     continue;
@@ -109,7 +112,27 @@ namespace Player
         {
             if(_itemUseLock.IsLocked)
                 return;
-            
+
+            HandleScroll();
+            HandleNumberKeys();
+        }
+
+        private void HandleNumberKeys()
+        {
+            if (Keyboard.current.digit1Key.wasPressedThisFrame)
+                SetCurrentHotbarSlot(0);
+            else if (Keyboard.current.digit2Key.wasPressedThisFrame)
+                SetCurrentHotbarSlot(1);
+            else if (Keyboard.current.digit3Key.wasPressedThisFrame)
+                SetCurrentHotbarSlot(2);
+            else if (Keyboard.current.digit4Key.wasPressedThisFrame)
+                SetCurrentHotbarSlot(3);
+            else if (Keyboard.current.digit5Key.wasPressedThisFrame)
+                SetCurrentHotbarSlot(4);
+        }
+
+        private void HandleScroll()
+        {
             var input = Mouse.current.scroll.y.ReadValue();
 
             switch (input)

@@ -13,6 +13,8 @@ namespace UI.Inventory
         
         [SerializeField]
         private List<ItemSlotUI> _slots = new();
+        
+        public List<ItemSlotUI> Slots => _slots;
         public IInventory Inventory => _inventory;
 
         private IInventory _inventory;
