@@ -21,6 +21,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8946145e9b38f9d4294a388e76d1f775, type: 2}
     - {fileID: 11400000, guid: c4b6476ca243e9b4c846d0aa739bbe18, type: 2}
     - {fileID: 11400000, guid: 0c899e08108ee44409fcb5cecb40e750, type: 2}
+    - {fileID: 11400000, guid: c7af67b4be41b5b4da2069ce16f8025b, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -32,7 +33,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 6
     - Name: 
       Entry: 10
       Data: 0
@@ -48,6 +49,22 @@ MonoBehaviour:
     - Name: 
       Entry: 10
       Data: 4
+    - Name: 
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _temporaryExcludedUpgrades
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[PlayerUpgradeSystem.ExcludedUpgrade,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
     - Name: 
       Entry: 13
       Data: 

@@ -23,25 +23,26 @@ namespace WaveSystem
 
         private void Start()
         {
-            _waveManager.OnWaveEnd += SpawnReward;
-            _waveManager.OnWaveStart += DestroyReward;
+            _waveManager.OnWaveEnd += TrySpawnReward;
+            _waveManager.OnWaveStart += TryDestroyReward;
         }
 
         private void OnDestroy()
         {
-            _waveManager.OnWaveEnd -= SpawnReward;
-            _waveManager.OnWaveStart -= DestroyReward;
+            _waveManager.OnWaveEnd -= TrySpawnReward;
+            _waveManager.OnWaveStart -= TryDestroyReward;
         }
 
-        private void DestroyReward(Wave wave)
+        private void TryDestroyReward(Wave wave)
         {
             if(_rewardInstance != null)
                 Destroy(_rewardInstance);
         }
 
-        private void SpawnReward(Wave wave)
+        private void TrySpawnReward(Wave wave)
         {
-            _rewardInstance = Instantiate(_rewardPrefab, transform.position + (Vector3)_spawnOffset, Quaternion.identity);
+            if(wave.Index % 2 == 0)
+                _rewardInstance = Instantiate(_rewardPrefab, transform.position + (Vector3)_spawnOffset, Quaternion.identity);
         }
     }
 }
