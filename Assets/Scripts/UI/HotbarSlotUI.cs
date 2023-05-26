@@ -1,6 +1,8 @@
 ﻿using System;
 using DG.Tweening;
+using Items.Abstraction;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace UI
@@ -9,6 +11,9 @@ namespace UI
     {
         [SerializeField]
         private Image _backgroundImage;
+        
+        [SerializeField]
+        private Image _inUseImage;
         
         [Space(10)]
         [SerializeField]
@@ -19,9 +24,14 @@ namespace UI
         
         private Vector2 _originalPosition = Vector2.zero;
         
+        private bool _selected;
+        
+        public IItemUseLock ItemUseLock { get; set; }        
 
         public void SetSelected(bool selected)
         {
+            _selected = selected;
+            
             if(_originalPosition == Vector2.zero)
                 _originalPosition = transform.position;
             
@@ -37,6 +47,14 @@ namespace UI
                 () => transform.DOScale(Vector3.one, 0.2f);
             
             transform.DOMoveY(transform.position.y + 15f, 0.2f);
+        }
+
+        private void Update()
+        {
+            if(!_selected)
+                return;
+
+            _inUseImage.color = ItemUseLock.IsLocked ? new Color(0f, 0f, 0f, 0.5f) : Color.clear;
         }
     }
 }

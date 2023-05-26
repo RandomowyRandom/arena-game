@@ -215,8 +215,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4325902104996148919}
   - component: {fileID: 4325902104996148913}
-  - component: {fileID: 4325902104996148914}
   - component: {fileID: 1232689567907890147}
+  - component: {fileID: 7483249346155588629}
   m_Layer: 0
   m_Name: Hotbar
   m_TagString: Untagged
@@ -254,32 +254,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4325902104996148918}
   m_CullTransparentMesh: 1
---- !u!114 &4325902104996148914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4325902104996148918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b2c2d7d9b7948299d344b7763a852eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: _inventoryToRegister
-      Entry: 6
-      Data: 
-  _slotsPanel: {fileID: 4325902104303804736}
-  _slotPrefab: {fileID: -4050196497257775967, guid: e2c67c5506d7ab441a297bb93fab74d0, type: 3}
 --- !u!114 &1232689567907890147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,3 +279,33 @@ MonoBehaviour:
       Entry: 6
       Data: 
   _itemNameText: {fileID: 2008273946}
+--- !u!114 &7483249346155588629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4325902104996148918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0861d72209ab452c94f47b634a5f32bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _inventoryToRegister
+      Entry: 6
+      Data: 
+  _slots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
