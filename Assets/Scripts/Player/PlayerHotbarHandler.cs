@@ -12,6 +12,7 @@ using Stats;
 using Stats.Interfaces;
 using UI;
 using UI.Inventory;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Player
@@ -24,7 +25,7 @@ namespace Player
         [OdinSerialize]
         private IItemUseLock _itemUseLock;
         
-        [OdinSerialize]
+        [SerializeField]
         private InstantiatedSlotsInventoryUI _hotbarUI;
         
         public event Action OnUsableItemChanged;

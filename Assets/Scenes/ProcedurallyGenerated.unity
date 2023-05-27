@@ -51845,6 +51845,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2082098676}
     m_Modifications:
     - target: {fileID: 233742934, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
+      propertyPath: _hotbarUI
+      value: 
+      objectReference: {fileID: 1232689567907890145}
+    - target: {fileID: 233742934, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 233742934, guid: 9463ccad87658174bb7aa99cbe1913d4, type: 3}
@@ -95547,6 +95551,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4325902104996148919, guid: 8bf3993f0a8655545bbd09d9a243cc8f, type: 3}
   m_PrefabInstance: {fileID: 3248174686547359063}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1232689567907890145 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7483249346155588629, guid: 8bf3993f0a8655545bbd09d9a243cc8f, type: 3}
+  m_PrefabInstance: {fileID: 3248174686547359063}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0861d72209ab452c94f47b634a5f32bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1232689569813782812
 PrefabInstance:
   m_ObjectHideFlags: 0
