@@ -27,18 +27,11 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 4e1452f97fe4c4d43bd7e7cbd4c5d6ca, type: 2}
     - {fileID: 11400000, guid: 0974c5b09519a1840a581549d9c2b86c, type: 2}
     - {fileID: 11400000, guid: a7f4edc93d413b14cac33b8bf096cd9a, type: 2}
-    - {fileID: 11400000, guid: 1384386db39eef74d96f62752ff0f234, type: 2}
-    - {fileID: 11400000, guid: 9a7341f9a37634f4fbb81ac2ac364e19, type: 2}
-    - {fileID: 11400000, guid: 474748b8d37d7a844838b6d3221ea1a9, type: 2}
-    - {fileID: 11400000, guid: 9676b87daf40f1e42af682a32edfd4e6, type: 2}
-    - {fileID: 11400000, guid: f02d6b62283b77e4288cb3e242e52e26, type: 2}
-    - {fileID: 11400000, guid: f25148785e1498e42b69d6677619c5bf, type: 2}
-    - {fileID: 11400000, guid: ae898ccdc5c497e44a5bd23936d5fe8d, type: 2}
-    - {fileID: 11400000, guid: 98feeb17ecabf31498df3ff15b58af5a, type: 2}
-    - {fileID: 11400000, guid: ea2b61484c5e6b04d9a1987d9c95ef6d, type: 2}
-    - {fileID: 11400000, guid: 38d1862d6b4ddcd46aa32af8917ad424, type: 2}
-    - {fileID: 11400000, guid: f4b427b4007adb746a2a58dea57cf71b, type: 2}
-    - {fileID: 11400000, guid: 1afd86fe56747d64db7800d6e109f591, type: 2}
+    - {fileID: 11400000, guid: c4850d86c3c11d7468de48d96d85537b, type: 2}
+    - {fileID: 11400000, guid: d223f95e090c6624bbc5e31e1836b3e3, type: 2}
+    - {fileID: 11400000, guid: a7f726dd5549d474db5af4e0504e0448, type: 2}
+    - {fileID: 11400000, guid: fd6eb8b80791a054a8a118cdc9572161, type: 2}
+    - {fileID: 11400000, guid: 2040b6f1c70c99c4481eee0886df34ba, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -57,7 +50,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 23
+      Data: 16
     - Name: 
       Entry: 7
       Data: 
@@ -195,7 +188,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: AIDENS_RING
+      Data: COPPER_BOW
     - Name: $v
       Entry: 10
       Data: 11
@@ -207,7 +200,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: AMETHYST_RING
+      Data: GOLDEN_BOW
     - Name: $v
       Entry: 10
       Data: 12
@@ -219,7 +212,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: AMMOLITE_RING
+      Data: MITHRIL_GREATSWORD
     - Name: $v
       Entry: 10
       Data: 13
@@ -231,7 +224,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: ANCIENT_GOLDEN_RING
+      Data: STONE_KNIVES
     - Name: $v
       Entry: 10
       Data: 14
@@ -243,94 +236,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: AZURITE_RING
+      Data: STONE_SHORTSWORD
     - Name: $v
       Entry: 10
       Data: 15
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: CORDIERITE_RING
-    - Name: $v
-      Entry: 10
-      Data: 16
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: CUPRITE_RING
-    - Name: $v
-      Entry: 10
-      Data: 17
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: DIAMOND_RING
-    - Name: $v
-      Entry: 10
-      Data: 18
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: EMERALD_RING
-    - Name: $v
-      Entry: 10
-      Data: 19
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: OPAL_RING
-    - Name: $v
-      Entry: 10
-      Data: 20
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: RUBY_RING
-    - Name: $v
-      Entry: 10
-      Data: 21
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: SAPPHIRE_RING
-    - Name: $v
-      Entry: 10
-      Data: 22
     - Name: 
       Entry: 8
       Data: 
