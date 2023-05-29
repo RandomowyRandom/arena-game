@@ -1,4 +1,7 @@
-﻿namespace Common.Enums
+﻿using JetBrains.Annotations;
+// ReSharper disable UnusedMember.Global
+
+namespace Common.Enums
 {
     public enum ScriptableType
     {
@@ -16,5 +19,6 @@
         Potion,
         Playlist,
         PlayerUpgrade,
+        EditorTemplate
     }
 }

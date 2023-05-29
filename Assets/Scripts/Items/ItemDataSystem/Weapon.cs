@@ -22,6 +22,14 @@ namespace Items.ItemDataSystem
         [OdinSerialize]
         private List<GearRarityData> _rarityData;
 
+        [field: SerializeField]
+        public int Durability { get; set; }
+        
+        public void SetRarityData(List<GearRarityData> rarityData)
+        {
+            _rarityData = new(rarityData);
+        }
+
         public override void OnItemConstructed(Item item)
         {
             var hasItemDurabilityData = item.AdditionalItemData is DurabilityItemData;

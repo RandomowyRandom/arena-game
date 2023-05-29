@@ -1,0 +1,207 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1041c82829c4e0d8d768e6b6023e0df, type: 3}
+  m_Name: Bow
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 6220283805649785671, guid: e4cc0ac6985a209488cb83ebd2c3a38e, type: 3}
+    - {fileID: 8300000, guid: 69ee7552a6396aa43b1a1547c0f72566, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _itemEffects
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Items.Abstraction.IItemEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 1|Items.Effects.Operators.ConditionalStatement, Assembly-CSharp
+    - Name: _conditionEvaluator
+      Entry: 7
+      Data: 2|Items.Effects.Operators.ConditionEvaluators.HasEnoughDurabilityEvaluator,
+        Assembly-CSharp
+    - Name: _biggerThan
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _expectedResult
+      Entry: 5
+      Data: true
+    - Name: _effects
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[Items.Abstraction.IItemEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 4|Items.Effects.RangedSquashVisualItemEffect, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
+    - Name: _projectilePrefab
+      Entry: 10
+      Data: 0
+    - Name: _force
+      Entry: 4
+      Data: 60
+    - Name: _damageMultiplier
+      Entry: 4
+      Data: 1
+    - Name: _forceMode
+      Entry: 3
+      Data: 1
+    - Name: _projectileColor
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.8156863
+    - Name: 
+      Entry: 4
+      Data: 0.433305085
+    - Name: 
+      Entry: 4
+      Data: 0.183962286
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _projectileEffects
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[ProjectileSystem.Abstraction.IProjectileEffect,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 7|ProjectileSystem.Effects.ApplyKnockBackProjectileEffect, Assembly-CSharp
+    - Name: _force
+      Entry: 4
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 8|Items.Effects.PlaySoundItemEffect, Assembly-CSharp
+    - Name: _clip
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|Items.Effects.Operators.ConditionalStatement, Assembly-CSharp
+    - Name: _conditionEvaluator
+      Entry: 7
+      Data: 10|Items.Effects.Operators.ConditionEvaluators.HasEnoughDurabilityEvaluator,
+        Assembly-CSharp
+    - Name: _biggerThan
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _expectedResult
+      Entry: 5
+      Data: false
+    - Name: _effects
+      Entry: 7
+      Data: 11|System.Collections.Generic.List`1[[Items.Abstraction.IItemEffect,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 12|Items.Effects.RangedSquashVisualItemEffect, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _commonStatsData
+      Entry: 7
+      Data: 13|Stats.StatsData, Assembly-CSharp
+    - Name: _damage
+      Entry: 4
+      Data: 5
+    - Name: _speed
+      Entry: 4
+      Data: 0
+    - Name: _fireRate
+      Entry: 4
+      Data: 0.8
+    - Name: _maxHealth
+      Entry: 4
+      Data: 0
+    - Name: _defense
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+  _icon: {fileID: 21300000, guid: 7ff0448b92075984caaefad1c502f37b, type: 3}
+  _name: '[...] bow'
+  _description: '[...]'
+  _requiredLevel: 1
+  _durability: 100
