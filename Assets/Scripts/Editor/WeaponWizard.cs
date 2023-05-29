@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Items.Abstraction;
 using Items.ItemDataSystem;
@@ -24,13 +25,13 @@ namespace Editor
         }
         
         [LabelWidth(100)]
-        [HorizontalGroup("Row", 0.3f)]
+        [HorizontalGroup("Row", 0.4f)]
         [VerticalGroup("Row/Left")]
         [ShowInInspector]
         private string _name;
         
         [LabelWidth(100)]
-        [HorizontalGroup("Row", 0.3f)]
+        [HorizontalGroup("Row", 0.4f)]
         [VerticalGroup("Row/Left")]
         [ShowInInspector]
         [ReadOnly]
@@ -46,18 +47,18 @@ namespace Editor
         [VerticalGroup("Row/Right")]
         [HorizontalGroup("Row", 0.2f)]
         [ShowInInspector]
-        [PreviewField(80, ObjectFieldAlignment.Right)]
+        [PreviewField(80, ObjectFieldAlignment.Center)]
         private Sprite _sprite;
         
         [Space(10)]
         [LabelWidth(100)]
-        [HorizontalGroup("Row", 0.3f)]
+        [HorizontalGroup("Row", 0.4f)]
         [VerticalGroup("Row/Left")]
         [ShowInInspector]
         private int _requiredLevel;
         
         [LabelWidth(100)]
-        [HorizontalGroup("Row", 0.3f)]
+        [HorizontalGroup("Row", 0.4f)]
         [VerticalGroup("Row/Left")]
         [ShowInInspector]
         private int _durability;
@@ -150,7 +151,7 @@ namespace Editor
         [ShowInInspector]
         private float _fireRateDecrease;
 
-        [Button("Save weapon")]
+        [Button("Save weapon", ButtonSizes.Large)]
         private void Save()
         {
             // create new weapon SO
@@ -163,6 +164,7 @@ namespace Editor
             weapon.Icon = _sprite;
             weapon.SetEffects(_effects);
             weapon.SetRarityData(_gearRarityData);
+            weapon.MaxStack = 1;
             
             // save weapon
             var path = "Assets/Scriptables/Weapon/" + _key + ".asset";
@@ -194,6 +196,85 @@ namespace Editor
             base.OnGUI();
             
             _key = GetKeyForName();
+            
+            HandleEmptyWarnings();
+            HandleSameAsTemplateWarning();
+        }
+
+        private void HandleSameAsTemplateWarning()
+        {
+            if(_statsData != null && _weaponTemplate != null)
+            {
+                if((Math.Abs(_weaponTemplate.CommonStatsData.Damage - _statsData.Damage) < 0.1f || Math.Abs(_weaponTemplate.CommonStatsData.FireRate - _statsData.FireRate) < 0.1f))
+                    EditorGUILayout.HelpBox("Damage or fire rate are the same as template.", MessageType.Warning);
+            }
+            
+            if (_weaponTemplate != null && _weaponTemplate.Name == _name)
+            {
+                EditorGUILayout.HelpBox("Name is the same as template.", MessageType.Info);
+            }
+            
+            if (_weaponTemplate != null && _weaponTemplate.Description == _description)
+            {
+                EditorGUILayout.HelpBox("Description is the same as template.", MessageType.Info);
+            }
+            
+            if (_weaponTemplate != null && _weaponTemplate.Icon == _sprite)
+            {
+                EditorGUILayout.HelpBox("Icon is the same as template.", MessageType.Info);
+            }
+            
+            if (_weaponTemplate != null && _weaponTemplate.RequiredLevel == _requiredLevel)
+            {
+                EditorGUILayout.HelpBox("Required level is the same as template.", MessageType.Info);
+            }
+            
+            if (_weaponTemplate != null && _weaponTemplate.Durability == _durability)
+            {
+                EditorGUILayout.HelpBox("Durability is the same as template.", MessageType.Info);
+            }
+        }
+        private void HandleEmptyWarnings()
+        {
+            if (_gearRarityData == null || _gearRarityData.Count == 0)
+            {
+                EditorGUILayout.HelpBox("Gear rarity data is empty. Generate it first.", MessageType.Error);
+            }
+
+            if (_statsData.Damage == 0)
+            {
+                EditorGUILayout.HelpBox("Damage is 0. Set it first.", MessageType.Error);
+            }
+
+            if (_name.IsNullOrWhitespace() || _description.IsNullOrWhitespace() || _sprite == null)
+            {
+                EditorGUILayout.HelpBox("Name, description or icon is empty. Set it first.", MessageType.Error);
+            }
+
+            if (_statsData.FireRate == 0)
+            {
+                EditorGUILayout.HelpBox("Fire rate is 0. Set it first.", MessageType.Warning);
+            }
+
+            if (_effects == null || _effects.Count == 0)
+            {
+                EditorGUILayout.HelpBox("Effects are empty. Set it first.", MessageType.Warning);
+            }
+
+            if (_requiredLevel <= 0)
+            {
+                EditorGUILayout.HelpBox("Required level is invalid. Set it first.", MessageType.Warning);
+            }
+
+            if (_durability <= 0)
+            {
+                EditorGUILayout.HelpBox("Durability is invalid. Set it first.", MessageType.Warning);
+            }
+            
+            if(_damageIncrease <= 0 || _fireRateDecrease <= 0)
+            {
+                EditorGUILayout.HelpBox("Damage increase or fire rate decrease is <= 0", MessageType.Info);
+            }
         }
 
         private string GetKeyForName()

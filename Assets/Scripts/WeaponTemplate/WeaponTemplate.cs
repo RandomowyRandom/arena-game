@@ -44,7 +44,7 @@ namespace WeaponTemplate
         
         public List<IItemEffect> ItemEffects => new(_itemEffects);
 
-        public StatsData CommonStatsData => _commonStatsData;
+        public StatsData CommonStatsData => new(_commonStatsData);
         
         public Sprite Icon => _icon;
     }

@@ -43,8 +43,12 @@ namespace Items.ItemDataSystem
             set => _description = value;
         }
 
-        public int MaxStack => _maxStack;
-        
+        public int MaxStack
+        {
+            get => _maxStack;
+            set => _maxStack = value;
+        }
+
         public bool IsStackable => _maxStack > 1;
         
         public int RequiredLevel
