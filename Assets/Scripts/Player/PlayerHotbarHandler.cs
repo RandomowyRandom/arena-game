@@ -18,7 +18,7 @@ using UnityEngine.InputSystem;
 
 namespace Player
 {
-    public class PlayerHotbarHandler: SerializedMonoBehaviour, IUsableItemProvider, IStatsDataProvider
+    public class PlayerHotbarHandler: SerializedMonoBehaviour, IUsableItemProvider, IStatsDataProvider, IPlayerHotbarHandler
     {
         [OdinSerialize]
         private IInventory _hotbarInventory;
@@ -40,8 +40,19 @@ namespace Player
         
         public Item CurrentItem => _hotbarInventory.Items[_currentHotbarSlot];
 
+        public int CurrentDurability
+        {
+            get
+            {
+                var durabilityData = CurrentItem.AdditionalItemData as DurabilityItemData;
+                return durabilityData?.CurrentDurability ?? 1;
+            }
+        }
+
         private void Start()
         {
+            ServiceLocator.ServiceLocator.Instance.Register<IPlayerHotbarHandler>(this);
+            
             _hotbarInventory.OnInventoryChanged += OnUsableItemChanged;
             
             Initialize();
@@ -49,6 +60,8 @@ namespace Player
         
         private void OnDestroy()
         {
+            ServiceLocator.ServiceLocator.Instance.Deregister<IPlayerHotbarHandler>();
+            
             _hotbarInventory.OnInventoryChanged -= OnUsableItemChanged;
         }
 
@@ -180,5 +193,6 @@ namespace Player
 
             return new StatsData();
         }
+
     }
 }
