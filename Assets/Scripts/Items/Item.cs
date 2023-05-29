@@ -21,21 +21,30 @@ namespace Items
         [Space(5)]
         [SerializeField]
         private GearRarity _gearRarity;
-
-        public Item(ItemData itemData, int amount)
-        {
-            ItemData = itemData;
-            Amount = amount;
-
-            if (itemData is IGearRaritiesProvider statsDataProvider)
-                GearRarity = statsDataProvider.GetGearRarities().FirstOrDefault()!.GearRarity;
-        }
         
-        public Item(ItemData itemData, int amount, GearRarity gearRarity)
+        private IAdditionalItemData _additionalItemData;
+
+        public Item(ItemData itemData, int amount, GearRarity gearRarity = null, IAdditionalItemData additionalItemData = null)
         {
             ItemData = itemData;
             Amount = amount;
             GearRarity = gearRarity;
+            AdditionalItemData = additionalItemData;
+            
+            if (itemData is IGearRaritiesProvider statsDataProvider && gearRarity == null)
+                GearRarity = statsDataProvider.GetGearRarities().FirstOrDefault()!.GearRarity;
+            
+            ItemData.OnItemConstructed(this);
+        }
+
+        public Item(Item item)
+        {
+            ItemData = item.ItemData;
+            Amount = item.Amount;
+            GearRarity = item.GearRarity;
+            AdditionalItemData = item.AdditionalItemData;
+            
+            ItemData.OnItemConstructed(this);
         }
         
         // for odin serialization
@@ -63,6 +72,12 @@ namespace Items
         }
 
         public bool IsRarityItem => GearRarity != null;
+        
+        public IAdditionalItemData AdditionalItemData
+        {
+            get => _additionalItemData;
+            set => _additionalItemData = value;
+        }
 
         public override string ToString()
         {

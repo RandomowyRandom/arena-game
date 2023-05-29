@@ -44,7 +44,6 @@ namespace Player
             _hotbarInventory.OnInventoryChanged += OnUsableItemChanged;
             
             Initialize();
-            // SetCurrentHotbarSlot(0);
         }
         
         private void OnDestroy()
@@ -71,7 +70,7 @@ namespace Player
             var currentItemInSlot = _hotbarInventory.GetItem(_currentHotbarSlot);
             
             if(CurrentItem.ItemData == item)
-                _hotbarInventory.SetItem(_currentHotbarSlot, new Item(item, currentItemInSlot.Amount - 1));
+                _hotbarInventory.SetItem(_currentHotbarSlot, new Item(item, currentItemInSlot.Amount - 1, currentItemInSlot.GearRarity ,currentItemInSlot.AdditionalItemData));
         }
 
         private void SetCurrentHotbarSlot(int slotIndex)

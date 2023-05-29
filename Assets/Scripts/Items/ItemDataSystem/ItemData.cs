@@ -37,6 +37,8 @@ namespace Items.ItemDataSystem
         
         public int RequiredLevel => _requiredLevel;
 
+        public virtual void OnItemConstructed(Item item) { }
+        
         public override string ToString()
         {
             return Key;

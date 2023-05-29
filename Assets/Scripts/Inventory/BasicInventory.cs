@@ -47,7 +47,7 @@ namespace Inventory
             if (bestSlotIndex != -1)
             {
                 var amountToAdd = Mathf.Min(remainingAmount, GetSpaceForItemInSlot(bestSlotIndex, item));
-                AddItemAmountToSlot(bestSlotIndex, new Item(item.ItemData, amountToAdd, item.GearRarity));
+                AddItemAmountToSlot(bestSlotIndex, new Item(item.ItemData, amountToAdd, item.GearRarity, item.AdditionalItemData));
                 remainingAmount -= amountToAdd;
 
                 if (remainingAmount == 0)
@@ -63,7 +63,7 @@ namespace Inventory
                     continue;
                 
                 var amountToAdd = Mathf.Min(remainingAmount, item.ItemData.MaxStack);
-                Items[i] = new Item(item.ItemData, amountToAdd, item.GearRarity);
+                Items[i] = new Item(item.ItemData, amountToAdd, item.GearRarity, item.AdditionalItemData);
                 remainingAmount -= amountToAdd;
 
                 if (remainingAmount != 0) 
@@ -75,7 +75,7 @@ namespace Inventory
             }
 
             OnInventoryChanged?.Invoke();
-            return new Item(item.ItemData, remainingAmount, item.GearRarity);
+            return new Item(item.ItemData, remainingAmount, item.GearRarity, item.AdditionalItemData);
         }
 
         public Item TryRemoveItem(Item item)
@@ -100,7 +100,7 @@ namespace Inventory
             }
             
             OnInventoryChanged?.Invoke();
-            return new Item(item.ItemData, remainingAmount, item.GearRarity);
+            return new Item(item.ItemData, remainingAmount, item.GearRarity, item.AdditionalItemData);
         }
 
         private int GetBestSlotToRemoveFrom(ItemData itemData)
@@ -213,7 +213,7 @@ namespace Inventory
         private void AddItemAmountToSlot(int slot, Item item)
         {
             var amountInSlot = _items[slot] == null ? 0 : _items[slot].Amount;
-            SetItem(slot, new Item(item.ItemData, amountInSlot + item.Amount, item.GearRarity));
+            SetItem(slot, new Item(item.ItemData, amountInSlot + item.Amount, item.GearRarity, item.AdditionalItemData));
         }
 
         private int GetSpaceForItemInSlot(int index, Item item)
@@ -234,7 +234,8 @@ namespace Inventory
         {
             var amountInSlot = _items[slot].Amount;
             var gearRarity = _items[slot].GearRarity;
-            SetItem(slot, new Item(_items[slot].ItemData, amountInSlot - amountToRemove, gearRarity));
+            var additionalItemData = _items[slot].AdditionalItemData;
+            SetItem(slot, new Item(_items[slot].ItemData, amountInSlot - amountToRemove, gearRarity, additionalItemData));
         }
     }
 }
