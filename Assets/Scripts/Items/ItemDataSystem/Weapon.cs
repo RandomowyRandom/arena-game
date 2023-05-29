@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Common.Attributes;
 using Items.Abstraction;
+using Items.Durability;
 using Items.RaritySystem;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
@@ -15,9 +16,20 @@ namespace Items.ItemDataSystem
     [ScriptableFactoryElement]
     public class Weapon: UsableItem, IStatsDataProvider, IGearRaritiesProvider
     {
+        [SerializeField]
+        private int _maxDurability;
+        
         [OdinSerialize]
         private List<GearRarityData> _rarityData;
-        
+
+        public override void OnItemConstructed(Item item)
+        {
+            var hasItemDurabilityData = item.AdditionalItemData is DurabilityItemData;
+            
+            if(!hasItemDurabilityData)
+                item.AdditionalItemData = new DurabilityItemData(_maxDurability);
+        }
+
         public StatsData GetStatsData(GearRarity rarity)
         {
             return  _rarityData

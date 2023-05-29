@@ -72,15 +72,15 @@ namespace Inventory
             if(!cursorHasItem && slotHasItem)
             {
                 var amountToTake = Mathf.CeilToInt(slot.Item.Amount / 2f);
-                SetItem(new Item(slot.Item.ItemData, amountToTake, slot.Item.GearRarity));
-                slot.UIHandler.Inventory.SetItem(slot.SlotIndex, new Item(slot.Item.ItemData, slot.Item.Amount - amountToTake, slot.Item.GearRarity));
+                SetItem(new Item(slot.Item.ItemData, amountToTake, slot.Item.GearRarity, slot.Item.AdditionalItemData));
+                slot.UIHandler.Inventory.SetItem(slot.SlotIndex, new Item(slot.Item.ItemData, slot.Item.Amount - amountToTake, slot.Item.GearRarity, slot.Item.AdditionalItemData));
                 return;
             }
             
             if(cursorHasItem && !slotHasItem)
             {
-                slot.UIHandler.Inventory.SetItem(slot.SlotIndex, new Item(_heldItem.ItemData, 1, _heldItem.GearRarity));
-                SetItem(new Item(_heldItem.ItemData, _heldItem.Amount - 1, _heldItem.GearRarity));
+                slot.UIHandler.Inventory.SetItem(slot.SlotIndex, new Item(_heldItem.ItemData, 1, _heldItem.GearRarity, _heldItem.AdditionalItemData));
+                SetItem(new Item(_heldItem.ItemData, _heldItem.Amount - 1, _heldItem.GearRarity, _heldItem.AdditionalItemData));
                 
                 if(_heldItem.Amount == 0)
                     SetItem(null);
@@ -96,8 +96,8 @@ namespace Inventory
                 if(slot.Item.Amount == slot.Item.ItemData.MaxStack)
                     return;
                 
-                slot.UIHandler.Inventory.SetItem(slot.SlotIndex, new Item(slot.Item.ItemData, slot.Item.Amount + 1, slot.Item.GearRarity));
-                SetItem(new Item(_heldItem.ItemData, _heldItem.Amount - 1, _heldItem.GearRarity));
+                slot.UIHandler.Inventory.SetItem(slot.SlotIndex, new Item(slot.Item.ItemData, slot.Item.Amount + 1, slot.Item.GearRarity, slot.Item.AdditionalItemData));
+                SetItem(new Item(_heldItem.ItemData, _heldItem.Amount - 1, _heldItem.GearRarity, _heldItem.AdditionalItemData));
                 
                 if(_heldItem.Amount == 0)
                     SetItem(null);
@@ -134,8 +134,8 @@ namespace Inventory
 
                 var amountToAdd = Mathf.Min(cursorItem.Amount, slotItem.ItemData.MaxStack - slotItem.Amount);
 
-                slot.UIHandler.Inventory.SetItem(slot.SlotIndex, new Item(slotItem.ItemData, slotItem.Amount + amountToAdd, slotItem.GearRarity));
-                SetItem(new Item(cursorItem.ItemData, cursorItem.Amount - amountToAdd, cursorItem.GearRarity));
+                slot.UIHandler.Inventory.SetItem(slot.SlotIndex, new Item(slotItem.ItemData, slotItem.Amount + amountToAdd, slotItem.GearRarity, slotItem.AdditionalItemData));
+                SetItem(new Item(cursorItem.ItemData, cursorItem.Amount - amountToAdd, cursorItem.GearRarity, cursorItem.AdditionalItemData));
 
                 if (_heldItem.Amount == 0)
                     SetItem(null);

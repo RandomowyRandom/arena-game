@@ -10,5 +10,6 @@ namespace Items.Abstraction
         public GameObject ParentGameObject { get; }
         public UniTask<bool> TryUseItem(UsableItem item);
         public void ConsumeItem(UsableItem item);
+        public void DecreaseDurability(UsableItem item, int amount);
     }
 }
