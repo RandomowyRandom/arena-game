@@ -29,6 +29,15 @@ namespace Stats
             _defense = defense;
         }
 
+        public StatsData(StatsData data)
+        {
+            _damage = data.Damage;
+            _speed = data.Speed;
+            _fireRate = data.FireRate;
+            _maxHealth = data.MaxHealth;
+            _defense = data.Defense;
+        }
+
         public StatsData()
         {
             _damage = 0;
@@ -38,14 +47,35 @@ namespace Stats
             _defense = 0;
         }
 
-        public float Damage => _damage;
-        public float Speed => _speed;
+        public float Damage
+        {
+            get => _damage;
+            set => _damage = value;
+        }
 
-        public float FireRate => _fireRate;
+        public float Speed
+        {
+            get => _speed;
+            set => _speed = value;
+        }
 
-        public float MaxHealth => _maxHealth;
-        
-        public float Defense => _defense;
+        public float FireRate
+        {
+            get => _fireRate;
+            set => _fireRate = value;
+        }
+
+        public float MaxHealth
+        {
+            get => _maxHealth;
+            set => _maxHealth = value;
+        }
+
+        public float Defense
+        {
+            get => _defense;
+            set => _defense = value;
+        }
 
         public static StatsData operator +(StatsData a, StatsData b)
         {

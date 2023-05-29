@@ -21,8 +21,16 @@ namespace Items.RaritySystem
             _statsData = statsData;
         }
         
-        public GearRarity GearRarity => _gearRarity;
-        
-        public StatsData StatsData => _statsData;
+        public GearRarity GearRarity
+        {
+            get => _gearRarity;
+            set => _gearRarity = value;
+        }
+
+        public StatsData StatsData
+        {
+            get => _statsData;
+            set => _statsData = value;
+        }
     }
 }

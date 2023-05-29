@@ -13,6 +13,11 @@ namespace Items.ItemDataSystem
         [OdinSerialize] 
         private List<IItemEffect> _effects;
         
+        public void SetEffects(List<IItemEffect> effects)
+        {
+            _effects = new(effects);
+        }
+        
         public async UniTask OnUse(IItemUser user)
         {
             if(_effects == null)

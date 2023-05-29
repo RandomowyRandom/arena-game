@@ -25,17 +25,33 @@ namespace Items.ItemDataSystem
 
         public string Key => name;
         
-        public string DisplayName => _displayName;
+        public string DisplayName
+        {
+            get => _displayName;
+            set => _displayName = value;
+        }
 
-        public Sprite Icon => _icon;
+        public Sprite Icon
+        {
+            get => _icon;
+            set => _icon = value;
+        }
 
-        public string Description => _description;
+        public string Description
+        {
+            get => _description;
+            set => _description = value;
+        }
 
         public int MaxStack => _maxStack;
         
         public bool IsStackable => _maxStack > 1;
         
-        public int RequiredLevel => _requiredLevel;
+        public int RequiredLevel
+        {
+            get => _requiredLevel;
+            set => _requiredLevel = value;
+        }
 
         public virtual void OnItemConstructed(Item item) { }
         

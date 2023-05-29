@@ -8,9 +8,6 @@ using Items.ItemDataSystem;
 
 public class ItemLevelWizard : OdinEditorWindow
 {
-    // Serialized value list
-    private List<int> values = new List<int>();
-
     // Reference to the ItemDatabase
     [SerializeField]
     private ItemDatabase itemDatabase;
