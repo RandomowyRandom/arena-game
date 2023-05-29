@@ -64,5 +64,10 @@ namespace Player
         {
             _usableItemProvider.ConsumeItem(item);
         }
+
+        public void DecreaseDurability(UsableItem item, int amount)
+        {
+            _usableItemProvider.DecreaseDurability(item, amount);
+        }
     }
 }

@@ -9,5 +9,7 @@ namespace Player.Interfaces
         public UsableItem GetUsableItem();
         
         public void ConsumeItem(UsableItem item);
+        
+        public void DecreaseDurability(UsableItem item, int amount);
     }
 }

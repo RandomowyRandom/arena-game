@@ -171,6 +171,11 @@ namespace Items
                     break;
             }
             
+            stringBuilder.Append("<color=\"white\">");
+            
+            if(_additionalItemData != null)
+                stringBuilder.AppendLine(_additionalItemData.GetTooltip());
+            
             return stringBuilder.ToString();
         }
     }

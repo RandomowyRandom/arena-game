@@ -2,6 +2,6 @@
 {
     public interface IAdditionalItemData
     {
-        
+        public string GetTooltip();
     }
 }

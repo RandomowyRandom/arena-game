@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Inventory.Interfaces;
 using Items;
 using Items.Abstraction;
+using Items.Durability;
 using Items.ItemDataSystem;
 using Items.RaritySystem;
 using Player.Interfaces;
@@ -71,6 +72,22 @@ namespace Player
             
             if(CurrentItem.ItemData == item)
                 _hotbarInventory.SetItem(_currentHotbarSlot, new Item(item, currentItemInSlot.Amount - 1, currentItemInSlot.GearRarity ,currentItemInSlot.AdditionalItemData));
+        }
+
+        public void DecreaseDurability(UsableItem item, int amount)
+        {
+            if(CurrentItem == null)
+                return;
+            
+            var currentItemInSlot = _hotbarInventory.GetItem(_currentHotbarSlot);
+
+            if(currentItemInSlot.AdditionalItemData is not DurabilityItemData durabilityData)
+                return;
+            
+            durabilityData.CurrentDurability -= amount;
+            
+            if(CurrentItem.ItemData == item)
+                _hotbarInventory.SetItem(_currentHotbarSlot, new Item(item, currentItemInSlot.Amount, currentItemInSlot.GearRarity, durabilityData));
         }
 
         private void SetCurrentHotbarSlot(int slotIndex)
