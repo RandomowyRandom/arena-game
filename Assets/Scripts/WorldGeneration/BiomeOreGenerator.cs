@@ -1,42 +1,45 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Common.Extensions;
+using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using UnityEngine;
+using WorldGeneration.Abstraction;
+using WorldGeneration.RoomGeneration;
+using Random = UnityEngine.Random;
 
 namespace WorldGeneration
 {
-    [RequireComponent(typeof(BiomeTerrainGenerator))]
-    public class BiomeOreGenerator: MonoBehaviour
+    public class BiomeOreGenerator: SerializedMonoBehaviour, IGenerationStep
     {
         [SerializeField]
-        private int _randomPointCount = 25;
+        private Vector2 _randomPositionOffset = new(0.5f, 0.5f);
         
-        [SerializeField] [Range(0f, 1f)]
-        private float _percentageOfAllRandomPoints = 0.3f;
-        
-        [SerializeField]
-        private List<ResourceGroupData> _resourceGroups;
-        
-        [SerializeField]
-        private Vector2 _randomPositionOffset = new Vector2(0.5f, 0.5f);
-        
-        private BiomeTerrainGenerator _terrainGenerator;
+        [OdinSerialize]
+        private IGenerationStep _previousStep;
+        public event Action<RoomData, bool[,]> OnGenerationComplete;
         
         private void Awake()
         {
-            _terrainGenerator = GetComponent<BiomeTerrainGenerator>();
-            _terrainGenerator.OnTerrainGenerated += GenerateOres;
+            _previousStep.OnGenerationComplete += Generate;
         }
 
         private void OnDestroy()
         {
-            _terrainGenerator.OnTerrainGenerated -= GenerateOres;
+            _previousStep.OnGenerationComplete -= Generate;
         }
-
-        private void GenerateOres(bool[,] tilePresence)
+        
+        public void Generate(RoomData roomData, bool[,] tilePresence)
         {
-            var allResourcePoints = GetOrePoints(tilePresence, out var updatedTilePresence);
+            if (!roomData.GenerateResources)
+            {
+                OnGenerationComplete?.Invoke(roomData, tilePresence);
+                return;
+            }
+            
+            var allResourcePoints = GetOrePoints(tilePresence, out var updatedTilePresence, roomData);
 
-            foreach (var data in _resourceGroups)
+            foreach (var data in roomData.ResourceGroups)
             {
                 allResourcePoints.Shuffle();
                     
@@ -51,7 +54,7 @@ namespace WorldGeneration
                 allResourcePoints.RemoveRange(0, groupAmount);
             }
         }
-
+        
         private void InstantiateGroup(Vector2 orePoint, ref bool[,] updatedTilePresence, ResourceGroupData data)
         {
             var oreGroup = new ResourceGroup(data);
@@ -67,7 +70,8 @@ namespace WorldGeneration
                         continue;
 
                     var position = new Vector3Int((int)orePoint.x + x, (int)orePoint.y + y);
-                    var worldPosition = BiomeGenerationHelper.GetWorldPositionFromTilemapPosition(position, transform);
+                    var isTilePresenceWidthOdd = updatedTilePresence.GetLength(0) % 2 == 1;
+                    var worldPosition = BiomeGenerationHelper.GetWorldPositionFromOrigin(position, transform, isTilePresenceWidthOdd);
 
                     if (position.x < 0 || position.x >= updatedTilePresence.GetLength(0) ||
                         position.y < 0 || position.y >= updatedTilePresence.GetLength(1))
@@ -86,13 +90,13 @@ namespace WorldGeneration
             }
         }
 
-        private List<Vector2> GetOrePoints(bool[,] tilePresence, out bool[,] updatedTilePresence)
+        private List<Vector2> GetOrePoints(bool[,] tilePresence, out bool[,] updatedTilePresence, RoomData roomData)
         {
             List<Vector2Int> possibleOrePositions = new();
             
             var tilePresenceWithPossibleOres = (bool[,]) tilePresence.Clone();
 
-            for (var i = 0; i < _randomPointCount; i++)
+            for (var i = 0; i < roomData.RandomPointCount; i++)
             {
                 var circleCenter = BiomeGenerationHelper.FindLargestCircleCenter(tilePresenceWithPossibleOres);
                 possibleOrePositions.Add(circleCenter);
@@ -100,7 +104,7 @@ namespace WorldGeneration
                 tilePresenceWithPossibleOres[circleCenter.x, circleCenter.y] = true;
             }
             
-            var amountOfPointsToRemove = possibleOrePositions.Count - Mathf.RoundToInt(possibleOrePositions.Count * _percentageOfAllRandomPoints);
+            var amountOfPointsToRemove = possibleOrePositions.Count - Mathf.RoundToInt(possibleOrePositions.Count * roomData.PercentageOfAllRandomPoints);
             
             for (var i = 0; i < amountOfPointsToRemove; i++)
             {
@@ -122,6 +126,7 @@ namespace WorldGeneration
             updatedTilePresence = tilePresenceWithOrePoints;
             
             return orePositions;
-        } 
+        }
+
     }
 }

@@ -6,13 +6,15 @@ using Sirenix.Serialization;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using WaveSystem;
+using WorldGeneration.Abstraction;
+using WorldGeneration.RoomGeneration;
 using static RoguelikeGeneratorPro.RoguelikeGeneratorPro.overlayType;
 using static RoguelikeGeneratorPro.RoguelikeGeneratorPro.tileType;
 
 namespace WorldGeneration
 {
     [RequireComponent(typeof(RoguelikeGeneratorPro.RoguelikeGeneratorPro))]
-    public class BiomeTerrainGenerator: SerializedMonoBehaviour
+    public class BiomeTerrainGenerator: SerializedMonoBehaviour, IGenerationStep
     {
         [Header("Prefabs")]
         [OdinSerialize]
@@ -47,14 +49,8 @@ namespace WorldGeneration
         [SerializeField]
         private Tilemap _overlayTilemap;
         
-        [Header("Configs")]
-        [SerializeField]
-        private int _edgeRemovalSize = 1;
-        
-        public event Action<bool[,]> OnTerrainGenerated;
+        public event Action<RoomData, bool[,]> OnGenerationComplete;
 
-        public Vector2 BiomePosition { get; set; }
-        public Vector2 BiomeSize => _generator.GetLevelSize();
         private RoguelikeGeneratorPro.RoguelikeGeneratorPro _generator;
 
         private Vector2Int _fireplacePosition;
@@ -63,31 +59,29 @@ namespace WorldGeneration
             _generator = GetComponent<RoguelikeGeneratorPro.RoguelikeGeneratorPro>();
         }
 
-        public void GenerateBiome()
+        public void Generate(RoomData roomData, bool[,] tilePresence)
         {
             _generator.RigenenerateLevel();
             
             PlaceTiles();
             
-            var tilePresence = BiomeGenerationHelper.GetTilePresence(_wallTilemap);
+            tilePresence = BiomeGenerationHelper.GetTilePresence(_wallTilemap);
 
             _fireplacePosition = BiomeGenerationHelper.FindLargestCircleCenter(tilePresence);
             
-            tilePresence[_fireplacePosition.x, _fireplacePosition.y] = true;
+            if(_hasFireplace)
+                tilePresence[_fireplacePosition.x, _fireplacePosition.y] = true;
 
-            var fireplaceWorldPosition = BiomeGenerationHelper.GetWorldPositionFromTilemapPosition(new Vector3Int(_fireplacePosition.x, _fireplacePosition.y, 0), transform);
+            var isTilePresenceWidthOdd = tilePresence.GetLength(0) % 2 == 1;
+            var fireplaceWorldPosition = BiomeGenerationHelper.GetWorldPositionFromOrigin(new Vector3Int(_fireplacePosition.x, _fireplacePosition.y, 0), transform, isTilePresenceWidthOdd);
             
             if (_hasFireplace)
             {
                 Instantiate(_fireplacePrefab, fireplaceWorldPosition, Quaternion.identity, transform);
-                DisableTilePresenceInRadius(tilePresence, _fireplacePosition, 15);
+                BiomeGenerationHelper.DisableTilePresenceInRadius(tilePresence, _fireplacePosition, 15);
             }
-
-            RemoveEdgesFromTilemap(_wallTilemap, _edgeRemovalSize);
             
-            transform.position = new Vector2(BiomePosition.x, BiomePosition.y);
-            
-            OnTerrainGenerated?.Invoke(tilePresence);
+            OnGenerationComplete?.Invoke(roomData, tilePresence);
             
             if(_spawnPlayerHere)
                 _playerEntity.transform.position = fireplaceWorldPosition - new Vector2(0, -2);
@@ -150,71 +144,6 @@ namespace WorldGeneration
                     .ToArray(),
                 overlayTiles.ConvertAll(_ => _overlayTile)
                     .ToArray());
-        }
-
-
-        private void DisableTilePresenceInRadius(bool[,] tilePresence, Vector2Int center, int radius)
-        {
-            for (var x = center.x - radius; x < center.x + radius; x++)
-            {
-                for (var y = center.y - radius; y < center.y + radius; y++)
-                {
-                    if (x < 0 || x >= tilePresence.GetLength(0) ||
-                        y < 0 || y >= tilePresence.GetLength(1))
-                        continue;
-                    
-                    tilePresence[x, y] = true;
-                }
-            }
-        }
-
-        private void MergeTilemaps(Tilemap margeTo, Tilemap mergeFrom, bool destroyMergeFrom = true)
-        {
-            var cellBounds = mergeFrom.cellBounds;
-            for (var x = cellBounds.xMin; x < cellBounds.xMax; x++)
-            {
-                for (var y = cellBounds.yMin; y < cellBounds.yMax; y++)
-                {
-                    var tilePos = new Vector3Int(x, y, 0);
-                    var tile = mergeFrom.GetTile(tilePos);
-                    
-                    if(tile == null)
-                        continue;
-                    
-                    margeTo.SetTile(tilePos, tile);
-                }
-            }
-            
-            if(destroyMergeFrom)
-                Destroy(mergeFrom.gameObject);
-            else
-                mergeFrom.ClearAllTiles();
-        }
-
-        private void RemoveEdgesFromTilemap(Tilemap tilemap, int edgeThickness = 1)
-        {
-            var cellBounds = tilemap.cellBounds;
-            var edges = new List<Vector3Int>();
-
-            for (var x = cellBounds.xMin; x < cellBounds.xMax; x++)
-            {
-                for (var y = cellBounds.yMin; y < cellBounds.yMax; y++)
-                {
-                    var tilePos = new Vector3Int(x, y, 0);
-                    var tile = tilemap.GetTile(tilePos);
-                    
-                    if(tile == null)
-                        continue;
-                    
-                    if (x < cellBounds.xMin + edgeThickness || x >= cellBounds.xMax - edgeThickness ||
-                        y < cellBounds.yMin + edgeThickness || y >= cellBounds.yMax - edgeThickness)
-                    {
-                        edges.Add(tilePos);
-                    }
-                }
-            }
-            
-            tilemap.SetTiles(edges.ToArray(), new TileBase[edges.Count]);
         }
     }
 }
