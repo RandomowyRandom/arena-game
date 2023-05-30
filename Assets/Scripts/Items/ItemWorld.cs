@@ -17,6 +17,9 @@ namespace Items
         
         [SerializeField]
         private Item _startingItem;
+        
+        [SerializeField]
+        private bool _performAnimation = true;
 
         private Item _item;
         
@@ -41,14 +44,20 @@ namespace Items
 
         private void Start()
         {
+            if(_performAnimation)
+                PerformAnimation();
+
+            PerformJumps();
+        }
+
+        private void PerformAnimation()
+        {
             var randomDirection = new Vector2(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f));
             var moveDuration = UnityEngine.Random.Range(0.2f, 0.4f);
             
             transform.DOMove(transform.position + (Vector3)randomDirection * .8f, moveDuration).SetEase(Ease.OutQuart);
             transform.DOScale(new Vector2(1, 1.3f), moveDuration * .5f).OnComplete(() =>
                 transform.DOScale(Vector3.one, moveDuration * .5f));
-
-            PerformJumps();
         }
 
         private async void PerformJumps()
