@@ -34,7 +34,7 @@ MonoBehaviour:
       Data: 30
     - Name: _percentageOfAllRandomPoints
       Entry: 4
-      Data: 0.25
+      Data: 0.738
     - Name: _resourceGroups
       Entry: 7
       Data: 0|System.Collections.Generic.List`1[[WorldGeneration.ResourceGroupData,
