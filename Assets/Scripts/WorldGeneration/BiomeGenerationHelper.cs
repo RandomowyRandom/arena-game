@@ -93,10 +93,31 @@ namespace WorldGeneration
             return 0;
         }
         
-        public static Vector2 GetWorldPositionFromTilemapPosition(Vector3Int tilemapPosition, Transform transform)
+        public static Vector2 GetWorldPositionFromOrigin(Vector3Int tilemapPosition, Transform transform, bool isOdd)
         {
-            return new Vector2(tilemapPosition.x + .5f, tilemapPosition.y + .5f)
+            if (isOdd)
+            {
+                return new Vector2(tilemapPosition.x + .5f, tilemapPosition.y + .5f)
+                       + (Vector2)transform.position;
+            }
+            
+            return new Vector2(tilemapPosition.x + 1, tilemapPosition.y + 1)
                    + (Vector2)transform.position;
+        }
+        
+        public static void DisableTilePresenceInRadius(bool[,] tilePresence, Vector2Int center, int radius)
+        {
+            for (var x = center.x - radius; x < center.x + radius; x++)
+            {
+                for (var y = center.y - radius; y < center.y + radius; y++)
+                {
+                    if (x < 0 || x >= tilePresence.GetLength(0) ||
+                        y < 0 || y >= tilePresence.GetLength(1))
+                        continue;
+                    
+                    tilePresence[x, y] = true;
+                }
+            }
         }
     }
 }

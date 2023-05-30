@@ -19,6 +19,7 @@ namespace Common.Enums
         Potion,
         Playlist,
         PlayerUpgrade,
-        EditorTemplate
+        EditorTemplate,
+        RoomData,
     }
 }
