@@ -12,6 +12,9 @@ namespace WaveSystem
         [SerializeField]
         private Vector2 _spawnOffset;
         
+        [SerializeField]
+        private int _rewardWaveInterval;
+        
         private WaveManager _waveManager;
         
         private GameObject _rewardInstance;
@@ -41,7 +44,7 @@ namespace WaveSystem
 
         private void TrySpawnReward(Wave wave)
         {
-            if(wave.Index % 2 == 0)
+            if(wave.Index % _rewardWaveInterval == 0)
                 _rewardInstance = Instantiate(_rewardPrefab, transform.position + (Vector3)_spawnOffset, Quaternion.identity);
         }
     }
