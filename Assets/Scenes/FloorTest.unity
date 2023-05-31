@@ -410,13 +410,20 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  _width: 50
-  _height: 50
-  _startPosition: {x: 0, y: 25}
+  _width: 20
+  _height: 20
+  _startPosition: {x: 10, y: 0}
   _roomCount: 20
-  _roomDatas: []
+  _roomDatas:
+  - {fileID: 11400000, guid: da35cafbd4af53943b08f8817c3556de, type: 2}
+  - {fileID: 11400000, guid: e186682753e0ed343927ebc3173623ae, type: 2}
+  - {fileID: 11400000, guid: 8609cc2ab227c9440a995393b5915a51, type: 2}
+  - {fileID: 11400000, guid: 4a27b93b4dc526f4f9b119b2f5f1b377, type: 2}
   _roomTile: {fileID: 11400000, guid: d1e19576a0f8a1a43a2beb7e6346f9a8, type: 2}
   _startingTile: {fileID: 11400000, guid: 7b92be4ebabfade458de3477a5a9d513, type: 2}
+  _levelFourTile: {fileID: 11400000, guid: c3316a94f61743147b6333ede138d379, type: 2}
+  _levelThreeTile: {fileID: 11400000, guid: 58763b0da90672c45b11dd650658cc83, type: 2}
+  _levelTwoTile: {fileID: 11400000, guid: 7336e6a5025141241961e78aa75e1ebb, type: 2}
   _tilemap: {fileID: 339597596}
 --- !u!4 &1639270954
 Transform:

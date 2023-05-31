@@ -51353,7 +51353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d4f4bc4e28a9ba41b5a5a814435cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelSize: {x: 12, y: 12}
+  levelSize: {x: 10, y: 10}
   tileSize: 1
   percentLevelToFill: 90
   spawnCornerWalls: 1

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Common.Extensions;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
@@ -32,6 +33,15 @@ namespace WorldGeneration.RoomGeneration
         private TileBase _startingTile;
         
         [SerializeField]
+        private TileBase _levelFourTile;
+        
+        [SerializeField]
+        private TileBase _levelThreeTile;
+        
+        [SerializeField]
+        private TileBase _levelTwoTile;
+        
+        [SerializeField]
         private Tilemap _tilemap;
 
         [Button]
@@ -61,6 +71,24 @@ namespace WorldGeneration.RoomGeneration
                     // Instantiate the room tile
                     var position = new Vector3Int(room.X, room.Y, 0);
                     _tilemap.SetTile(position, _roomTile);
+
+                    if (room.RoomData != null)
+                    {
+                        switch (room.RoomData.Level)
+                        {
+                            case 2:
+                                _tilemap.SetTile(position, _levelTwoTile);
+                                break;
+                            
+                            case 3:
+                                _tilemap.SetTile(position, _levelThreeTile);
+                                break;
+                            
+                            case 4:
+                                _tilemap.SetTile(position, _levelFourTile);
+                                break;
+                        }
+                    }
 
                     // Visualize open doors with debug draw rays
                     var openDoorSides = room.GetOpenDoorSides();
@@ -137,6 +165,13 @@ namespace WorldGeneration.RoomGeneration
                     var newRoom = new Room(neighborX, neighborY);
                     newRoom.AddOpenDoorSide(GetOppositeOpenDoorSide(openDoorSide));
 
+                    // Determine the level of the room based on the generation progress
+                    var level = Math.Min(roomCount / (_roomCount / 4) + 1, 4);
+
+                    newRoom.RoomData = GetRandomRoomData(level); // Assign a random RoomData based on the level
+
+                    Debug.Log(newRoom.RoomData.Level);
+                    
                     // Connect the new room to the open door of the current room
                     currentRoom.AddOpenDoorSide(openDoorSide);
 
@@ -149,6 +184,20 @@ namespace WorldGeneration.RoomGeneration
             }
 
             return roomsArray;
+        }
+
+        private RoomData GetRandomRoomData(int level)
+        {
+            var shuffledRooms = new List<RoomData>(_roomDatas);
+            shuffledRooms.Shuffle();
+            
+            foreach (var roomData in shuffledRooms)
+            {
+                if (roomData.Level == level)
+                    return roomData;
+            }
+            
+            return null;
         }
 
         private List<OpenDoorSide> GetRandomOpenDoorSides()
