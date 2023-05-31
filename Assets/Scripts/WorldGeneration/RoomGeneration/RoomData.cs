@@ -9,6 +9,9 @@ namespace WorldGeneration.RoomGeneration
     [ScriptableFactoryElement]
     public class RoomData: SerializedScriptableObject
     {
+        [SerializeField] [Range(1, 4)] 
+        private int _level;
+        
         [SerializeField]
         private bool _generateTreasure;
         
@@ -29,6 +32,8 @@ namespace WorldGeneration.RoomGeneration
         [OdinSerialize] [ShowIf(nameof(_generateResources))]
         private List<ResourceGroupData> _resourceGroups;
 
+        public int Level => _level;
+        
         public bool GenerateTreasure => _generateTreasure;
 
         public GameObject TreasurePrefab => _treasurePrefab;
