@@ -413,7 +413,7 @@ MonoBehaviour:
   _width: 50
   _height: 50
   _startPosition: {x: 0, y: 25}
-  _roomCount: 40
+  _roomCount: 20
   _roomDatas: []
   _roomTile: {fileID: 11400000, guid: d1e19576a0f8a1a43a2beb7e6346f9a8, type: 2}
   _startingTile: {fileID: 11400000, guid: 7b92be4ebabfade458de3477a5a9d513, type: 2}

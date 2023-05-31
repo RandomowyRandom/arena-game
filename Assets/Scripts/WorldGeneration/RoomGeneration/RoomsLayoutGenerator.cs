@@ -79,80 +79,77 @@ namespace WorldGeneration.RoomGeneration
             }
         }
         
-       public Room[,] Generate()
-{
-    var roomsArray = new Room[_width, _height];
-    var roomCount = 0;
-
-    // Generate the starting room
-    var startingRoom = new Room(_startPosition.x, _startPosition.y);
-    roomsArray[_startPosition.x, _startPosition.y] = startingRoom;
-    roomCount++;
-
-    // Create a queue to store the rooms that need to be processed
-    var roomQueue = new Queue<Room>();
-    roomQueue.Enqueue(startingRoom);
-
-    // Repeat until the room count is reached or the queue becomes empty
-    while (roomQueue.Count > 0 && roomCount < _roomCount)
-    {
-        var currentRoom = roomQueue.Dequeue();
-
-        // Generate random open doors for the room
-        var openDoorSides = GetRandomOpenDoorSides();
-
-        foreach (var openDoorSide in openDoorSides)
+        public Room[,] Generate()
         {
-            var neighborX = currentRoom.X;
-            var neighborY = currentRoom.Y;
+            var roomsArray = new Room[_width, _height];
+            var roomCount = 0;
 
-            // Calculate the position of the adjacent room based on the open door side
-            switch (openDoorSide)
+            // Generate the starting room
+            var startingRoom = new Room(_startPosition.x, _startPosition.y);
+            roomsArray[_startPosition.x, _startPosition.y] = startingRoom;
+            roomCount++;
+
+            // Create a queue to store the rooms that need to be processed
+            var roomQueue = new Queue<Room>();
+            roomQueue.Enqueue(startingRoom);
+
+            // Repeat until the room count is reached or the queue becomes empty
+            while (roomQueue.Count > 0 && roomCount < _roomCount)
             {
-                case OpenDoorSide.Left:
-                    neighborX--;
-                    break;
-                case OpenDoorSide.Right:
-                    neighborX++;
-                    break;
-                case OpenDoorSide.Top:
-                    neighborY++;
-                    break;
-                case OpenDoorSide.Bottom:
-                    neighborY--;
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
+                var currentRoom = roomQueue.Dequeue();
+
+                // Generate random open doors for the room
+                var openDoorSides = GetRandomOpenDoorSides();
+
+                foreach (var openDoorSide in openDoorSides)
+                {
+                    var neighborX = currentRoom.X;
+                    var neighborY = currentRoom.Y;
+
+                    // Calculate the position of the adjacent room based on the open door side
+                    switch (openDoorSide)
+                    {
+                        case OpenDoorSide.Left:
+                            neighborX--;
+                            break;
+                        case OpenDoorSide.Right:
+                            neighborX++;
+                            break;
+                        case OpenDoorSide.Top:
+                            neighborY++;
+                            break;
+                        case OpenDoorSide.Bottom:
+                            neighborY--;
+                            break;
+                        default:
+                            throw new ArgumentOutOfRangeException();
+                    }
+
+                    // Check if the adjacent position is within the bounds of the array
+                    if (neighborX < 0 || neighborX >= _width || neighborY < 0 || neighborY >= _height)
+                        continue;
+
+                    // Check if there is no room already present at the adjacent position
+                    if (roomsArray[neighborX, neighborY] != null)
+                        continue;
+
+                    // Create a new room at the adjacent position
+                    var newRoom = new Room(neighborX, neighborY);
+                    newRoom.AddOpenDoorSide(GetOppositeOpenDoorSide(openDoorSide));
+
+                    // Connect the new room to the open door of the current room
+                    currentRoom.AddOpenDoorSide(openDoorSide);
+
+                    // Add the new room to the array and enqueue it for further processing
+                    roomsArray[neighborX, neighborY] = newRoom;
+                    roomQueue.Enqueue(newRoom);
+
+                    roomCount++;
+                }
             }
 
-            // Check if the adjacent position is within the bounds of the array
-            if (neighborX < 0 || neighborX >= _width || neighborY < 0 || neighborY >= _height)
-                continue;
-
-            // Check if there is no room already present at the adjacent position
-            if (roomsArray[neighborX, neighborY] != null)
-                continue;
-
-            // Calculate the cost of generating a room at the adjacent position
-            var cost = CalculateGenerationCost(roomsArray, neighborX, neighborY);
-
-            // Create a new room at the adjacent position
-            var newRoom = new Room(neighborX, neighborY);
-            newRoom.AddOpenDoorSide(GetOppositeOpenDoorSide(openDoorSide));
-
-            // Connect the new room to the open door of the current room
-            currentRoom.AddOpenDoorSide(openDoorSide);
-
-            // Add the new room to the array and enqueue it for further processing
-            roomsArray[neighborX, neighborY] = newRoom;
-            roomQueue.Enqueue(newRoom);
-
-            roomCount++;
+            return roomsArray;
         }
-    }
-
-    return roomsArray;
-}
 
         private List<OpenDoorSide> GetRandomOpenDoorSides()
         {
@@ -186,37 +183,6 @@ namespace WorldGeneration.RoomGeneration
             return openDoorSides;
         }
 
-        private int CalculateGenerationCost(Room[,] roomsArray, int x, int y)
-        {
-            var cost = 0;
-
-            // Check left neighbor
-            if (x > 0 && roomsArray[x - 1, y] != null)
-            {
-                cost++;
-            }
-
-            // Check right neighbor
-            if (x < _width - 1 && roomsArray[x + 1, y] != null)
-            {
-                cost++;
-            }
-
-            // Check top neighbor
-            if (y < _height - 1 && roomsArray[x, y + 1] != null)
-            {
-                cost++;
-            }
-
-            // Check bottom neighbor
-            if (y > 0 && roomsArray[x, y - 1] != null)
-            {
-                cost++;
-            }
-
-            return cost;
-        }
-        
         private OpenDoorSide GetOppositeOpenDoorSide(OpenDoorSide openDoorSide)
         {
             return openDoorSide switch
