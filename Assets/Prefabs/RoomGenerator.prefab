@@ -485,6 +485,7 @@ GameObject:
   - component: {fileID: 2678575389401994695}
   - component: {fileID: 2678575389401994693}
   - component: {fileID: 2678575389401994688}
+  - component: {fileID: 8359439455835839508}
   m_Layer: 0
   m_Name: RoomGenerator
   m_TagString: Untagged
@@ -832,6 +833,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 2678575389401994695}
+    - {fileID: 8359439455835839508}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -840,7 +842,11 @@ MonoBehaviour:
     - Name: _firstStep
       Entry: 10
       Data: 0
+    - Name: _stageTwoFirstStep
+      Entry: 10
+      Data: 1
   _roomData: {fileID: 11400000, guid: da35cafbd4af53943b08f8817c3556de, type: 2}
+  _generateOnStart: 0
 --- !u!114 &2678575389401994695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -941,3 +947,26 @@ MonoBehaviour:
       Entry: 10
       Data: 0
   _randomPositionOffset: {x: 0.4, y: 0.4}
+--- !u!114 &8359439455835839508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2678575389401994690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62a4888e4dc44568a2d7daf209fee08f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _wallTilemap: {fileID: 2678575389285343804}
+  _roomSize: {x: 10, y: 10}

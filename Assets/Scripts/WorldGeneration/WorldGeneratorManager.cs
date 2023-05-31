@@ -65,11 +65,10 @@ namespace WorldGeneration
                     
                     var roomGameObject = Instantiate(_roomPrefab, roomPosition, Quaternion.identity);
                     
-                    if(room.IsStartRoom)
-                        Debug.DrawRay(roomPosition, Vector2.one * 0.5f, Color.green, 100f);
-                    
                     roomGameObject.SetRoomData(room.RoomData);
                     roomGameObject.GenerateRoom();
+                    
+                    roomGameObject.GenerateStageTwo(room, rooms);
                 }
             }
         }

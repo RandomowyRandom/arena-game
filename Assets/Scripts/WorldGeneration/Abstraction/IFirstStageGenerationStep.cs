@@ -3,7 +3,7 @@ using WorldGeneration.RoomGeneration;
 
 namespace WorldGeneration.Abstraction
 {
-    public interface IGenerationStep
+    public interface IFirstStageGenerationStep
     {
         public event Action<RoomData, bool[,]> OnGenerationComplete;
         

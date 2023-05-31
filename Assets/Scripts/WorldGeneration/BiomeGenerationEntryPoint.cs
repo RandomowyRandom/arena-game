@@ -13,10 +13,13 @@ namespace WorldGeneration
         private RoomData _roomData;
         
         [OdinSerialize]
-        private IGenerationStep _firstStep;
+        private IFirstStageGenerationStep _firstStep;
         
         [SerializeField]
         private bool _generateOnStart;
+        
+        [OdinSerialize]
+        private ISecondStageGenerationStep _stageTwoFirstStep;
 
         private void Start()
         {
@@ -35,6 +38,11 @@ namespace WorldGeneration
                 return;
             
             _firstStep.Generate(_roomData, null);
+        }
+        
+        public void GenerateStageTwo(Room room, Room[,] tilePresence)
+        {
+            _stageTwoFirstStep.Generate(room, tilePresence);
         }
     }
 }

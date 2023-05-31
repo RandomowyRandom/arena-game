@@ -81458,7 +81458,7 @@ MonoBehaviour:
   _height: 20
   _roomCount: 30
   _startPosition: {x: 10, y: 0}
-  _startGenerationPosition: {x: -77, y: 35}
+  _startGenerationPosition: {x: -88, y: 34}
   _roomSize: {x: 10, y: 10}
 --- !u!1 &923762507
 GameObject:
@@ -83008,6 +83008,9 @@ MonoBehaviour:
     - Name: _firstStep
       Entry: 10
       Data: 0
+    - Name: _stageTwoFirstStep
+      Entry: 6
+      Data: 
   _roomData: {fileID: 11400000, guid: 15a711265af716b42af9ae81984eafd8, type: 2}
   _generateOnStart: 1
 --- !u!1 &1213403474

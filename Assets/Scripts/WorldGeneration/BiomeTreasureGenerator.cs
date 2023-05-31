@@ -7,10 +7,10 @@ using WorldGeneration.RoomGeneration;
 
 namespace WorldGeneration
 {
-    public class BiomeTreasureGenerator: SerializedMonoBehaviour, IGenerationStep
+    public class BiomeTreasureGenerator: SerializedMonoBehaviour, IFirstStageGenerationStep
     {
         [OdinSerialize]
-        private IGenerationStep _previousStep;
+        private IFirstStageGenerationStep _previousStep;
 
         public event Action<RoomData, bool[,]> OnGenerationComplete;
 

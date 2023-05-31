@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Common.Extensions;
-using Sirenix.OdinInspector;
-using Sirenix.Serialization;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 namespace WorldGeneration.RoomGeneration
 {
@@ -38,6 +35,8 @@ namespace WorldGeneration.RoomGeneration
             roomsArray[_startPosition.x, _startPosition.y] = startingRoom;
             roomCount++;
 
+            startingRoom.RoomData = GetRandomRoomData(1);
+            
             // Create a queue to store the rooms that need to be processed
             var roomQueue = new Queue<Room>();
             roomQueue.Enqueue(startingRoom);
@@ -90,8 +89,6 @@ namespace WorldGeneration.RoomGeneration
                     var level = Math.Min(roomCount / (_roomCount / 4) + 1, 4);
 
                     newRoom.RoomData = GetRandomRoomData(level); // Assign a random RoomData based on the level
-
-                    Debug.Log(newRoom.RoomData.Level);
                     
                     // Connect the new room to the open door of the current room
                     currentRoom.AddOpenDoorSide(openDoorSide);
