@@ -413,7 +413,7 @@ MonoBehaviour:
   _width: 20
   _height: 20
   _startPosition: {x: 10, y: 0}
-  _roomCount: 20
+  _roomCount: 30
   _roomDatas:
   - {fileID: 11400000, guid: da35cafbd4af53943b08f8817c3556de, type: 2}
   - {fileID: 11400000, guid: e186682753e0ed343927ebc3173623ae, type: 2}

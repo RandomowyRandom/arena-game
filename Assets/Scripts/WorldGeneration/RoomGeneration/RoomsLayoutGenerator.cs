@@ -8,112 +8,33 @@ using UnityEngine.Tilemaps;
 
 namespace WorldGeneration.RoomGeneration
 {
-    public class RoomsLayoutGenerator: SerializedMonoBehaviour
+    public class RoomsLayoutGenerator
     {
-        [SerializeField]
-        private int _width;
+        private readonly int _width;
+        private readonly int _height;
+        private readonly Vector2Int _startPosition;
+        private readonly int _roomCount;
+        private readonly List<RoomData> _roomDatas;
         
-        [SerializeField]
-        private int _height;
-
-        [SerializeField]
-        private Vector2Int _startPosition;
-        
-        [SerializeField]
-        private int _roomCount;
-        
-        [SerializeField] 
-        private List<RoomData> _roomDatas;
-        
-        [Header("DEBUG")]
-        [SerializeField]
-        private TileBase _roomTile;
-        
-        [SerializeField]
-        private TileBase _startingTile;
-        
-        [SerializeField]
-        private TileBase _levelFourTile;
-        
-        [SerializeField]
-        private TileBase _levelThreeTile;
-        
-        [SerializeField]
-        private TileBase _levelTwoTile;
-        
-        [SerializeField]
-        private Tilemap _tilemap;
-
-        [Button]
-        private void InstantiateTiles()
+        public RoomsLayoutGenerator(int width, int height, Vector2Int startPosition, int roomCount, List<RoomData> roomDatas)
         {
-            if (_tilemap == null || _roomTile == null || _startingTile == null)
-            {
-                Debug.LogError("Tilemap, room tile, or starting tile is not assigned!");
-                return;
-            }
-
-            // Clear the tilemap
-            _tilemap.ClearAllTiles();
-
-            // Generate the room layout
-            var roomsArray = Generate();
-
-            // Iterate through the generated rooms
-            for (var x = 0; x < _width; x++)
-            {
-                for (var y = 0; y < _height; y++)
-                {
-                    var room = roomsArray[x, y];
-                    if (room == null)
-                        continue;
-
-                    // Instantiate the room tile
-                    var position = new Vector3Int(room.X, room.Y, 0);
-                    _tilemap.SetTile(position, _roomTile);
-
-                    if (room.RoomData != null)
-                    {
-                        switch (room.RoomData.Level)
-                        {
-                            case 2:
-                                _tilemap.SetTile(position, _levelTwoTile);
-                                break;
-                            
-                            case 3:
-                                _tilemap.SetTile(position, _levelThreeTile);
-                                break;
-                            
-                            case 4:
-                                _tilemap.SetTile(position, _levelFourTile);
-                                break;
-                        }
-                    }
-
-                    // Visualize open doors with debug draw rays
-                    var openDoorSides = room.GetOpenDoorSides();
-                    foreach (var openDoorSide in openDoorSides)
-                    {
-                        var doorPosition = position + GetOffsetFromOpenDoorSide(openDoorSide);
-                        Debug.DrawRay(position + new Vector3(.5f, .5f), doorPosition - position, Color.green, 1f);
-                    }
-
-                    // Mark the start position with the starting tile
-                    if (room.X == _startPosition.x && room.Y == _startPosition.y)
-                    {
-                        _tilemap.SetTile(position, _startingTile);
-                    }
-                }
-            }
+            _width = width;
+            _height = height;
+            _startPosition = startPosition;
+            _roomCount = roomCount;
+            _roomDatas = roomDatas;
         }
         
-        public Room[,] Generate()
+        public Room[,] GetRoomArray()
         {
             var roomsArray = new Room[_width, _height];
             var roomCount = 0;
 
             // Generate the starting room
-            var startingRoom = new Room(_startPosition.x, _startPosition.y);
+            var startingRoom = new Room(_startPosition.x, _startPosition.y)
+            {
+                IsStartRoom = true
+            };
             roomsArray[_startPosition.x, _startPosition.y] = startingRoom;
             roomCount++;
 

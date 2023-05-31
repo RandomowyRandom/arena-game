@@ -7,6 +7,8 @@ namespace WorldGeneration.RoomGeneration
         public int X { get; set; }
         public int Y { get; set; }
         
+        public bool IsStartRoom { get; set; }
+        
         public RoomData RoomData { get; set; }
         
         private List<OpenDoorSide> _openDoorSides = new();
