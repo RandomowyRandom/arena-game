@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b200d00db304599bea1efabd4534e99, type: 3}
-  m_Name: FOREST_ARENA
+  m_Name: TEST_ROOM_L1
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
+    - {fileID: 3535736021708267638, guid: f9716007508942d47bf4efaf9273ab30, type: 3}
     - {fileID: 2268759984707524892, guid: e21f925273aff0348a747583aff0f3e8, type: 3}
     - {fileID: 9094995047937489891, guid: 5fd6ea4b323a5514684d2b7bdeede518, type: 3}
     - {fileID: 2530176304263761368, guid: 235436f20323ed24e9c5e0db63316324, type: 3}
@@ -26,14 +27,14 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes:
     - Name: _treasurePrefab
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: _randomPointCount
       Entry: 3
       Data: 30
     - Name: _percentageOfAllRandomPoints
       Entry: 4
-      Data: 0.5
+      Data: 0.738
     - Name: _resourceGroups
       Entry: 7
       Data: 0|System.Collections.Generic.List`1[[WorldGeneration.ResourceGroupData,
@@ -56,7 +57,7 @@ MonoBehaviour:
       Data: 3|WorldGeneration.RandomResource, Assembly-CSharp
     - Name: _resourcePrefab
       Entry: 10
-      Data: 0
+      Data: 1
     - Name: _chance
       Entry: 4
       Data: 0.7
@@ -68,7 +69,7 @@ MonoBehaviour:
       Data: 4|WorldGeneration.RandomResource, Assembly-CSharp
     - Name: _resourcePrefab
       Entry: 10
-      Data: 1
+      Data: 2
     - Name: _chance
       Entry: 4
       Data: 0.3
@@ -120,7 +121,7 @@ MonoBehaviour:
       Data: 7|WorldGeneration.RandomResource, Assembly-CSharp
     - Name: _resourcePrefab
       Entry: 10
-      Data: 2
+      Data: 3
     - Name: _chance
       Entry: 4
       Data: 0.7
@@ -132,7 +133,7 @@ MonoBehaviour:
       Data: 8|WorldGeneration.RandomResource, Assembly-CSharp
     - Name: _resourcePrefab
       Entry: 10
-      Data: 3
+      Data: 4
     - Name: _chance
       Entry: 4
       Data: 0.3
@@ -176,5 +177,5 @@ MonoBehaviour:
       Entry: 8
       Data: 
   _level: 1
-  _generateTreasure: 0
-  _generateResources: 0
+  _generateTreasure: 1
+  _generateResources: 1

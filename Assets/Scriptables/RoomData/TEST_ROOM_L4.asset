@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b200d00db304599bea1efabd4534e99, type: 3}
-  m_Name: TEST_ROOM
+  m_Name: TEST_ROOM_L4
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -176,5 +176,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  _level: 4
   _generateTreasure: 1
   _generateResources: 1

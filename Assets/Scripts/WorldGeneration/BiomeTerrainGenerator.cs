@@ -14,7 +14,7 @@ using static RoguelikeGeneratorPro.RoguelikeGeneratorPro.tileType;
 namespace WorldGeneration
 {
     [RequireComponent(typeof(RoguelikeGeneratorPro.RoguelikeGeneratorPro))]
-    public class BiomeTerrainGenerator: SerializedMonoBehaviour, IGenerationStep
+    public class BiomeTerrainGenerator: SerializedMonoBehaviour, IFirstStageGenerationStep
     {
         [Header("Prefabs")]
         [OdinSerialize]

@@ -7,10 +7,10 @@ using WorldGeneration.RoomGeneration;
 
 namespace WorldGeneration
 {
-    public class BiomeTreasureGenerator: SerializedMonoBehaviour, IGenerationStep
+    public class BiomeTreasureGenerator: SerializedMonoBehaviour, IFirstStageGenerationStep
     {
         [OdinSerialize]
-        private IGenerationStep _previousStep;
+        private IFirstStageGenerationStep _previousStep;
 
         public event Action<RoomData, bool[,]> OnGenerationComplete;
 
@@ -36,8 +36,6 @@ namespace WorldGeneration
             
             var isTilePresenceWidthOdd = tilePresence.GetLength(0) % 2 == 1;
             var worldPosition = BiomeGenerationHelper.GetWorldPositionFromOrigin((Vector3Int)treasurePosition, transform, isTilePresenceWidthOdd);
-            
-            Debug.DrawLine(worldPosition, (Vector3)worldPosition + Vector3.up * 2, Color.red, 999);
             
             var treasure = Instantiate(roomData.TreasurePrefab, worldPosition, Quaternion.identity);
             

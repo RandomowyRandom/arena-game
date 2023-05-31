@@ -10,13 +10,13 @@ using Random = UnityEngine.Random;
 
 namespace WorldGeneration
 {
-    public class BiomeOreGenerator: SerializedMonoBehaviour, IGenerationStep
+    public class BiomeOreGenerator: SerializedMonoBehaviour, IFirstStageGenerationStep
     {
         [SerializeField]
         private Vector2 _randomPositionOffset = new(0.5f, 0.5f);
         
         [OdinSerialize]
-        private IGenerationStep _previousStep;
+        private IFirstStageGenerationStep _previousStep;
         public event Action<RoomData, bool[,]> OnGenerationComplete;
         
         private void Awake()
