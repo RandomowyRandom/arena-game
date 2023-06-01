@@ -970,3 +970,4 @@ MonoBehaviour:
     SerializationNodes: []
   _wallTilemap: {fileID: 2678575389285343804}
   _roomSize: {x: 10, y: 10}
+  _doorPrefab: {fileID: 4519477797728035068, guid: cf07c2ff86bb5544799f30b4c817fde3, type: 3}

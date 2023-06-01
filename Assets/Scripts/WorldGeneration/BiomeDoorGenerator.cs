@@ -10,32 +10,51 @@ namespace WorldGeneration
 {
     public class BiomeDoorGenerator : SerializedMonoBehaviour, ISecondStageGenerationStep
     {
-        [SerializeField] private Tilemap _wallTilemap;
+        [SerializeField]
+        private Tilemap _wallTilemap;
 
-        [SerializeField] private Vector2Int _roomSize;
+        [SerializeField]
+        private Vector2Int _roomSize;
+
+        [SerializeField] private GameObject _doorPrefab; // TODO: later change to DoorWorld class
 
         public event Action<Room, Room[,]> OnGenerationComplete;
 
         public void Generate(Room room, Room[,] rooms)
         {
-            var openDoors = room.GetOpenDoorSides();
+            var openDoors = room.GetDoors();
 
             if (room.IsStartRoom)
-                openDoors.Add(OpenDoorSide.Bottom);
+                openDoors.Add(new(OpenDoorSide.Bottom, 1));
                 
             foreach (var openDoor in openDoors)
             {
-                var doorPositions = GetDoorPositions(openDoor);
+                var doorPositions = GetDoorTilePositions(openDoor.OpenDoorSide);
                 foreach (var doorPosition in doorPositions)
                 {
                     _wallTilemap.SetTile(doorPosition, null);
                 }
+                
+                var doorInstancePosition = GetDoorWorldPosition(openDoor);
+                var doorInstance = Instantiate(_doorPrefab, doorInstancePosition, Quaternion.identity);
             }
             
             OnGenerationComplete?.Invoke(room, rooms);
         }
 
-        private List<Vector3Int> GetDoorPositions(OpenDoorSide side)
+        private Vector2 GetDoorWorldPosition(Door door)
+        {
+            return door.OpenDoorSide switch
+            {
+                OpenDoorSide.Left => new(transform.position.x, transform.position.y + _roomSize.y * .5f),
+                OpenDoorSide.Right => new(transform.position.x + _roomSize.x, transform.position.y + _roomSize.y * .5f),
+                OpenDoorSide.Top => new(transform.position.x + _roomSize.x * .5f + .5f, transform.position.y + _roomSize.y - .5f),
+                OpenDoorSide.Bottom => new(transform.position.x + _roomSize.x * .5f + .5f, transform.position.y + .5f),
+                _ => throw new ArgumentOutOfRangeException()
+            };
+        }
+        
+        private List<Vector3Int> GetDoorTilePositions(OpenDoorSide side)
         {
             return side switch
             {

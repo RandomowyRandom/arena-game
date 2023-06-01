@@ -81,17 +81,17 @@ namespace WorldGeneration.RoomGeneration
                     if (roomsArray[neighborX, neighborY] != null)
                         continue;
 
-                    // Create a new room at the adjacent position
-                    var newRoom = new Room(neighborX, neighborY);
-                    newRoom.AddOpenDoorSide(GetOppositeOpenDoorSide(openDoorSide));
-
                     // Determine the level of the room based on the generation progress
                     var level = Math.Min(roomCount / (_roomCount / 4) + 1, 4);
+                    
+                    // Create a new room at the adjacent position
+                    var newRoom = new Room(neighborX, neighborY);
+                    newRoom.AddDoor(GetOppositeOpenDoorSide(openDoorSide), level);
 
                     newRoom.RoomData = GetRandomRoomData(level); // Assign a random RoomData based on the level
                     
                     // Connect the new room to the open door of the current room
-                    currentRoom.AddOpenDoorSide(openDoorSide);
+                    currentRoom.AddDoor(openDoorSide, currentRoom.RoomData.Level);
 
                     // Add the new room to the array and enqueue it for further processing
                     roomsArray[neighborX, neighborY] = newRoom;
