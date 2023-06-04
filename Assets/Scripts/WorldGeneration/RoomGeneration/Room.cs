@@ -11,6 +11,8 @@ namespace WorldGeneration.RoomGeneration
         
         public RoomData RoomData { get; set; }
         
+        public BiomeGenerationEntryPoint GenerationHandler { get; set; }
+        
         private List<Door> _doors = new();
         
         public Room(int x, int y)

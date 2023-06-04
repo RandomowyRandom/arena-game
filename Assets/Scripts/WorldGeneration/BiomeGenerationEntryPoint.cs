@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
@@ -20,6 +21,8 @@ namespace WorldGeneration
         
         [OdinSerialize]
         private ISecondStageGenerationStep _stageTwoFirstStep;
+        
+        public List<DoorInteractable> DoorInstances { get; } = new();
 
         private void Start()
         {

@@ -84,7 +84,7 @@ namespace WorldGeneration
                         (worldPosition.x + Random.Range(-_randomPositionOffset.x, _randomPositionOffset.x),
                             worldPosition.y + Random.Range(-_randomPositionOffset.y, _randomPositionOffset.y));
                     
-                    var ore = Instantiate(oreGroup.Data.GetRandomResourcePrefab(), offsetPosition, Quaternion.identity);
+                    var ore = Instantiate(oreGroup.Data.GetRandomResourcePrefab(), offsetPosition, Quaternion.identity, transform);
                     updatedTilePresence[position.x, position.y] = true;
                 }
             }

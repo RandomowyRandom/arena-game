@@ -15,8 +15,22 @@ namespace WorldGeneration
 
         [SerializeField]
         private Vector2Int _roomSize;
+        
+        [SerializeField] 
+        private DoorInteractable _doorPrefab;
 
-        [SerializeField] private GameObject _doorPrefab; // TODO: later change to DoorWorld class
+        [Header("Door transforms")]
+        [SerializeField]
+        private Transform _leftDoorTransform;
+
+        [SerializeField]
+        private Transform _rightDoorTransform;
+        
+        [SerializeField]
+        private Transform _topDoorTransform;
+        
+        [SerializeField]
+        private Transform _bottomDoorTransform;
 
         public event Action<Room, Room[,]> OnGenerationComplete;
 
@@ -35,22 +49,44 @@ namespace WorldGeneration
                     _wallTilemap.SetTile(doorPosition, null);
                 }
                 
-                var doorInstancePosition = GetDoorWorldPosition(openDoor);
-                var doorInstance = Instantiate(_doorPrefab, doorInstancePosition, Quaternion.identity);
+                var doorInstanceTransform = GetDoorTransform(openDoor);
+
+                var doorInstance = Instantiate(_doorPrefab, doorInstanceTransform.position, doorInstanceTransform.rotation, transform);
+                var targetRoom = GetRoomAtSide(openDoor.OpenDoorSide, new Vector2Int(room.X, room.Y), rooms);
+
+                if(targetRoom != null)
+                    doorInstance.TargetRoom = targetRoom.GenerationHandler;
+                
+                room.GenerationHandler.DoorInstances.Add(doorInstance);
+                
+                doorInstance.ParentRoom = room.GenerationHandler;
+                doorInstance.OpenDoorSide = openDoor.OpenDoorSide;
             }
             
             OnGenerationComplete?.Invoke(room, rooms);
         }
 
-        private Vector2 GetDoorWorldPosition(Door door)
+        private Room GetRoomAtSide(OpenDoorSide side, Vector2Int position, Room[,] rooms)
+        {
+            return side switch
+            {
+                OpenDoorSide.Left => rooms[position.x - 1, position.y],
+                OpenDoorSide.Right => rooms[position.x + 1, position.y],
+                OpenDoorSide.Top => rooms[position.x, position.y + 1],
+                OpenDoorSide.Bottom => position.y - 1 >= 0 ? rooms[position.x, position.y - 1] : null,
+                _ => throw new ArgumentOutOfRangeException(nameof(side), side, null)
+            };
+        }
+        
+        private Transform GetDoorTransform(Door door)
         {
             return door.OpenDoorSide switch
             {
-                OpenDoorSide.Left => new(transform.position.x, transform.position.y + _roomSize.y * .5f),
-                OpenDoorSide.Right => new(transform.position.x + _roomSize.x, transform.position.y + _roomSize.y * .5f),
-                OpenDoorSide.Top => new(transform.position.x + _roomSize.x * .5f + .5f, transform.position.y + _roomSize.y - .5f),
-                OpenDoorSide.Bottom => new(transform.position.x + _roomSize.x * .5f + .5f, transform.position.y + .5f),
-                _ => throw new ArgumentOutOfRangeException()
+                OpenDoorSide.Left => _leftDoorTransform,
+                OpenDoorSide.Right => _rightDoorTransform,
+                OpenDoorSide.Top => _topDoorTransform,
+                OpenDoorSide.Bottom => _bottomDoorTransform,
+                _ => null
             };
         }
         
