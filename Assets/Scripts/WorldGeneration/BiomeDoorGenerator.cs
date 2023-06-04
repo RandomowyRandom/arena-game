@@ -53,14 +53,17 @@ namespace WorldGeneration
 
                 var doorInstance = Instantiate(_doorPrefab, doorInstanceTransform.position, doorInstanceTransform.rotation, transform);
                 var targetRoom = GetRoomAtSide(openDoor.OpenDoorSide, new Vector2Int(room.X, room.Y), rooms);
-
+                
                 if(targetRoom != null)
                     doorInstance.TargetRoom = targetRoom.GenerationHandler;
+                
+                if(room.IsStartRoom && openDoor.OpenDoorSide == OpenDoorSide.Bottom)
+                    doorInstance.TargetRoom = room.GenerationHandler;
                 
                 room.GenerationHandler.DoorInstances.Add(doorInstance);
                 
                 doorInstance.ParentRoom = room.GenerationHandler;
-                doorInstance.OpenDoorSide = openDoor.OpenDoorSide;
+                doorInstance.Door = openDoor;
             }
             
             OnGenerationComplete?.Invoke(room, rooms);

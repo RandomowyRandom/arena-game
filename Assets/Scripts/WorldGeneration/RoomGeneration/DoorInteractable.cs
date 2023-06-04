@@ -12,21 +12,28 @@ namespace WorldGeneration.RoomGeneration
         
         public BiomeGenerationEntryPoint TargetRoom { get; set; }
         
-        public OpenDoorSide OpenDoorSide { get; set; }
+        public OpenDoorSide OpenDoorSide => Door.OpenDoorSide;
+        
+        public Door Door { get; set; }
         public void Interact()
         {
             if(TargetRoom == null)
                 return;
             
             TargetRoom.gameObject.SetActive(true);
+
+            if (TargetRoom != ParentRoom)
+            {
+                var doorToDestroy = TargetRoom.DoorInstances.Find(door => door.OpenDoorSide == GetOppositeSide(OpenDoorSide));
+                doorToDestroy.DestroyDoor();
+            }
+
+            TargetRoom.gameObject.GetComponent<TilemapMerger>().Merge();
             
-            var doorToDestroy = TargetRoom.DoorInstances.Find(door => door.OpenDoorSide == GetOppositeSide(OpenDoorSide));
-            
-            doorToDestroy.DestroyDoor();
             DestroyDoor();
         }
 
-        public void DestroyDoor()
+        private void DestroyDoor()
         {
             Destroy(gameObject);
         }

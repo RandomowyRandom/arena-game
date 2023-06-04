@@ -579,6 +579,7 @@ GameObject:
   - component: {fileID: 2678575389401994693}
   - component: {fileID: 2678575389401994688}
   - component: {fileID: 8359439455835839508}
+  - component: {fileID: 6733184509217432786}
   m_Layer: 0
   m_Name: RoomGenerator
   m_TagString: Untagged
@@ -1043,7 +1044,7 @@ MonoBehaviour:
     - Name: _previousStep
       Entry: 10
       Data: 0
-  _randomPositionOffset: {x: 0.4, y: 0.4}
+  _randomPositionOffset: {x: 0, y: 0}
 --- !u!114 &8359439455835839508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1072,6 +1073,31 @@ MonoBehaviour:
   _rightDoorTransform: {fileID: 1817954562608088075}
   _topDoorTransform: {fileID: 2403997412857391728}
   _bottomDoorTransform: {fileID: 279710646837569064}
+--- !u!114 &6733184509217432786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2678575389401994690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf558f38e05c41c69a5f48441f389680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _mergeFrom: {fileID: 2678575389285343804}
+  _useTilemapName: 1
+  _mergeTo: {fileID: 0}
+  _mergeToName: MainWallTiles
 --- !u!1 &5381610419450024735
 GameObject:
   m_ObjectHideFlags: 0
