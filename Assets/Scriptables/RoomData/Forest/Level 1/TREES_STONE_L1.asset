@@ -1,0 +1,180 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b200d00db304599bea1efabd4534e99, type: 3}
+  m_Name: TREES_STONE_L1
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 2268759984707524892, guid: e21f925273aff0348a747583aff0f3e8, type: 3}
+    - {fileID: 9094995047937489891, guid: 5fd6ea4b323a5514684d2b7bdeede518, type: 3}
+    - {fileID: 2530176304263761368, guid: 235436f20323ed24e9c5e0db63316324, type: 3}
+    - {fileID: 1190555262996832711, guid: f6b4728fd68c79f4c93b592268c9a0bd, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _treasurePrefab
+      Entry: 6
+      Data: 
+    - Name: _randomPointCount
+      Entry: 3
+      Data: 30
+    - Name: _percentageOfAllRandomPoints
+      Entry: 4
+      Data: 0.738
+    - Name: _resourceGroups
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[WorldGeneration.ResourceGroupData,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 1|WorldGeneration.ResourceGroupData, Assembly-CSharp
+    - Name: _resourcePrefabs
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[WorldGeneration.RandomResource,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 3|WorldGeneration.RandomResource, Assembly-CSharp
+    - Name: _resourcePrefab
+      Entry: 10
+      Data: 0
+    - Name: _chance
+      Entry: 4
+      Data: 0.7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|WorldGeneration.RandomResource, Assembly-CSharp
+    - Name: _resourcePrefab
+      Entry: 10
+      Data: 1
+    - Name: _chance
+      Entry: 4
+      Data: 0.3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _startSpawnChance
+      Entry: 4
+      Data: 0.7
+    - Name: _chanceFollOff
+      Entry: 4
+      Data: 0.2
+    - Name: _groupSize
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _percentageCoverage
+      Entry: 4
+      Data: 0.7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|WorldGeneration.ResourceGroupData, Assembly-CSharp
+    - Name: _resourcePrefabs
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[WorldGeneration.RandomResource,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 7|WorldGeneration.RandomResource, Assembly-CSharp
+    - Name: _resourcePrefab
+      Entry: 10
+      Data: 2
+    - Name: _chance
+      Entry: 4
+      Data: 0.7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 8|WorldGeneration.RandomResource, Assembly-CSharp
+    - Name: _resourcePrefab
+      Entry: 10
+      Data: 3
+    - Name: _chance
+      Entry: 4
+      Data: 0.3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _startSpawnChance
+      Entry: 4
+      Data: 0.6
+    - Name: _chanceFollOff
+      Entry: 4
+      Data: 0.2
+    - Name: _groupSize
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _percentageCoverage
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  _level: 1
+  _generateTreasure: 0
+  _generateResources: 1

@@ -31,57 +31,27 @@ namespace Crafting
         
         [SerializeField]
         private SpriteRenderer _cloudRenderer;
-        
-        [SerializeField]
-        private int _spawnInterval = 5;
-
-        private IWaveManager _waveManager;
         public event Action OnRecipeChanged;
 
-        private IPlayerLevel _playerLevel;
         private IPlayerInventory _playerInventory;
 
         private CraftInteraction _selectedInteraction;
 
-        private void Start()
+        private void OnEnable()
         {
-            _waveManager = GetComponentInParent<IWaveManager>();
-            _playerLevel = ServiceLocator.ServiceLocator.Instance.Get<IPlayerLevel>();
             _playerInventory = ServiceLocator.ServiceLocator.Instance.Get<IPlayerInventory>();
+
+            if(_playerInventory == null)
+                return;
+            
             InstantiateCraftInteractions();
-            
-            _waveManager.OnWaveStart += TryHideNpc;
-            _waveManager.OnWaveEnd += TryShowNpc;
-            
-            TryHideNpc(null);
-        }
-        private void OnDestroy()
-        {
-            _waveManager.OnWaveStart -= TryHideNpc;
-            _waveManager.OnWaveEnd -= TryShowNpc;
         }
 
         public CraftingRecipe GetRecipe()
         {
             return _selectedInteraction == null ? null : _selectedInteraction.GetRecipe();
         }
-
-
-        private void TryShowNpc(Wave wave)
-        {
-            if(wave.Index % _spawnInterval != 0)
-                return;
-            
-            gameObject.SetActive(true);
-            InstantiateCraftInteractions();
-            
-            DeselectInteraction(null);
-        }
-
-        private void TryHideNpc(Wave wave)
-        {
-            gameObject.SetActive(false);
-        }
+        
 
         private void InstantiateCraftInteractions()
         {
@@ -94,6 +64,9 @@ namespace Crafting
             {
                 var recipes = _craftingHandler.CraftingRecipeDatabase
                     .GetAvailableRecipes(_playerInventory.Inventory);
+                
+                if(recipes.Count == 0)
+                    continue;
                 
                 recipes.Shuffle();
                 

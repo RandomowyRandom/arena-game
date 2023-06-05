@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b200d00db304599bea1efabd4534e99, type: 3}
-  m_Name: TEST_ROOM_L4
+  m_Name: ORES_L3
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 3535736021708267638, guid: f9716007508942d47bf4efaf9273ab30, type: 3}
-    - {fileID: 2268759984707524892, guid: e21f925273aff0348a747583aff0f3e8, type: 3}
-    - {fileID: 9094995047937489891, guid: 5fd6ea4b323a5514684d2b7bdeede518, type: 3}
-    - {fileID: 2530176304263761368, guid: 235436f20323ed24e9c5e0db63316324, type: 3}
-    - {fileID: 1190555262996832711, guid: f6b4728fd68c79f4c93b592268c9a0bd, type: 3}
+    - {fileID: 2931861312426724257, guid: b3c4cfc79667508419ca162f1cb0f2f5, type: 3}
+    - {fileID: 8432503717114699612, guid: 575195085d5d6404686de488d876220d, type: 3}
+    - {fileID: 4869632929779141202, guid: 48b08c1b1e940384ca041b82c445517b, type: 3}
+    - {fileID: 2831485062929809176, guid: cf22c4d08bd53384eacc41cfa0fc892f, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -102,7 +102,7 @@ MonoBehaviour:
       Data: 
     - Name: _percentageCoverage
       Entry: 4
-      Data: 0.6
+      Data: 0.7
     - Name: 
       Entry: 8
       Data: 
@@ -148,7 +148,7 @@ MonoBehaviour:
       Data: 
     - Name: _startSpawnChance
       Entry: 4
-      Data: 0.6
+      Data: 0.7
     - Name: _chanceFollOff
       Entry: 4
       Data: 0.2
@@ -176,6 +176,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  _level: 4
-  _generateTreasure: 1
+  _level: 3
+  _generateTreasure: 0
   _generateResources: 1

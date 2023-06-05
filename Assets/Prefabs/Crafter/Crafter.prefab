@@ -58,7 +58,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  _craftingRecipeDatabase: {fileID: 11400000, guid: 87d30faa21d28d440900a85926c2ba7e, type: 2}
+  _craftingRecipeDatabase: {fileID: 11400000, guid: 42a044f91223657429607aeb71259a57, type: 2}
 --- !u!114 &2082338041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,7 +105,7 @@ MonoBehaviour:
       Data: 
     - Name: _amount
       Entry: 3
-      Data: 3
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -118,7 +118,6 @@ MonoBehaviour:
   _craftInteractionPrefab: {fileID: 1344353487, guid: 95da78080502333498f3bba697631455, type: 3}
   _tooltipText: {fileID: 8093370622363699977}
   _cloudRenderer: {fileID: 659841793646896289}
-  _spawnInterval: 5
 --- !u!212 &1459616626315940688
 SpriteRenderer:
   m_ObjectHideFlags: 0

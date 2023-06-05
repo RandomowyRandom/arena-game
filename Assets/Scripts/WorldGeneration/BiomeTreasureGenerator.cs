@@ -37,9 +37,9 @@ namespace WorldGeneration
             var isTilePresenceWidthOdd = tilePresence.GetLength(0) % 2 == 1;
             var worldPosition = BiomeGenerationHelper.GetWorldPositionFromOrigin((Vector3Int)treasurePosition, transform, isTilePresenceWidthOdd);
             
-            var treasure = Instantiate(roomData.TreasurePrefab, worldPosition, Quaternion.identity, transform);
+                var treasure = Instantiate(roomData.TreasurePrefab, worldPosition, Quaternion.identity, transform);
             
-            BiomeGenerationHelper.DisableTilePresenceInRadius(tilePresence, treasurePosition, 2);
+            BiomeGenerationHelper.DisableTilePresenceInRadius(tilePresence, treasurePosition, 1);
             
             OnGenerationComplete?.Invoke(roomData, tilePresence);
         }
