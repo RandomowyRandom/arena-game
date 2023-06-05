@@ -12,6 +12,11 @@ namespace Items.Effects
         [SerializeField]
         private int _durabilityDecreaseAmount;
         
+        public DecreaseDurabilityItemEffect()
+        {
+            _durabilityDecreaseAmount = 1;
+        }
+        
         public UniTask OnUse(IItemUser user, UsableItem item)
         {
             user.DecreaseDurability(item, _durabilityDecreaseAmount);

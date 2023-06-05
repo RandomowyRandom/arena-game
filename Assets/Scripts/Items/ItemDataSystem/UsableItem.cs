@@ -13,6 +13,8 @@ namespace Items.ItemDataSystem
         [OdinSerialize] 
         private List<IItemEffect> _effects;
         
+        protected List<IItemEffect> Effects => new(_effects);
+
         public void SetEffects(List<IItemEffect> effects)
         {
             _effects = new(effects);

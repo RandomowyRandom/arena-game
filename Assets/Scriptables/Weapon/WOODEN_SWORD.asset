@@ -177,16 +177,92 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 4
     - Name: 
       Entry: 7
       Data: 13|Items.Effects.MeleeScaleVisualItemEffect, Assembly-CSharp
     - Name: _scaleDuration
       Entry: 4
-      Data: 0.4
+      Data: 0.3
     - Name: _rotationDuration
       Entry: 4
-      Data: 0.3
+      Data: 0.25
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 14|Items.Effects.InstantiateProjectileItemEffect, Assembly-CSharp
+    - Name: _projectilePrefab
+      Entry: 10
+      Data: 0
+    - Name: _force
+      Entry: 4
+      Data: 25
+    - Name: _damageMultiplier
+      Entry: 4
+      Data: 0.5
+    - Name: _forceMode
+      Entry: 3
+      Data: 1
+    - Name: _projectileColor
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.831372559
+    - Name: 
+      Entry: 4
+      Data: 0.432795674
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _projectileEffects
+      Entry: 7
+      Data: 15|System.Collections.Generic.List`1[[ProjectileSystem.Abstraction.IProjectileEffect,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 16|ProjectileSystem.Effects.ApplyKnockBackProjectileEffect, Assembly-CSharp
+    - Name: _force
+      Entry: 4
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 17|Items.Effects.PlaySoundItemEffect, Assembly-CSharp
+    - Name: _clip
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 18|Items.Effects.WaitForSecondsItemEffect, Assembly-CSharp
+    - Name: _seconds
+      Entry: 4
+      Data: 0.15
     - Name: 
       Entry: 8
       Data: 
@@ -207,20 +283,20 @@ MonoBehaviour:
       Data: 
     - Name: _rarityData
       Entry: 7
-      Data: 14|System.Collections.Generic.List`1[[Items.RaritySystem.GearRarityData,
+      Data: 19|System.Collections.Generic.List`1[[Items.RaritySystem.GearRarityData,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 5
     - Name: 
       Entry: 7
-      Data: 15|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 20|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 2
     - Name: _statsData
       Entry: 7
-      Data: 16|Stats.StatsData, Assembly-CSharp
+      Data: 21|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 2
@@ -244,13 +320,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 17|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 22|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 3
     - Name: _statsData
       Entry: 7
-      Data: 18|Stats.StatsData, Assembly-CSharp
+      Data: 23|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 3
@@ -274,13 +350,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 19|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 24|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 4
     - Name: _statsData
       Entry: 7
-      Data: 20|Stats.StatsData, Assembly-CSharp
+      Data: 25|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 4
@@ -304,13 +380,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 21|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 26|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 5
     - Name: _statsData
       Entry: 7
-      Data: 22|Stats.StatsData, Assembly-CSharp
+      Data: 27|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 5
@@ -334,13 +410,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 23|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 28|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 6
     - Name: _statsData
       Entry: 7
-      Data: 24|Stats.StatsData, Assembly-CSharp
+      Data: 29|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 6
@@ -373,5 +449,4 @@ MonoBehaviour:
   _description: Pure wood power
   _maxStack: 1
   _requiredLevel: 0
-  _maxDurability: 50
-  _damageIncreasePerLevel: 1
+  _maxDurability: 100
