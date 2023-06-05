@@ -25,7 +25,7 @@ namespace EntitySystem
             _entity = GetComponent<Entity>();
         }
 
-        public void Interact()
+        public void Interact(IInteractionHandler handler)
         {
             _entity.InstantKill(this);
         }

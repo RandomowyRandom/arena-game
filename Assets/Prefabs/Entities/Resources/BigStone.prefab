@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: -5783072649043770545}
   - component: {fileID: -4333948181340843727}
   - component: {fileID: -2042655458731524763}
-  - component: {fileID: 1458289238431569128}
   m_Layer: 9
   m_Name: BigStone
   m_TagString: Untagged
@@ -351,6 +350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hitSound: {fileID: 8300000, guid: 38ee749178d2efb40915369aac992564, type: 3}
   _levelLockedSound: {fileID: 8300000, guid: 74d6abc2585ce87479bbab6b3c20adcd, type: 3}
+  _entitySpriteRenderer: {fileID: 0}
 --- !u!114 &-2042655458731524763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,28 +364,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageIndicator: {fileID: 6555825616068831193, guid: e75c9e3b24e5b2147b52223efebe2a78, type: 3}
---- !u!114 &1458289238431569128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2530176304263761368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d7f1d5ab32e42fd9f1aff8d76f819b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
-  _weight: -0.3
 --- !u!1 &6691773143699341254
 GameObject:
   m_ObjectHideFlags: 0

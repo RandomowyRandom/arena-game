@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: -7759521909765717433}
   - component: {fileID: -7670665768240966829}
   - component: {fileID: 6727561715287801322}
-  - component: {fileID: -3871625896348630886}
   m_Layer: 9
   m_Name: Tree
   m_TagString: Untagged
@@ -365,28 +364,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageIndicator: {fileID: 6555825616068831193, guid: e75c9e3b24e5b2147b52223efebe2a78, type: 3}
---- !u!114 &-3871625896348630886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2268759984707524892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d7f1d5ab32e42fd9f1aff8d76f819b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
-  _weight: -0.3
 --- !u!1 &6970807954281786114
 GameObject:
   m_ObjectHideFlags: 0

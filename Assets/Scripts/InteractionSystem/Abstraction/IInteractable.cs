@@ -6,7 +6,7 @@ namespace InteractionSystem.Abstraction
     {
         public GameObject GameObject { get; }
         
-        public void Interact();
+        public void Interact(IInteractionHandler handler);
         
         public void OnHandlerEnter(IInteractionHandler handler);
         public void OnHandlerExit(IInteractionHandler handler);

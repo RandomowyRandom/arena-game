@@ -44,7 +44,7 @@ namespace InteractionSystem
             if(!Keyboard.current.eKey.wasPressedThisFrame)
                 return;
             
-            _currentInteractable?.Interact();
+            _currentInteractable?.Interact(this);
         }
 
         public void OnInteractableEnter(GameObject collision)

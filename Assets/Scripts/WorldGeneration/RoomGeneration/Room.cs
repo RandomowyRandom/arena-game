@@ -11,7 +11,9 @@ namespace WorldGeneration.RoomGeneration
         
         public RoomData RoomData { get; set; }
         
-        private List<OpenDoorSide> _openDoorSides = new();
+        public BiomeGenerationEntryPoint GenerationHandler { get; set; }
+        
+        private List<Door> _doors = new();
         
         public Room(int x, int y)
         {
@@ -19,14 +21,14 @@ namespace WorldGeneration.RoomGeneration
             Y = y;
         }
         
-        public void AddOpenDoorSide(OpenDoorSide openDoorSide)
+        public void AddDoor(OpenDoorSide openDoorSide, int cost)
         {
-            _openDoorSides.Add(openDoorSide);
+            _doors.Add(new(openDoorSide, cost));
         }
         
-        public List<OpenDoorSide> GetOpenDoorSides()
+        public List<Door> GetDoors()
         {
-            return new(_openDoorSides);
+            return new(_doors);
         }
     }
 }

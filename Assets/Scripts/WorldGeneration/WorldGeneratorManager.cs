@@ -35,16 +35,22 @@ namespace WorldGeneration
 
         private RoomsLayoutGenerator _roomsLayoutGenerator;
         
-        [Button]
+        private Room[,] roomArray;
+        
         private void Generate()
         {
-            var rooms = _roomsLayoutGenerator.GetRoomArray();
-            InstantiateRooms(rooms, _roomSize);
+            roomArray = _roomsLayoutGenerator.GetRoomArray();
+            InstantiateRooms(roomArray, _roomSize);
         }
 
         private void Awake()
         {
             _roomsLayoutGenerator = new RoomsLayoutGenerator(_width, _height, _startPosition, _roomCount, _roomDatas);
+        }
+
+        private void Start()
+        {
+            Generate();
         }
 
         private void InstantiateRooms(Room[,] rooms, Vector2 roomSize)
@@ -58,7 +64,7 @@ namespace WorldGeneration
                 {
                     var room = rooms[x, y];
                     
-                    if (room == null || room.RoomData == null) 
+                    if (room == null) 
                         continue;
                     
                     var roomPosition = new Vector2(_startGenerationPosition.x + x * roomSize.x, _startGenerationPosition.y + y * roomSize.y);
@@ -66,11 +72,28 @@ namespace WorldGeneration
                     var roomGameObject = Instantiate(_roomPrefab, roomPosition, Quaternion.identity);
                     
                     roomGameObject.SetRoomData(room.RoomData);
-                    roomGameObject.GenerateRoom();
-                    
-                    roomGameObject.GenerateStageTwo(room, rooms);
+
+                    room.GenerationHandler = roomGameObject;
                 }
             }
+
+            for (var x = 0; x < width; x++)
+            {
+                for (var y = 0; y < height; y++)
+                {
+                    var room = rooms[x, y];
+                    
+                    if (room == null) 
+                        continue;
+
+                    room.GenerationHandler.GenerateRoom();
+                    room.GenerationHandler.GenerateStageTwo(room, rooms);
+                    
+                    if(!room.IsStartRoom)
+                        room.GenerationHandler.gameObject.SetActive(false);
+                }
+            }
+
         }
     }
     
