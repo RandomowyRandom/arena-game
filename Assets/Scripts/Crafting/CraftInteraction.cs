@@ -45,7 +45,7 @@ namespace Crafting
             return _recipe;
         }
         
-        public void Interact()
+        public void Interact(IInteractionHandler handler)
         {
             CraftingHandler.TryCraft(GetRecipe());
         }

@@ -24,9 +24,6 @@ namespace WorldGeneration
             if (_mergeTo == null)
                 _mergeTo = GameObject.Find(_mergeToName).GetComponent<Tilemap>();
 
-            // merge tiles from _mergeFrom to _mergeTo
-            // add transform.position to the tile position
-
             var fromBounds = _mergeFrom.cellBounds;
             var toBounds = _mergeTo.cellBounds;
 

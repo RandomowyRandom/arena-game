@@ -41,8 +41,7 @@ namespace ItemSelection
             _itemRenderer.sprite = item.ItemData.Icon;
             _tooltipText.SetText(item.GetTooltip());
         }
-
-        public void Interact()
+        public void Interact(IInteractionHandler handler)
         {
             _playerInventory.TryAddItem(_item);
             OnItemTaken?.Invoke();

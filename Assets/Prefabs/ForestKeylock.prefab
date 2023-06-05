@@ -134,6 +134,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
+  _key: {fileID: 11400000, guid: 64aab11f59e987e4a9ff43229472e76f, type: 2}
 --- !u!50 &3812937138659434299
 Rigidbody2D:
   serializedVersion: 4

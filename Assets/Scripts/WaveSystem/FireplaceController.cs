@@ -36,7 +36,7 @@ namespace WaveSystem
         private Light2D _globalLight2D;
         
         public GameObject GameObject => gameObject;
-        public void Interact()
+        public void Interact(IInteractionHandler handler)
         {
             if(_waveManager.IsWaveInProgress)
                 return;

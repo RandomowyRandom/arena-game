@@ -37,7 +37,6 @@ namespace WorldGeneration
         
         private Room[,] roomArray;
         
-        [Button]
         private void Generate()
         {
             roomArray = _roomsLayoutGenerator.GetRoomArray();
@@ -47,6 +46,11 @@ namespace WorldGeneration
         private void Awake()
         {
             _roomsLayoutGenerator = new RoomsLayoutGenerator(_width, _height, _startPosition, _roomCount, _roomDatas);
+        }
+
+        private void Start()
+        {
+            Generate();
         }
 
         private void InstantiateRooms(Room[,] rooms, Vector2 roomSize)
