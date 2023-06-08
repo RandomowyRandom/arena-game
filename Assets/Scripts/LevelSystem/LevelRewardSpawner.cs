@@ -24,6 +24,9 @@ namespace LevelSystem
 
         private async void SpawnReward(Level level)
         {
+            if(level.LevelRewardPrefab == null)
+                return;
+            
             var waveManager = ServiceLocator.ServiceLocator.Instance.Get<IWaveManager>();
             
             await UniTask.WaitUntil(() => !waveManager.IsWaveInProgress);
