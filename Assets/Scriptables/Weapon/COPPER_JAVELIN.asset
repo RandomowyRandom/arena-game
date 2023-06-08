@@ -33,10 +33,33 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 1
     - Name: 
       Entry: 7
-      Data: 1|Items.Effects.SetItemVisibilityVisualItemEffect, Assembly-CSharp
+      Data: 1|Items.Effects.Operators.ConditionalStatement, Assembly-CSharp
+    - Name: _conditionEvaluator
+      Entry: 7
+      Data: 2|Items.Effects.Operators.ConditionEvaluators.HasEnoughDurabilityEvaluator,
+        Assembly-CSharp
+    - Name: _biggerThan
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _expectedResult
+      Entry: 5
+      Data: true
+    - Name: _effects
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[Items.Abstraction.IItemEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 7
+      Data: 4|Items.Effects.SetItemVisibilityVisualItemEffect, Assembly-CSharp
     - Name: _visible
       Entry: 5
       Data: false
@@ -48,7 +71,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 2|Items.Effects.InstantiateReturningProjectileItemEffect, Assembly-CSharp
+      Data: 5|Items.Effects.InstantiateReturningProjectileItemEffect, Assembly-CSharp
     - Name: _projectilePrefab
       Entry: 10
       Data: 0
@@ -93,14 +116,14 @@ MonoBehaviour:
       Data: 
     - Name: _projectileEffects
       Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[ProjectileSystem.Abstraction.IProjectileEffect,
+      Data: 6|System.Collections.Generic.List`1[[ProjectileSystem.Abstraction.IProjectileEffect,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 4|ProjectileSystem.Effects.ApplyKnockBackProjectileEffect, Assembly-CSharp
+      Data: 7|ProjectileSystem.Effects.ApplyKnockBackProjectileEffect, Assembly-CSharp
     - Name: _force
       Entry: 4
       Data: 10
@@ -118,13 +141,31 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 5|Items.Effects.SetItemVisibilityVisualItemEffect, Assembly-CSharp
+      Data: 8|Items.Effects.SetItemVisibilityVisualItemEffect, Assembly-CSharp
     - Name: _visible
       Entry: 5
       Data: true
     - Name: _scaleDuration
       Entry: 4
       Data: 0.15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|Items.Effects.DecreaseDurabilityItemEffect, Assembly-CSharp
+    - Name: _durabilityDecreaseAmount
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -136,20 +177,20 @@ MonoBehaviour:
       Data: 
     - Name: _rarityData
       Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[Items.RaritySystem.GearRarityData,
+      Data: 10|System.Collections.Generic.List`1[[Items.RaritySystem.GearRarityData,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 5
     - Name: 
       Entry: 7
-      Data: 7|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 11|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 1
     - Name: _statsData
       Entry: 7
-      Data: 8|Stats.StatsData, Assembly-CSharp
+      Data: 12|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 20
@@ -173,13 +214,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 9|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 13|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 2
     - Name: _statsData
       Entry: 7
-      Data: 10|Stats.StatsData, Assembly-CSharp
+      Data: 14|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 22
@@ -203,13 +244,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 11|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 15|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 3
     - Name: _statsData
       Entry: 7
-      Data: 12|Stats.StatsData, Assembly-CSharp
+      Data: 16|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 24
@@ -233,13 +274,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 13|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 17|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 4
     - Name: _statsData
       Entry: 7
-      Data: 14|Stats.StatsData, Assembly-CSharp
+      Data: 18|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 26
@@ -263,13 +304,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 15|Items.RaritySystem.GearRarityData, Assembly-CSharp
+      Data: 19|Items.RaritySystem.GearRarityData, Assembly-CSharp
     - Name: _gearRarity
       Entry: 10
       Data: 5
     - Name: _statsData
       Entry: 7
-      Data: 16|Stats.StatsData, Assembly-CSharp
+      Data: 20|Stats.StatsData, Assembly-CSharp
     - Name: _damage
       Entry: 4
       Data: 28
@@ -302,4 +343,4 @@ MonoBehaviour:
   _description: 
   _maxStack: 1
   _requiredLevel: 7
-  _damageIncreasePerLevel: 2
+  _maxDurability: 350

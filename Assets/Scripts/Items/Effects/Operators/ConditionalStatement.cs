@@ -22,6 +22,15 @@ namespace Items.Effects.Operators
         [OdinSerialize]
         private List<IItemEffect> _effects;
 
+        public ConditionalStatement(){}
+        
+        public ConditionalStatement(IConditionEvaluator conditionEvaluator, bool expectedResult, List<IItemEffect> effects)
+        {
+            _conditionEvaluator = conditionEvaluator;
+            _expectedResult = expectedResult;
+            _effects = effects;
+        }
+        
         public async UniTask OnUse(IItemUser user, UsableItem item)
         {
             var conditionResult = _conditionEvaluator.EvaluateCondition();

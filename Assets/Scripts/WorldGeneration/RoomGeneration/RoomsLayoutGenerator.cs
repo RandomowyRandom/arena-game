@@ -86,7 +86,7 @@ namespace WorldGeneration.RoomGeneration
                     
                     // Create a new room at the adjacent position
                     var newRoom = new Room(neighborX, neighborY);
-                    newRoom.AddDoor(GetOppositeOpenDoorSide(openDoorSide), level);
+                    newRoom.AddDoor(GetOppositeOpenDoorSide(openDoorSide), 1);
 
                     newRoom.RoomData = GetRandomRoomData(level); // Assign a random RoomData based on the level
                     
