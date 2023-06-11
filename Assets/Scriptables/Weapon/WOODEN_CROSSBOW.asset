@@ -330,3 +330,4 @@ MonoBehaviour:
   _maxStack: 1
   _requiredLevel: 4
   _maxDurability: 250
+  _gearRarityDatabase: {fileID: 11400000, guid: 4abf34798dd61f34a9c5cb97eee052e8, type: 2}

@@ -44,7 +44,7 @@ namespace Player
         {
             get
             {
-                var durabilityData = CurrentItem.AdditionalItemData as DurabilityItemData;
+                var durabilityData = CurrentItem.GetAdditionalData<DurabilityItemData>();
                 return durabilityData?.CurrentDurability ?? 1;
             }
         }
@@ -84,7 +84,7 @@ namespace Player
             var currentItemInSlot = _hotbarInventory.GetItem(_currentHotbarSlot);
             
             if(CurrentItem.ItemData == item)
-                _hotbarInventory.SetItem(_currentHotbarSlot, new Item(item, currentItemInSlot.Amount - 1, currentItemInSlot.GearRarity ,currentItemInSlot.AdditionalItemData));
+                _hotbarInventory.SetItem(_currentHotbarSlot, new Item(item, currentItemInSlot.Amount - 1 ,currentItemInSlot.AdditionalItemData));
         }
 
         public void DecreaseDurability(UsableItem item, int amount)
@@ -94,13 +94,15 @@ namespace Player
             
             var currentItemInSlot = _hotbarInventory.GetItem(_currentHotbarSlot);
 
-            if(currentItemInSlot.AdditionalItemData is not DurabilityItemData durabilityData)
+            var durabilityData = CurrentItem.GetAdditionalData<DurabilityItemData>();
+            
+            if(durabilityData == null)
                 return;
             
             durabilityData.CurrentDurability -= amount;
             
             if(CurrentItem.ItemData == item)
-                _hotbarInventory.SetItem(_currentHotbarSlot, new Item(item, currentItemInSlot.Amount, currentItemInSlot.GearRarity, durabilityData));
+                _hotbarInventory.SetItem(_currentHotbarSlot, new Item(item, currentItemInSlot.Amount, currentItemInSlot.AdditionalItemData));
         }
 
         private void SetCurrentHotbarSlot(int slotIndex)
@@ -184,12 +186,13 @@ namespace Player
                 return new StatsData();
 
             var itemInSlot = _hotbarInventory.GetItem(_currentHotbarSlot);
-
-            if (!itemInSlot.IsRarityItem)
+            
+            var rarityData = itemInSlot.GetAdditionalData<RarityAdditionalItemData>();
+            if (rarityData == null)
                 return new StatsData();
             
             if (usableItem is IStatsDataProvider statsDataProvider)
-                return statsDataProvider.GetStatsData(itemInSlot.GearRarity);
+                return statsDataProvider.GetStatsData(rarityData.GearRarity);
 
             return new StatsData();
         }

@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Common.Attributes;
 using Items.Abstraction;
 using Items.Durability;
-using Items.Effects.Operators;
-using Items.Effects.Operators.ConditionEvaluators;
 using Items.RaritySystem;
-using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using Stats;
 using Stats.Interfaces;
@@ -23,6 +19,10 @@ namespace Items.ItemDataSystem
         
         [OdinSerialize]
         private List<GearRarityData> _rarityData;
+        
+        [Space(5)]
+        [SerializeField]
+        private GearRarityDatabase _gearRarityDatabase;
         public int Durability { get; set; }
         
         public void SetRarityData(List<GearRarityData> rarityData)
@@ -32,10 +32,14 @@ namespace Items.ItemDataSystem
 
         public override void OnItemConstructed(Item item)
         {
-            var hasItemDurabilityData = item.AdditionalItemData is DurabilityItemData;
+            var hasItemDurabilityData = item.HasAdditionalData<DurabilityItemData>();
+            var hasItemRarityData = item.HasAdditionalData<RarityAdditionalItemData>();
+            
+            if(!hasItemRarityData)
+                item.AddAdditionalData(new RarityAdditionalItemData(_gearRarityDatabase.GetRandomRarity()));
             
             if(!hasItemDurabilityData)
-                item.AdditionalItemData = new DurabilityItemData(_maxDurability);
+                item.AddAdditionalData(new DurabilityItemData(_maxDurability));
         }
 
         public StatsData GetStatsData(GearRarity rarity)
@@ -48,17 +52,6 @@ namespace Items.ItemDataSystem
         public List<GearRarityData> GetGearRarities()
         {
             return _rarityData;
-        }
-
-        [Button("Wrap in Condition")]
-        private void WrapInCondition()
-        {
-            var effects = new List<IItemEffect>
-            {
-                new ConditionalStatement(new HasEnoughDurabilityEvaluator(), true, Effects)
-            };
-
-            SetEffects(effects);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Player;
+﻿using Items.RaritySystem;
+using Player;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using TMPro;
@@ -35,7 +36,10 @@ namespace UI.Inventory
             }
             
             _itemNameText.SetText(item.ToString());
-            _itemNameText.color = item.IsRarityItem ? item.GearRarity.Color : Color.white;
+            
+            var rarityData = item.GetAdditionalData<RarityAdditionalItemData>();
+            
+            _itemNameText.color = rarityData != null ? rarityData.GearRarity.Color : Color.white;
         }
 
         private void ClearInfo()

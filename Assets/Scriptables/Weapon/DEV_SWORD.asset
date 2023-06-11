@@ -405,5 +405,4 @@ MonoBehaviour:
   _maxStack: 1
   _requiredLevel: 9999
   _maxDurability: 2147483647
-  <Durability>k__BackingField: 0
-  _damageIncreasePerLevel: 1
+  _gearRarityDatabase: {fileID: 11400000, guid: 4abf34798dd61f34a9c5cb97eee052e8, type: 2}

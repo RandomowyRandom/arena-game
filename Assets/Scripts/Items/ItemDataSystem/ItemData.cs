@@ -57,7 +57,9 @@ namespace Items.ItemDataSystem
             set => _requiredLevel = value;
         }
 
-        public virtual void OnItemConstructed(Item item) { }
+        public virtual void OnItemConstructed(Item item)
+        {
+        }
         
         public override string ToString()
         {
