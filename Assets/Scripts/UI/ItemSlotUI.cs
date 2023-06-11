@@ -2,6 +2,7 @@
 using Inventory.Interfaces;
 using Items;
 using Items.ItemDataSystem;
+using Items.RaritySystem;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
@@ -69,7 +70,8 @@ namespace UI
             if (item.Amount == 1)
                 _itemAmountText.text = string.Empty;
             
-            _itemImage.material = item.IsRarityItem ? item.GearRarity.Material : null;
+            var rarityData = item.GetAdditionalData<RarityAdditionalItemData>();
+            _itemImage.material = rarityData?.GearRarity.Material;
         }
     }
 }

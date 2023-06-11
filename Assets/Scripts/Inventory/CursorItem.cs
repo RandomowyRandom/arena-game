@@ -1,5 +1,6 @@
 ﻿using Items;
 using Items.ItemDataSystem;
+using Items.RaritySystem;
 using TMPro;
 using UI;
 using UnityEngine;
@@ -72,15 +73,15 @@ namespace Inventory
             if(!cursorHasItem && slotHasItem)
             {
                 var amountToTake = Mathf.CeilToInt(slot.Item.Amount / 2f);
-                SetItem(new Item(slot.Item.ItemData, amountToTake, slot.Item.GearRarity, slot.Item.AdditionalItemData));
-                slot.UIHandler.Inventory.SetItem(slot.SlotIndex, new Item(slot.Item.ItemData, slot.Item.Amount - amountToTake, slot.Item.GearRarity, slot.Item.AdditionalItemData));
+                SetItem(new Item(slot.Item.ItemData, amountToTake, slot.Item.AdditionalItemData));
+                slot.UIHandler.Inventory.SetItem(slot.SlotIndex, new Item(slot.Item.ItemData, slot.Item.Amount - amountToTake, slot.Item.AdditionalItemData));
                 return;
             }
             
             if(cursorHasItem && !slotHasItem)
             {
-                slot.UIHandler.Inventory.SetItem(slot.SlotIndex, new Item(_heldItem.ItemData, 1, _heldItem.GearRarity, _heldItem.AdditionalItemData));
-                SetItem(new Item(_heldItem.ItemData, _heldItem.Amount - 1, _heldItem.GearRarity, _heldItem.AdditionalItemData));
+                slot.UIHandler.Inventory.SetItem(slot.SlotIndex, new Item(_heldItem.ItemData, 1, _heldItem.AdditionalItemData));
+                SetItem(new Item(_heldItem.ItemData, _heldItem.Amount - 1, _heldItem.AdditionalItemData));
                 
                 if(_heldItem.Amount == 0)
                     SetItem(null);
@@ -96,8 +97,8 @@ namespace Inventory
                 if(slot.Item.Amount == slot.Item.ItemData.MaxStack)
                     return;
                 
-                slot.UIHandler.Inventory.SetItem(slot.SlotIndex, new Item(slot.Item.ItemData, slot.Item.Amount + 1, slot.Item.GearRarity, slot.Item.AdditionalItemData));
-                SetItem(new Item(_heldItem.ItemData, _heldItem.Amount - 1, _heldItem.GearRarity, _heldItem.AdditionalItemData));
+                slot.UIHandler.Inventory.SetItem(slot.SlotIndex, new Item(slot.Item.ItemData, slot.Item.Amount + 1, slot.Item.AdditionalItemData));
+                SetItem(new Item(_heldItem.ItemData, _heldItem.Amount - 1, _heldItem.AdditionalItemData));
                 
                 if(_heldItem.Amount == 0)
                     SetItem(null);
@@ -134,8 +135,8 @@ namespace Inventory
 
                 var amountToAdd = Mathf.Min(cursorItem.Amount, slotItem.ItemData.MaxStack - slotItem.Amount);
 
-                slot.UIHandler.Inventory.SetItem(slot.SlotIndex, new Item(slotItem.ItemData, slotItem.Amount + amountToAdd, slotItem.GearRarity, slotItem.AdditionalItemData));
-                SetItem(new Item(cursorItem.ItemData, cursorItem.Amount - amountToAdd, cursorItem.GearRarity, cursorItem.AdditionalItemData));
+                slot.UIHandler.Inventory.SetItem(slot.SlotIndex, new Item(slotItem.ItemData, slotItem.Amount + amountToAdd, slotItem.AdditionalItemData));
+                SetItem(new Item(cursorItem.ItemData, cursorItem.Amount - amountToAdd, cursorItem.AdditionalItemData));
 
                 if (_heldItem.Amount == 0)
                     SetItem(null);
@@ -157,7 +158,9 @@ namespace Inventory
             _itemImage.color = Color.white;
             _itemAmountText.text = item.Amount > 1 ? item.Amount.ToString() : string.Empty;
             
-            _itemImage.material = item.IsRarityItem ? item.GearRarity.Material : null;
+            var rarityData = item.GetAdditionalData<RarityAdditionalItemData>();
+            
+            _itemImage.material = rarityData?.GearRarity.Material;
             
             _heldItem = item;
         }

@@ -143,11 +143,13 @@ namespace Inventory
             {
                 if (item?.ItemData is not IStatsDataProvider statsDataProvider) 
                     continue;
+
+                var rarityData = item.GetAdditionalData<RarityAdditionalItemData>();
                 
-                if(!item.IsRarityItem)
+                if(rarityData == null)
                     continue;
                 
-                var itemStatsData = statsDataProvider.GetStatsData(item.GearRarity);
+                var itemStatsData = statsDataProvider.GetStatsData(rarityData.GearRarity);
                 statsData += itemStatsData;
             }
 

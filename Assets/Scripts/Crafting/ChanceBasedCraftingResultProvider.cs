@@ -29,7 +29,7 @@ namespace Crafting
                 _possibleResults.Add(new ChanceBasedCraftingResult
                 {
                     Chance = chance,
-                    Result = new Item(item, 1, rarity)
+                    Result = new Item(item, 1)
                 });
             }
         }

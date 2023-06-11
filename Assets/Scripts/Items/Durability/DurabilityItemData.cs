@@ -25,7 +25,7 @@ namespace Items.Durability
             return $"Durability: <color=#{ColorUtility.ToHtmlStringRGB(GetDurabilityColor())}> {CurrentDurability}/{MaxDurability}";
         }
         
-        public Color GetDurabilityColor()
+        private Color GetDurabilityColor()
         {
             var durabilityPercentage = (float)CurrentDurability / MaxDurability;
             return durabilityPercentage switch

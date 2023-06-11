@@ -195,4 +195,4 @@ MonoBehaviour:
   _maxStack: 1
   _requiredLevel: 11
   _equipmentType: 2
-  _defenseIncreasePerLevel: 2
+  _gearRarityDatabase: {fileID: 11400000, guid: 4abf34798dd61f34a9c5cb97eee052e8, type: 2}

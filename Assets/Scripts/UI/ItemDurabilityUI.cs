@@ -29,9 +29,11 @@ namespace UI
                 return;
             }
             
-            if(currentItem.AdditionalItemData is not DurabilityItemData durabilityItemData)
-                return;
+            var durabilityItemData = currentItem.GetAdditionalData<DurabilityItemData>();
 
+            if(durabilityItemData == null)
+                return;
+            
             SetDurabilityUI(durabilityItemData.GetTooltip());
         }
 

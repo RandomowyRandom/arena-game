@@ -22,6 +22,10 @@ namespace Items.ItemDataSystem
         [SerializeField]
         private EquipmentType _equipmentType;
         
+        [Space(5)]
+        [SerializeField]
+        private GearRarityDatabase _gearRarityDatabase;
+        
         public EquipmentType EquipmentType => _equipmentType;
 
         public StatsData GetStatsData(GearRarity rarity)
@@ -35,31 +39,13 @@ namespace Items.ItemDataSystem
         {
             return _rarityData;
         }
-        
-        [InfoBox("Requires definition of Common stats!")]
-        [Button]
-        private void GenerateStats()
+
+        public override void OnItemConstructed(Item item)
         {
-            var hasCommonStats = _rarityData
-                .Any(r => r.GearRarity.name == "Common");
+            var hasItemRarityData = item.HasAdditionalData<RarityAdditionalItemData>();
 
-            var commonStat = _rarityData[0].StatsData;
-                
-            if (!hasCommonStats)
-                throw new NotImplementedException("Common stats are not defined!");
-
-            for (var i = 1; i < 5; i++)
-            {
-                var newStat = new StatsData
-                (commonStat.Damage, 
-                    commonStat.Speed,commonStat.FireRate, 
-                    commonStat.MaxHealth, 
-                    commonStat.Defense + _defenseIncreasePerLevel * i);
-                _rarityData.Add(new GearRarityData(newStat));
-            }
+            if(!hasItemRarityData)
+                item.AddAdditionalData(new RarityAdditionalItemData(_gearRarityDatabase.GetRandomRarity()));
         }
-        
-        [SerializeField]
-        private float _defenseIncreasePerLevel = 1f;
     }
 }
