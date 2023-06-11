@@ -63,7 +63,7 @@ namespace Crafting
             foreach (var data in _craftingStationDatas)
             {
                 var recipes = _craftingHandler.CraftingRecipeDatabase
-                    .GetAvailableRecipes(_playerInventory.Inventory);
+                    .GetCraftableRecipesByObtainedWeapons(_playerInventory.Inventory);
                 
                 if(recipes.Count == 0)
                     continue;

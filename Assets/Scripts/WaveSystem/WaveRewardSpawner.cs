@@ -13,11 +13,15 @@ namespace WaveSystem
         private Vector2 _spawnOffset;
         
         [SerializeField]
+        private float _randomOffset;
+        
+        [SerializeField]
+        private AnimationCurve _rewardAmountCurve;
+        
+        [SerializeField]
         private int _rewardWaveInterval;
         
         private WaveManager _waveManager;
-        
-        private GameObject _rewardInstance;
         
         private void Awake()
         {
@@ -27,25 +31,27 @@ namespace WaveSystem
         private void Start()
         {
             _waveManager.OnWaveEnd += TrySpawnReward;
-            _waveManager.OnWaveStart += TryDestroyReward;
         }
 
         private void OnDestroy()
         {
             _waveManager.OnWaveEnd -= TrySpawnReward;
-            _waveManager.OnWaveStart -= TryDestroyReward;
-        }
-
-        private void TryDestroyReward(Wave wave)
-        {
-            if(_rewardInstance != null)
-                Destroy(_rewardInstance);
         }
 
         private void TrySpawnReward(Wave wave)
         {
-            if(wave.Index % _rewardWaveInterval == 0)
-                _rewardInstance = Instantiate(_rewardPrefab, transform.position + (Vector3)_spawnOffset, Quaternion.identity);
+            if (wave.Index % _rewardWaveInterval != 0) 
+                return;
+            
+            var rewardAmount = Mathf.FloorToInt(_rewardAmountCurve.Evaluate(wave.Index));
+
+            for (var i = 0; i < rewardAmount; i++)
+            {
+                var spawnPosition = 
+                    transform.position + (Vector3)_spawnOffset + new Vector3(UnityEngine.Random.Range(-_randomOffset, _randomOffset), UnityEngine.Random.Range(-_randomOffset, _randomOffset));
+                
+                Instantiate(_rewardPrefab, spawnPosition, Quaternion.identity);
+            }
         }
     }
 }

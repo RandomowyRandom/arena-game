@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Common.Attributes;
 using Inventory.Interfaces;
+using Items.ItemDataSystem;
 using Player.Interfaces;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -74,6 +75,32 @@ namespace Crafting
                 recipe => recipe.Ingredients
                     .Sum(ingredient => ingredient.Amount))
                     .ToList();
+        }
+
+        public List<CraftingRecipe> GetCraftableRecipesByObtainedWeapons(IInventory inventory)
+        {
+            var items = inventory.Items
+                .Where(item => item != null).ToList();
+            
+            var recipes = new List<CraftingRecipe>();
+            
+            var weapons = items.Where(item => item.ItemData is Weapon).ToList();
+            
+            foreach (var recipe in _recipes)
+            {
+                var ingredients = recipe.Ingredients;
+                var weaponInRecipe = ingredients.FirstOrDefault(ingredient => ingredient.ItemData is Weapon);
+                
+                if(weaponInRecipe == null)
+                    continue;
+                
+                var doesPlayerHaveWeapon = weapons.Any(weapon => weapon.ItemData == weaponInRecipe.ItemData);
+                
+                if(doesPlayerHaveWeapon)
+                    recipes.Add(recipe);
+            }
+
+            return recipes;
         }
         
         public List<CraftingRecipe> GetRecipesByTypeAndLevel(Type type, int minLevel, int maxLevel)

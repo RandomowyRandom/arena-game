@@ -413,6 +413,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rewardPrefab: {fileID: 4956166285135844180, guid: ce146531e9a974a4d9db3b2f1c38527e, type: 3}
   _spawnOffset: {x: 0, y: 3}
+  _randomOffset: 0.8
+  _rewardAmountCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0.15
+      outSlope: 0.15
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 20
+      value: 4
+      inSlope: 0.15
+      outSlope: 0.15
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   _rewardWaveInterval: 1
 --- !u!1 &8129455810172548389
 GameObject:
