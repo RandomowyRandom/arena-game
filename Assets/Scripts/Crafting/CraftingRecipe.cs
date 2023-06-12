@@ -35,8 +35,8 @@ namespace Crafting
         public void SetResultProvider(ICraftingResultProvider resultProvider)
         {
             _resultProvider = resultProvider;
-        } 
-        
+        }
+
         [InfoBox("Runtime only")]
         [Button]
         private void AddNeededItems()

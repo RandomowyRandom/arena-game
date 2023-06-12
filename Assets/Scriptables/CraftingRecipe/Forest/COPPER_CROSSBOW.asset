@@ -19,11 +19,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: c4850d86c3c11d7468de48d96d85537b, type: 2}
     - {fileID: 11400000, guid: c2f0bf6036eb07242976aa9d34bb2fc5, type: 2}
     - {fileID: 11400000, guid: e5a413d60949b084685b2453a34e14f3, type: 2}
-    - {fileID: 11400000, guid: 5c3c3f83f3bff214caedaf5ea0b51356, type: 2}
-    - {fileID: 11400000, guid: cea9beb5a9fdacc448777c52afac584b, type: 2}
-    - {fileID: 11400000, guid: d8917f73eb0309040ad9ef636dc22eae, type: 2}
-    - {fileID: 11400000, guid: a24912256fd91a845bd6f489827a3d3b, type: 2}
-    - {fileID: 11400000, guid: 7ff96bf0ebbc025429ee488993903671, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -44,9 +39,6 @@ MonoBehaviour:
     - Name: _amount
       Entry: 3
       Data: 1
-    - Name: _gearRarity
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -59,9 +51,6 @@ MonoBehaviour:
     - Name: _amount
       Entry: 3
       Data: 12
-    - Name: _gearRarity
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -73,142 +62,16 @@ MonoBehaviour:
       Data: 
     - Name: _resultProvider
       Entry: 7
-      Data: 3|Crafting.ChanceBasedCraftingResultProvider, Assembly-CSharp
-    - Name: _possibleResults
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Crafting.ChanceBasedCraftingResultProvider+ChanceBasedCraftingResult,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 5
-    - Name: 
-      Entry: 7
-      Data: 5|Crafting.ChanceBasedCraftingResultProvider+ChanceBasedCraftingResult,
-        Assembly-CSharp
+      Data: 3|Crafting.BasicCraftingResultProvider, Assembly-CSharp
     - Name: _result
       Entry: 7
-      Data: 6|Items.Item, Assembly-CSharp
+      Data: 4|Items.Item, Assembly-CSharp
     - Name: _itemData
       Entry: 10
       Data: 2
     - Name: _amount
       Entry: 3
       Data: 1
-    - Name: _gearRarity
-      Entry: 10
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: _chance
-      Entry: 4
-      Data: 0.04
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 7|Crafting.ChanceBasedCraftingResultProvider+ChanceBasedCraftingResult,
-        Assembly-CSharp
-    - Name: _result
-      Entry: 7
-      Data: 8|Items.Item, Assembly-CSharp
-    - Name: _itemData
-      Entry: 10
-      Data: 2
-    - Name: _amount
-      Entry: 3
-      Data: 1
-    - Name: _gearRarity
-      Entry: 10
-      Data: 4
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: _chance
-      Entry: 4
-      Data: 0.08
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 9|Crafting.ChanceBasedCraftingResultProvider+ChanceBasedCraftingResult,
-        Assembly-CSharp
-    - Name: _result
-      Entry: 7
-      Data: 10|Items.Item, Assembly-CSharp
-    - Name: _itemData
-      Entry: 10
-      Data: 2
-    - Name: _amount
-      Entry: 3
-      Data: 1
-    - Name: _gearRarity
-      Entry: 10
-      Data: 5
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: _chance
-      Entry: 4
-      Data: 0.25
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 11|Crafting.ChanceBasedCraftingResultProvider+ChanceBasedCraftingResult,
-        Assembly-CSharp
-    - Name: _result
-      Entry: 7
-      Data: 12|Items.Item, Assembly-CSharp
-    - Name: _itemData
-      Entry: 10
-      Data: 2
-    - Name: _amount
-      Entry: 3
-      Data: 1
-    - Name: _gearRarity
-      Entry: 10
-      Data: 6
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: _chance
-      Entry: 4
-      Data: 0.5
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 13|Crafting.ChanceBasedCraftingResultProvider+ChanceBasedCraftingResult,
-        Assembly-CSharp
-    - Name: _result
-      Entry: 7
-      Data: 14|Items.Item, Assembly-CSharp
-    - Name: _itemData
-      Entry: 10
-      Data: 2
-    - Name: _amount
-      Entry: 3
-      Data: 1
-    - Name: _gearRarity
-      Entry: 10
-      Data: 7
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: _chance
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
     - Name: 
       Entry: 8
       Data: 

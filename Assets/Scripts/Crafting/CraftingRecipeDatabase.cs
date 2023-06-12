@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Common.Attributes;
+using Common.Extensions;
 using Inventory.Interfaces;
 using Items.ItemDataSystem;
 using Player.Interfaces;
@@ -115,6 +116,23 @@ namespace Crafting
         public List<CraftingRecipe> GetRecipesForLevel(int level)
         {
             return _recipes.Where(recipe => recipe.RequiredLevel == level).ToList();
+        }
+
+        public List<CraftingRecipe> GetRandomRecipes(int amount)
+        {
+            var recipes = new List<CraftingRecipe>();
+
+            for (var i = 0; i < amount; i++)
+            {
+                var recipe = _recipes.GetRandomElement();
+
+                while (recipes.Contains(recipe))
+                    recipe = _recipes.GetRandomElement();
+                
+                recipes.Add(recipe);
+            }
+            
+            return recipes;
         }
 
         [InfoBox("Runtime tests", InfoMessageType.Warning)]

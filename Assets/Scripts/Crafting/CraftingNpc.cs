@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using Common.Extensions;
 using Crafting.Abstraction;
+using Crafting.CraftingQueries;
 using Items;
 using Player.Interfaces;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using TMPro;
 using UI.Crafting.Abstraction;
-using UnityEditor;
 using UnityEngine;
-using WaveSystem;
 
 namespace Crafting
 {
@@ -23,14 +22,14 @@ namespace Crafting
         [SerializeField]
         private CraftInteraction _craftInteractionPrefab;
         
-        [OdinSerialize]
-        private List<CraftingStationData> _craftingStationDatas;
-        
         [SerializeField]
         private TMP_Text _tooltipText;
         
         [SerializeField]
         private SpriteRenderer _cloudRenderer;
+        
+        [OdinSerialize]
+        private ICraftingRecipeQuery _craftingRecipeQuery;
         public event Action OnRecipeChanged;
 
         private IPlayerInventory _playerInventory;
@@ -60,32 +59,24 @@ namespace Crafting
             var y = -.9f;
             var x = -2f;
             
-            foreach (var data in _craftingStationDatas)
+            var recipes = _craftingRecipeQuery.GetRecipes(_craftingHandler.CraftingRecipeDatabase, _playerInventory.Inventory);
+            
+            if(recipes.Count == 0)
+                return;
+            
+            recipes.Shuffle();
+                
+            foreach (var recipe in recipes)
             {
-                var recipes = _craftingHandler.CraftingRecipeDatabase
-                    .GetCraftableRecipesByObtainedWeapons(_playerInventory.Inventory);
+                var interaction = Instantiate(
+                    _craftInteractionPrefab, transform.position + new Vector3(x, y), Quaternion.identity, 
+                    transform);
                 
-                if(recipes.Count == 0)
-                    continue;
-                
-                recipes.Shuffle();
-                
-                var recipesToDisplay = recipes.Take(data.Amount).ToList();
-                
-                foreach (var recipe in recipesToDisplay)
-                {
-                    var interaction = Instantiate(
-                        _craftInteractionPrefab, transform.position + new Vector3(x, y), Quaternion.identity, 
-                        transform);
-                
-                    interaction.OnSelected += SelectInteraction;
-                    interaction.OnDeselected += DeselectInteraction;
-                    interaction.CraftingHandler = _craftingHandler;
-                    interaction.SetRecipe(recipe);
+                interaction.OnSelected += SelectInteraction;
+                interaction.OnDeselected += DeselectInteraction;
+                interaction.CraftingHandler = _craftingHandler;
+                interaction.SetRecipe(recipe);
 
-                    x++;
-                }
-                
                 x++;
             }
         }
@@ -103,7 +94,7 @@ namespace Crafting
         {
             _selectedInteraction = craftInteraction;
             var resultItem = _selectedInteraction.GetRecipe().Result;
-            var itemToShow = new Item(resultItem.ItemData, resultItem.Amount);
+            var itemToShow = new Item(resultItem);
             
             _tooltipText.text = itemToShow.GetTooltip();
             _cloudRenderer.enabled = true;

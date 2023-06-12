@@ -42,7 +42,7 @@ MonoBehaviour:
       Data: 0
     - Name: _fireRate
       Entry: 4
-      Data: -0.05
+      Data: -0.01
     - Name: _maxHealth
       Entry: 4
       Data: 0
@@ -62,4 +62,4 @@ MonoBehaviour:
       Entry: 8
       Data: 
   _icon: {fileID: 21300000, guid: 0872f578895fcfa4184b34d7ac2bb38b, type: 3}
-  _description: +0.05 Fire rate
+  _description: +0.01 Fire rate
