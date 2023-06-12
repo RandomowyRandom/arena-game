@@ -228,11 +228,19 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 11400000, guid: 7c2fce353265b73449e040c3678cc176, type: 2}
     - {fileID: 11400000, guid: 962a6829cdafb8144abcedcc05e9fe3c, type: 2}
-    - {fileID: 11400000, guid: 7ff96bf0ebbc025429ee488993903671, type: 2}
     - {fileID: 11400000, guid: 1c5ec546bab06ee4b93958c46b0db236, type: 2}
     - {fileID: 11400000, guid: 8cfdc5209dfad004d8c6c931b29e1f7e, type: 2}
+    - {fileID: 11400000, guid: 1135907777c22b1418ad7b21107005cf, type: 2}
+    - {fileID: 11400000, guid: ecae45177ab6ddb45b0c3f02a5e26c5c, type: 2}
+    - {fileID: 11400000, guid: d2145849c970e0b49a8f807de5654776, type: 2}
+    - {fileID: 11400000, guid: d223f95e090c6624bbc5e31e1836b3e3, type: 2}
+    - {fileID: 11400000, guid: a051a68d78723a4479221cd1923762a9, type: 2}
+    - {fileID: 11400000, guid: 9a7341f9a37634f4fbb81ac2ac364e19, type: 2}
+    - {fileID: 11400000, guid: f4b427b4007adb746a2a58dea57cf71b, type: 2}
+    - {fileID: 11400000, guid: 1afd86fe56747d64db7800d6e109f591, type: 2}
+    - {fileID: 11400000, guid: ae898ccdc5c497e44a5bd23936d5fe8d, type: 2}
+    - {fileID: 11400000, guid: 8b04078c2a1577444a26c1f57c0d57c1, type: 2}
     - {fileID: 11400000, guid: 893618c5518171a4fbfa414b759849c6, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -248,13 +256,13 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 2|System.Collections.Generic.List`1[[Items.Item, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 3
     - Name: 
       Entry: 7
       Data: 3|Items.Item, Assembly-CSharp
@@ -263,10 +271,7 @@ MonoBehaviour:
       Data: 0
     - Name: _amount
       Entry: 3
-      Data: 10
-    - Name: _gearRarity
-      Entry: 6
-      Data: 
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -279,9 +284,6 @@ MonoBehaviour:
     - Name: _amount
       Entry: 3
       Data: 1
-    - Name: _gearRarity
-      Entry: 10
-      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -290,28 +292,142 @@ MonoBehaviour:
       Data: 5|Items.Item, Assembly-CSharp
     - Name: _itemData
       Entry: 10
-      Data: 3
+      Data: 2
     - Name: _amount
       Entry: 3
       Data: 1
-    - Name: _gearRarity
-      Entry: 10
-      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 6|Items.Item, Assembly-CSharp
+      Data: 6|System.Collections.Generic.List`1[[Items.Item, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 7
+      Data: 7|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 3
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 8|Items.Item, Assembly-CSharp
     - Name: _itemData
       Entry: 10
       Data: 4
     - Name: _amount
       Entry: 3
       Data: 1
-    - Name: _gearRarity
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|Items.Item, Assembly-CSharp
+    - Name: _itemData
       Entry: 10
-      Data: 2
+      Data: 5
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 10|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 6
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 11|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 7
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 12|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 8
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 13|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 9
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 14|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 10
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 15|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 11
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 16|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 12
+    - Name: _amount
+      Entry: 3
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -329,32 +445,50 @@ MonoBehaviour:
       Data: 
     - Name: _chanceDrops
       Entry: 7
-      Data: 7|System.Collections.Generic.List`1[[EntitySystem.BasicItemDrop, Assembly-CSharp]],
+      Data: 17|System.Collections.Generic.List`1[[EntitySystem.BasicItemDrop, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
-      Data: 8|EntitySystem.BasicItemDrop, Assembly-CSharp
+      Data: 18|EntitySystem.BasicItemDrop, Assembly-CSharp
     - Name: _item
       Entry: 7
-      Data: 9|Items.Item, Assembly-CSharp
+      Data: 19|Items.Item, Assembly-CSharp
     - Name: _itemData
       Entry: 10
-      Data: 5
+      Data: 13
     - Name: _amount
       Entry: 3
-      Data: 1
-    - Name: _gearRarity
-      Entry: 6
-      Data: 
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
     - Name: _chance
       Entry: 4
-      Data: 0.8
+      Data: 0.9
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 20|EntitySystem.BasicItemDrop, Assembly-CSharp
+    - Name: _item
+      Entry: 7
+      Data: 21|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 13
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _chance
+      Entry: 4
+      Data: 0.5
     - Name: 
       Entry: 8
       Data: 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2082338041}
   - component: {fileID: 1459616626315940688}
   m_Layer: 0
-  m_Name: Crafter
+  m_Name: Adam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459616626315940695}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.52, y: 0.83, z: 0}
+  m_LocalPosition: {x: -2.541, y: 0.915, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -58,7 +58,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  _craftingRecipeDatabase: {fileID: 11400000, guid: 42a044f91223657429607aeb71259a57, type: 2}
+  _craftingRecipeDatabase: {fileID: 11400000, guid: a441df168e795a84c802de912779ce01, type: 2}
 --- !u!114 &2082338041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,34 +84,12 @@ MonoBehaviour:
     - Name: _craftingHandler
       Entry: 10
       Data: 0
-    - Name: _craftingStationDatas
+    - Name: _craftingRecipeQuery
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Crafting.CraftingStationData, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|Crafting.CraftingStationData, Assembly-CSharp
-    - Name: _itemType
-      Entry: 7
-      Data: 2|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: Items.ItemDataSystem.Weapon, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: _amount
+      Data: 0|Crafting.CraftingQueries.AnyCraftingRecipeQuery, Assembly-CSharp
+    - Name: <Amount>k__BackingField
       Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -159,7 +137,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6124d40516d48b04fb0513ed63d67fb2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6f0d766955114004c8f60b603ddb5327, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -195,7 +173,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459616626500853414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.004, y: 0.285, z: 0}
+  m_LocalPosition: {x: 0.004, y: -0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -243,7 +221,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: e6aab3d889e1392439eb2e6322f4a393, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d94cc70706583cc4da20cdf0e09aca95, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -452,7 +430,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3142953515377188854}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2157, y: 1.2998, z: 0}
+  m_LocalPosition: {x: -1.161, y: 0.938, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

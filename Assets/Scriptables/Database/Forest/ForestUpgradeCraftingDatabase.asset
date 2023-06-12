@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5646dca65124f9d913f8a44bde63c8e, type: 3}
+  m_Name: ForestUpgradeCraftingDatabase
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _recipes:
+  - {fileID: 11400000, guid: b8af181dd479f7247bd5ea3482343c7d, type: 2}
+  - {fileID: 11400000, guid: 763210d5d51aed84a9fdd7d9f80c500b, type: 2}
+  - {fileID: 11400000, guid: e775a65a969c6f0418b20f34d8e988b0, type: 2}
+  - {fileID: 11400000, guid: 0b0ed1853bdd921489b195d3dab73c2b, type: 2}
+  - {fileID: 11400000, guid: ca29b1d58f50b444a8589eb11f2cceb3, type: 2}
+  - {fileID: 11400000, guid: 096c14617d823e04096dce406a508142, type: 2}
+  - {fileID: 11400000, guid: 7c18e50255083d04fa10d4c96fda3f05, type: 2}
+  - {fileID: 11400000, guid: 0af7cb27c683e6c4aaca2c16091c3161, type: 2}
+  - {fileID: 11400000, guid: 8a954666e6fd7cf449f324140fc39152, type: 2}
+  - {fileID: 11400000, guid: 5cf40c82f20d2614ba320538ecff254c, type: 2}
+  - {fileID: 11400000, guid: 5d98ed57e323d7440ad019b7f613bb53, type: 2}
+  - {fileID: 11400000, guid: 6a28df99b6a20b9468d4158f4bb35844, type: 2}
