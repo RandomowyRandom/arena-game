@@ -12,6 +12,8 @@ namespace Crafting
         
         public Item GetResult()
         {
+            _result = new(_result);
+            
             return _result;
         }
         

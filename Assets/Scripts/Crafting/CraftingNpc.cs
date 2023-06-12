@@ -94,7 +94,7 @@ namespace Crafting
         {
             _selectedInteraction = craftInteraction;
             var resultItem = _selectedInteraction.GetRecipe().Result;
-            var itemToShow = new Item(resultItem.ItemData, resultItem.Amount);
+            var itemToShow = new Item(resultItem);
             
             _tooltipText.text = itemToShow.GetTooltip();
             _cloudRenderer.enabled = true;

@@ -19,6 +19,7 @@ MonoBehaviour:
     - {fileID: 4787323143279092637, guid: dffa238d7402ec54facd178c2430668a, type: 3}
     - {fileID: 2931861312426724257, guid: b3c4cfc79667508419ca162f1cb0f2f5, type: 3}
     - {fileID: 8432503717114699612, guid: 575195085d5d6404686de488d876220d, type: 3}
+    - {fileID: 354067270852212649, guid: 7963bea492054e24faf9683041354201, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -39,7 +40,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 1|WorldGeneration.ResourceGroupData, Assembly-CSharp
@@ -101,6 +102,58 @@ MonoBehaviour:
     - Name: _percentageCoverage
       Entry: 4
       Data: 0.25
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|WorldGeneration.ResourceGroupData, Assembly-CSharp
+    - Name: _resourcePrefabs
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[WorldGeneration.RandomResource,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 7|WorldGeneration.RandomResource, Assembly-CSharp
+    - Name: _resourcePrefab
+      Entry: 10
+      Data: 3
+    - Name: _chance
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _startSpawnChance
+      Entry: 4
+      Data: 1
+    - Name: _chanceFollOff
+      Entry: 4
+      Data: 0.3
+    - Name: _groupSize
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _percentageCoverage
+      Entry: 4
+      Data: 0.8
     - Name: 
       Entry: 8
       Data: 

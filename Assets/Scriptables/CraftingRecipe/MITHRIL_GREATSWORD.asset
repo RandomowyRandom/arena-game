@@ -18,6 +18,7 @@ MonoBehaviour:
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: a86f937ca05c7fa48b7ae0609e21d741, type: 2}
     - {fileID: 11400000, guid: 1092548eece441b468e2c2ccbdd301b2, type: 2}
+    - {fileID: 11400000, guid: 7c2fce353265b73449e040c3678cc176, type: 2}
     - {fileID: 11400000, guid: a7f726dd5549d474db5af4e0504e0448, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -29,7 +30,7 @@ MonoBehaviour:
       Data: 0|System.Collections.Generic.List`1[[Items.Item, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 7
       Data: 1|Items.Item, Assembly-CSharp
@@ -38,7 +39,7 @@ MonoBehaviour:
       Data: 0
     - Name: _amount
       Entry: 3
-      Data: 12
+      Data: 18
     - Name: 
       Entry: 8
       Data: 
@@ -48,6 +49,18 @@ MonoBehaviour:
     - Name: _itemData
       Entry: 10
       Data: 1
+    - Name: _amount
+      Entry: 3
+      Data: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 2
     - Name: _amount
       Entry: 3
       Data: 4
@@ -62,13 +75,13 @@ MonoBehaviour:
       Data: 
     - Name: _resultProvider
       Entry: 7
-      Data: 3|Crafting.BasicCraftingResultProvider, Assembly-CSharp
+      Data: 4|Crafting.BasicCraftingResultProvider, Assembly-CSharp
     - Name: _result
       Entry: 7
-      Data: 4|Items.Item, Assembly-CSharp
+      Data: 5|Items.Item, Assembly-CSharp
     - Name: _itemData
       Entry: 10
-      Data: 2
+      Data: 3
     - Name: _amount
       Entry: 3
       Data: 1

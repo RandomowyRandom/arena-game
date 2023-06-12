@@ -39,7 +39,7 @@ MonoBehaviour:
       Data: 0
     - Name: _amount
       Entry: 3
-      Data: 8
+      Data: 6
     - Name: 
       Entry: 8
       Data: 
@@ -51,7 +51,7 @@ MonoBehaviour:
       Data: 1
     - Name: _amount
       Entry: 3
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 8
       Data: 

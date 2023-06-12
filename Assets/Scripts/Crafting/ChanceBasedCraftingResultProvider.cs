@@ -55,7 +55,7 @@ namespace Crafting
             
             public Item Result
             {
-                get => _result;
+                get => new(_result);
                 set => _result = value;
             }
 

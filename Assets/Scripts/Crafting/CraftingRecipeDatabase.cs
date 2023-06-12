@@ -120,10 +120,19 @@ namespace Crafting
 
         public List<CraftingRecipe> GetRandomRecipes(int amount)
         {
-            var randomRecipes = new List<CraftingRecipe>(_recipes);
-            randomRecipes.Shuffle();
+            var recipes = new List<CraftingRecipe>();
+
+            for (var i = 0; i < amount; i++)
+            {
+                var recipe = _recipes.GetRandomElement();
+
+                while (recipes.Contains(recipe))
+                    recipe = _recipes.GetRandomElement();
+                
+                recipes.Add(recipe);
+            }
             
-            return randomRecipes.Take(amount).ToList();
+            return recipes;
         }
 
         [InfoBox("Runtime tests", InfoMessageType.Warning)]

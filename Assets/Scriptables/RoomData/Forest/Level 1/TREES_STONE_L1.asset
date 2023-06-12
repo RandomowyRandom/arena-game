@@ -20,6 +20,7 @@ MonoBehaviour:
     - {fileID: 9094995047937489891, guid: 5fd6ea4b323a5514684d2b7bdeede518, type: 3}
     - {fileID: 2530176304263761368, guid: 235436f20323ed24e9c5e0db63316324, type: 3}
     - {fileID: 1190555262996832711, guid: f6b4728fd68c79f4c93b592268c9a0bd, type: 3}
+    - {fileID: 354067270852212649, guid: 7963bea492054e24faf9683041354201, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -40,7 +41,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 7
       Data: 1|WorldGeneration.ResourceGroupData, Assembly-CSharp
@@ -101,7 +102,7 @@ MonoBehaviour:
       Data: 
     - Name: _percentageCoverage
       Entry: 4
-      Data: 0.7
+      Data: 0.5
     - Name: 
       Entry: 8
       Data: 
@@ -151,6 +152,58 @@ MonoBehaviour:
     - Name: _chanceFollOff
       Entry: 4
       Data: 0.2
+    - Name: _groupSize
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _percentageCoverage
+      Entry: 4
+      Data: 0.5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|WorldGeneration.ResourceGroupData, Assembly-CSharp
+    - Name: _resourcePrefabs
+      Entry: 7
+      Data: 10|System.Collections.Generic.List`1[[WorldGeneration.RandomResource,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 11|WorldGeneration.RandomResource, Assembly-CSharp
+    - Name: _resourcePrefab
+      Entry: 10
+      Data: 4
+    - Name: _chance
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _startSpawnChance
+      Entry: 4
+      Data: 1
+    - Name: _chanceFollOff
+      Entry: 4
+      Data: 0.3
     - Name: _groupSize
       Entry: 7
       Data: UnityEngine.Vector2Int, UnityEngine.CoreModule

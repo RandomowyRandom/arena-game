@@ -324,7 +324,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  _displayName: Wooden crossbow
+  _displayName: Copper crossbow
   _icon: {fileID: 21300000, guid: 1179cd3189e800d4f865236c8bd0456f, type: 3}
   _description: 
   _maxStack: 1
