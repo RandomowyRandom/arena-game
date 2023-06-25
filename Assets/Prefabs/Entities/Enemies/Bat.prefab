@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 786313674999913745}
   - component: {fileID: -2055450039741182297}
   - component: {fileID: 716236919041000029}
+  - component: {fileID: -4203657750750939323}
   m_Layer: 8
   m_Name: Bat
   m_TagString: Untagged
@@ -553,3 +554,88 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _weight: -0.4
+--- !u!114 &-4203657750750939323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4637590501584507413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7decab0781449ea1b54b962207c405, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 36a4024659ae1ce409ab6836d3687c09, type: 2}
+    - {fileID: 11400000, guid: 8af40227ef33c4649bf349fae1007f64, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _dropTable
+      Entry: 7
+      Data: 0|EntitySystem.DropTable.BasicDropTable, Assembly-CSharp
+    - Name: _drops
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[EntitySystem.BasicItemDrop, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 2|EntitySystem.BasicItemDrop, Assembly-CSharp
+    - Name: _item
+      Entry: 7
+      Data: 3|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 0
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _chance
+      Entry: 4
+      Data: 0.02
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|EntitySystem.BasicItemDrop, Assembly-CSharp
+    - Name: _item
+      Entry: 7
+      Data: 5|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 1
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _chance
+      Entry: 4
+      Data: 0.015
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  _itemWorldPrefab: {fileID: 4956166285135844185, guid: 4909a5cc932cf8b4a8f682ba5aecb08a, type: 3}

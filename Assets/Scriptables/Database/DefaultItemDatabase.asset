@@ -89,6 +89,12 @@ MonoBehaviour:
     - {fileID: 11400000, guid: dbc23c4f8223f8240bda11d22fb92ee1, type: 2}
     - {fileID: 11400000, guid: 5cd9f6b3404097d45bab0a1560aee0ba, type: 2}
     - {fileID: 11400000, guid: 64aab11f59e987e4a9ff43229472e76f, type: 2}
+    - {fileID: 11400000, guid: 36a4024659ae1ce409ab6836d3687c09, type: 2}
+    - {fileID: 11400000, guid: 2ab2cd3852b2aaa40943b3cd22addfc2, type: 2}
+    - {fileID: 11400000, guid: bdb0746b393f1b642acbdee27bd0a7ec, type: 2}
+    - {fileID: 11400000, guid: db09ae3e244bb32409d02ae8af8871fb, type: 2}
+    - {fileID: 11400000, guid: 48d6a49c3f77a0f43a46c0a32123472e, type: 2}
+    - {fileID: 11400000, guid: 8af40227ef33c4649bf349fae1007f64, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -107,7 +113,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 73
+      Data: 79
     - Name: 
       Entry: 7
       Data: 
@@ -985,6 +991,78 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: BAT_WING
+    - Name: $v
+      Entry: 10
+      Data: 73
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: BOAR_TOOTH
+    - Name: $v
+      Entry: 10
+      Data: 74
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: BONE
+    - Name: $v
+      Entry: 10
+      Data: 75
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: COBWEB
+    - Name: $v
+      Entry: 10
+      Data: 76
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: SLIME_BALL
+    - Name: $v
+      Entry: 10
+      Data: 77
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: VIAL_OF_BAT_BLOOD
+    - Name: $v
+      Entry: 10
+      Data: 78
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -1064,3 +1142,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dbc23c4f8223f8240bda11d22fb92ee1, type: 2}
   - {fileID: 11400000, guid: 5cd9f6b3404097d45bab0a1560aee0ba, type: 2}
   - {fileID: 11400000, guid: 64aab11f59e987e4a9ff43229472e76f, type: 2}
+  - {fileID: 11400000, guid: 36a4024659ae1ce409ab6836d3687c09, type: 2}
+  - {fileID: 11400000, guid: 2ab2cd3852b2aaa40943b3cd22addfc2, type: 2}
+  - {fileID: 11400000, guid: bdb0746b393f1b642acbdee27bd0a7ec, type: 2}
+  - {fileID: 11400000, guid: db09ae3e244bb32409d02ae8af8871fb, type: 2}
+  - {fileID: 11400000, guid: 48d6a49c3f77a0f43a46c0a32123472e, type: 2}
+  - {fileID: 11400000, guid: 8af40227ef33c4649bf349fae1007f64, type: 2}

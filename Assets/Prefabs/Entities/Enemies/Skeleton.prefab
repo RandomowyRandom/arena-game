@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 7009650184479776436}
   - component: {fileID: 6920103162997232335}
   - component: {fileID: 6208930948365235157}
+  - component: {fileID: 5277664135084625266}
   m_Layer: 8
   m_Name: Skeleton
   m_TagString: Untagged
@@ -520,3 +521,66 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _weight: -0.55
+--- !u!114 &5277664135084625266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7250216071847878195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7decab0781449ea1b54b962207c405, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: bdb0746b393f1b642acbdee27bd0a7ec, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _dropTable
+      Entry: 7
+      Data: 0|EntitySystem.DropTable.BasicDropTable, Assembly-CSharp
+    - Name: _drops
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[EntitySystem.BasicItemDrop, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 2|EntitySystem.BasicItemDrop, Assembly-CSharp
+    - Name: _item
+      Entry: 7
+      Data: 3|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 0
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _chance
+      Entry: 4
+      Data: 0.05
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  _itemWorldPrefab: {fileID: 4956166285135844185, guid: 4909a5cc932cf8b4a8f682ba5aecb08a, type: 3}

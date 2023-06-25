@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 4592981610897401294}
   - component: {fileID: 661546434376186694}
   - component: {fileID: -3677133812845743396}
+  - component: {fileID: -8991641300341636547}
   m_Layer: 8
   m_Name: BlueSlime
   m_TagString: Untagged
@@ -560,6 +561,69 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _weight: -0.6
+--- !u!114 &-8991641300341636547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3748062702778602465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7decab0781449ea1b54b962207c405, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 48d6a49c3f77a0f43a46c0a32123472e, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _dropTable
+      Entry: 7
+      Data: 0|EntitySystem.DropTable.BasicDropTable, Assembly-CSharp
+    - Name: _drops
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[EntitySystem.BasicItemDrop, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 2|EntitySystem.BasicItemDrop, Assembly-CSharp
+    - Name: _item
+      Entry: 7
+      Data: 3|Items.Item, Assembly-CSharp
+    - Name: _itemData
+      Entry: 10
+      Data: 0
+    - Name: _amount
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _chance
+      Entry: 4
+      Data: 0.04
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  _itemWorldPrefab: {fileID: 4956166285135844185, guid: 4909a5cc932cf8b4a8f682ba5aecb08a, type: 3}
 --- !u!1 &6955444816798097189
 GameObject:
   m_ObjectHideFlags: 0
